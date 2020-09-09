@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
+		4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
+		4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
+		4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A92E250128710064CB76 /* DKCustomeTargetCell.m */; };
+		4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A92E250128710064CB76 /* DKCustomeTargetCell.m */; };
+		4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A92E250128710064CB76 /* DKCustomeTargetCell.m */; };
+		4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */; };
+		4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */; };
+		4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */; };
+		4C07A9392501DE740064CB76 /* DKTargetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9382501DE740064CB76 /* DKTargetManager.m */; };
+		4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9382501DE740064CB76 /* DKTargetManager.m */; };
+		4C07A93B2501DE740064CB76 /* DKTargetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9382501DE740064CB76 /* DKTargetManager.m */; };
+		4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A93D2501DE920064CB76 /* DKSignModel.m */; };
+		4C07A93F2501DE920064CB76 /* DKSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A93D2501DE920064CB76 /* DKSignModel.m */; };
+		4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A93D2501DE920064CB76 /* DKSignModel.m */; };
+		4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9422501EFF70064CB76 /* DKPingCiSegment.m */; };
+		4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9422501EFF70064CB76 /* DKPingCiSegment.m */; };
+		4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9422501EFF70064CB76 /* DKPingCiSegment.m */; };
+		4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9472501F03D0064CB76 /* DKWeekCollectionViewCell.m */; };
+		4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9472501F03D0064CB76 /* DKWeekCollectionViewCell.m */; };
+		4C07A94A2501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A9472501F03D0064CB76 /* DKWeekCollectionViewCell.m */; };
+		4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A94C2501F08A0064CB76 /* DKPingCiSettingView.m */; };
+		4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A94C2501F08A0064CB76 /* DKPingCiSettingView.m */; };
+		4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A94C2501F08A0064CB76 /* DKPingCiSettingView.m */; };
+		4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A951250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m */; };
+		4C07A953250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A951250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m */; };
+		4C07A954250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A951250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m */; };
+		4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C4412506084B0064CB76 /* DKDateSelectView.m */; };
+		4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C4412506084B0064CB76 /* DKDateSelectView.m */; };
+		4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C4412506084B0064CB76 /* DKDateSelectView.m */; };
+		4C07C44725061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44625061F650064CB76 /* DKHomeItemCollectionViewCell.m */; };
+		4C07C44825061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44625061F650064CB76 /* DKHomeItemCollectionViewCell.m */; };
+		4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44625061F650064CB76 /* DKHomeItemCollectionViewCell.m */; };
+		4C07C44C250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44B250620940064CB76 /* DKHomeItemTableViewCell.m */; };
+		4C07C44D250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44B250620940064CB76 /* DKHomeItemTableViewCell.m */; };
+		4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07C44B250620940064CB76 /* DKHomeItemTableViewCell.m */; };
+		4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE6C24FE49680004EF4E /* AppDelegate.m */; };
+		4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7724FE49690004EF4E /* Assets.xcassets */; };
+		4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7924FE49690004EF4E /* LaunchScreen.storyboard */; };
+		4C1CCE7E24FE49690004EF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7D24FE49690004EF4E /* main.m */; };
+		4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE8724FE49690004EF4E /* DailyClockTests.m */; };
+		4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */; };
+		4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
+		4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
+		4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
+		4C8DA0C02500E74600112389 /* DKApplication+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BF2500E74600112389 /* DKApplication+Window.m */; };
+		4C8DA0C12500E74600112389 /* DKApplication+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BF2500E74600112389 /* DKApplication+Window.m */; };
+		4C8DA0C22500E74600112389 /* DKApplication+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BF2500E74600112389 /* DKApplication+Window.m */; };
+		4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */; };
+		4C8DA0CB2500E8AA00112389 /* DKHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */; };
+		4C8DA0CC2500E8AA00112389 /* DKHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */; };
+		4C8DA0CF2500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0CE2500EA0800112389 /* CYBaseViewController+DKExtend.m */; };
+		4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0CE2500EA0800112389 /* CYBaseViewController+DKExtend.m */; };
+		4C8DA0D12500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0CE2500EA0800112389 /* CYBaseViewController+DKExtend.m */; };
+		4C8DA0D42500F16100112389 /* DKCreateTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */; };
+		4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */; };
+		4C8DA0D62500F16100112389 /* DKCreateTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */; };
+		4C8DA0D82500F18C00112389 /* targets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D72500F18C00112389 /* targets.json */; };
+		4C8DA0D92500F18C00112389 /* targets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D72500F18C00112389 /* targets.json */; };
+		4C8DA0DA2500F18C00112389 /* targets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DA0D72500F18C00112389 /* targets.json */; };
+		4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
+		4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
+		4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
+		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
+		4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
+		4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
+		4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
+		82A240713B8F38693BCDA1AA /* libPods-DailyClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */; };
+		F7A1179D7E6F63F951D5E8CB /* libPods-DailyClockUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 799B35C738A5B9A293ACE11D /* libPods-DailyClockUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C1CCE8424FE49690004EF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1CCE6024FE49680004EF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1CCE6724FE49680004EF4E;
+			remoteInfo = DailyClock;
+		};
+		4C1CCE8F24FE49690004EF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1CCE6024FE49680004EF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1CCE6724FE49680004EF4E;
+			remoteInfo = DailyClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3491C9716A45D76C310454C9 /* Pods-DailyClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClockUITests.release.xcconfig"; path = "Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C07A927250108850064CB76 /* DKCreateTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCreateTargetCell.h; sourceTree = "<group>"; };
+		4C07A928250108850064CB76 /* DKCreateTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCreateTargetCell.m; sourceTree = "<group>"; };
+		4C07A92C250121DE0064CB76 /* DKTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTheme.h; sourceTree = "<group>"; };
+		4C07A92D250128710064CB76 /* DKCustomeTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCustomeTargetCell.h; sourceTree = "<group>"; };
+		4C07A92E250128710064CB76 /* DKCustomeTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCustomeTargetCell.m; sourceTree = "<group>"; };
+		4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetSettingViewController.h; sourceTree = "<group>"; };
+		4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetSettingViewController.m; sourceTree = "<group>"; };
+		4C07A9372501DE740064CB76 /* DKTargetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetManager.h; sourceTree = "<group>"; };
+		4C07A9382501DE740064CB76 /* DKTargetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetManager.m; sourceTree = "<group>"; };
+		4C07A93C2501DE920064CB76 /* DKSignModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSignModel.h; sourceTree = "<group>"; };
+		4C07A93D2501DE920064CB76 /* DKSignModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSignModel.m; sourceTree = "<group>"; };
+		4C07A9412501EFF70064CB76 /* DKPingCiSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPingCiSegment.h; sourceTree = "<group>"; };
+		4C07A9422501EFF70064CB76 /* DKPingCiSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPingCiSegment.m; sourceTree = "<group>"; };
+		4C07A9462501F03D0064CB76 /* DKWeekCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKWeekCollectionViewCell.h; sourceTree = "<group>"; };
+		4C07A9472501F03D0064CB76 /* DKWeekCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKWeekCollectionViewCell.m; sourceTree = "<group>"; };
+		4C07A94B2501F08A0064CB76 /* DKPingCiSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPingCiSettingView.h; sourceTree = "<group>"; };
+		4C07A94C2501F08A0064CB76 /* DKPingCiSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPingCiSettingView.m; sourceTree = "<group>"; };
+		4C07A950250223BF0064CB76 /* DKPingCiSettingWeekMonthView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPingCiSettingWeekMonthView.h; sourceTree = "<group>"; };
+		4C07A951250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPingCiSettingWeekMonthView.m; sourceTree = "<group>"; };
+		4C07C4402506084B0064CB76 /* DKDateSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDateSelectView.h; sourceTree = "<group>"; };
+		4C07C4412506084B0064CB76 /* DKDateSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDateSelectView.m; sourceTree = "<group>"; };
+		4C07C44525061F650064CB76 /* DKHomeItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomeItemCollectionViewCell.h; sourceTree = "<group>"; };
+		4C07C44625061F650064CB76 /* DKHomeItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomeItemCollectionViewCell.m; sourceTree = "<group>"; };
+		4C07C44A250620940064CB76 /* DKHomeItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomeItemTableViewCell.h; sourceTree = "<group>"; };
+		4C07C44B250620940064CB76 /* DKHomeItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomeItemTableViewCell.m; sourceTree = "<group>"; };
+		4C1CCE6824FE49680004EF4E /* 打卡.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "打卡.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1CCE6B24FE49680004EF4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C1CCE6C24FE49680004EF4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C1CCE7724FE49690004EF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1CCE7A24FE49690004EF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C1CCE7C24FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1CCE7D24FE49690004EF4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C1CCE8324FE49690004EF4E /* DailyClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1CCE8724FE49690004EF4E /* DailyClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyClockTests.m; sourceTree = "<group>"; };
+		4C1CCE8924FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1CCE8E24FE49690004EF4E /* DailyClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyClockUITests.m; sourceTree = "<group>"; };
+		4C1CCE9424FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4C8DA0B92500E6D700112389 /* DKApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKApplication.h; sourceTree = "<group>"; };
+		4C8DA0BA2500E6D700112389 /* DKApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKApplication.m; sourceTree = "<group>"; };
+		4C8DA0BE2500E74600112389 /* DKApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Window.h"; sourceTree = "<group>"; };
+		4C8DA0BF2500E74600112389 /* DKApplication+Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DKApplication+Window.m"; sourceTree = "<group>"; };
+		4C8DA0C32500E76800112389 /* DKApplication+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Extension.h"; sourceTree = "<group>"; };
+		4C8DA0C82500E8AA00112389 /* DKHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomePageViewController.h; sourceTree = "<group>"; };
+		4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomePageViewController.m; sourceTree = "<group>"; };
+		4C8DA0CD2500EA0800112389 /* CYBaseViewController+DKExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CYBaseViewController+DKExtend.h"; sourceTree = "<group>"; };
+		4C8DA0CE2500EA0800112389 /* CYBaseViewController+DKExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CYBaseViewController+DKExtend.m"; sourceTree = "<group>"; };
+		4C8DA0D22500F16100112389 /* DKCreateTargetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCreateTargetViewController.h; sourceTree = "<group>"; };
+		4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCreateTargetViewController.m; sourceTree = "<group>"; };
+		4C8DA0D72500F18C00112389 /* targets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = targets.json; sourceTree = "<group>"; };
+		4C8DA0DB2500F3E500112389 /* DKTargetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTargetModel.m; sourceTree = "<group>"; };
+		4C8DA0DC2500F3E500112389 /* DKTargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTargetModel.h; sourceTree = "<group>"; };
+		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		4CF6868D25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomeItemClockCollectionViewCell.h; sourceTree = "<group>"; };
+		4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomeItemClockCollectionViewCell.m; sourceTree = "<group>"; };
+		5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		799B35C738A5B9A293ACE11D /* libPods-DailyClockUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyClockUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9379C958B874918AE348D55D /* Pods-DailyClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClock.debug.xcconfig"; path = "Target Support Files/Pods-DailyClock/Pods-DailyClock.debug.xcconfig"; sourceTree = "<group>"; };
+		C9A558477B0ECD84E2FE50A3 /* Pods-DailyClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClock.release.xcconfig"; path = "Target Support Files/Pods-DailyClock/Pods-DailyClock.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C1CCE6524FE49680004EF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A240713B8F38693BCDA1AA /* libPods-DailyClock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE8024FE49690004EF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE8B24FE49690004EF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A1179D7E6F63F951D5E8CB /* libPods-DailyClockUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48001CCFE284ABAC9CB3594C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */,
+				799B35C738A5B9A293ACE11D /* libPods-DailyClockUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C1CCE5F24FE49680004EF4E = {
+			isa = PBXGroup;
+			children = (
+				4C1CCE6A24FE49680004EF4E /* DailyClock */,
+				4C1CCE8624FE49690004EF4E /* DailyClockTests */,
+				4C1CCE9124FE49690004EF4E /* DailyClockUITests */,
+				4C1CCE6924FE49680004EF4E /* Products */,
+				D150DA5740767EA867855DD7 /* Pods */,
+				48001CCFE284ABAC9CB3594C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C1CCE6924FE49680004EF4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C1CCE6824FE49680004EF4E /* 打卡.app */,
+				4C1CCE8324FE49690004EF4E /* DailyClockTests.xctest */,
+				4C1CCE8E24FE49690004EF4E /* DailyClockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C1CCE6A24FE49680004EF4E /* DailyClock */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DA0B72500E6A300112389 /* Modules */,
+				4C1CCE6B24FE49680004EF4E /* AppDelegate.h */,
+				4C1CCE6C24FE49680004EF4E /* AppDelegate.m */,
+				4C1CCE7724FE49690004EF4E /* Assets.xcassets */,
+				4C1CCE7924FE49690004EF4E /* LaunchScreen.storyboard */,
+				4C1CCE7C24FE49690004EF4E /* Info.plist */,
+				4C1CCE7D24FE49690004EF4E /* main.m */,
+				4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */,
+				4C07A92C250121DE0064CB76 /* DKTheme.h */,
+			);
+			path = DailyClock;
+			sourceTree = "<group>";
+		};
+		4C1CCE8624FE49690004EF4E /* DailyClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1CCE8724FE49690004EF4E /* DailyClockTests.m */,
+				4C1CCE8924FE49690004EF4E /* Info.plist */,
+			);
+			path = DailyClockTests;
+			sourceTree = "<group>";
+		};
+		4C1CCE9124FE49690004EF4E /* DailyClockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */,
+				4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */,
+				4C1CCE9424FE49690004EF4E /* Info.plist */,
+				4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */,
+			);
+			path = DailyClockUITests;
+			sourceTree = "<group>";
+		};
+		4C8DA0B72500E6A300112389 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DA0C42500E87F00112389 /* Home */,
+				4C8DA0B82500E6AB00112389 /* Config */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4C8DA0B82500E6AB00112389 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DA0B92500E6D700112389 /* DKApplication.h */,
+				4C8DA0BA2500E6D700112389 /* DKApplication.m */,
+				4C8DA0C32500E76800112389 /* DKApplication+Extension.h */,
+				4C8DA0BE2500E74600112389 /* DKApplication+Window.h */,
+				4C8DA0BF2500E74600112389 /* DKApplication+Window.m */,
+				4C8DA0CD2500EA0800112389 /* CYBaseViewController+DKExtend.h */,
+				4C8DA0CE2500EA0800112389 /* CYBaseViewController+DKExtend.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4C8DA0C42500E87F00112389 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DA0C72500E88F00112389 /* Model */,
+				4C8DA0C62500E88C00112389 /* View */,
+				4C8DA0C52500E88500112389 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4C8DA0C52500E88500112389 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DA0C82500E8AA00112389 /* DKHomePageViewController.h */,
+				4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */,
+				4C8DA0D22500F16100112389 /* DKCreateTargetViewController.h */,
+				4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */,
+				4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */,
+				4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4C8DA0C62500E88C00112389 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C07A927250108850064CB76 /* DKCreateTargetCell.h */,
+				4C07A928250108850064CB76 /* DKCreateTargetCell.m */,
+				4C07A92D250128710064CB76 /* DKCustomeTargetCell.h */,
+				4C07A92E250128710064CB76 /* DKCustomeTargetCell.m */,
+				4C07A9412501EFF70064CB76 /* DKPingCiSegment.h */,
+				4C07A9422501EFF70064CB76 /* DKPingCiSegment.m */,
+				4C07A94B2501F08A0064CB76 /* DKPingCiSettingView.h */,
+				4C07A94C2501F08A0064CB76 /* DKPingCiSettingView.m */,
+				4C07A9462501F03D0064CB76 /* DKWeekCollectionViewCell.h */,
+				4C07A9472501F03D0064CB76 /* DKWeekCollectionViewCell.m */,
+				4C07A950250223BF0064CB76 /* DKPingCiSettingWeekMonthView.h */,
+				4C07A951250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m */,
+				4C07C4402506084B0064CB76 /* DKDateSelectView.h */,
+				4C07C4412506084B0064CB76 /* DKDateSelectView.m */,
+				4C07C44525061F650064CB76 /* DKHomeItemCollectionViewCell.h */,
+				4C07C44625061F650064CB76 /* DKHomeItemCollectionViewCell.m */,
+				4C07C44A250620940064CB76 /* DKHomeItemTableViewCell.h */,
+				4C07C44B250620940064CB76 /* DKHomeItemTableViewCell.m */,
+				4CF6868D25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.h */,
+				4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C8DA0C72500E88F00112389 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C07A9372501DE740064CB76 /* DKTargetManager.h */,
+				4C07A9382501DE740064CB76 /* DKTargetManager.m */,
+				4C8DA0DC2500F3E500112389 /* DKTargetModel.h */,
+				4C8DA0DB2500F3E500112389 /* DKTargetModel.m */,
+				4C07A93C2501DE920064CB76 /* DKSignModel.h */,
+				4C07A93D2501DE920064CB76 /* DKSignModel.m */,
+				4C8DA0D72500F18C00112389 /* targets.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D150DA5740767EA867855DD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9379C958B874918AE348D55D /* Pods-DailyClock.debug.xcconfig */,
+				C9A558477B0ECD84E2FE50A3 /* Pods-DailyClock.release.xcconfig */,
+				5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */,
+				3491C9716A45D76C310454C9 /* Pods-DailyClockUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C1CCE6724FE49680004EF4E /* DailyClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1CCE9724FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClock" */;
+			buildPhases = (
+				5C5B868B402C76EB2EE43BF3 /* [CP] Check Pods Manifest.lock */,
+				4C1CCE6424FE49680004EF4E /* Sources */,
+				4C1CCE6524FE49680004EF4E /* Frameworks */,
+				4C1CCE6624FE49680004EF4E /* Resources */,
+				EE9799733FE7EE73199734B0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyClock;
+			productName = DailyClock;
+			productReference = 4C1CCE6824FE49680004EF4E /* 打卡.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C1CCE8224FE49690004EF4E /* DailyClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1CCE9A24FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClockTests" */;
+			buildPhases = (
+				4C1CCE7F24FE49690004EF4E /* Sources */,
+				4C1CCE8024FE49690004EF4E /* Frameworks */,
+				4C1CCE8124FE49690004EF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1CCE8524FE49690004EF4E /* PBXTargetDependency */,
+			);
+			name = DailyClockTests;
+			productName = DailyClockTests;
+			productReference = 4C1CCE8324FE49690004EF4E /* DailyClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C1CCE8D24FE49690004EF4E /* DailyClockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1CCE9D24FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClockUITests" */;
+			buildPhases = (
+				8BB7515234028D445D12A1FE /* [CP] Check Pods Manifest.lock */,
+				4C1CCE8A24FE49690004EF4E /* Sources */,
+				4C1CCE8B24FE49690004EF4E /* Frameworks */,
+				4C1CCE8C24FE49690004EF4E /* Resources */,
+				845F02FA4B2D9FEE635230BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1CCE9024FE49690004EF4E /* PBXTargetDependency */,
+			);
+			name = DailyClockUITests;
+			productName = DailyClockUITests;
+			productReference = 4C1CCE8E24FE49690004EF4E /* DailyClockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C1CCE6024FE49680004EF4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = cheng.yan;
+				TargetAttributes = {
+					4C1CCE6724FE49680004EF4E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					4C1CCE8224FE49690004EF4E = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 4C1CCE6724FE49680004EF4E;
+					};
+					4C1CCE8D24FE49690004EF4E = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+						TestTargetID = 4C1CCE6724FE49680004EF4E;
+					};
+				};
+			};
+			buildConfigurationList = 4C1CCE6324FE49680004EF4E /* Build configuration list for PBXProject "DailyClock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C1CCE5F24FE49680004EF4E;
+			productRefGroup = 4C1CCE6924FE49680004EF4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C1CCE6724FE49680004EF4E /* DailyClock */,
+				4C1CCE8224FE49690004EF4E /* DailyClockTests */,
+				4C1CCE8D24FE49690004EF4E /* DailyClockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C1CCE6624FE49680004EF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */,
+				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
+				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE8124FE49690004EF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE8C24FE49690004EF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C5B868B402C76EB2EE43BF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyClock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845F02FA4B2D9FEE635230BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BB7515234028D445D12A1FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyClockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE9799733FE7EE73199734B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyClock/Pods-DailyClock-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyClock/Pods-DailyClock-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyClock/Pods-DailyClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C1CCE6424FE49680004EF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
+				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
+				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
+				4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */,
+				4C07C44C250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
+				4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */,
+				4C07A9392501DE740064CB76 /* DKTargetManager.m in Sources */,
+				4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
+				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
+				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
+				4C1CCE7E24FE49690004EF4E /* main.m in Sources */,
+				4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */,
+				4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */,
+				4C8DA0CF2500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
+				4C8DA0C02500E74600112389 /* DKApplication+Window.m in Sources */,
+				4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C07C44725061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
+				4C8DA0D42500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE7F24FE49690004EF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */,
+				4C07C44825061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
+				4C07C44D250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
+				4C07A93F2501DE920064CB76 /* DKSignModel.m in Sources */,
+				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
+				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
+				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
+				4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */,
+				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
+				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
+				4C8DA0CB2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
+				4C8DA0C12500E74600112389 /* DKApplication+Window.m in Sources */,
+				4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
+				4C07A953250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */,
+				4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1CCE8A24FE49690004EF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
+				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
+				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
+				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
+				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
+				4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */,
+				4C8DA0D62500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4C8DA0D12500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
+				4C07A94A2501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
+				4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */,
+				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
+				4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */,
+				4C8DA0CC2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
+				4C8DA0C22500E74600112389 /* DKApplication+Window.m in Sources */,
+				4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
+				4C07A954250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */,
+				4C07A93B2501DE740064CB76 /* DKTargetManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C1CCE8524FE49690004EF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1CCE6724FE49680004EF4E /* DailyClock */;
+			targetProxy = 4C1CCE8424FE49690004EF4E /* PBXContainerItemProxy */;
+		};
+		4C1CCE9024FE49690004EF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1CCE6724FE49680004EF4E /* DailyClock */;
+			targetProxy = 4C1CCE8F24FE49690004EF4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C1CCE7924FE49690004EF4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C1CCE7A24FE49690004EF4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C1CCE9524FE49690004EF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4C1CCE9624FE49690004EF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1CCE9824FE49690004EF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9379C958B874918AE348D55D /* Pods-DailyClock.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DailyClock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
+				PRODUCT_NAME = "打卡";
+				PROVISIONING_PROFILE_SPECIFIER = DailyClockDev;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		4C1CCE9924FE49690004EF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A558477B0ECD84E2FE50A3 /* Pods-DailyClock.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DailyClock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
+				PRODUCT_NAME = "打卡";
+				PROVISIONING_PROFILE_SPECIFIER = DailyClockAdhot;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		4C1CCE9B24FE49690004EF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				INFOPLIST_FILE = DailyClockTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/打卡.app/打卡";
+			};
+			name = Debug;
+		};
+		4C1CCE9C24FE49690004EF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				INFOPLIST_FILE = DailyClockTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/打卡.app/打卡";
+			};
+			name = Release;
+		};
+		4C1CCE9E24FE49690004EF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DailyClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClockUITests/DailyClockUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyClock;
+			};
+			name = Debug;
+		};
+		4C1CCE9F24FE49690004EF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3491C9716A45D76C310454C9 /* Pods-DailyClockUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DailyClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClockUITests/DailyClockUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyClock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C1CCE6324FE49680004EF4E /* Build configuration list for PBXProject "DailyClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1CCE9524FE49690004EF4E /* Debug */,
+				4C1CCE9624FE49690004EF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1CCE9724FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1CCE9824FE49690004EF4E /* Debug */,
+				4C1CCE9924FE49690004EF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1CCE9A24FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1CCE9B24FE49690004EF4E /* Debug */,
+				4C1CCE9C24FE49690004EF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1CCE9D24FE49690004EF4E /* Build configuration list for PBXNativeTarget "DailyClockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1CCE9E24FE49690004EF4E /* Debug */,
+				4C1CCE9F24FE49690004EF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C1CCE6024FE49680004EF4E /* Project object */;
+}
