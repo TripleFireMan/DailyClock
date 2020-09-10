@@ -8,6 +8,7 @@
 
 #import "DKHomeItemTableViewCell.h"
 #import "DKWeekCollectionViewCell.h"
+#import "DKHomeItemClockCollectionViewCell.h"
 
 @interface DKHomeItemTableViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -66,8 +67,8 @@
     }];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(30);
-        make.top.offset(30);
+        make.left.offset(20);
+        make.top.offset(20);
         make.width.height.offset(36);
     }];
     
@@ -78,8 +79,8 @@
     }];
     
     [self.countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.offset(-30);
-        make.centerY.mas_equalTo(self.nameLabel);
+        make.right.offset(-15);
+        make.top.offset(15);
     }];
     
     [self.continueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -93,8 +94,8 @@
     }];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(0);
-        make.right.offset(0);
+        make.left.offset(15);
+        make.right.offset(-15);
         make.height.offset(50);
         make.top.mas_equalTo(self.totalCountLabel.mas_bottom).offset(10);
         make.bottom.offset(-20);
@@ -106,7 +107,10 @@
     self.bgImageView.image = [[UIImage imageNamed:_model.backgroundImage] stretchableImageWithLeftCapWidth:10 topCapHeight:10];
     self.iconImageView.image = [UIImage imageNamed:_model.icon];
     self.nameLabel.text = _model.title;
-    
+    self.countLabel.text = [NSString stringWithFormat:@"%@ 次",@(_model.signModels.count)];
+    self.continueLabel.text = [NSString stringWithFormat:@"连续 %@ 次",@(1)];
+    self.totalCountLabel.text = [NSString stringWithFormat:@"目标 %@ 次",@(_model.signModels.count)];
+    [self.collectionView reloadData];
 }
 
 - (UIImageView *) bgImageView{
@@ -137,7 +141,7 @@
 - (UILabel *) countLabel{
     if (!_countLabel) {
         _countLabel = [UILabel new];
-        _countLabel.font = CYPingFangSCMedium(12);
+        _countLabel.font = CYBebas(20);
         _countLabel.textColor = kTitleColor;
         _countLabel.text = @"";
     }
@@ -167,17 +171,17 @@
 - (UICollectionView *) collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-        flow.itemSize = CGSizeMake(50, 50);
+        flow.itemSize = [[self class] itemSize];
         flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flow.minimumInteritemSpacing = 10.f;
-        flow.headerReferenceSize = CGSizeMake(15, 50);
-        flow.footerReferenceSize = CGSizeMake(15, 50);
+        flow.headerReferenceSize = CGSizeMake(15, [[self class] itemSize].width);
+        flow.footerReferenceSize = CGSizeMake(15, [[self class] itemSize].width);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
         _collectionView.alwaysBounceHorizontal = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.backgroundColor = [UIColor clearColor];
-        [_collectionView registerClass:[DKWeekCollectionViewCell class] forCellWithReuseIdentifier:@"DKWeekCollectionViewCell"];
+        [_collectionView registerClass:[DKHomeItemClockCollectionViewCell class] forCellWithReuseIdentifier:@"DKHomeItemClockCollectionViewCell"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
 //        [_collectionView cy_adjustForIOS13];
@@ -187,12 +191,29 @@
 
 - (__kindof UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     DKTargetPinCiWeekModel *weekModel = [self.model.weekSettings objectAtIndex:indexPath.row];
-    DKWeekCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DKWeekCollectionViewCell" forIndexPath:indexPath];
+    DKHomeItemClockCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DKHomeItemClockCollectionViewCell" forIndexPath:indexPath];
+    cell.model = self.model;
     cell.weekModel = weekModel;
     return cell;
 }
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.model.weekSettings.count;
+}
+
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DKTargetPinCiWeekModel *weekModel = [self.model.weekSettings objectAtIndex:indexPath.row];
+    if ([weekModel isToday] && ![self.model isSignByDate:[NSDate date]]) {
+        DKSignModel *signModel = [DKSignModel new];
+        signModel.date = [NSDate date];
+        [self.model.signModels addObject:signModel];
+        [[DKTargetManager cy_shareInstance] cy_save];
+        [collectionView reloadData];
+    }
+}
+
++ (CGSize) itemSize{
+    float width = (kScreenSize.width - 30 - 30 - 6 * 10) / 7.f;
+    return CGSizeMake(width, width);
 }
 @end

@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) DKTargetModel *model;
 
++ (CGSize) itemSize;
+
 - (void) configModel:(id)model;
 
 @end

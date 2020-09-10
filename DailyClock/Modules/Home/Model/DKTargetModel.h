@@ -41,6 +41,8 @@ typedef NS_ENUM(NSInteger, DKTargetPinCiType){
 /// 结束时间
 @property (nonatomic, strong) NSDate *endDate;
 
+- (BOOL) isSignByDate:(NSDate *)date;
+
 @end
 
 
@@ -49,5 +51,5 @@ typedef NS_ENUM(NSInteger, DKTargetPinCiType){
 @property (nonatomic, copy  ) NSString *weekName;
 @property (nonatomic, assign) NSInteger weekday;
 @property (nonatomic, assign) BOOL isSelected;
-
+- (BOOL) isToday;
 @end

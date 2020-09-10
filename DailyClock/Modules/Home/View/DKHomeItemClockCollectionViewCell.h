@@ -7,11 +7,14 @@
 //  首页打卡cell
 
 #import <UIKit/UIKit.h>
+#import "DKTargetModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DKHomeItemClockCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) DKTargetPinCiWeekModel *weekModel;
+@property (nonatomic, strong) DKTargetModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

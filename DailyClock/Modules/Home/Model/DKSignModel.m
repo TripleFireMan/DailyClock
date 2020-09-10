@@ -9,5 +9,7 @@
 #import "DKSignModel.h"
 
 @implementation DKSignModel
-
+- (void) dealloc{
+    NSLog(@"------");
+}
 @end

@@ -265,6 +265,7 @@
             [vcs removeObjectsInArray:willremove];
             [self.navigationController setViewControllers:vcs animated:NO];
             [self.navigationController popViewControllerAnimated:YES];
+            [[DKTargetManager cy_shareInstance] cy_save];
         }];
     }
     return _saveBtn;
@@ -497,6 +498,8 @@
         _segment = [[UISegmentedControl alloc] initWithItems:@[@"固定",@"每周",@"每月"]];
         _segment.selectedSegmentIndex = 0;
         _segment.tintColor = kContainerColor;
+        [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
+        [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
     }
     return _segment;
 }

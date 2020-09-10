@@ -18,6 +18,13 @@
     return _uniqueId;
 }
 
+- (NSMutableArray <DKSignModel *> *)signModels{
+    if (!_signModels) {
+        _signModels = [NSMutableArray array];
+    }
+    return _signModels;
+}
+
 - (NSMutableArray <DKTargetPinCiWeekModel *> *) weekSettings{
     if (!_weekSettings) {
         _weekSettings = [NSMutableArray array];
@@ -39,17 +46,34 @@
     return _startDate;
 }
 
-//- (NSDate *) endDate{
-//    if (!_endDate) {
-//        _endDate = [[NSDate date] dateByAddingMonths:1];
-//    }
-//    return _endDate;
-//}
+- (NSDate *) endDate{
+    if (!_endDate) {
+        _endDate = [[NSDate date] dateByAddingMonths:1];
+    }
+    return _endDate;
+}
+
+
+- (BOOL) isSignByDate:(NSDate *)date{
+    __block BOOL isSign = NO;
+    [self.signModels enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.date.day == date.day) {
+            isSign = YES;
+//            *stop = YES;
+        }
+    }];
+    return isSign;
+}
 
 @end
 
 @implementation DKTargetPinCiWeekModel
 
-
+- (BOOL) isToday{
+    if (self.weekday == [NSDate date].weekdayOrdinal) {
+        return YES;
+    }
+    return NO;
+}
 @end
 

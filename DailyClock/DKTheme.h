@@ -31,5 +31,6 @@
 
 /// 吸色
 #define kbgColor1               
+#define CYBebas(x)              [UIFont fontWithName:@"Bebas" size:x]
 
 #endif /* DKTheme_h */

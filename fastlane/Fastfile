@@ -79,6 +79,6 @@ platform :ios do
   desc "screet"
   lane:frame do
 	snapshot
-	frame_screenshots(white: true)
+	frame_screenshots
   end
 end

@@ -71,6 +71,9 @@
 		4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
 		4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
+		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
+		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
+		4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
 		4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
 		4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
@@ -153,6 +156,7 @@
 		4C8DA0DC2500F3E500112389 /* DKTargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTargetModel.h; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
 		4CF6868D25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomeItemClockCollectionViewCell.h; sourceTree = "<group>"; };
 		4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomeItemClockCollectionViewCell.m; sourceTree = "<group>"; };
 		5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		4C1CCE6A24FE49680004EF4E /* DailyClock */ = {
 			isa = PBXGroup;
 			children = (
+				4CE63C0D250905FB007EC122 /* Resources */,
 				4C8DA0B72500E6A300112389 /* Modules */,
 				4C1CCE6B24FE49680004EF4E /* AppDelegate.h */,
 				4C1CCE6C24FE49680004EF4E /* AppDelegate.m */,
@@ -340,6 +345,22 @@
 				4C8DA0D72500F18C00112389 /* targets.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4CE63C0D250905FB007EC122 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CE63C0E25090613007EC122 /* TTF */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CE63C0E25090613007EC122 /* TTF */ = {
+			isa = PBXGroup;
+			children = (
+				4CE63C0F25090613007EC122 /* BEBAS___.TTF */,
+			);
+			path = TTF;
 			sourceTree = "<group>";
 		};
 		D150DA5740767EA867855DD7 /* Pods */ = {
@@ -463,6 +484,7 @@
 			files = (
 				4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */,
 				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
+				4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
