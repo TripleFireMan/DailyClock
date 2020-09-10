@@ -36,13 +36,13 @@
     
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [Snapshot snapshot:@"0.png" timeWaitingForIdle:10];
-    [app.buttons[@"tianjia"] tap];
     [Snapshot snapshot:@"1.png" timeWaitingForIdle:10];
-    [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"\u65e9\u8d77"]/*[[".cells.staticTexts[@\"\\u65e9\\u8d77\"]",".staticTexts[@\"\\u65e9\\u8d77\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [app.buttons[@"tianjia"] tap];
     [Snapshot snapshot:@"2.png" timeWaitingForIdle:10];
-    [app.buttons[@"\u4fdd\u5b58"] tap];
+    [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"\u65e9\u8d77"]/*[[".cells.staticTexts[@\"\\u65e9\\u8d77\"]",".staticTexts[@\"\\u65e9\\u8d77\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
     [Snapshot snapshot:@"3.png" timeWaitingForIdle:10];
+    [app.buttons[@"\u4fdd\u5b58"] tap];
+    [Snapshot snapshot:@"4.png" timeWaitingForIdle:10];
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }

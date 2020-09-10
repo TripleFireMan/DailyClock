@@ -31,6 +31,21 @@ Test Flight
 fastlane ios frame
 ```
 screet
+### ios release
+```
+fastlane ios release
+```
+app store
+### ios testflights
+```
+fastlane ios testflights
+```
+testflight
+### ios deliver_app
+```
+fastlane ios deliver_app
+```
+deliver_app
 
 ----
 

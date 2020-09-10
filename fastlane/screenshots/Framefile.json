@@ -1,0 +1,63 @@
+{
+  "default": {
+    "keyword": {
+      "fonts": [
+        {
+          "font": "./fonts/简胖娃.ttf",
+          "supported": ["en-US"]
+        },
+        {
+          "font": "./fonts/简胖娃.ttf",
+          "supported": ["zh-Hans"]
+        }
+      ]
+    },
+    "title": {
+      "fonts": [
+        {
+          "font": "./fonts/简胖娃.ttf",
+          "supported": ["en-US"]
+        },
+        {
+          "font": "./fonts/简胖娃.ttf",
+          "supported": ["zh-Hans"]
+        }
+      ],
+      "color": "#545454"
+    },
+    "background": "./bg.jpg",
+    "padding": 60,
+    "show_complete_frame": false,
+    "stack_title" : true,
+    "title_below_image": false,
+    "frame": "GOLD"
+  },
+
+
+  "data": [
+    {
+      "filter": "1",
+      "keyword": {
+        "color": "#d21559" 
+      }
+    },
+    {
+      "filter": "2",
+      "keyword": {
+        "color": "#feb909"
+      }
+    },
+    {
+      "filter": "3",
+      "keyword": {
+        "color": "#aa4dbc"
+      }
+    },
+    {
+      "filter": "4",
+      "keyword": {
+        "color": "#31bb48"
+      }
+    }
+  ]
+}
