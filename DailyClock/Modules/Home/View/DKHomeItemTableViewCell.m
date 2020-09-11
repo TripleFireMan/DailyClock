@@ -108,8 +108,8 @@
     self.iconImageView.image = [UIImage imageNamed:_model.icon];
     self.nameLabel.text = _model.title;
     self.countLabel.text = [NSString stringWithFormat:@"%@ 次",@(_model.signModels.count)];
-    self.continueLabel.text = [NSString stringWithFormat:@"连续 %@ 次",@(1)];
-    self.totalCountLabel.text = [NSString stringWithFormat:@"目标 %@ 次",@(_model.signModels.count)];
+    self.continueLabel.text = [NSString stringWithFormat:@"连续 %@ 次",@([_model continueCont])];
+    self.totalCountLabel.text = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount])];
     [self.collectionView reloadData];
 }
 
@@ -151,7 +151,7 @@
 - (UILabel *) continueLabel{
     if (!_continueLabel) {
         _continueLabel = [UILabel new];
-        _continueLabel.font = CYPingFangSCMedium(12);
+        _continueLabel.font = CYPingFangSCRegular(12);
         _continueLabel.textColor = kTitleColor;
         _continueLabel.text = @"";
     }
@@ -161,8 +161,8 @@
 - (UILabel *) totalCountLabel{
     if (!_totalCountLabel) {
         _totalCountLabel = [UILabel new];
-        _totalCountLabel.font = CYPingFangSCMedium(12);
-        _totalCountLabel.textColor = kSubTitleColor;
+        _totalCountLabel.font = CYPingFangSCRegular(12);
+        _totalCountLabel.textColor = kTitleColor;
         _totalCountLabel.text = @"";
     }
     return _totalCountLabel;
@@ -205,9 +205,11 @@
     DKTargetPinCiWeekModel *weekModel = [self.model.weekSettings objectAtIndex:indexPath.row];
     if ([weekModel isToday] && ![self.model isSignByDate:[NSDate date]]) {
         DKSignModel *signModel = [DKSignModel new];
-        signModel.date = [NSDate date];
+        NSDate *day = [[NSDate date] dateByAddingDays:0];
+        signModel.date = day;
         [self.model.signModels addObject:signModel];
         [[DKTargetManager cy_shareInstance] cy_save];
+        self.model = self.model;
         [collectionView reloadData];
     }
 }

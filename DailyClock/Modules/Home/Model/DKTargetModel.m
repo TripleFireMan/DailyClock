@@ -31,7 +31,10 @@
         NSArray *weekNames = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
         for (int i = 0; i < 7; i++) {
             DKTargetPinCiWeekModel *weekModel = [DKTargetPinCiWeekModel new];
-            weekModel.weekday = i;
+            weekModel.weekday = i+2;
+            if (i==6) {
+                weekModel.weekday = 1;
+            }
             weekModel.weekName = weekNames[i];
             [_weekSettings addObject:weekModel];
         }
@@ -65,12 +68,71 @@
     return isSign;
 }
 
+- (NSInteger) targetCount{
+    NSInteger targetCount = 0;
+    NSInteger totalDays = [self.endDate timeIntervalSinceDate:self.startDate] / (60*24*60.f);
+    __block NSInteger gudingDays = 0;
+    [self.weekSettings enumerateObjectsUsingBlock:^(DKTargetPinCiWeekModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.isSelected) {
+            gudingDays++;
+        }
+    }];
+    
+    switch (self.pinciType) {
+        case DKTargetPinCiType_Guding:
+        {
+            targetCount = totalDays *gudingDays/7.f;
+        }
+            break;
+        case DKTargetPinCiType_Week:
+        {
+            targetCount = self.weekofDay * totalDays / 7.f;
+        }
+            break;
+        case DKTargetPinCiType_Month:
+        {
+            targetCount = self.monthOfDay * totalDays / 30.f;
+        }
+            break;;
+        default:
+            break;
+    }
+    if (targetCount != 0) {
+        targetCount ++;
+    }
+    return targetCount;
+}
+
+- (NSInteger) continueCont{
+
+    __block NSInteger count = 0;
+    __block NSDate *day = [self.signModels lastObject].date;
+    
+    [[[self.signModels reverseObjectEnumerator] allObjects] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.date isToday] || [obj.date isYesterday]) {
+            count++;
+        }
+        else{
+            if ([day timeIntervalSinceDate:obj.date] > 24 * 60 * 60) {
+                *stop = YES;
+            }
+            else{
+                count++;
+            }
+        }
+        day = obj.date;
+    }];
+    
+    return count;
+}
+
+
 @end
 
 @implementation DKTargetPinCiWeekModel
 
 - (BOOL) isToday{
-    if (self.weekday == [NSDate date].weekdayOrdinal) {
+    if (self.weekday == [NSDate date].weekday) {
         return YES;
     }
     return NO;

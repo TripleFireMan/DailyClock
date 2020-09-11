@@ -43,6 +43,11 @@ typedef NS_ENUM(NSInteger, DKTargetPinCiType){
 
 - (BOOL) isSignByDate:(NSDate *)date;
 
+/// 目标次数
+- (NSInteger) targetCount;
+
+/// 连续次数
+- (NSInteger) continueCont;
 @end
 
 

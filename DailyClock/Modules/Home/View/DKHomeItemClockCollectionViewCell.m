@@ -31,7 +31,7 @@
     
     
     NSDate *today = [NSDate date];
-    if ([today weekdayOrdinal] == _weekModel.weekday) {
+    if ([today weekday] == _weekModel.weekday) {
         self.textLabel.text = @"";
         self.dakaImageView.hidden = NO;
         self.dakaImageView.highlighted = NO;
@@ -45,25 +45,36 @@
         
     }
     else{
+        BOOL isSigned = [self isSigned:_weekModel];
+        if (isSigned) {
+            self.container.backgroundColor = kMainColor;
+        }
+        else{
+            self.container.backgroundColor = [UIColor lightTextColor];
+        }
         self.textLabel.text = _weekModel.weekName;
         self.dakaImageView.hidden = YES;
     }
-    if (_weekModel.isSelected) {
-//        self.container.backgroundColor = kContainerColor;
-//        self.container.layer.borderColor = [UIColor clearColor].CGColor;
-    }
-    else{
-//        self.container.backgroundColor = kMainColor;
-//        self.container.layer.borderColor = [UIColor blackColor].CGColor;
-    }
+}
+
+- (BOOL) isSigned:(DKTargetPinCiWeekModel *)weekModel {
+    __block BOOL isSigned = NO;
+    
+    [[self.model signModels] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.date.weekday == weekModel.weekday) {
+            isSigned = YES;
+        }
+    }];
+    
+    return isSigned;
 }
 
 - (void) layoutSubviews{
     [super layoutSubviews];
     
     CGRect frame = self.bounds;
-//    self.container.layer.cornerRadius = frame.size.width / 2.f;
-//    self.container.layer.masksToBounds = YES;
+    self.container.layer.cornerRadius = frame.size.width / 2.f;
+    self.container.layer.masksToBounds = YES;
 }
 - (id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -125,8 +136,9 @@
     if (!_dakaImageView) {
         _dakaImageView = [UIImageView new];
 //        _dakaImageView.backgroundColor = [UIColor redColor];
-        _dakaImageView.image = [UIImage imageNamed:@"daka"];
-        _dakaImageView.highlightedImage = [UIImage imageNamed:@"wanc"];
+        _dakaImageView.image = [[UIImage imageNamed:@"daka"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _dakaImageView.highlightedImage = [[UIImage imageNamed:@"wanc"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _dakaImageView.tintColor = kMainColor;
     }
     return _dakaImageView;
 }

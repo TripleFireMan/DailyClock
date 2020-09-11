@@ -19,7 +19,7 @@
 - (void) setWeekModel:(DKTargetPinCiWeekModel *)weekModel{
     _weekModel = weekModel;
     self.textLabel.text = _weekModel.weekName;
-    if (_weekModel.isSelected) {
+    if (!_weekModel.isSelected) {
         self.container.backgroundColor = kContainerColor;
         self.container.layer.borderColor = [UIColor clearColor].CGColor;
     }
