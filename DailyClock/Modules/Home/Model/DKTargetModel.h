@@ -13,6 +13,12 @@ typedef NS_ENUM(NSInteger, DKTargetPinCiType){
     DKTargetPinCiType_Month,
 };
 
+typedef NS_ENUM(NSInteger, DKTargetStatus){
+    DKTargetStatus_Doing,
+    DKTargetStatus_Cancel,
+    DKTargetStatus_Finished,
+};
+
 @interface DKTargetModel : NSObject
 
 @property (nonatomic, copy  ) NSString *uniqueId;
@@ -40,6 +46,9 @@ typedef NS_ENUM(NSInteger, DKTargetPinCiType){
 @property (nonatomic, strong) NSDate *startDate;
 /// 结束时间
 @property (nonatomic, strong) NSDate *endDate;
+/// 任务状态
+@property (nonatomic, assign) DKTargetStatus status;
+
 
 - (BOOL) isSignByDate:(NSDate *)date;
 

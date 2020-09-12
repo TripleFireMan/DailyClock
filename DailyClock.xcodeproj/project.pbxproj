@@ -49,6 +49,21 @@
 		4C1CCE7E24FE49690004EF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7D24FE49690004EF4E /* main.m */; };
 		4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE8724FE49690004EF4E /* DailyClockTests.m */; };
 		4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */; };
+		4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
+		4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
+		4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
+		4C51ACFF250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
+		4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
+		4C51AD01250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
+		4C51AD06250B53E4007DEB77 /* img_bling_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD04250B53E4007DEB77 /* img_bling_0.png */; };
+		4C51AD07250B53E4007DEB77 /* img_bling_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD04250B53E4007DEB77 /* img_bling_0.png */; };
+		4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD04250B53E4007DEB77 /* img_bling_0.png */; };
+		4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
+		4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
+		4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
+		4C51AD0E250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
+		4C51AD0F250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
+		4C51AD10250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
 		4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
@@ -149,6 +164,13 @@
 		4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyClockUITests.m; sourceTree = "<group>"; };
 		4C1CCE9424FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "简胖娃.ttf"; sourceTree = "<group>"; };
+		4C51ACFD250B4BD6007DEB77 /* DKSharePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSharePopView.h; sourceTree = "<group>"; };
+		4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSharePopView.m; sourceTree = "<group>"; };
+		4C51AD04250B53E4007DEB77 /* img_bling_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bling_0.png; sourceTree = "<group>"; };
+		4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qqw_bling_bling.json; sourceTree = "<group>"; };
+		4C51AD0C250B7D69007DEB77 /* DKTargetShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetShareViewController.h; sourceTree = "<group>"; };
+		4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetShareViewController.m; sourceTree = "<group>"; };
 		4C8DA0B92500E6D700112389 /* DKApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKApplication.h; sourceTree = "<group>"; };
 		4C8DA0BA2500E6D700112389 /* DKApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKApplication.m; sourceTree = "<group>"; };
 		4C8DA0BE2500E74600112389 /* DKApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Window.h"; sourceTree = "<group>"; };
@@ -275,9 +297,36 @@
 			path = DailyClockUITests;
 			sourceTree = "<group>";
 		};
+		4C51ACFC250B4BB8007DEB77 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				4C51ACFD250B4BD6007DEB77 /* DKSharePopView.h */,
+				4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		4C51AD02250B53E4007DEB77 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				4C51AD03250B53E4007DEB77 /* images */,
+				4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		4C51AD03250B53E4007DEB77 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4C51AD04250B53E4007DEB77 /* img_bling_0.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		4C8DA0B72500E6A300112389 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4C51ACFC250B4BB8007DEB77 /* Share */,
 				4C8DA0C42500E87F00112389 /* Home */,
 				4C8DA0B82500E6AB00112389 /* Config */,
 			);
@@ -317,6 +366,8 @@
 				4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */,
 				4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */,
 				4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */,
+				4C51AD0C250B7D69007DEB77 /* DKTargetShareViewController.h */,
+				4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -365,6 +416,7 @@
 		4CE63C0D250905FB007EC122 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C51AD02250B53E4007DEB77 /* Lottie */,
 				4CE63C0E25090613007EC122 /* TTF */,
 			);
 			path = Resources;
@@ -373,6 +425,7 @@
 		4CE63C0E25090613007EC122 /* TTF */ = {
 			isa = PBXGroup;
 			children = (
+				4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */,
 				4CE63C0F25090613007EC122 /* BEBAS___.TTF */,
 			);
 			path = TTF;
@@ -501,6 +554,9 @@
 				4CE63C202509BDA8007EC122 /* title.strings in Resources */,
 				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
 				4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C51AD06250B53E4007DEB77 /* img_bling_0.png in Resources */,
+				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
+				4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1C2509B85F007EC122 /* Framefile.json in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 				4CE63C142509B830007EC122 /* keyword.strings in Resources */,
@@ -511,10 +567,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1D2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
 				4CE63C152509B830007EC122 /* keyword.strings in Resources */,
+				4C51AD07250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4CE63C212509BDA8007EC122 /* title.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,10 +582,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1E2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
 				4CE63C162509B830007EC122 /* keyword.strings in Resources */,
+				4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4CE63C222509BDA8007EC122 /* title.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +683,7 @@
 			files = (
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
+				4C51AD0E250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
@@ -640,6 +703,7 @@
 				4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C07C44725061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C8DA0D42500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4C51ACFF250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +721,7 @@
 				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4C51AD0F250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
@@ -666,6 +731,7 @@
 				4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A953250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
 				4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */,
+				4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 				4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +742,7 @@
 			files = (
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
+				4C51AD10250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
@@ -695,6 +762,7 @@
 				4C07A954250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
 				4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */,
 				4C07A93B2501DE740064CB76 /* DKTargetManager.m in Sources */,
+				4C51AD01250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

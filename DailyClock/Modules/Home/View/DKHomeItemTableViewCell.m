@@ -203,14 +203,21 @@
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     DKTargetPinCiWeekModel *weekModel = [self.model.weekSettings objectAtIndex:indexPath.row];
-    if ([weekModel isToday] && ![self.model isSignByDate:[NSDate date]]) {
-        DKSignModel *signModel = [DKSignModel new];
-        NSDate *day = [[NSDate date] dateByAddingDays:0];
-        signModel.date = day;
-        [self.model.signModels addObject:signModel];
-        [[DKTargetManager cy_shareInstance] cy_save];
-        self.model = self.model;
-        [collectionView reloadData];
+    if ([weekModel isToday]) {
+        if (![self.model isSignByDate:[NSDate date]]) {
+            DKSignModel *signModel = [DKSignModel new];
+            NSDate *day = [[NSDate date] dateByAddingDays:0];
+            signModel.date = day;
+            [self.model.signModels addObject:signModel];
+            [[DKTargetManager cy_shareInstance] cy_save];
+            self.model = self.model;
+            [collectionView reloadData];
+            self.clickBlock ? self.clickBlock(signModel) : nil;
+        }
+        else{
+            [XHToast showBottomWithText:@"亲，您今天已经打过卡了哦~"];
+        }
+
     }
 }
 

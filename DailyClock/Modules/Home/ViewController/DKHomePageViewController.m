@@ -7,6 +7,7 @@
 #import "DKHomePageViewController.h"
 #import "DKCreateTargetViewController.h"
 #import "DKHomeItemTableViewCell.h"
+#import "DKSharePopView.h"
 
 @interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -68,10 +69,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    @weakify(self);
     DKTargetModel *model = [[DKTargetManager cy_shareInstance].items objectAtIndex:indexPath.row];
     static NSString *identifier = @"DKHomeItemTableViewCell";
     DKHomeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.model = model;
+    cell.clickBlock = ^(id obj) {
+        @strongify(self);
+        [DKSharePopView showOnView:self.view confirmAction:^{
+            [self p_save:model];
+        } shareAction:^{
+            [self p_save:model];
+            [self p_share:model];
+        } cancelAction:^{
+            
+        } targetModel:model signModel:obj];
+        
+    };
     return cell;
 }
 
@@ -82,7 +96,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+}
+
+
+/// 分享
+/// @param model 目标参数
+- (void) p_share:(DKTargetModel *)model {
     
+}
+
+
+/// 保存
+/// @param model 目标参数
+- (void) p_save:(DKTargetModel *)model{
+    [[DKTargetManager cy_shareInstance] cy_save];
 }
 
 

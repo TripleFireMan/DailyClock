@@ -53,8 +53,13 @@ PODS:
     - ReactiveObjC
     - XHToast
     - YYKit
+  - CYLTabBarController/Core (1.28.3)
+  - CYLTabBarController/Lottie (1.28.3):
+    - CYLTabBarController/Core
+    - lottie-ios (~> 2.5.3)
   - FastCoding (3.3)
   - IQKeyboardManager (6.4.2)
+  - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - MJExtension (3.2.2)
   - MJRefresh (3.2.2)
@@ -67,9 +72,12 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
+  - ZWLimitCounter (0.0.2)
+  - ZWPlaceHolder (0.0.2)
 
 DEPENDENCIES:
   - CYKit (from `https://github.com/TripleFireMan/CYKit.git`)
+  - CYLTabBarController/Lottie (= 1.28.3)
   - FastCoding (= 3.3)
   - IQKeyboardManager (= 6.4.2)
   - Masonry (= 1.1.0)
@@ -77,12 +85,16 @@ DEPENDENCIES:
   - SDWebImage (= 5.5.2)
   - XHToast
   - YYKit
+  - ZWLimitCounter (= 0.0.2)
+  - ZWPlaceHolder
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
+    - CYLTabBarController
     - FastCoding
     - IQKeyboardManager
+    - lottie-ios
     - Masonry
     - MJExtension
     - MJRefresh
@@ -91,6 +103,8 @@ SPEC REPOS:
     - SDWebImage
     - XHToast
     - YYKit
+    - ZWLimitCounter
+    - ZWPlaceHolder
 
 EXTERNAL SOURCES:
   CYKit:
@@ -104,8 +118,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CYKit: 3aca21bbbd548d9d817fe2be055ac86767ab93ad
+  CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
   IQKeyboardManager: b41e0a4943fbac4c11a239d31a688667675f962e
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
@@ -114,7 +130,9 @@ SPEC CHECKSUMS:
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
+  ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: a0c9c1026b9d536ef5220463c8a838f033413b55
+PODFILE CHECKSUM: 4738b75b27dac0c55da5d0e6166b3ae1fe629ba2
 
 COCOAPODS: 1.9.1
