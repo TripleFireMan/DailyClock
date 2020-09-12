@@ -21,7 +21,7 @@
     if (result.count != 0) {
         return;
     }
-    [self.items addObject:target];
+    [self.items insertObject:target atIndex:0];
 }
 
 - (void) removeTarget:(DKTargetModel *)target{
@@ -32,5 +32,20 @@
     }
     [self.items removeObject:result.firstObject];
     
+}
+- (NSArray<DKTargetModel *> *) activeModels{
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"status==%@",@(0)];
+    NSArray *result = [self.items filteredArrayUsingPredicate:pre];
+    return result;
+}
+- (NSArray<DKTargetModel *> *) finishedModels{
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"status==%@",@(2)];
+    NSArray *result = [self.items filteredArrayUsingPredicate:pre];
+    return result;
+}
+- (NSArray<DKTargetModel *> *) cancelModels{
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"status==%@",@(1)];
+    NSArray *result = [self.items filteredArrayUsingPredicate:pre];
+    return result;
 }
 @end

@@ -70,7 +70,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     @weakify(self);
-    DKTargetModel *model = [[DKTargetManager cy_shareInstance].items objectAtIndex:indexPath.row];
+    DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
     static NSString *identifier = @"DKHomeItemTableViewCell";
     DKHomeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.model = model;
@@ -91,7 +91,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [DKTargetManager cy_shareInstance].items.count;
+    return [[DKTargetManager cy_shareInstance] activeModels].count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,6 +99,35 @@
 
 }
 
+
+- (UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels]objectAtIndex:indexPath.row];
+        model.status = DKTargetStatus_Cancel;
+        [[DKTargetManager cy_shareInstance] cy_save];
+        [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+- (NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除目标";
+}
+
+//- (UISwipeActionsConfiguration *) tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0)){
+//    UIContextualAction *action = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除任务" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+//        DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels]objectAtIndex:indexPath.row];
+//        model.status = DKTargetStatus_Cancel;
+//        [[DKTargetManager cy_shareInstance] cy_save];
+//        completionHandler(YES);
+//        [self.tableView reloadData];
+//    }];
+//    action.backgroundColor = [UIColor redColor];
+//    UISwipeActionsConfiguration *config = [UISwipeActionsConfiguration configurationWithActions:@[action]];
+//    return config;
+//}
 
 /// 分享
 /// @param model 目标参数

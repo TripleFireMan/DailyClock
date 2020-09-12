@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) addTarget:(DKTargetModel *)target;
 - (void) removeTarget:(DKTargetModel *)target;
+
+- (NSArray<DKTargetModel *> *) activeModels;
+- (NSArray<DKTargetModel *> *) finishedModels;
+- (NSArray<DKTargetModel *> *) cancelModels;
 @end
 
 NS_ASSUME_NONNULL_END

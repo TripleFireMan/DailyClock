@@ -137,6 +137,7 @@
         _inputTf.font = CYPingFangSCMedium(14.f);
         _inputTf.textColor = kDetailColor;
         _inputTf.textAlignment = NSTextAlignmentCenter;
+        _inputTf.keyboardType  = UIKeyboardTypeNumberPad;
     }
     return _inputTf;
 }

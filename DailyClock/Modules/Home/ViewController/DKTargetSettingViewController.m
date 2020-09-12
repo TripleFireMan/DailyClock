@@ -254,6 +254,11 @@
         [_saveBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [[_saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            if (CYStringIsEmpty(self.nameTF.text)) {
+                [XHToast showBottomWithText:@"请设置目标名称"];
+                return;
+            }
+            self.model.title = self.nameTF.text;
             [[DKTargetManager cy_shareInstance] addTarget:self.model];
             NSMutableArray *vcs = [self.navigationController viewControllers].mutableCopy;
             NSMutableArray *willremove = @[].mutableCopy;
