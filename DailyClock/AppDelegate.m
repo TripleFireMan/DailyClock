@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DKApplication.h"
+#import "JPUSHService.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,12 @@
     return YES;
 }
 
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken:%@",deviceToken);
+    [JPUSHService registerDeviceToken:deviceToken];
+}
 
 
 @end

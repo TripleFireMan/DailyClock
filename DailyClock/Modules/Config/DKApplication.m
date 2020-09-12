@@ -13,6 +13,7 @@
 
 - (void)setup:(NSDictionary *)launchInfo{
     [self initwindow:launchInfo];
+    [self configJPush:launchInfo];
 }
 
 @end

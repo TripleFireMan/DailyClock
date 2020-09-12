@@ -14,6 +14,7 @@ def DKPods()
   pod 'CYLTabBarController/Lottie', '1.28.3'
   pod 'ZWPlaceHolder'
   pod 'ZWLimitCounter','0.0.2'
+  pod 'JPush', '~> 3.1.0'
 end
 
 target 'DailyClock' do

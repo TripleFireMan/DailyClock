@@ -8,10 +8,11 @@
 
 #import "DKApplication.h"
 #import "DKApplication+Window.h"
-
+#import "DKApplication+JPush.h"
+#import "JPUSHService.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DKApplication ()
+@interface DKApplication ()<JPUSHRegisterDelegate>
 
 @end
 

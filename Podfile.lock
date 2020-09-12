@@ -59,6 +59,9 @@ PODS:
     - lottie-ios (~> 2.5.3)
   - FastCoding (3.3)
   - IQKeyboardManager (6.4.2)
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
   - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - MJExtension (3.2.2)
@@ -80,6 +83,7 @@ DEPENDENCIES:
   - CYLTabBarController/Lottie (= 1.28.3)
   - FastCoding (= 3.3)
   - IQKeyboardManager (= 6.4.2)
+  - JPush (~> 3.1.0)
   - Masonry (= 1.1.0)
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
@@ -94,6 +98,8 @@ SPEC REPOS:
     - CYLTabBarController
     - FastCoding
     - IQKeyboardManager
+    - JCore
+    - JPush
     - lottie-ios
     - Masonry
     - MJExtension
@@ -121,6 +127,8 @@ SPEC CHECKSUMS:
   CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
   IQKeyboardManager: b41e0a4943fbac4c11a239d31a688667675f962e
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
@@ -133,6 +141,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 4738b75b27dac0c55da5d0e6166b3ae1fe629ba2
+PODFILE CHECKSUM: 9ce9e11050b776f8dd33966d9988ad8049a3a26b
 
 COCOAPODS: 1.9.1
