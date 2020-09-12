@@ -61,9 +61,15 @@
 		4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
 		4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
 		4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */; };
-		4C51AD0E250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
-		4C51AD0F250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
-		4C51AD10250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */; };
+		4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
+		4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
+		4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
+		4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
+		4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
+		4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
+		4C51AD1F250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
+		4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
+		4C51AD21250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
 		4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
@@ -169,8 +175,11 @@
 		4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSharePopView.m; sourceTree = "<group>"; };
 		4C51AD04250B53E4007DEB77 /* img_bling_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bling_0.png; sourceTree = "<group>"; };
 		4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qqw_bling_bling.json; sourceTree = "<group>"; };
-		4C51AD0C250B7D69007DEB77 /* DKTargetShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetShareViewController.h; sourceTree = "<group>"; };
-		4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetShareViewController.m; sourceTree = "<group>"; };
+		4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetSharedViewController.h; sourceTree = "<group>"; };
+		4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetSharedViewController.m; sourceTree = "<group>"; };
+		4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKTargetSharedViewController.xib; sourceTree = "<group>"; };
+		4C51AD1D250CAC42007DEB77 /* DKMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKMineViewController.h; sourceTree = "<group>"; };
+		4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKMineViewController.m; sourceTree = "<group>"; };
 		4C8DA0B92500E6D700112389 /* DKApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKApplication.h; sourceTree = "<group>"; };
 		4C8DA0BA2500E6D700112389 /* DKApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKApplication.m; sourceTree = "<group>"; };
 		4C8DA0BE2500E74600112389 /* DKApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Window.h"; sourceTree = "<group>"; };
@@ -323,9 +332,35 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		4C51AD1A250CAC24007DEB77 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4C51AD1C250CAC2F007DEB77 /* ViewController */,
+				4C51AD1B250CAC28007DEB77 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		4C51AD1B250CAC28007DEB77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C51AD1C250CAC2F007DEB77 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C51AD1D250CAC42007DEB77 /* DKMineViewController.h */,
+				4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4C8DA0B72500E6A300112389 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4C51AD1A250CAC24007DEB77 /* Mine */,
 				4C51ACFC250B4BB8007DEB77 /* Share */,
 				4C8DA0C42500E87F00112389 /* Home */,
 				4C8DA0B82500E6AB00112389 /* Config */,
@@ -366,8 +401,9 @@
 				4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */,
 				4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */,
 				4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */,
-				4C51AD0C250B7D69007DEB77 /* DKTargetShareViewController.h */,
-				4C51AD0D250B7D69007DEB77 /* DKTargetShareViewController.m */,
+				4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */,
+				4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */,
+				4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -558,6 +594,7 @@
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1C2509B85F007EC122 /* Framefile.json in Resources */,
+				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 				4CE63C142509B830007EC122 /* keyword.strings in Resources */,
 			);
@@ -567,6 +604,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1D2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
@@ -582,6 +620,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1E2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
@@ -681,9 +720,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51AD1F250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
-				4C51AD0E250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
@@ -694,6 +733,7 @@
 				4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C1CCE7E24FE49690004EF4E /* main.m in Sources */,
 				4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */,
@@ -715,13 +755,14 @@
 				4C07C44825061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C07C44D250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C07A93F2501DE920064CB76 /* DKSignModel.m in Sources */,
+				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
 				4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */,
+				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
-				4C51AD0F250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
@@ -740,9 +781,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C51AD21250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
-				4C51AD10250B7D69007DEB77 /* DKTargetShareViewController.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
@@ -753,6 +794,7 @@
 				4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */,
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */,

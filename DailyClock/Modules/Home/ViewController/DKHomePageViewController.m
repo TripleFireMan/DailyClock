@@ -8,7 +8,7 @@
 #import "DKCreateTargetViewController.h"
 #import "DKHomeItemTableViewCell.h"
 #import "DKSharePopView.h"
-
+#import "DKTargetSharedViewController.h"
 @interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 
@@ -24,15 +24,39 @@
 #pragma mark - def
 
 #pragma mark - override
+- (id) init{
+    self  = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"首页";
+    self.titleLabel.text = @"打卡";
 }
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self loadData];
+}
+
+- (void) loadData {
+    @weakify(self);
+    if ([DKTargetManager cy_shareInstance].activeModels.count == 0) {
+        [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"你还没有创建目标，点击右上角开始吧~" topMargin:200 clickRefresh:^{
+            @strongify(self);
+            [self loadData];
+        }];
+    }
+    else{
+        [self.tableView cy_hideAll];
+    }
+    
     [self.tableView reloadData];
+    
+    
 }
 
 - (void) setupSubView
@@ -81,6 +105,14 @@
         } shareAction:^{
             [self p_save:model];
             [self p_share:model];
+            
+            DKTargetSharedViewController *shareObj =  [[DKTargetSharedViewController alloc] initWithNibName:@"DKTargetSharedViewController" bundle:[NSBundle mainBundle]];
+            shareObj.modalPresentationStyle = UIModalPresentationFullScreen;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareObj];
+            nav.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self.navigationController presentViewController:nav animated:YES completion:nil];
+            
+            
         } cancelAction:^{
             
         } targetModel:model signModel:obj];
@@ -110,6 +142,9 @@
         model.status = DKTargetStatus_Cancel;
         [[DKTargetManager cy_shareInstance] cy_save];
         [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationFade];
+        if ([DKTargetManager cy_shareInstance].activeModels.count == 0) {
+            [self loadData];
+        }
     }
 }
 - (NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -149,7 +184,7 @@
     @weakify(self);
     if (!_addBtn) {
         _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *addImg = [[UIImage imageNamed:@"tianjia"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIImage *addImg = [[UIImage imageNamed:@"NavView_Add"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [_addBtn setImage:addImg forState:UIControlStateNormal];
         _addBtn.tintColor = kThemeGray;
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {

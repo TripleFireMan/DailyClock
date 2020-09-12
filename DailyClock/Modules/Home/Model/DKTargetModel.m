@@ -49,6 +49,13 @@
     return _startDate;
 }
 
+- (NSDate *) createDate{
+    if (!_createDate) {
+        _createDate = [NSDate date];
+    }
+    return _createDate;
+}
+
 - (NSDate *) endDate{
     if (!_endDate) {
         _endDate = [[NSDate date] dateByAddingMonths:1];

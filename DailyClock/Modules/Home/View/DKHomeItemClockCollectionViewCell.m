@@ -32,25 +32,40 @@
     
     NSDate *today = [NSDate date];
     if ([today weekday] == _weekModel.weekday) {
-        self.textLabel.text = @"";
-        self.dakaImageView.hidden = NO;
-        self.dakaImageView.highlighted = NO;
+        self.textLabel.text = @"打卡";
+        self.textLabel.font = CYPingFangSCBold(14);
+        
+        self.dakaImageView.hidden = YES;
+//        self.dakaImageView.highlighted = NO;
+        self.container.backgroundColor = [UIColor redColor];
+        self.textLabel.textColor = [UIColor whiteColor];
+        self.container.layer.borderColor = [UIColor clearColor].CGColor;
         [self.model.signModels enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj.date isToday]) {
-                self.dakaImageView.highlighted = YES;
-                self.dakaImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+//                self.dakaImageView.hidden = YES;
+                self.textLabel.text = @"今天";
+                self.container.backgroundColor = kMainColor;
+                self.textLabel.font = CYPingFangSCRegular(11);
+                self.textLabel.textColor = [UIColor blackColor];
+                self.container.layer.borderColor = [UIColor clearColor].CGColor;
+//                self.dakaImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
                 *stop = YES;
             }
         }];
         
     }
     else{
+        self.textLabel.font = CYPingFangSCRegular(11);
         BOOL isSigned = [self isSigned:_weekModel];
         if (isSigned) {
             self.container.backgroundColor = kMainColor;
+            self.textLabel.textColor = [UIColor blackColor];
+            self.container.layer.borderColor = [UIColor clearColor].CGColor;
         }
         else{
             self.container.backgroundColor = [UIColor lightTextColor];
+            self.textLabel.textColor = [UIColor blackColor];
+            self.container.layer.borderColor = [UIColor clearColor].CGColor;
         }
         self.textLabel.text = _weekModel.weekName;
         self.dakaImageView.hidden = YES;

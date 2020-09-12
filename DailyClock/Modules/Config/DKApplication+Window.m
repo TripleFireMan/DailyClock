@@ -11,6 +11,7 @@
 #import "DKHomePageViewController.h"
 #import "AppDelegate.h"
 #import "DKCreateTargetViewController.h"
+#import "DKMineViewController.h"
 
 @implementation DKApplication (Window)
 - (void) initwindow:(NSDictionary *)laucnInfo{
@@ -20,13 +21,21 @@
     
     DKHomePageViewController *home = [DKHomePageViewController new];
     UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:home];
-    [[CYCustomTabBarController shareInstance] addChildViewController:homeNavi title:@"打卡" image:nil selectedImage:nil color:[UIColor whiteColor] selectedColor:[UIColor blackColor]];
-    app.window.rootViewController = [CYCustomTabBarController shareInstance];
+    [[CYCustomTabBarController shareInstance] addChildViewController:homeNavi title:@"打卡" image:[UIImage imageNamed:@"TabBar_PunchCard_Nor"] selectedImage:[UIImage imageNamed:@"TabBar_PunchCard_Sel"] color:[UIColor lightGrayColor] selectedColor:[UIColor lightGrayColor]];
+    
     
 
     
-    DKCreateTargetViewController *createTarget = [DKCreateTargetViewController new];
-    [[CYCustomTabBarController shareInstance] addChildViewController:createTarget title:@"任务" image:nil selectedImage:nil color:nil selectedColor:nil];
+    DKMineViewController *mine = [DKMineViewController new];
+    UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mine];
+    [[CYCustomTabBarController shareInstance] addChildViewController:mineNavi title:@"我的" image:[UIImage imageNamed:@"TabBar_My_Nor"] selectedImage:[UIImage imageNamed:@"TabBar_My_Sel"] color:[UIColor lightGrayColor] selectedColor:[UIColor lightGrayColor]];
+    
+    UITabBarController *tabbar = [[UITabBarController alloc] init];
+    [tabbar addChildViewController:homeNavi];
+    [tabbar addChildViewController:mineNavi];
+    tabbar.tabBar.tintColor = [UIColor blackColor];
+    
+    app.window.rootViewController = tabbar;
     
     [app.window makeKeyAndVisible];
 }

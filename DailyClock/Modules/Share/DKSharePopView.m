@@ -7,6 +7,7 @@
 //
 
 #import "DKSharePopView.h"
+#import "UITextView+ZWPlaceHolder.h"
 
 @interface DKSharePopView ()
 {
@@ -205,13 +206,13 @@
     }];
 
     [self->_xqImgView[0] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self->_xqImgView[1].mas_left).offset(-30);
+        make.left.offset(30);
         make.top.mas_equalTo(self.messageLabel.mas_bottom).offset(15);
         make.width.height.offset(32.5);
     }];
     
     [self->_xqImgView[2] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self->_xqImgView[1].mas_right).offset(30);
+        make.right.offset(-30);
         make.top.mas_equalTo(self.messageLabel.mas_bottom).offset(15);
         make.width.height.offset(32.5);
     }];
@@ -246,7 +247,7 @@
 - (void) setTargetModel:(DKTargetModel *)targetModel
 {
     _targetModel = targetModel;
-    NSString *text = [NSString stringWithFormat:@"您已累计打卡%@次,连续打卡%@次,距离目标还剩%@次,加油吧~~~",@([_targetModel signModels].count),@([_targetModel continueCont]),@([_targetModel targetCount])];
+    NSString *text = [NSString stringWithFormat:@"您已累计打卡%@次\n连续打卡%@次\n距离目标还剩%@次\n加油吧~~~",@([_targetModel signModels].count),@([_targetModel continueCont]),@([_targetModel targetCount])];
     
     NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:text];
     att.font = CYPingFangSCMedium(14.f);
@@ -267,6 +268,13 @@
     [att setColor:kMainColor range:range1];
     [att setColor:kMainColor range:range2];
     [att setColor:kMainColor range:range3];
+    
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 10.f; // 调整行间距
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    NSRange range = NSMakeRange(0, [text length]);
+    [att addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     
     self.messageLabel.attributedText = att;
     
@@ -352,6 +360,7 @@
         _textView = [UITextView new];
         _textView.backgroundColor = [UIColor clearColor];
         _textView.font = CYPingFangSCRegular(14.f);
+        _textView.zw_placeHolder = @"写点什么吧";
     }
     return _textView;
 }

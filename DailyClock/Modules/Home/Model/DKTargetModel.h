@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 /// 任务状态
 @property (nonatomic, assign) DKTargetStatus status;
 
+/// 任务创建日期
+@property (nonatomic, strong) NSDate *createDate;
 
 - (BOOL) isSignByDate:(NSDate *)date;
 

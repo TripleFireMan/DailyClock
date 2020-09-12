@@ -116,6 +116,10 @@
 - (UIImageView *) bgImageView{
     if (!_bgImageView) {
         _bgImageView = [UIImageView new];
+////        _bgImageView.layer.shadowColor = kBorderColor.CGColor;
+////        _bgImageView.layer.shadowOpacity  = 1;
+//        _bgImageView.backgroundColor = RGBColor(87, 217, 214);
+//        _bgImageView.layer.cornerRadius = 12.f;
         _bgImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _bgImageView;

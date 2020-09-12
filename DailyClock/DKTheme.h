@@ -29,7 +29,7 @@
 #define kContainerColor         RGBColor(246, 247, 241)
 
 /// 主题色
-#define kMainColor              RGBColor(232, 62, 45)
+#define kMainColor              [UIColor colorWithHexString:@"#FFC500"]//RGBColor(232, 62, 45)FFC500
 
 /// 吸色
 #define kbgColor1               
