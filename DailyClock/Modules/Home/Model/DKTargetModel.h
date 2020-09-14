@@ -51,6 +51,8 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 
 /// 任务创建日期
 @property (nonatomic, strong) NSDate *createDate;
+/// 自动弹打卡日志
+@property (nonatomic, assign) BOOL shouldAutoDaily;
 
 - (BOOL) isSignByDate:(NSDate *)date;
 

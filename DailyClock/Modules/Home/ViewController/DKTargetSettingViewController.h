@@ -9,7 +9,7 @@
 @interface DKTargetSettingViewController: CYBaseViewController
 
 @property (nonatomic, strong) DKTargetModel *targetModel;
-
+@property (nonatomic, strong) DKTargetModel *editModel;
 #pragma mark- as
 
 #pragma mark- model

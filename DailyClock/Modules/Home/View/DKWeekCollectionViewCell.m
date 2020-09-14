@@ -32,7 +32,7 @@
 - (void) layoutSubviews{
     [super layoutSubviews];
     
-    self.container.layer.cornerRadius = 25.f;
+    self.container.layer.cornerRadius = 18.f;
     self.container.layer.masksToBounds = YES;
 }
 - (id) initWithFrame:(CGRect)frame{
@@ -56,10 +56,8 @@
     if (!_container) {
         _container = [UIView new];
         _container.backgroundColor = kMainColor;
-        _container.layer.borderWidth = 2;
+        _container.layer.borderWidth = 1;
         _container.layer.borderColor = [UIColor blackColor].CGColor;
-        _container.layer.cornerRadius = 8.f;
-        _container.layer.masksToBounds = YES;
     }
     return _container;
 }
@@ -67,7 +65,7 @@
 - (UILabel *) textLabel{
     if (!_textLabel) {
         _textLabel = [UILabel new];
-        _textLabel.font = CYPingFangSCMedium(12);
+        _textLabel.font = CYPingFangSCRegular(12);
         _textLabel.textColor = [UIColor blackColor];
     }
     return _textLabel;

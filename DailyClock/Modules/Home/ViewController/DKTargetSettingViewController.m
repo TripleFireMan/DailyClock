@@ -38,6 +38,13 @@
 @property (nonatomic, strong) DKPingCiSettingView *pingciSettingView;
 @property (nonatomic, strong) UIView    *pingciBlank;
 
+/// 日志弹出开关
+@property (nonatomic, strong) UIView    *rizhiContainer;
+@property (nonatomic, strong) UILabel   *rizhiLabel;
+@property (nonatomic, strong) UILabel   *rizhiTextLabel;
+@property (nonatomic, strong) UISwitch  *rizhiSwitch;
+@property (nonatomic, strong) UIView    *rizhiBlank;
+
 /// 页面创建的目标对象
 @property (nonatomic, strong) DKTargetModel *model;
 
@@ -53,13 +60,19 @@
 {
     [super viewDidLoad];
     @weakify(self);
-    self.titleLabel.text = @"设置目标";
+    self.titleLabel.text = self.editModel? @"编辑目标": @"设置目标";
     self.shouldShowBackBtn = YES;
     self.backBtn.tintColor = kThemeGray;
     self.shouldShowBottomLine = YES;
     
-    if (self.targetModel.ID != 0) {
-        self.nameTF.text = self.targetModel.title;
+    if (self.editModel) {
+        self.model = self.editModel;
+        self.nameTF.text = self.model.title;
+    }
+    else{
+        if (self.targetModel.ID != 0) {
+            self.nameTF.text = self.targetModel.title;
+        }
     }
     
     [RACObserve(self.segment, selectedSegmentIndex) subscribeNext:^(id  _Nullable x) {
@@ -96,6 +109,12 @@
     [self.pingciContainer addSubview:self.segment];
     [self.pingciContainer addSubview:self.pingciSettingView];
     [self.pingciContainer addSubview:self.pingciBlank];
+    
+    [self.scrollView addSubview:self.rizhiContainer];
+    [self.rizhiContainer addSubview:self.rizhiLabel];
+    [self.rizhiContainer addSubview:self.rizhiTextLabel];
+    [self.rizhiContainer addSubview:self.rizhiSwitch];
+    [self.rizhiContainer addSubview:self.rizhiBlank];
 }
 
 - (void) addConstraints
@@ -202,16 +221,9 @@
     }];
     
     [self.pingciSettingView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.pingciLabel.mas_bottom).offset(15);
+        make.top.mas_equalTo(self.pingciLabel.mas_bottom).offset(0);
         make.left.right.offset(0);
-        make.height.offset(100);
-    }];
-    
-    [self.pingciBlank mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.offset(0);
-        make.top.mas_equalTo(self.pingciSettingView.mas_bottom).offset(15);
-        make.bottom.offset(0);
-        make.height.offset(10);
+        make.height.offset(80);
     }];
     
     [self.segment mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -219,6 +231,41 @@
         make.centerY.mas_equalTo(self.pingciLabel);
     }];
     
+    [self.pingciBlank mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.offset(0);
+        make.top.mas_equalTo(self.pingciSettingView.mas_bottom).offset(0);
+        make.height.offset(10);
+        make.bottom.offset(0);
+    }];
+    
+    [self.rizhiContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(0);
+        make.right.offset(0);
+        make.top.mas_equalTo(self.pingciContainer.mas_bottom).offset(0);
+    }];
+
+    [self.rizhiLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(20);
+        make.left.offset(15);
+    }];
+    
+    [self.rizhiTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(15);
+        make.top.mas_equalTo(self.rizhiLabel.mas_bottom).offset(20);
+        
+    }];
+    
+    [self.rizhiSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(-15);
+        make.centerY.mas_equalTo(self.rizhiTextLabel);
+    }];
+    
+    [self.rizhiBlank mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.rizhiTextLabel.mas_bottom).offset(20);
+        make.bottom.offset(0);
+        make.left.right.offset(0);
+        make.height.offset(10);
+    }];
     
 }
 
@@ -485,7 +532,7 @@
 - (DKPingCiSettingView *) pingciSettingView{
     if (!_pingciSettingView) {
         _pingciSettingView = [DKPingCiSettingView new];
-        _pingciSettingView.model = self.model;
+        _pingciSettingView.model = self.editModel? : self.model;
     }
     return _pingciSettingView;
 }
@@ -493,15 +540,64 @@
 - (UIView *) pingciBlank{
     if (!_pingciBlank) {
         _pingciBlank = [UIView new];
-        _pingciBlank.backgroundColor = [UIColor clearColor];
+        _pingciBlank.backgroundColor = kBackGroungColor;
     }
     return _pingciBlank;
+}
+
+- (UIView *) rizhiContainer{
+    if (!_rizhiContainer) {
+        _rizhiContainer = [UIView new];
+    }
+    return _rizhiContainer;
+}
+
+- (UILabel *) rizhiLabel{
+    if (!_rizhiLabel) {
+        _rizhiLabel = [UILabel new];
+        _rizhiLabel.font = CYPingFangSCMedium(16.f);
+        _rizhiLabel.textColor = [UIColor blackColor];
+        _rizhiLabel.text = @"日志设置";
+    }
+    return _rizhiLabel;
+}
+
+- (UILabel *) rizhiTextLabel{
+    if (!_rizhiTextLabel) {
+        _rizhiTextLabel = [UILabel new];
+        _rizhiTextLabel.font = CYPingFangSCMedium(12);
+        _rizhiTextLabel.textColor = [UIColor darkTextColor];
+        _rizhiTextLabel.text = @"是否自动弹出打卡日志";
+    }
+    return _rizhiTextLabel;
+}
+
+- (UISwitch *)rizhiSwitch{
+    @weakify(self);
+    if (!_rizhiSwitch) {
+        _rizhiSwitch = [[UISwitch alloc] init];
+        _rizhiSwitch.onTintColor = kMainColor;
+        _rizhiSwitch.on = self.editModel?self.editModel.shouldAutoDaily:self.model.shouldAutoDaily;
+        [[_rizhiSwitch rac_newOnChannel] subscribeNext:^(NSNumber * _Nullable x) {
+            @strongify(self);
+            self.model.shouldAutoDaily = [x boolValue];
+        }];
+    }
+    return _rizhiSwitch;
+}
+
+- (UIView *)rizhiBlank{
+    if (!_rizhiBlank) {
+        _rizhiBlank = [UIView new];
+        _rizhiBlank.backgroundColor = kBackGroungColor;
+    }
+    return _rizhiBlank;
 }
 
 - (UISegmentedControl *) segment{
     if (!_segment) {
         _segment = [[UISegmentedControl alloc] initWithItems:@[@"固定",@"每周",@"每月"]];
-        _segment.selectedSegmentIndex = 0;
+        _segment.selectedSegmentIndex = self.editModel?self.editModel.pinciType:0;
         _segment.tintColor = kContainerColor;
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];

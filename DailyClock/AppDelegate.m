@@ -33,5 +33,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService registerDeviceToken:deviceToken];
 }
 
+- (void) applicationDidEnterBackground:(UIApplication *)application{
+    [JPUSHService setBadge:0];
+    [application setApplicationIconBadgeNumber:0];
+}
+
 
 @end

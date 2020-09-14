@@ -1,12 +1,11 @@
 //
-//  Created by 成焱 on 2020/9/3.
+//  Created by 成焱 on 2020/9/14.
 //Copyright © 2020 cheng.yan. All rights reserved.
 //
 
 #import "CYBaseViewController.h"
 
-@interface DKCreateTargetViewController: CYBaseViewController
-
+@interface DKSettingViewController: CYBaseViewController
 #pragma mark- as
 
 #pragma mark- model

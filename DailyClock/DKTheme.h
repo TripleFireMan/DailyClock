@@ -31,6 +31,27 @@
 /// 主题色
 #define kMainColor              [UIColor colorWithHexString:@"#FFC500"]//RGBColor(232, 62, 45)FFC500
 
+/// 未选中的颜色
+#define kDefaultContainerColor      [UIColor lightTextColor]
+/// 未选中border颜色
+#define kDefaultContainerBorderColor  kMainColor
+/// 未选中标题颜色
+#define kDefaultContainerTitleColor  [UIColor blackColor]
+
+/// 选中的颜色
+#define kSelectedContainerColor       kMainColor
+/// 选中border颜色
+#define kSelectedContainerBorderColor  [UIColor blackColor]
+/// 选中标题颜色
+#define kSelectedContainerTitleColor  [UIColor blackColor]
+
+/// 将来的颜色
+#define kFutureContainerColor       [UIColor clearColor]
+/// 将来border颜色
+#define kFutureContainerBorderColor  [UIColor clearColor]
+/// 将来标题颜色
+#define kFutureContainerTitleColor  [UIColor darkGrayColor]
+
 /// 吸色
 #define kbgColor1               
 #define CYBebas(x)              [UIFont fontWithName:@"Bebas" size:x]

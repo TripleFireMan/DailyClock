@@ -9,6 +9,9 @@
 #import "DKHomeItemTableViewCell.h"
 #import "DKSharePopView.h"
 #import "DKTargetSharedViewController.h"
+#import "DKTargetDetailViewController.h"
+#import "DKTargetSettingViewController.h"
+
 @interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 
@@ -100,23 +103,27 @@
     cell.model = model;
     cell.clickBlock = ^(id obj) {
         @strongify(self);
-        [DKSharePopView showOnView:self.view confirmAction:^{
+        if (![model shouldAutoDaily]) {
             [self p_save:model];
-        } shareAction:^{
-            [self p_save:model];
-            [self p_share:model];
-            
-            DKTargetSharedViewController *shareObj =  [[DKTargetSharedViewController alloc] initWithNibName:@"DKTargetSharedViewController" bundle:[NSBundle mainBundle]];
-            shareObj.modalPresentationStyle = UIModalPresentationFullScreen;
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareObj];
-            nav.modalPresentationStyle = UIModalPresentationFullScreen;
-            [self.navigationController presentViewController:nav animated:YES completion:nil];
-            
-            
-        } cancelAction:^{
-            
-        } targetModel:model signModel:obj];
-        
+        }
+        else{
+            [DKSharePopView showOnView:self.view confirmAction:^{
+                [self p_save:model];
+            } shareAction:^{
+                [self p_save:model];
+                [self p_share:model];
+                
+                DKTargetSharedViewController *shareObj =  [[DKTargetSharedViewController alloc] initWithNibName:@"DKTargetSharedViewController" bundle:[NSBundle mainBundle]];
+                shareObj.modalPresentationStyle = UIModalPresentationFullScreen;
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareObj];
+                nav.modalPresentationStyle = UIModalPresentationFullScreen;
+                [self.navigationController presentViewController:nav animated:YES completion:nil];
+                
+                
+            } cancelAction:^{
+                
+            } targetModel:model signModel:obj];
+        }
     };
     return cell;
 }
@@ -128,7 +135,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
+    DKTargetDetailViewController *detail = [DKTargetDetailViewController new];
+    detail.model = model;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 
@@ -151,18 +161,27 @@
     return @"删除目标";
 }
 
-//- (UISwipeActionsConfiguration *) tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0)){
-//    UIContextualAction *action = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除任务" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
-//        DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels]objectAtIndex:indexPath.row];
-//        model.status = DKTargetStatus_Cancel;
-//        [[DKTargetManager cy_shareInstance] cy_save];
-//        completionHandler(YES);
-//        [self.tableView reloadData];
-//    }];
-//    action.backgroundColor = [UIColor redColor];
-//    UISwipeActionsConfiguration *config = [UISwipeActionsConfiguration configurationWithActions:@[action]];
-//    return config;
-//}
+
+- (UISwipeActionsConfiguration *) tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0)){
+    DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
+    UIContextualAction *action = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels]objectAtIndex:indexPath.row];
+        model.status = DKTargetStatus_Cancel;
+        [[DKTargetManager cy_shareInstance] cy_save];
+        completionHandler(YES);
+        [self.tableView reloadData];
+    }];
+    
+    UIContextualAction *edit = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"编辑" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        DKTargetSettingViewController *target = [[DKTargetSettingViewController alloc] init];
+        target.editModel = model;
+        [self.navigationController pushViewController:target animated:YES];
+    }];
+    edit.backgroundColor = kMainColor;
+    action.backgroundColor = [UIColor redColor];
+    UISwipeActionsConfiguration *config = [UISwipeActionsConfiguration configurationWithActions:@[action,edit]];
+    return config;
+}
 
 /// 分享
 /// @param model 目标参数

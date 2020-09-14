@@ -73,6 +73,15 @@
 		4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD24250CBBF9007DEB77 /* DKApplication+JPush.m */; };
 		4C51AD26250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD24250CBBF9007DEB77 /* DKApplication+JPush.m */; };
 		4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD24250CBBF9007DEB77 /* DKApplication+JPush.m */; };
+		4C51AD4E250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */; };
+		4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */; };
+		4C51AD50250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */; };
+		4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */; };
+		4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */; };
+		4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */; };
+		4C51AD58250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
+		4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
+		4C51AD5A250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
 		4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
@@ -187,6 +196,12 @@
 		4C51AD23250CBBF9007DEB77 /* DKApplication+JPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+JPush.h"; sourceTree = "<group>"; };
 		4C51AD24250CBBF9007DEB77 /* DKApplication+JPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DKApplication+JPush.m"; sourceTree = "<group>"; };
 		4C51AD28250CBC8F007DEB77 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		4C51AD4C250E1DA3007DEB77 /* DKTargetDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetDetailViewController.h; sourceTree = "<group>"; };
+		4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetDetailViewController.m; sourceTree = "<group>"; };
+		4C51AD51250F29C8007DEB77 /* DKSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSettingViewController.h; sourceTree = "<group>"; };
+		4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSettingViewController.m; sourceTree = "<group>"; };
+		4C51AD56250F3A13007DEB77 /* DKUserCenterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKUserCenterHeader.h; sourceTree = "<group>"; };
+		4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKUserCenterHeader.m; sourceTree = "<group>"; };
 		4C8DA0B92500E6D700112389 /* DKApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKApplication.h; sourceTree = "<group>"; };
 		4C8DA0BA2500E6D700112389 /* DKApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKApplication.m; sourceTree = "<group>"; };
 		4C8DA0BE2500E74600112389 /* DKApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Window.h"; sourceTree = "<group>"; };
@@ -353,6 +368,8 @@
 		4C51AD1B250CAC28007DEB77 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C51AD56250F3A13007DEB77 /* DKUserCenterHeader.h */,
+				4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +379,8 @@
 			children = (
 				4C51AD1D250CAC42007DEB77 /* DKMineViewController.h */,
 				4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */,
+				4C51AD51250F29C8007DEB77 /* DKSettingViewController.h */,
+				4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -412,6 +431,8 @@
 				4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */,
 				4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */,
 				4C07A9332501DDE80064CB76 /* DKTargetSettingViewController.m */,
+				4C51AD4C250E1DA3007DEB77 /* DKTargetDetailViewController.h */,
+				4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */,
 				4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */,
 				4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */,
 				4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */,
@@ -736,6 +757,7 @@
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4C51AD4E250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
 				4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */,
@@ -746,6 +768,7 @@
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
 				4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
+				4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C1CCE7E24FE49690004EF4E /* main.m in Sources */,
 				4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */,
@@ -756,6 +779,7 @@
 				4C07C44725061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C8DA0D42500F16100112389 /* DKCreateTargetViewController.m in Sources */,
 				4C51ACFF250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
+				4C51AD58250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,12 +798,15 @@
 				4C51AD26250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */,
+				4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
+				4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CB2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C8DA0C12500E74600112389 /* DKApplication+Window.m in Sources */,
 				4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
@@ -799,6 +826,7 @@
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
+				4C51AD50250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
 				4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */,
@@ -809,6 +837,7 @@
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
+				4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */,
@@ -819,6 +848,7 @@
 				4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */,
 				4C07A93B2501DE740064CB76 /* DKTargetManager.m in Sources */,
 				4C51AD01250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
+				4C51AD5A250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

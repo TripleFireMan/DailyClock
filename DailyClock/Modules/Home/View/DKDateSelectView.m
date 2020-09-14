@@ -201,9 +201,13 @@
 
 - (UIDatePicker *) datePicker{
     if (!_datePicker) {
+        NSLocale *local = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
         _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
         _datePicker.datePickerMode = UIDatePickerModeDate;
         _datePicker.minimumDate = [NSDate date];
+        _datePicker.timeZone = [NSTimeZone systemTimeZone];
+        _datePicker.locale = local;
+        
     }
     return _datePicker;
 }

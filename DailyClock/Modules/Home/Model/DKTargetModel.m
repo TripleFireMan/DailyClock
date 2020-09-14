@@ -10,6 +10,14 @@
     return @{@"ID":@"id"};
 }
 
+- (id) init{
+    self = [super init];
+    if (self) {
+        self.shouldAutoDaily = YES;
+    }
+    return self;
+}
+
 - (NSString *) uniqueId{
     if (!_uniqueId) {
         CFStringRef uuidString =  CFUUIDCreateString(NULL,CFUUIDCreate(NULL));
@@ -31,6 +39,7 @@
         NSArray *weekNames = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
         for (int i = 0; i < 7; i++) {
             DKTargetPinCiWeekModel *weekModel = [DKTargetPinCiWeekModel new];
+            weekModel.isSelected = YES;
             weekModel.weekday = i+2;
             if (i==6) {
                 weekModel.weekday = 1;
@@ -48,6 +57,7 @@
     }
     return _startDate;
 }
+
 
 - (NSDate *) createDate{
     if (!_createDate) {

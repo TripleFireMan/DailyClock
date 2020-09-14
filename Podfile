@@ -15,6 +15,8 @@ def DKPods()
   pod 'ZWPlaceHolder'
   pod 'ZWLimitCounter','0.0.2'
   pod 'JPush', '~> 3.1.0'
+  pod 'WMZDialog'
+  pod 'FSCalendar'
 end
 
 target 'DailyClock' do

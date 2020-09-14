@@ -89,11 +89,11 @@
 - (UICollectionView *) collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-        flow.itemSize = CGSizeMake(50, 50);
+        flow.itemSize = CGSizeMake(36, 36);
         flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flow.minimumInteritemSpacing = 10.f;
-        flow.headerReferenceSize = CGSizeMake(15, 50);
-        flow.footerReferenceSize = CGSizeMake(15, 50);
+        flow.headerReferenceSize = CGSizeMake(15, 36);
+        flow.footerReferenceSize = CGSizeMake(15, 36);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
         _collectionView.showsHorizontalScrollIndicator = NO;

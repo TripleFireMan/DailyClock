@@ -91,8 +91,15 @@
 
 - (void)setModel:(DKTargetModel *)model{
     _model = model;
+    if (_model.pinciType == self.type) {
+        if (_model.pinciType == DKTargetPinCiType_Month) {
+            self.inputTf.text = @(_model.monthOfDay).stringValue;
+        }
+        else if (_model.pinciType == DKTargetPinCiType_Week){
+            self.inputTf.text = @(_model.weekofDay).stringValue;
+        }
+    }
     
-
 }
 
 - (UILabel *) namelabel{
