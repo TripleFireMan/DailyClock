@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKApplication : NSObject
 
+/// 普通
 @property (nonatomic, strong) NSString *fontName;
+/// 粗体
+@property (nonatomic, strong) NSString *boldFontName;
 
 - (void) setup:(NSDictionary *)launchInfo;
 

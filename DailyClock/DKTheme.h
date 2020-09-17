@@ -57,4 +57,5 @@
 #define CYBebas(x)              [UIFont fontWithName:@"Bebas" size:x]
 #define CYZcool(x)              [UIFont fontWithName:@"HappyZcool-2016" size:x]
 #define DKFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:(x)]
+#define DKBoldFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:(x)]
 #endif /* DKTheme_h */

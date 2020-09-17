@@ -20,6 +20,13 @@
     return _fontName;
 }
 
+- (NSString *) boldFontName{
+    if (!_boldFontName) {
+        _boldFontName = @"HappyZcool-2016";
+    }
+    return _boldFontName;
+}
+
 - (void)setup:(NSDictionary *)launchInfo{
     [self initwindow:launchInfo];
     [self configJPush:launchInfo];

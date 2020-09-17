@@ -58,6 +58,7 @@ PODS:
     - CYLTabBarController/Core
     - lottie-ios (~> 2.5.3)
   - FastCoding (3.3)
+  - FCAlertView (1.4.0)
   - FSCalendar (2.8.1)
   - IQKeyboardManager (6.4.2)
   - JCore (1.2.6)
@@ -72,7 +73,6 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
-  - WMZDialog (1.1.5)
   - XHToast (1.4.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -84,13 +84,13 @@ DEPENDENCIES:
   - CYKit (from `https://github.com/TripleFireMan/CYKit.git`)
   - CYLTabBarController/Lottie (= 1.28.3)
   - FastCoding (= 3.3)
+  - FCAlertView
   - FSCalendar
   - IQKeyboardManager (= 6.4.2)
   - JPush (~> 3.1.0)
   - Masonry (= 1.1.0)
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
-  - WMZDialog
   - XHToast
   - YYKit
   - ZWLimitCounter (= 0.0.2)
@@ -101,6 +101,7 @@ SPEC REPOS:
     - AFNetworking
     - CYLTabBarController
     - FastCoding
+    - FCAlertView
     - FSCalendar
     - IQKeyboardManager
     - JCore
@@ -112,7 +113,6 @@ SPEC REPOS:
     - PromisesObjC
     - ReactiveObjC
     - SDWebImage
-    - WMZDialog
     - XHToast
     - YYKit
     - ZWLimitCounter
@@ -132,6 +132,7 @@ SPEC CHECKSUMS:
   CYKit: 3aca21bbbd548d9d817fe2be055ac86767ab93ad
   CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
+  FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   IQKeyboardManager: b41e0a4943fbac4c11a239d31a688667675f962e
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
@@ -143,12 +144,11 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
-  WMZDialog: 582ebc04124a5366f27ad8f2c6a32254b9c697d0
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: c70b6ebd76a56cdd27de129db93c59d07cf1ef75
+PODFILE CHECKSUM: c1fe0302c60d1ccf8f025b1489304527610f7337
 
 COCOAPODS: 1.9.1

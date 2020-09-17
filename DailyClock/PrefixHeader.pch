@@ -21,4 +21,6 @@
 #import "DKTargetManager.h"
 #import "Config.h"
 #import "DKApplication.h"
+#import "FCAlertView.h"
+#import "DKAlert.h"
 #endif /* PrefixHeader_pch */

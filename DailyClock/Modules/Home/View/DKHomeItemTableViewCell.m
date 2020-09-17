@@ -121,7 +121,7 @@
     
     self.continueLabel.attributedText = attcontinueContText;
     
-    NSString *targetCountText = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount])];
+    NSString *targetCountText = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount]-_model.signModels.count)];
     NSMutableAttributedString *atttargetCountText = [[NSMutableAttributedString alloc] initWithString:targetCountText];
     atttargetCountText.font = DKFont(13);
     [atttargetCountText setFont:CYBebas(13) range:[targetCountText rangeOfString:[NSString stringWithFormat:@"%@",@([_model targetCount])]]];
