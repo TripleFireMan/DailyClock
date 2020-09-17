@@ -65,7 +65,7 @@
 - (UILabel *) textLabel{
     if (!_textLabel) {
         _textLabel = [UILabel new];
-        _textLabel.font = CYPingFangSCRegular(12);
+        _textLabel.font = DKFont(12);
         _textLabel.textColor = [UIColor blackColor];
     }
     return _textLabel;

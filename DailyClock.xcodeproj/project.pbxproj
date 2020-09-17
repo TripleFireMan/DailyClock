@@ -103,6 +103,9 @@
 		4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
 		4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
 		4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0DB2500F3E500112389 /* DKTargetModel.m */; };
+		4C993BA6251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
+		4C993BA7251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
+		4C993BA8251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
@@ -116,6 +119,12 @@
 		4CE63C202509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
 		4CE63C212509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
 		4CE63C222509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
+		4CEDD5A9250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
+		4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
+		4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
+		4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */; };
+		4CEDD5B62512104600092940 /* CYBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */; };
+		4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */; };
 		4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
 		4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
 		4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */; };
@@ -216,12 +225,16 @@
 		4C8DA0D72500F18C00112389 /* targets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = targets.json; sourceTree = "<group>"; };
 		4C8DA0DB2500F3E500112389 /* DKTargetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTargetModel.m; sourceTree = "<group>"; };
 		4C8DA0DC2500F3E500112389 /* DKTargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTargetModel.h; sourceTree = "<group>"; };
+		4C993BA5251256700082F86D /* zcool.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zcool.ttf; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
 		4CE63C132509B830007EC122 /* keyword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "fastlane/screenshots/en-US/keyword.strings"; sourceTree = "<group>"; };
 		4CE63C1B2509B85E007EC122 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = fastlane/screenshots/Framefile.json; sourceTree = "<group>"; };
 		4CE63C1F2509BDA8007EC122 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "fastlane/screenshots/en-US/title.strings"; sourceTree = "<group>"; };
+		4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKSettingViewController.xib; sourceTree = "<group>"; };
+		4CEDD5B32512104600092940 /* CYBaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYBaseNavigationBar.h; sourceTree = "<group>"; };
+		4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavigationBar.m; sourceTree = "<group>"; };
 		4CF6868D25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKHomeItemClockCollectionViewCell.h; sourceTree = "<group>"; };
 		4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKHomeItemClockCollectionViewCell.m; sourceTree = "<group>"; };
 		5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -370,6 +383,8 @@
 			children = (
 				4C51AD56250F3A13007DEB77 /* DKUserCenterHeader.h */,
 				4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */,
+				4CEDD5B32512104600092940 /* CYBaseNavigationBar.h */,
+				4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +396,7 @@
 				4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */,
 				4C51AD51250F29C8007DEB77 /* DKSettingViewController.h */,
 				4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */,
+				4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -494,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */,
+				4C993BA5251256700082F86D /* zcool.ttf */,
 				4CE63C0F25090613007EC122 /* BEBAS___.TTF */,
 			);
 			path = TTF;
@@ -622,7 +639,9 @@
 				4CE63C202509BDA8007EC122 /* title.strings in Resources */,
 				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
 				4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */,
+				4CEDD5A9250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD06250B53E4007DEB77 /* img_bling_0.png in Resources */,
+				4C993BA6251256700082F86D /* zcool.ttf in Resources */,
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1C2509B85F007EC122 /* Framefile.json in Resources */,
@@ -636,11 +655,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1D2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
+				4C993BA7251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
 				4CE63C152509B830007EC122 /* keyword.strings in Resources */,
 				4C51AD07250B53E4007DEB77 /* img_bling_0.png in Resources */,
@@ -652,11 +673,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1E2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
+				4C993BA8251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
 				4CE63C162509B830007EC122 /* keyword.strings in Resources */,
 				4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */,
@@ -754,6 +777,7 @@
 			files = (
 				4C51AD1F250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
@@ -803,6 +827,7 @@
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
+				4CEDD5B62512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
@@ -823,6 +848,7 @@
 			files = (
 				4C51AD21250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
+				4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
@@ -998,7 +1024,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1025,7 +1051,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";

@@ -67,7 +67,7 @@
 - (UILabel *) namelbl{
     if (!_namelbl) {
         _namelbl = [UILabel new];
-        _namelbl.font = CYPingFangSCMedium(12);
+        _namelbl.font = [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:15];
         _namelbl.textColor = kSubTitleColor;
         _namelbl.text = @"每天进步一点点";
     }

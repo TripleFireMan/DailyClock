@@ -296,7 +296,7 @@
     if (!_saveBtn) {
         _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_saveBtn setTitle:@"保存" forState:UIControlStateNormal];
-        _saveBtn.titleLabel.font = CYPingFangSCMedium(16.f);
+        _saveBtn.titleLabel.font = DKFont(16.f);
         [_saveBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_saveBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [[_saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -342,7 +342,7 @@
 - (UILabel *) nameLabel{
     if (!_nameLabel) {
         _nameLabel = [UILabel new];
-        _nameLabel.font = CYPingFangSCMedium(16);
+        _nameLabel.font = DKFont(16);
         _nameLabel.textColor = [UIColor blackColor];
         _nameLabel.text = @"目标名称";
     }
@@ -362,10 +362,10 @@
 - (UITextField *) nameTF{
     if (!_nameTF) {
         _nameTF = [[UITextField alloc] init];
-        _nameTF.font = CYPingFangSCMedium(14.f);
+        _nameTF.font = DKFont(14.f);
         _nameTF.textColor = [UIColor blackColor];
         NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:@"起一个能坚持下来的名字吧~"];
-        placeholder.font = CYPingFangSCMedium(14.f);
+        placeholder.font = DKFont(14.f);
         placeholder.color = RGBColor(195, 196, 192);
         _nameTF.attributedPlaceholder = placeholder;
     }
@@ -401,7 +401,7 @@
 - (UILabel *) timeLabel{
     if (!_timeLabel) {
         _timeLabel = [UILabel new];
-        _timeLabel.font = CYPingFangSCMedium(16);
+        _timeLabel.font = DKFont(16);
         _timeLabel.textColor = [UIColor blackColor];
         _timeLabel.text = @"起止时间";
     }
@@ -411,7 +411,7 @@
 - (UILabel *) startTimeLabel{
     if (!_startTimeLabel) {
         _startTimeLabel = [UILabel new];
-        _startTimeLabel.font = CYPingFangSCMedium(12);
+        _startTimeLabel.font = DKFont(12);
         _startTimeLabel.textColor = [UIColor blackColor];
         _startTimeLabel.text = @"开始时间";
     }
@@ -421,7 +421,7 @@
 - (UILabel *) endTimeLabel{
     if (!_endTimeLabel) {
         _endTimeLabel = [UILabel new];
-        _endTimeLabel.font = CYPingFangSCMedium(12);
+        _endTimeLabel.font = DKFont(12);
         _endTimeLabel.textColor = [UIColor blackColor];
         _endTimeLabel.text = @"结束时间";
     }
@@ -431,7 +431,7 @@
 - (UILabel *) totalDays{
     if (!_totalDays) {
         _totalDays = [UILabel new];
-        _totalDays.font = CYPingFangSCMedium(14);
+        _totalDays.font = DKFont(14);
         _totalDays.textColor = [UIColor blackColor];
         [self p_configTotalInfo];
     }
@@ -443,7 +443,7 @@
     if (!_startTimeBtn) {
         _startTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_startTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _startTimeBtn.titleLabel.font = CYPingFangSCRegular(12.f);
+        _startTimeBtn.titleLabel.font = DKFont(12.f);
         [_startTimeBtn setTitle:[self stringWithDate:self.model.startDate] forState:UIControlStateNormal];
         [[_startTimeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
@@ -479,7 +479,7 @@
     if (!_endTimeBtn) {
         _endTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_endTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _endTimeBtn.titleLabel.font = CYPingFangSCRegular(12.f);
+        _endTimeBtn.titleLabel.font = DKFont(12.f);
         [_endTimeBtn setTitle:[self stringWithDate:self.model.endDate] forState:UIControlStateNormal];
         [[_endTimeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
@@ -523,7 +523,7 @@
     if (!_pingciLabel) {
         _pingciLabel = [UILabel new];
         _pingciLabel.text = @"目标频次";
-        _pingciLabel.font = CYPingFangSCMedium(16.f);
+        _pingciLabel.font = DKFont(16.f);
         _pingciLabel.textColor = [UIColor blackColor];
     }
     return _pingciLabel;
@@ -555,7 +555,7 @@
 - (UILabel *) rizhiLabel{
     if (!_rizhiLabel) {
         _rizhiLabel = [UILabel new];
-        _rizhiLabel.font = CYPingFangSCMedium(16.f);
+        _rizhiLabel.font = DKFont(16.f);
         _rizhiLabel.textColor = [UIColor blackColor];
         _rizhiLabel.text = @"日志设置";
     }
@@ -565,7 +565,7 @@
 - (UILabel *) rizhiTextLabel{
     if (!_rizhiTextLabel) {
         _rizhiTextLabel = [UILabel new];
-        _rizhiTextLabel.font = CYPingFangSCMedium(12);
+        _rizhiTextLabel.font = DKFont(12);
         _rizhiTextLabel.textColor = [UIColor darkTextColor];
         _rizhiTextLabel.text = @"是否自动弹出打卡日志";
     }
@@ -601,6 +601,7 @@
         _segment.tintColor = kContainerColor;
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
+        [_segment setTitleTextAttributes:@{NSFontAttributeName:DKFont(14)} forState:UIControlStateNormal];
     }
     return _segment;
 }

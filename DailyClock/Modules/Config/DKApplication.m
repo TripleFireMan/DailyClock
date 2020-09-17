@@ -11,6 +11,15 @@
 
 @implementation DKApplication
 
+- (NSString *) fontName{
+    if (!_fontName) {
+        _fontName = @"HappyZcool-2016";
+//        _fontName = @"PingFangSC-Regular";
+        
+    }
+    return _fontName;
+}
+
 - (void)setup:(NSDictionary *)launchInfo{
     [self initwindow:launchInfo];
     [self configJPush:launchInfo];

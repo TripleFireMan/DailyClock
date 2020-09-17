@@ -33,7 +33,7 @@
     NSDate *today = [NSDate date];
     if ([today weekday] == _weekModel.weekday) {
         self.textLabel.text = @"打卡";
-        self.textLabel.font = CYPingFangSCBold(14);
+        self.textLabel.font = DKFont(14);
         
         self.dakaImageView.hidden = YES;
 //        self.dakaImageView.highlighted = NO;
@@ -45,7 +45,7 @@
 //                self.dakaImageView.hidden = YES;
                 self.textLabel.text = @"今天";
                 self.container.backgroundColor = kMainColor;
-                self.textLabel.font = CYPingFangSCRegular(11);
+                self.textLabel.font = DKFont(11);
                 self.textLabel.textColor = [UIColor blackColor];
                 self.container.layer.borderColor = [UIColor clearColor].CGColor;
 //                self.dakaImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -55,7 +55,7 @@
         
     }
     else{
-        self.textLabel.font = CYPingFangSCRegular(11);
+        self.textLabel.font = DKFont(11);
         BOOL isSigned = [self isSigned:_weekModel];
         if (isSigned) {
             self.container.backgroundColor = kMainColor;
@@ -132,7 +132,7 @@
 - (UILabel *) textLabel{
     if (!_textLabel) {
         _textLabel = [UILabel new];
-        _textLabel.font = CYPingFangSCRegular(11);
+        _textLabel.font = DKFont(11);
         _textLabel.textColor = [UIColor blackColor];
     }
     return _textLabel;

@@ -20,5 +20,5 @@
 #import "XHToast.h"
 #import "DKTargetManager.h"
 #import "Config.h"
-
+#import "DKApplication.h"
 #endif /* PrefixHeader_pch */

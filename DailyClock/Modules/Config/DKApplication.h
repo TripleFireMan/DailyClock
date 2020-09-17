@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKApplication : NSObject
 
+@property (nonatomic, strong) NSString *fontName;
+
 - (void) setup:(NSDictionary *)launchInfo;
 
 @end

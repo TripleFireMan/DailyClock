@@ -86,6 +86,12 @@
         _calendar.appearance.weekdayTextColor = [UIColor blackColor];
         _calendar.appearance.borderDefaultColor = kMainColor;
         _calendar.appearance.borderSelectionColor = [UIColor blackColor];
+        
+        _calendar.appearance.titleFont = DKFont(FSCalendarStandardTitleTextSize);
+        _calendar.appearance.subtitleFont = DKFont(FSCalendarStandardSubtitleTextSize);
+        _calendar.appearance.weekdayFont = DKFont(FSCalendarStandardWeekdayTextSize);
+        _calendar.appearance.headerTitleFont = DKFont(FSCalendarStandardHeaderTextSize);
+        
         _calendar.placeholderType = FSCalendarPlaceholderTypeNone;
         _calendar.appearance.headerMinimumDissolvedAlpha = 0.0;
         _calendar.allowsMultipleSelection = YES;

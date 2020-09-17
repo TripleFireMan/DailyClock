@@ -75,7 +75,7 @@
 - (UILabel *) titleLabel{
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.font = CYPingFangSCMedium(16);
+        _titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:16];
         _titleLabel.textColor = [UIColor whiteColor];
     }
     return _titleLabel;

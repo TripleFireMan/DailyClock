@@ -107,9 +107,26 @@
     self.bgImageView.image = [[UIImage imageNamed:_model.backgroundImage] stretchableImageWithLeftCapWidth:10 topCapHeight:10];
     self.iconImageView.image = [UIImage imageNamed:_model.icon];
     self.nameLabel.text = _model.title;
-    self.countLabel.text = [NSString stringWithFormat:@"%@ 次",@(_model.signModels.count)];
-    self.continueLabel.text = [NSString stringWithFormat:@"连续 %@ 次",@([_model continueCont])];
-    self.totalCountLabel.text = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount])];
+    NSString *countText = [NSString stringWithFormat:@"%@ 次",@(_model.signModels.count)];
+    NSMutableAttributedString *attCountText = [[NSMutableAttributedString alloc] initWithString:countText];
+    attCountText.font = CYBebas(20);
+    [attCountText setFont:DKFont(20) range:NSMakeRange(countText.length-1, 1)];
+    self.countLabel.attributedText = attCountText;
+
+    NSString *continueContText = [NSString stringWithFormat:@"连续 %@ 次",@([_model continueCont])];
+    NSMutableAttributedString *attcontinueContText = [[NSMutableAttributedString alloc] initWithString:continueContText];
+    
+    attcontinueContText.font = DKFont(13);
+    [attcontinueContText setFont:CYBebas(13) range:[continueContText rangeOfString:[NSString stringWithFormat:@"%@",@([_model continueCont])]]];
+    
+    self.continueLabel.attributedText = attcontinueContText;
+    
+    NSString *targetCountText = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount])];
+    NSMutableAttributedString *atttargetCountText = [[NSMutableAttributedString alloc] initWithString:targetCountText];
+    atttargetCountText.font = DKFont(13);
+    [atttargetCountText setFont:CYBebas(13) range:[targetCountText rangeOfString:[NSString stringWithFormat:@"%@",@([_model targetCount])]]];
+    
+    self.totalCountLabel.attributedText = atttargetCountText;
     [self.collectionView reloadData];
 }
 
@@ -135,7 +152,7 @@
 - (UILabel *) nameLabel{
     if (!_nameLabel) {
         _nameLabel = [UILabel new];
-        _nameLabel.font = CYPingFangSCMedium(16);
+        _nameLabel.font = DKFont(16);
         _nameLabel.textColor = [UIColor blackColor];
         _nameLabel.text = @"";
     }
@@ -155,7 +172,7 @@
 - (UILabel *) continueLabel{
     if (!_continueLabel) {
         _continueLabel = [UILabel new];
-        _continueLabel.font = CYPingFangSCRegular(12);
+        _continueLabel.font = DKFont(12);
         _continueLabel.textColor = kTitleColor;
         _continueLabel.text = @"";
     }
@@ -165,7 +182,7 @@
 - (UILabel *) totalCountLabel{
     if (!_totalCountLabel) {
         _totalCountLabel = [UILabel new];
-        _totalCountLabel.font = CYPingFangSCRegular(12);
+        _totalCountLabel.font = DKFont(12);
         _totalCountLabel.textColor = kTitleColor;
         _totalCountLabel.text = @"";
     }

@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"个人中心";
+    
 }
 
 - (void) setupSubView
@@ -55,6 +56,8 @@
         make.bottom.offset(0);
         make.width.height.offset(44);
     }];
+    
+    
 }
 
 #pragma mark - api
@@ -99,7 +102,7 @@
         [_settingBtn setImage:[UIImage imageNamed:@"shezhi"] forState:UIControlStateNormal];
         [[_settingBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
-            DKSettingViewController *setting = [DKSettingViewController new];
+            DKSettingViewController *setting = [[DKSettingViewController alloc] init];
             [self.navigationController pushViewController:setting animated:YES];
         }];
     }

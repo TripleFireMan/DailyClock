@@ -165,7 +165,7 @@
     if (!_cancelBtn) {
         _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-        _cancelBtn.titleLabel.font = CYPingFangSCMedium(14.f);
+        _cancelBtn.titleLabel.font = DKFont(14.f);
         [_cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [[_cancelBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
@@ -180,7 +180,7 @@
     if (!_confirmBtn) {
         _confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
-        _confirmBtn.titleLabel.font = CYPingFangSCMedium(14.f);
+        _confirmBtn.titleLabel.font = DKFont(14.f);
         [_confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [[_confirmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
@@ -207,6 +207,7 @@
         _datePicker.minimumDate = [NSDate date];
         _datePicker.timeZone = [NSTimeZone systemTimeZone];
         _datePicker.locale = local;
+        
         
     }
     return _datePicker;

@@ -105,7 +105,7 @@
 - (UILabel *) namelabel{
     if (!_namelabel) {
         _namelabel = [UILabel new];
-        _namelabel.font = CYPingFangSCMedium(12);
+        _namelabel.font = DKFont(12);
         _namelabel.textColor = [UIColor blackColor];
         if (self.type == DKTargetPinCiType_Month) {
             _namelabel.text = @"每月";
@@ -121,7 +121,7 @@
     if (!_perLabel) {
         _perLabel = [UILabel new];
         _perLabel.text = @"次";
-        _perLabel.font = CYPingFangSCMedium(12);
+        _perLabel.font = DKFont(12);
         _perLabel.textColor = [UIColor blackColor];
     }
     return _perLabel;
@@ -141,7 +141,7 @@
     if (!_inputTf) {
         _inputTf = [[UITextField alloc] init];
         _inputTf.placeholder =@"0";
-        _inputTf.font = CYPingFangSCMedium(14.f);
+        _inputTf.font = DKFont(14.f);
         _inputTf.textColor = kDetailColor;
         _inputTf.textAlignment = NSTextAlignmentCenter;
         _inputTf.keyboardType  = UIKeyboardTypeNumberPad;
