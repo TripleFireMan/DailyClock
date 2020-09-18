@@ -1,8 +1,8 @@
 //
-//  DKUserCenterHeader.h
+//  DKUserCenterFooter.h
 //  DailyClock
 //
-//  Created by 成焱 on 2020/9/14.
+//  Created by 成焱 on 2020/9/17.
 //  Copyright © 2020 cheng.yan. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DKUserCenterHeader : UICollectionReusableView
-- (void) configModel:(id)model;
+@interface DKUserCenterFooter : UICollectionReusableView
+
 @end
 
 NS_ASSUME_NONNULL_END

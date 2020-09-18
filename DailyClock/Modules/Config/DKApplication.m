@@ -23,6 +23,7 @@
 - (NSString *) boldFontName{
     if (!_boldFontName) {
         _boldFontName = @"HappyZcool-2016";
+//        _fontName = @"PingFangSC-Medium";
     }
     return _boldFontName;
 }

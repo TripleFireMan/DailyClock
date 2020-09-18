@@ -22,7 +22,8 @@
     [self dkViewDidLoad];
     self.headerView.backgroundColor = [UIColor whiteColor];
     self.titleLabel.textColor = [UIColor blackColor];
-    self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:18.f];
+    self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
+    self.backBtn.tintColor = [UIColor darkGrayColor];
 }
 
 

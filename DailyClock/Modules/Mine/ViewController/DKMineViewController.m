@@ -7,16 +7,16 @@
 #import "DKMineViewController.h"
 #import "DKUserCenterHeader.h"
 #import "DKSettingViewController.h"
+#import "DKMinePageCollectionViewCell.h"
+#import "DKMineItemModel.h"
+#import "DKUserCenterFooter.h"
 
-@interface DKMineViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
 @property (nonatomic, strong) UIButton *settingBtn;
-@property (nonatomic, strong) UIScrollView      *scroll;
-@property (nonatomic, strong) UIView            *topView;
-@property (nonatomic, strong) UICollectionView  *itemView;
-
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) DKUserCenterHeader *tableHeader;
-
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray <DKMineItemModel *>*dataSource;
 @end
 
 @implementation DKMineViewController
@@ -35,19 +35,20 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"个人中心";
+    self.shouldShowBackBtn = NO;
+    [self.collectionView reloadData];
     
 }
 
 - (void) setupSubView
 {
-    [self.view addSubview:self.tableView];
-    self.tableView.tableHeaderView = self.tableHeader;
+    [self.view addSubview:self.collectionView];
     [self.headerView addSubview:self.settingBtn];
 }
 
 - (void) addConstraints
 {
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.insets(UIEdgeInsetsMake(CY_Height_NavBar, 0, CY_Height_TabBar, 0));
     }];
     
@@ -75,23 +76,92 @@
 
 #pragma mark -
 
-- (UITableView *)tableView{
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        _tableView.dataSource = self;
-//        _tableView.delegate = self;
-        _tableView.backgroundColor = [UIColor whiteColor];
-        [_tableView cy_adjustForIOS13];
+
+- (UICollectionView *) collectionView{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+//        CGFloat headerWidth ,footerWidth = 25.f;
+        CGFloat gap = 15.f;
+        NSInteger count = 3;
+        CGFloat itemWidth = (kScreenSize.width - 60.f- gap * count) / count;
+        flowLayout.itemSize = CGSizeMake(itemWidth, 100.f);
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30);
+        [_collectionView cy_adjustForIOS13];
+        _collectionView.alwaysBounceVertical = YES;
+        [_collectionView registerClass:[DKUserCenterHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"DKUserCenterHeader"];
+        [_collectionView registerClass:[DKUserCenterFooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"DKUserCenterFooter"];
+        [_collectionView registerClass:[DKMinePageCollectionViewCell class] forCellWithReuseIdentifier:@"DKMinePageCollectionViewCell"];
     }
-    return _tableView;
+    return _collectionView;
+}
+
+- (UICollectionReusableView *) collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        DKUserCenterHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"DKUserCenterHeader" forIndexPath:indexPath];
+        if (!header) {
+            header = self.tableHeader;
+        }
+        return header;
+    }
+    else{
+        DKUserCenterFooter *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"DKUserCenterFooter" forIndexPath:indexPath];
+        if (!footer) {
+            footer = [DKUserCenterFooter new];
+        }
+        return footer;
+    }
+}
+
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeMake(collectionView.bounds.size.width, 180);
+}
+
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    return CGSizeMake(collectionView.bounds.size.width, 50);
+}
+
+
+
+- (__kindof UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    DKMineItemModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    DKMinePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DKMinePageCollectionViewCell" forIndexPath:indexPath];
+    cell.model = model;
+    return cell;
+}
+
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
 }
 
 - (DKUserCenterHeader *) tableHeader{
     if (!_tableHeader) {
-        _tableHeader = [[DKUserCenterHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, 180)];
+        _tableHeader = [[DKUserCenterHeader alloc] init];
     }
     return _tableHeader;
+}
+
+- (NSMutableArray <DKMineItemModel *> *) dataSource{
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+        NSArray *imgs = @[@"box",@"download",@"faq",@"faq2",@"email",@"feedback"];
+        NSArray *titles = @[@"已暂停目标",@"数据备份",@"问题反馈",@"联系作者",@"版本记录",@"分享"];
+        for (int i = 0; i <imgs.count ; i++) {
+            DKMineItemModel *model = [DKMineItemModel new];
+            model.img = [UIImage imageNamed:imgs[i]];
+            model.title = titles[i];
+            [_dataSource addObject:model];
+        }
+    }
+    return _dataSource;
 }
 
 - (UIButton *)settingBtn{

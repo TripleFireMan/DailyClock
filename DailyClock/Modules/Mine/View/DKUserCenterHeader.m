@@ -37,7 +37,7 @@
 - (void) addConstrainss
 {
     [self.icon mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.offset(54);
+        make.width.height.offset(80);
         make.centerX.offset(0);
         make.centerY.offset(-20);
     }];
@@ -55,11 +55,7 @@
 - (UIImageView *) icon{
     if (!_icon) {
         _icon = [UIImageView new];
-        _icon.image = [UIImage imageNamed:@"WechatIMG132store_1024pt的副本"];
-        _icon.layer.cornerRadius = 27.f;
-        _icon.layer.masksToBounds = YES;
-        _icon.layer.borderColor = kBorderColor.CGColor;
-        _icon.layer.borderWidth = 1.f;
+        _icon.image = [UIImage imageNamed:@"dk_icon"];
     }
     return _icon;
 }

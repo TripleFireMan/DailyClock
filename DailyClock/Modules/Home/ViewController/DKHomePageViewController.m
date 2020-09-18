@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"打卡";
+    self.shouldShowBackBtn = NO;
 }
 
 - (void) viewWillAppear:(BOOL)animated{

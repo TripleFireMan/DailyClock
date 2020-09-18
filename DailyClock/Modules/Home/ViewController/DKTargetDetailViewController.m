@@ -55,25 +55,25 @@
         [self.calendar selectDate:obj];
     }];
     
-    NSMutableAttributedString *l1txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 天",@(self.model.signModels.count)]];
+    NSMutableAttributedString *l1txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@   天",@(self.model.signModels.count)]];
     
-    NSMutableAttributedString *l2txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 天",@(self.model.continueCont)]];
+    NSMutableAttributedString *l2txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@   天",@(self.model.continueCont)]];
     
-    NSMutableAttributedString *l3txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 天",@(self.model.targetCount-self.model.signModels.count)]];
+    NSMutableAttributedString *l3txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@  天",@(self.model.targetCount-self.model.signModels.count)]];
     
-    NSMutableAttributedString *l4txt = [[NSMutableAttributedString alloc] initWithString:[[self.model createDate] stringWithFormat:@"yyyy-MM-dd"]];
+    NSMutableAttributedString *l4txt = [[NSMutableAttributedString alloc] initWithString:[[self.model createDate] stringWithFormat:@"yyyy.MM.dd"]];
     
     [l1txt setFont:DKBoldFont(13)];
-    [l1txt setFont:CYBebas(13) range:NSMakeRange(0, l1txt.rangeOfAll.length-1)];
+    [l1txt setFont:CYBebas(20) range:NSMakeRange(0, l1txt.rangeOfAll.length-1)];
     
     [l2txt setFont:DKBoldFont(13)];
-    [l2txt setFont:CYBebas(13) range:NSMakeRange(0, l2txt.rangeOfAll.length-1)];
+    [l2txt setFont:CYBebas(20) range:NSMakeRange(0, l2txt.rangeOfAll.length-1)];
     
     [l3txt setFont:DKBoldFont(13)];
-    [l3txt setFont:CYBebas(13) range:NSMakeRange(0, l3txt.rangeOfAll.length-1)];
+    [l3txt setFont:CYBebas(20) range:NSMakeRange(0, l3txt.rangeOfAll.length-1)];
     
     
-    [l4txt setFont:CYBebas(13)];
+    [l4txt setFont:CYBebas(15)];
     
     self.l1.titleLabel.attributedText = l1txt;
     self.l2.titleLabel.attributedText = l2txt;
