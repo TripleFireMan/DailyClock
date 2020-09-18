@@ -66,6 +66,7 @@ PODS:
     - JCore (~> 1.2.6)
   - lottie-ios (2.5.3)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MJExtension (3.2.2)
   - MJRefresh (3.2.2)
   - PromisesObjC (1.2.8)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - IQKeyboardManager (= 6.4.2)
   - JPush (~> 3.1.0)
   - Masonry (= 1.1.0)
+  - MBProgressHUD
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
   - XHToast
@@ -108,6 +110,7 @@ SPEC REPOS:
     - JPush
     - lottie-ios
     - Masonry
+    - MBProgressHUD
     - MJExtension
     - MJRefresh
     - PromisesObjC
@@ -139,6 +142,7 @@ SPEC CHECKSUMS:
   JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -149,6 +153,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: c1fe0302c60d1ccf8f025b1489304527610f7337
+PODFILE CHECKSUM: 79e0f6803078f4dbb70cd2db9c8bc8ee2b710e82
 
 COCOAPODS: 1.9.1

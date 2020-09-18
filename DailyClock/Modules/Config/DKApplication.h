@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FBLPromises.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,9 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *fontName;
 /// 粗体
 @property (nonatomic, strong) NSString *boldFontName;
+/// 是否24小时自动备份数据
+@property (nonatomic, assign) BOOL isAutoBeifeiShuju;
+/// 上次备份时间
+@property (nonatomic, strong) NSDate *lastBackupDate;
 
 - (void) setup:(NSDictionary *)launchInfo;
 
+/// 保存数据到iCloud
+- (FBLPromise *) p_backupToICloud;
+/// 恢复数据
+- (FBLPromise *) p_loadDataFromICloud;
 @end
 
 NS_ASSUME_NONNULL_END

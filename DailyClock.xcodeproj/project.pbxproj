@@ -142,6 +142,13 @@
 		4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
 		4C993BCB2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
 		4C993BCC2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
+		4CA97733251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
+		4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
+		4CA97735251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
+		4CA9773A2514649F0041EB7D /* DKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977392514649F0041EB7D /* DKDocument.m */; };
+		4CA9773B2514649F0041EB7D /* DKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977392514649F0041EB7D /* DKDocument.m */; };
+		4CA9773C2514649F0041EB7D /* DKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977392514649F0041EB7D /* DKDocument.m */; };
+		4CA9773E2514711E0041EB7D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9773D2514711E0041EB7D /* CloudKit.framework */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
@@ -284,6 +291,12 @@
 		4C993BC42513A7B90082F86D /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		4C993BC52513A7B90082F86D /* CacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
 		4C993BC62513A7B90082F86D /* CacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
+		4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDataResumeViewController.h; sourceTree = "<group>"; };
+		4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDataResumeViewController.m; sourceTree = "<group>"; };
+		4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "打卡Release.entitlements"; sourceTree = "<group>"; };
+		4CA977382514649F0041EB7D /* DKDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDocument.h; sourceTree = "<group>"; };
+		4CA977392514649F0041EB7D /* DKDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDocument.m; sourceTree = "<group>"; };
+		4CA9773D2514711E0041EB7D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
@@ -307,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A240713B8F38693BCDA1AA /* libPods-DailyClock.a in Frameworks */,
+				4CA9773E2514711E0041EB7D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +345,7 @@
 		48001CCFE284ABAC9CB3594C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CA9773D2514711E0041EB7D /* CloudKit.framework */,
 				282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */,
 				799B35C738A5B9A293ACE11D /* libPods-DailyClockUITests.a */,
 			);
@@ -365,6 +380,8 @@
 		4C1CCE6A24FE49680004EF4E /* DailyClock */ = {
 			isa = PBXGroup;
 			children = (
+				4CA97737251464890041EB7D /* Tools */,
+				4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */,
 				4C51AD22250CB7AA007DEB77 /* 打卡.entitlements */,
 				4CE63C0D250905FB007EC122 /* Resources */,
 				4C8DA0B72500E6A300112389 /* Modules */,
@@ -466,6 +483,8 @@
 				4C91B78D2513AA8200C8F594 /* DKAboutUsViewController.m */,
 				4C91B79E25144E5C00C8F594 /* DKPausedTargetViewController.h */,
 				4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */,
+				4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */,
+				4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -581,6 +600,15 @@
 				4C993BBA25139A370082F86D /* DKMineItemModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4CA97737251464890041EB7D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4CA977382514649F0041EB7D /* DKDocument.h */,
+				4CA977392514649F0041EB7D /* DKDocument.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		4CE63C0D250905FB007EC122 /* Resources */ = {
@@ -893,6 +921,8 @@
 				4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C993BC72513A7B90082F86D /* DataTool.m in Sources */,
+				4CA9773A2514649F0041EB7D /* DKDocument.m in Sources */,
+				4CA97733251456BC0041EB7D /* DKDataResumeViewController.m in Sources */,
 				4C993BAB2513482A0082F86D /* DKDetailAnalyticsView.m in Sources */,
 				4C993BB0251371890082F86D /* DKAlert.m in Sources */,
 				4C993BB5251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
@@ -928,6 +958,7 @@
 				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4CA9773B2514649F0041EB7D /* DKDocument.m in Sources */,
 				4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C51AD26250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
@@ -944,6 +975,7 @@
 				4C91B7A125144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
+				4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */,
 				4C8DA0CB2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C8DA0C12500E74600112389 /* DKApplication+Window.m in Sources */,
 				4CF6869025072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
@@ -984,6 +1016,8 @@
 				4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C993BC92513A7B90082F86D /* DataTool.m in Sources */,
+				4CA9773C2514649F0041EB7D /* DKDocument.m in Sources */,
+				4CA97735251456BC0041EB7D /* DKDataResumeViewController.m in Sources */,
 				4C993BAD2513482A0082F86D /* DKDetailAnalyticsView.m in Sources */,
 				4C993BB2251371890082F86D /* DKAlert.m in Sources */,
 				4C993BB7251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
@@ -1172,7 +1206,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡Release.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 23;

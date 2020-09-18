@@ -17,6 +17,7 @@ def DKPods()
   pod 'JPush', '~> 3.1.0'
   pod 'FSCalendar'
   pod 'FCAlertView'
+  pod 'MBProgressHUD'
 end
 
 target 'DailyClock' do

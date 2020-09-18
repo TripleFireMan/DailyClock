@@ -23,4 +23,7 @@
 #import "DKApplication.h"
 #import "FCAlertView.h"
 #import "DKAlert.h"
+#import "FBLPromises.h"
+#import "MBProgressHUD.h"
+
 #endif /* PrefixHeader_pch */

@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) addTarget:(DKTargetModel *)target;
 - (void) removeTarget:(DKTargetModel *)target;
 
+/// 将单例重置为空
++ (void) resetModel;
+
 - (NSArray<DKTargetModel *> *) activeModels;
 - (NSArray<DKTargetModel *> *) finishedModels;
 - (NSArray<DKTargetModel *> *) cancelModels;

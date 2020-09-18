@@ -11,6 +11,7 @@
 #import "DKMineItemModel.h"
 #import "DKUserCenterFooter.h"
 #import "DKPausedTargetViewController.h"
+#import "DKDataResumeViewController.h"
 
 @interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -147,6 +148,10 @@
     DKMineItemModel *model = [self.dataSource objectAtIndex:indexPath.row];
     if ([model.title isEqualToString:@"已暂停目标"]) {
         DKPausedTargetViewController *vc = [DKPausedTargetViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 1){
+        DKDataResumeViewController *vc = [DKDataResumeViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

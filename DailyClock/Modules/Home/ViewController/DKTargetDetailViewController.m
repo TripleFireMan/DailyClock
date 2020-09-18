@@ -83,9 +83,11 @@
     
     if (self.model.status == DKTargetStatus_Doing) {
         self.activeBtn.hidden = YES;
+        self.stopBtn.hidden = NO;
     }
     else if (self.model.status == DKTargetStatus_Cancel){
         self.stopBtn.hidden = YES;
+        self.activeBtn.hidden = NO;
     }
 }
 
@@ -400,8 +402,8 @@
          @strongify(self);
             self.model.status = DKTargetStatus_Doing;
             [[DKTargetManager cy_shareInstance] cy_save];
-            [self.navigationController popToRootViewControllerAnimated:YES];
-            [XHToast showBottomWithText:@"任务已激活，请到首页查看信息"];
+            [self p_config];
+            [XHToast showBottomWithText:@"任务已激活"];
         }];
             
     }

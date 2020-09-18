@@ -9,6 +9,10 @@
 #import "DKTargetManager.h"
 
 @implementation DKTargetManager
+
++ (void) resetModel{
+    objc_setAssociatedObject(self, @"cy_shareInstanceOBJ", nil, OBJC_ASSOCIATION_RETAIN);
+}
 - (NSMutableArray <DKTargetModel *> *) items{
     if (!_items) {
         _items = [NSMutableArray array];
