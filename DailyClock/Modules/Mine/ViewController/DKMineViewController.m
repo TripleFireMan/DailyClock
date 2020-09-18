@@ -163,6 +163,9 @@
     else if (indexPath.row == 3){
         [self p_sendEmail];
     }
+    else if (indexPath.row == 5){
+        [self p_share];
+    }
 }
 - (void) p_sendEmail{
     MFMailComposeViewController *mailVC = [MFMailComposeViewController new];
@@ -181,6 +184,52 @@
     [mailVC setToRecipients:@[@"ab364743113@126.com"]];
     
     [self presentViewController:mailVC animated:YES completion:nil];
+}
+
+- (void) p_share {
+    UIImage* image = [UIImage imageNamed:@"dk_icon"];
+
+    NSString *text = @"一款简洁、萌萌哒的打卡小软件，赶紧下载体验下吧~";
+
+    NSURL *urlToShare = [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/us/app/id1531050825?l=zh&ls=1&mt=8"]];
+
+    NSArray *activityItems = @[image,text,urlToShare];
+
+    UIActivityViewController *avc = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+
+    [self presentViewController:avc animated:TRUE completion:nil];
+
+    // 选中分享类型
+
+    [avc setCompletionWithItemsHandler:^(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+
+    // 显示选中的分享类型
+
+    NSLog(@"act type %@",activityType);
+
+    if (completed) {
+
+    NSLog(@"ok");
+
+    }else {
+
+    NSLog(@"no ok");
+
+    }
+
+    }];
+
+    UIPopoverPresentationController *popover = avc.popoverPresentationController;
+
+    if (popover) {
+
+    popover.sourceView = self.view;
+
+    popover.sourceRect = self.view.bounds;
+
+    popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+
+    }
 }
 
 // 实现代理方法
