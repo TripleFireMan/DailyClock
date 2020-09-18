@@ -12,8 +12,10 @@
 #import "DKUserCenterFooter.h"
 #import "DKPausedTargetViewController.h"
 #import "DKDataResumeViewController.h"
+#import "DKFeedBackViewController.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) UIButton *settingBtn;
 @property (nonatomic, strong) DKUserCenterHeader *tableHeader;
@@ -154,6 +156,47 @@
         DKDataResumeViewController *vc = [DKDataResumeViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
+    else if (indexPath.row == 2){
+        DKFeedBackViewController *feedBack = [DKFeedBackViewController new];
+        [self.navigationController pushViewController:feedBack animated:YES];
+    }
+    else if (indexPath.row == 3){
+        [self p_sendEmail];
+    }
+}
+- (void) p_sendEmail{
+    MFMailComposeViewController *mailVC = [MFMailComposeViewController new];
+    if (!mailVC) {
+        // 在设备还没有添加邮件账户的时候，为空
+        NSLog(@"暂未设置邮箱账户，请先到系统设置添加账户");
+        return;
+    }
+    NSString *body = [NSString stringWithFormat:@"\n\n\n\n\nAPP:极简打卡\n版本:%@\n设备机型:%@\n系统版本:%@",APPVersion,[[UIDevice currentDevice]machineModelName],[UIDevice currentDevice].systemVersion];
+    //代理 MFMailComposeViewControllerDelegate
+    mailVC.mailComposeDelegate = self;
+    [mailVC setMessageBody:body isHTML:NO];
+    //邮件主题
+    [mailVC setSubject:@"联系作者"];
+    //收件人
+    [mailVC setToRecipients:@[@"ab364743113@126.com"]];
+    
+    [self presentViewController:mailVC animated:YES completion:nil];
+}
+
+// 实现代理方法
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    // MFMailComposeResultCancelled
+    // MFMailComposeResultSaved
+    // MFMailComposeResultSent
+    // MFMailComposeResultFailed
+  
+    if (result == MFMailComposeResultSent) {
+        [XHToast showBottomWithText:@"发送成功"];
+    } else if (result == MFMailComposeResultFailed) {
+        [XHToast showBottomWithText:@"发送失败"];
+    }
+    
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (DKUserCenterHeader *) tableHeader{
