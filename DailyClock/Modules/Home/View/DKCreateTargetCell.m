@@ -7,13 +7,13 @@
 //
 
 #import "DKCreateTargetCell.h"
-#import "DKTargetModel.h"
+
 
 @interface DKCreateTargetCell ()
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, strong) UIImageView *iconImgView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) DKTargetModel *model;
+
 @end
 
 @implementation DKCreateTargetCell

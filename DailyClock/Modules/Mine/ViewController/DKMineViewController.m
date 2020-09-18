@@ -10,6 +10,7 @@
 #import "DKMinePageCollectionViewCell.h"
 #import "DKMineItemModel.h"
 #import "DKUserCenterFooter.h"
+#import "DKPausedTargetViewController.h"
 
 @interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -140,6 +141,14 @@
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
+}
+
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DKMineItemModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    if ([model.title isEqualToString:@"已暂停目标"]) {
+        DKPausedTargetViewController *vc = [DKPausedTargetViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (DKUserCenterHeader *) tableHeader{

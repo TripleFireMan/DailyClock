@@ -112,6 +112,12 @@
 		4C91B7962513B25C00C8F594 /* userregiest.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C91B7952513B25B00C8F594 /* userregiest.html */; };
 		4C91B7972513B25C00C8F594 /* userregiest.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C91B7952513B25B00C8F594 /* userregiest.html */; };
 		4C91B7982513B25C00C8F594 /* userregiest.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C91B7952513B25B00C8F594 /* userregiest.html */; };
+		4C91B79B25144B1200C8F594 /* DKPausedTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */; };
+		4C91B79C25144B1200C8F594 /* DKPausedTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */; };
+		4C91B79D25144B1200C8F594 /* DKPausedTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */; };
+		4C91B7A025144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */; };
+		4C91B7A125144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */; };
+		4C91B7A225144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */; };
 		4C993BA6251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
 		4C993BA7251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
 		4C993BA8251256700082F86D /* zcool.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C993BA5251256700082F86D /* zcool.ttf */; };
@@ -259,6 +265,10 @@
 		4C91B78D2513AA8200C8F594 /* DKAboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAboutUsViewController.m; sourceTree = "<group>"; };
 		4C91B7912513AF8B00C8F594 /* private.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = private.html; sourceTree = "<group>"; };
 		4C91B7952513B25B00C8F594 /* userregiest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = userregiest.html; sourceTree = "<group>"; };
+		4C91B79925144B1200C8F594 /* DKPausedTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPausedTargetCell.h; sourceTree = "<group>"; };
+		4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPausedTargetCell.m; sourceTree = "<group>"; };
+		4C91B79E25144E5C00C8F594 /* DKPausedTargetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPausedTargetViewController.h; sourceTree = "<group>"; };
+		4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPausedTargetViewController.m; sourceTree = "<group>"; };
 		4C993BA5251256700082F86D /* zcool.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zcool.ttf; sourceTree = "<group>"; };
 		4C993BA92513482A0082F86D /* DKDetailAnalyticsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDetailAnalyticsView.h; sourceTree = "<group>"; };
 		4C993BAA2513482A0082F86D /* DKDetailAnalyticsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDetailAnalyticsView.m; sourceTree = "<group>"; };
@@ -438,6 +448,8 @@
 				4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */,
 				4C993BB3251399D80082F86D /* DKMinePageCollectionViewCell.h */,
 				4C993BB4251399D80082F86D /* DKMinePageCollectionViewCell.m */,
+				4C91B79925144B1200C8F594 /* DKPausedTargetCell.h */,
+				4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,6 +464,8 @@
 				4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */,
 				4C91B78C2513AA8200C8F594 /* DKAboutUsViewController.h */,
 				4C91B78D2513AA8200C8F594 /* DKAboutUsViewController.m */,
+				4C91B79E25144E5C00C8F594 /* DKPausedTargetViewController.h */,
+				4C91B79F25144E5C00C8F594 /* DKPausedTargetViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -864,6 +878,7 @@
 				4C51AD4E250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C993BBB25139A370082F86D /* DKMineItemModel.m in Sources */,
+				4C91B79B25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC02513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
 				4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */,
@@ -874,6 +889,7 @@
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
 				4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
+				4C91B7A025144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C993BC72513A7B90082F86D /* DataTool.m in Sources */,
@@ -903,6 +919,7 @@
 				4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C993BC12513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C993BAC2513482A0082F86D /* DKDetailAnalyticsView.m in Sources */,
+				4C91B79C25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C07C44825061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C07C44D250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C993BC82513A7B90082F86D /* DataTool.m in Sources */,
@@ -924,6 +941,7 @@
 				4CEDD5B62512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4C91B7A125144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CB2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
@@ -951,6 +969,7 @@
 				4C51AD50250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4C993BBD25139A370082F86D /* DKMineItemModel.m in Sources */,
+				4C91B79D25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC22513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
 				4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */,
@@ -961,6 +980,7 @@
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
+				4C91B7A225144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C993BC92513A7B90082F86D /* DataTool.m in Sources */,

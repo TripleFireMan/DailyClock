@@ -7,13 +7,17 @@
 //  常规cell
 
 #import <UIKit/UIKit.h>
+#import "DKTargetModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DKCreateTargetCell : UITableViewCell
 
-- (void) configModel:(id)model;
+@property (nonatomic, strong) DKTargetModel *model;
 
+- (void) configModel:(id)model;
+- (void) setupSubviews;
+- (void) addConstrainss;
 @end
 
 NS_ASSUME_NONNULL_END

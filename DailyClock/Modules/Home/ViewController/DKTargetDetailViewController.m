@@ -28,6 +28,7 @@
 @property (nonatomic, strong) UIButton *stopBtn;
 @property (nonatomic, strong) UIButton *editBtn;
 @property (nonatomic, strong) UIButton *deleteBtn;
+@property (nonatomic, strong) UIButton *activeBtn;
 
 
 @end
@@ -79,6 +80,13 @@
     self.l2.titleLabel.attributedText = l2txt;
     self.l3.titleLabel.attributedText = l3txt;
     self.l4.titleLabel.attributedText = l4txt;
+    
+    if (self.model.status == DKTargetStatus_Doing) {
+        self.activeBtn.hidden = YES;
+    }
+    else if (self.model.status == DKTargetStatus_Cancel){
+        self.stopBtn.hidden = YES;
+    }
 }
 
 - (void) setupSubView{
@@ -91,6 +99,7 @@
     [self.scrollView addSubview:self.l2];
     [self.scrollView addSubview:self.l3];
     [self.scrollView addSubview:self.l4];
+    [self.scrollView addSubview:self.activeBtn];
     [self.scrollView addSubview:self.stopBtn];
     [self.scrollView addSubview:self.editBtn];
     [self.scrollView addSubview:self.deleteBtn];
@@ -164,6 +173,16 @@
         make.height.offset(btnHeight);
         make.bottom.offset(-CY_Height_Bottom_SafeArea-20);
     }];
+
+    [self.activeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
+        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
+        make.left.offset(15);
+        make.width.offset(btnwidth);
+        make.height.offset(btnHeight);
+        make.bottom.offset(-CY_Height_Bottom_SafeArea-20);
+    }];
+    
     
     [self.editBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.stopBtn.mas_right).offset(10);
@@ -366,6 +385,27 @@
         _analyticsLabel.text = @"打卡统计";
     }
     return _analyticsLabel;
+}
+
+- (UIButton *) activeBtn{
+    @weakify(self);
+    if (!_activeBtn) {
+        _activeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_activeBtn setTitle:@"激活" forState:UIControlStateNormal];
+        _activeBtn.titleLabel.font = DKFont(15);
+        _activeBtn.backgroundColor = RGBColor(59, 214, 224);
+        _activeBtn.layer.cornerRadius = 22.f;
+        [[_activeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+         subscribeNext:^(__kindof UIControl * _Nullable x) {
+         @strongify(self);
+            self.model.status = DKTargetStatus_Doing;
+            [[DKTargetManager cy_shareInstance] cy_save];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            [XHToast showBottomWithText:@"任务已激活，请到首页查看信息"];
+        }];
+            
+    }
+    return _activeBtn;
 }
 
 
