@@ -158,6 +158,18 @@
 		4CA9774C2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
 		4CA9774D2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
 		4CA9774E2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
+		4CA97751251604450041EB7D /* DKVersionHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */; };
+		4CA97752251604450041EB7D /* DKVersionHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */; };
+		4CA97753251604450041EB7D /* DKVersionHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */; };
+		4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
+		4CA97757251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
+		4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
+		4CA9775B251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
+		4CA9775C251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
+		4CA9775D251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
+		4CA9776025160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
+		4CA9776125160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
+		4CA9776225160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
@@ -313,6 +325,14 @@
 		4CA977492515DDF40041EB7D /* URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
 		4CA9774A2515EABD0041EB7D /* DKResultObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKResultObject.h; sourceTree = "<group>"; };
 		4CA9774B2515EABE0041EB7D /* DKResultObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKResultObject.m; sourceTree = "<group>"; };
+		4CA9774F251604450041EB7D /* DKVersionHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKVersionHistoryViewController.h; sourceTree = "<group>"; };
+		4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionHistoryViewController.m; sourceTree = "<group>"; };
+		4CA97754251605E10041EB7D /* DKVersionHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKVersionHistoryCell.h; sourceTree = "<group>"; };
+		4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionHistoryCell.m; sourceTree = "<group>"; };
+		4CA97759251607B60041EB7D /* dd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dd.h; sourceTree = "<group>"; };
+		4CA9775A251607B60041EB7D /* dd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dd.m; sourceTree = "<group>"; };
+		4CA9775E25160EE40041EB7D /* DKVersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKVersionModel.h; sourceTree = "<group>"; };
+		4CA9775F25160EE40041EB7D /* DKVersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionModel.m; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
@@ -484,6 +504,8 @@
 				4C993BB4251399D80082F86D /* DKMinePageCollectionViewCell.m */,
 				4C91B79925144B1200C8F594 /* DKPausedTargetCell.h */,
 				4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */,
+				4CA97754251605E10041EB7D /* DKVersionHistoryCell.h */,
+				4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +526,10 @@
 				4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */,
 				4CA9773F25148AC50041EB7D /* DKFeedBackViewController.h */,
 				4CA9774025148AC50041EB7D /* DKFeedBackViewController.m */,
+				4CA9774F251604450041EB7D /* DKVersionHistoryViewController.h */,
+				4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */,
+				4CA97759251607B60041EB7D /* dd.h */,
+				4CA9775A251607B60041EB7D /* dd.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -617,6 +643,8 @@
 			children = (
 				4C993BB925139A370082F86D /* DKMineItemModel.h */,
 				4C993BBA25139A370082F86D /* DKMineItemModel.m */,
+				4CA9775E25160EE40041EB7D /* DKVersionModel.h */,
+				4CA9775F25160EE40041EB7D /* DKVersionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -922,7 +950,9 @@
 			files = (
 				4C51AD1F250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
+				4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */,
+				4CA9775B251607B60041EB7D /* dd.m in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
@@ -935,8 +965,10 @@
 				4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C07C44C250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
 				4CA9774125148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
+				4CA9776025160EE40041EB7D /* DKVersionModel.m in Sources */,
 				4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C07A9392501DE740064CB76 /* DKTargetManager.m in Sources */,
+				4CA97751251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
 				4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
@@ -975,6 +1007,7 @@
 				4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C993BC12513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C993BAC2513482A0082F86D /* DKDetailAnalyticsView.m in Sources */,
+				4CA9776125160EE40041EB7D /* DKVersionModel.m in Sources */,
 				4C91B79C25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C07C44825061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C07C44D250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
@@ -985,6 +1018,7 @@
 				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4CA97752251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
 				4CA9773B2514649F0041EB7D /* DKDocument.m in Sources */,
 				4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C51AD26250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
@@ -993,6 +1027,7 @@
 				4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4CA9775C251607B60041EB7D /* dd.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C91B78F2513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,
@@ -1000,6 +1035,7 @@
 				4C07A9352501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C91B7A125144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
+				4CA97757251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */,
@@ -1023,7 +1059,9 @@
 			files = (
 				4C51AD21250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
+				4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */,
+				4CA9775D251607B60041EB7D /* dd.m in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
@@ -1036,8 +1074,10 @@
 				4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D62500F16100112389 /* DKCreateTargetViewController.m in Sources */,
 				4CA9774325148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
+				4CA9776225160EE40041EB7D /* DKVersionModel.m in Sources */,
 				4C8DA0D12500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C07A94A2501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
+				4CA97753251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
 				4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */,
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,

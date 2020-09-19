@@ -16,8 +16,8 @@
 #define HOST        @"http://chengyan.shop/"
 #endif
 
-#define FeedBack    HOST@"dailyClock/feedBack?"
-#define UploadImge  HOST@"save_profile?"
-
+#define FeedBack            HOST@"dailyClock/feedBack?"
+#define UploadImge          HOST@"save_profile?"
+#define VersionHistory      HOST@"dailyClock/versionHistory?"
 
 #endif /* URL_h */

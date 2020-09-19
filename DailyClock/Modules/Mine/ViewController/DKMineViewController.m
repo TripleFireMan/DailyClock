@@ -14,6 +14,7 @@
 #import "DKDataResumeViewController.h"
 #import "DKFeedBackViewController.h"
 #import <MessageUI/MFMailComposeViewController.h>
+#import "DKVersionHistoryViewController.h"
 
 @interface DKMineViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,MFMailComposeViewControllerDelegate>
 
@@ -162,6 +163,10 @@
     }
     else if (indexPath.row == 3){
         [self p_sendEmail];
+    }
+    else if (indexPath.row == 4){
+        DKVersionHistoryViewController *vc=  [DKVersionHistoryViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 5){
         [self p_share];
