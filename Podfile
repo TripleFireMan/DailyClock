@@ -18,6 +18,7 @@ def DKPods()
   pod 'FSCalendar'
   pod 'FCAlertView'
   pod 'MBProgressHUD'
+  pod 'UMCCommon'
 end
 
 target 'DailyClock' do

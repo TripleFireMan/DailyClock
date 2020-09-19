@@ -8,6 +8,7 @@
 
 #import "DKFeedBackViewController.h"
 #import "CYEvaluate.h"
+#import "DKResultObject.h"
 
 #define BG_GRAY_COLOR RGBColor(249, 249, 249)
 #define SY_MAX_INPUT 150
@@ -34,6 +35,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *confirmBtn;
 @property (nonatomic, strong) UIImage *currentUploadImage;
+@property (nonatomic, strong) DKResultObject *uploadImg;
 
 @end
 
@@ -55,6 +57,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 
 - (void) setupSubview
 {
+    @weakify(self);
     self.scrollView = [UIScrollView new];
     self.scrollView.alwaysBounceVertical = YES;
     self.scrollView.delaysContentTouches = NO;
@@ -163,6 +166,38 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     self.confirmBtn.layer.cornerRadius = 22;
     self.confirmBtn.layer.masksToBounds = YES;
     [self.scrollView addSubview:self.confirmBtn];
+    
+    [[self.confirmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        
+        NSString *phone = self.phoneTF.text;
+        NSString *content = self.feedBackTextView.text;
+        NSString *title = @"极简打卡APP问题反馈";
+        NSString *img = self.uploadImg.data;
+        NSMutableDictionary *dic = @{}.mutableCopy;
+        dic[@"phone"] = phone;
+        dic[@"content"] = content;
+        dic[@"title"] = title;
+        if (!CYStringIsEmpty(img)) {
+            dic[@"imgs"] = img;
+        }
+        if ([content length] == 0) {
+            [XHToast showBottomWithText:@"反馈内容不能为空"];
+            return;
+        }
+
+        if ([CYEvaluate validateMobile:self.phoneTF.text] == NO) {
+            [XHToast showBottomWithText:@"请输入正确的手机号"];
+            return;
+        }
+        
+        [HttpTool POST:FeedBack parameters:dic HUD:YES success:^(id responseObject) {
+            [XHToast showBottomWithText:@"您的反馈已提交，谢谢合作"];
+            [self.navigationController popViewControllerAnimated:YES];
+        } failure:^(NSError *error) {
+            [XHToast showBottomWithText:error.localizedDescription];
+        }];
+    }];
     
 }
 
@@ -278,10 +313,15 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
         }
     }];
     
-//    [self.imageView bk_whenTapped:^{
-//        @strongify(self);
-//        [self uploadImage];
-//    }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        @strongify(self);
+        [self uploadImage];
+    }];
+    tap.numberOfTapsRequired = 1;
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:tap];
+    
     
     [[self.phoneTF rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
         @strongify(self);
@@ -289,31 +329,6 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
             self.phoneTF.text = [[self.phoneTF text] substringToIndex:11];
         }
     }];
-    
-//    [self.confirmBtn bk_addEventHandler:^(id sender) {
-//        @strongify(self);
-//        NSString *content = [self.feedBackTextView text];
-//        NSString *phoneNum = [self.phoneTF text];
-//        NSString *picUrl = [self picUrl];
-//
-//        if ([content length] == 0) {
-//            [XHToast showBottomWithText:@"反馈内容不能为空"];
-//            return;
-//        }
-//
-//        if ([CYEvaluate validateMobile:self.phoneTF.text] == NO) {
-//            [XHToast showBottomWithText:@"请输入正确的手机号"];
-//            return;
-//        }
-//
-//        if (self.confirmBlock) {
-//            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//            [dic setObject:content forKey:k_TextFeedBackKey];
-//            [dic setObject:phoneNum forKey:k_MobilePhoneKey];
-//            [dic setObject:picUrl?:@"" forKey:k_PicUrlFeedBackKey];
-//            self.confirmBlock(dic);
-//        }
-//    } forControlEvents:UIControlEventTouchUpInside];
     
     
 }
@@ -384,6 +399,19 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
         [XHToast showBottomWithText:@"文件太大，允许上传最大图片为3MB"];
         return;
     }
+    [HttpTool UPLOAD:UploadImge parameters:@{@"picture":imgData} HUD:YES success:^(id responseObject) {
+        DKResultObject *obj = [DKResultObject modelWithJSON:responseObject];
+        if (obj.status == 0) {
+            self.imageView.image = self.currentUploadImage;
+            [XHToast showBottomWithText:@"上传图片成功"];
+            self.uploadImg = obj;
+        }
+        else{
+            [XHToast showBottomWithText:obj.message];
+        }
+    } failure:^(NSError *error) {
+        [XHToast showBottomWithText:@"上传图片失败"];
+    }];
     
 }
 

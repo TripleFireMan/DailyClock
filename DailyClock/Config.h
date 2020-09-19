@@ -20,6 +20,8 @@
 //APP BundleId
 #define APPBundleId [[NSBundle mainBundle] bundleIdentifier]
 
+#define UM_APPKEY   @"5f65c265b473963242a2a356"
+
 #define JPushAppKey     @"feeda3c2e20b59e431cbfd43"
 #define JPushChannel    @"App Store"
 

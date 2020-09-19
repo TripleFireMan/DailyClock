@@ -32,19 +32,24 @@
 }
 
 - (void)testExample {
-    // UI tests must launch the application that they test.
-    
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [Snapshot snapshot:@"1.png" timeWaitingForIdle:10];
-    [app.buttons[@"tianjia"] tap];
-    [Snapshot snapshot:@"2.png" timeWaitingForIdle:10];
+    [app.buttons[@"NavView Add"] tap];
+    [Snapshot snapshot:@"1" timeWaitingForIdle:10];
     [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"\u65e9\u8d77"]/*[[".cells.staticTexts[@\"\\u65e9\\u8d77\"]",".staticTexts[@\"\\u65e9\\u8d77\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
-    [Snapshot snapshot:@"3.png" timeWaitingForIdle:10];
+    [Snapshot snapshot:@"2" timeWaitingForIdle:10];
     [app.buttons[@"\u4fdd\u5b58"] tap];
-    [Snapshot snapshot:@"4.png" timeWaitingForIdle:10];
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [app.tabBars.buttons[@"\u6211\u7684"] tap];
+    [Snapshot snapshot:@"3" timeWaitingForIdle:10];
+    XCUIElementQuery *cellsQuery = app.collectionViews.cells;
+    [[cellsQuery.otherElements containingType:XCUIElementTypeImage identifier:@"download"].element tap];
+    [Snapshot snapshot:@"4" timeWaitingForIdle:10];
+    XCUIElement *backButton = app.buttons[@"back"];
+    [backButton tap];
+    [[cellsQuery.otherElements containingType:XCUIElementTypeImage identifier:@"faq"].element tap];
+    [Snapshot snapshot:@"5" timeWaitingForIdle:10];
+    [backButton tap];
+    
 }
 
 - (void)testLaunchPerformance {

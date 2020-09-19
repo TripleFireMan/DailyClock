@@ -193,12 +193,19 @@
         [[_beifenBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [[[[[DKApplication cy_shareInstance] p_backupToICloud] then:^id _Nullable(id  _Nullable value) {
-                [XHToast showBottomWithText:@"备份成功"];
+                hud.mode = MBProgressHUDModeText;
+                hud.label.text = @"备份成功";
+                [hud hideAnimated:YES afterDelay:1];
                 return nil;
             }] catch:^(NSError * _Nonnull error) {
-                [XHToast showBottomWithText:@"备份失败"];
+                hud.mode = MBProgressHUDModeText;
+                hud.label.text = @"备份失败";
+                [hud hideAnimated:YES afterDelay:1];
             }] always:^{
-                [hud hideAnimated:YES];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [hud hideAnimated:YES];
+                });
+                
             }];
         }];
     }
@@ -222,12 +229,18 @@
         [[_huifuBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [[[[[DKApplication cy_shareInstance] p_loadDataFromICloud] then:^id _Nullable(id  _Nullable value) {
-                [XHToast showBottomWithText:@"恢复成功"];
+                hud.mode = MBProgressHUDModeText;
+                hud.label.text = @"恢复成功";
+                [hud hideAnimated:YES afterDelay:1];
                 return nil;
             }] catch:^(NSError * _Nonnull error) {
-                [XHToast showBottomWithText:@"恢复失败"];
+                hud.mode = MBProgressHUDModeText;
+                hud.label.text = @"恢复失败";
+                [hud hideAnimated:YES afterDelay:1];
             }] always:^{
-                [hud hideAnimated:YES];
+                                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [hud hideAnimated:YES];
+                });
             }];
         }];
     }

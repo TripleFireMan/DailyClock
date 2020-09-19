@@ -10,6 +10,7 @@
 #import "DKApplication+Extension.h"
 #import "FBLPromises.h"
 #import "DKDocument.h"
+#import <UMCommon/UMCommon.h>
 
 @implementation DKApplication
 - (id) init{
@@ -23,10 +24,17 @@
 }
 
 - (void)setup:(NSDictionary *)launchInfo{
+    
+    //注册友盟
+    [UMConfigure initWithAppkey:UM_APPKEY channel:nil];
+    [UMConfigure setLogEnabled:YES];
+    
     [self initwindow:launchInfo];
     [self configJPush:launchInfo];
     /// 自动备份
     [self autoBackup];
+    
+
 
 }
 

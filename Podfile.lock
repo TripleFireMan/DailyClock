@@ -74,6 +74,7 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - UMCCommon (7.1.1)
   - XHToast (1.4.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
+  - UMCCommon
   - XHToast
   - YYKit
   - ZWLimitCounter (= 0.0.2)
@@ -116,6 +118,7 @@ SPEC REPOS:
     - PromisesObjC
     - ReactiveObjC
     - SDWebImage
+    - UMCCommon
     - XHToast
     - YYKit
     - ZWLimitCounter
@@ -148,11 +151,12 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  UMCCommon: f455f92c125342e360d6ad9eafe484945351eeb5
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 79e0f6803078f4dbb70cd2db9c8bc8ee2b710e82
+PODFILE CHECKSUM: 1073cbaf7acb33c5c4aafb34d4f192cce747fdf5
 
 COCOAPODS: 1.9.1

@@ -152,6 +152,12 @@
 		4CA9774125148AC50041EB7D /* DKFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774025148AC50041EB7D /* DKFeedBackViewController.m */; };
 		4CA9774225148AC50041EB7D /* DKFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774025148AC50041EB7D /* DKFeedBackViewController.m */; };
 		4CA9774325148AC50041EB7D /* DKFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774025148AC50041EB7D /* DKFeedBackViewController.m */; };
+		4CA977462515D61E0041EB7D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977452515D61E0041EB7D /* HttpTool.m */; };
+		4CA977472515D61E0041EB7D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977452515D61E0041EB7D /* HttpTool.m */; };
+		4CA977482515D61E0041EB7D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA977452515D61E0041EB7D /* HttpTool.m */; };
+		4CA9774C2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
+		4CA9774D2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
+		4CA9774E2515EABE0041EB7D /* DKResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9774B2515EABE0041EB7D /* DKResultObject.m */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
@@ -302,6 +308,11 @@
 		4CA9773D2514711E0041EB7D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4CA9773F25148AC50041EB7D /* DKFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFeedBackViewController.h; sourceTree = "<group>"; };
 		4CA9774025148AC50041EB7D /* DKFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFeedBackViewController.m; sourceTree = "<group>"; };
+		4CA977442515D61E0041EB7D /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		4CA977452515D61E0041EB7D /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		4CA977492515DDF40041EB7D /* URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		4CA9774A2515EABD0041EB7D /* DKResultObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKResultObject.h; sourceTree = "<group>"; };
+		4CA9774B2515EABE0041EB7D /* DKResultObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKResultObject.m; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
@@ -399,6 +410,7 @@
 				4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */,
 				4C07A92C250121DE0064CB76 /* DKTheme.h */,
 				4C51AD28250CBC8F007DEB77 /* Config.h */,
+				4CA977492515DDF40041EB7D /* URL.h */,
 			);
 			path = DailyClock;
 			sourceTree = "<group>";
@@ -612,8 +624,12 @@
 		4CA97737251464890041EB7D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4CA9774A2515EABD0041EB7D /* DKResultObject.h */,
+				4CA9774B2515EABE0041EB7D /* DKResultObject.m */,
 				4CA977382514649F0041EB7D /* DKDocument.h */,
 				4CA977392514649F0041EB7D /* DKDocument.m */,
+				4CA977442515D61E0041EB7D /* HttpTool.h */,
+				4CA977452515D61E0041EB7D /* HttpTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -936,9 +952,11 @@
 				4C993BB5251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
 				4C1CCE7E24FE49690004EF4E /* main.m in Sources */,
 				4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */,
+				4CA9774C2515EABE0041EB7D /* DKResultObject.m in Sources */,
 				4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */,
 				4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */,
 				4C8DA0CF2500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
+				4CA977462515D61E0041EB7D /* HttpTool.m in Sources */,
 				4C8DA0C02500E74600112389 /* DKApplication+Window.m in Sources */,
 				4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C91B78E2513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,
@@ -963,6 +981,7 @@
 				4C993BC82513A7B90082F86D /* DataTool.m in Sources */,
 				4C993BBC25139A370082F86D /* DKMineItemModel.m in Sources */,
 				4C07A93F2501DE920064CB76 /* DKSignModel.m in Sources */,
+				4CA9774D2515EABE0041EB7D /* DKResultObject.m in Sources */,
 				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
@@ -994,6 +1013,7 @@
 				4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 				4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */,
 				4CA9774225148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
+				4CA977472515D61E0041EB7D /* HttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,9 +1053,11 @@
 				4C993BB7251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
 				4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */,
+				4CA9774E2515EABE0041EB7D /* DKResultObject.m in Sources */,
 				4C8DA0CC2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C993BCC2513A7B90082F86D /* CacheTool.m in Sources */,
 				4C8DA0C22500E74600112389 /* DKApplication+Window.m in Sources */,
+				4CA977482515D61E0041EB7D /* HttpTool.m in Sources */,
 				4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A954250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
 				4C91B7902513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,

@@ -10,10 +10,6 @@
 #import "UITextView+ZWPlaceHolder.h"
 
 @interface DKSharePopView ()
-{
-    /// 打卡心情
-    UIImageView *_xqImgView[3];
-}
 
 /// 背景
 @property (nonatomic, strong) UIView *maskView;
@@ -75,87 +71,62 @@
 {
   self = [super initWithFrame:frame];
   if(self){
+      @weakify(self);
       [self setupSubviews];
       [self addConstrainss];
+      
+      [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+          @strongify(self);
+          NSDictionary *useinfo = [x userInfo];
+          CGRect rect = [[useinfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+          CGFloat keyboardHeight = rect.size.height;
+          
+          [self layoutIfNeeded];
+          [UIView animateWithDuration:0.35 animations:^{
+              [self.container mas_remakeConstraints:^(MASConstraintMaker *make) {
+                  make.centerX.offset(0);
+                  make.left.offset(15);
+                  make.right.offset(-15);
+                  make.bottom.offset(-keyboardHeight-20);
+              }];
+              [self layoutIfNeeded];
+          } completion:^(BOOL finished) {
+          }];
+      }];
+      
+      [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+          @strongify(self);
+          
+          [self layoutIfNeeded];
+          [UIView animateWithDuration:0.35 animations:^{
+            [self.container mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.center.offset(0);
+                make.left.offset(15);
+                make.right.offset(-15);
+            }];
+            [self layoutIfNeeded];
+          } completion:^(BOOL finished) {
+          }];
+      }];
   }
   return self;
 }
 
 - (void) setupSubviews
 {
-    @weakify(self);
+
     [self addSubview:self.maskView];
     [self addSubview:self.container];
-    
-    _xqImgView[0] = [UIImageView new];
-    _xqImgView[0].image = [UIImage imageNamed:@"gj_commentbmy_unselect"];
-    _xqImgView[0].highlightedImage = [UIImage imageNamed:@"gj_commentbmy"];
-    _xqImgView[0].userInteractionEnabled = YES;
-    
-    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        @strongify(self);
-        self->_xqImgView[0].highlighted = NO;
-        self->_xqImgView[1].highlighted = NO;
-        self->_xqImgView[2].highlighted = NO;
-        
-        self->_xqImgView[0].highlighted = YES;
-        self.signModel.xq = DKSignXQType_Sad;
-    }];
-    tap1.numberOfTapsRequired = 1;
-    
-    [_xqImgView[0] addGestureRecognizer:tap1];
-
-    
-    _xqImgView[1] = [UIImageView new];
-    _xqImgView[1].image = [UIImage imageNamed:@"gj_commentyb_unselect"];
-    _xqImgView[1].highlightedImage = [UIImage imageNamed:@"gj_commentyb"];
-    _xqImgView[1].userInteractionEnabled = YES;
-    _xqImgView[1].highlighted = YES;
-    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        @strongify(self);
-        self->_xqImgView[0].highlighted = NO;
-        self->_xqImgView[1].highlighted = NO;
-        self->_xqImgView[2].highlighted = NO;
-        
-        self->_xqImgView[1].highlighted = YES;
-        self.signModel.xq = DKSignXQType_Normal;
-    }];
-    tap2.numberOfTapsRequired = 1;
-    
-    [_xqImgView[1] addGestureRecognizer:tap2];
-    
-    
-    _xqImgView[2] = [UIImageView new];
-    _xqImgView[2].image = [UIImage imageNamed:@"gj_commenthp_unselect"];
-    _xqImgView[2].highlightedImage = [UIImage imageNamed:@"gj_commenthp"];
-    _xqImgView[2].userInteractionEnabled = YES;
-    
-    UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        @strongify(self);
-        self->_xqImgView[0].highlighted = NO;
-        self->_xqImgView[1].highlighted = NO;
-        self->_xqImgView[2].highlighted = NO;
-        
-        self->_xqImgView[2].highlighted = YES;
-        self.signModel.xq = DKSignXQType_Hp;
-    }];
-    tap3.numberOfTapsRequired = 1;
-    
-    [_xqImgView[2] addGestureRecognizer:tap3];
-    
-    [self.container addSubview:_xqImgView[0]];
-    [self.container addSubview:_xqImgView[1]];
-    [self.container addSubview:_xqImgView[2]];
     
     [self.container addSubview:self.imageView];
     [self.container addSubview:self.closeImageView];
     [self.container addSubview:self.closeBtn];
-    [self.container addSubview:self.titleLabel];
-    [self.container addSubview:self.messageLabel];
+//    [self.container addSubview:self.titleLabel];
+//    [self.container addSubview:self.messageLabel];
     [self.container addSubview:self.textContaierView];
     [self.textContaierView addSubview:self.textView];
     [self.container addSubview:self.confirmBtn];
-    [self.container addSubview:self.shareBtn];
+//    [self.container addSubview:self.shareBtn];
 }
 
 - (void) addConstrainss
@@ -174,6 +145,8 @@
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(30);
         make.centerX.offset(0);
+        make.width.offset(293*0.8);
+        make.height.offset(124*0.8f);
     }];
     
     [self.closeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -188,60 +161,43 @@
        make.width.height.offset(50);
     }];
     
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imageView.mas_bottom).offset(15);
-        make.centerX.offset(0);
-    }];
-    
-    [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(15);
-        make.left.offset(30);
-        make.right.offset(-30);
-    }];
-    
-    [self->_xqImgView[1] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.offset(0);
-        make.top.mas_equalTo(self.messageLabel.mas_bottom).offset(15);
-        make.width.height.offset(32.5);
-    }];
-
-    [self->_xqImgView[0] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(30);
-        make.top.mas_equalTo(self.messageLabel.mas_bottom).offset(15);
-        make.width.height.offset(32.5);
-    }];
-    
-    [self->_xqImgView[2] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.offset(-30);
-        make.top.mas_equalTo(self.messageLabel.mas_bottom).offset(15);
-        make.width.height.offset(32.5);
-    }];
+//    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.imageView.mas_bottom).offset(15);
+//        make.centerX.offset(0);
+//    }];
+//
+//    [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(15);
+//        make.left.offset(30);
+//        make.right.offset(-30);
+//    }];
     
     [self.textContaierView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(30);
         make.right.offset(-30);
-        make.height.offset(40);
-        make.top.mas_equalTo(self->_xqImgView[1].mas_bottom).offset(15);
+        make.height.offset(100);
+        make.top.mas_equalTo(self.imageView.mas_bottom).offset(15);
     }];
     
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.inset(0);
     }];
-    CGFloat btnWidth = (kScreenSize.width - 30 - 60 - 15)/2.f;
+//    CGFloat btnWidth = (kScreenSize.width - 30 - 60 - 15)/2.f;
     [self.confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.textContaierView.mas_bottom).offset(15);
-        make.left.offset(30);
-        make.width.offset(btnWidth);
+//        make.left.offset(30);
+        make.width.offset(kScreenSize.width - 30 -60);
         make.height.offset(40);
         make.bottom.offset(-20);
+        make.centerX.offset(0);
     }];
     
-    [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.offset(-30);
-        make.width.offset(btnWidth);
-        make.height.offset(40);
-        make.bottom.offset(-20);
-    }];
+//    [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.offset(-30);
+//        make.width.offset(btnWidth);
+//        make.height.offset(40);
+//        make.bottom.offset(-20);
+//    }];
 }
 
 - (void) setTargetModel:(DKTargetModel *)targetModel
@@ -359,7 +315,7 @@
     if (!_textView) {
         _textView = [UITextView new];
         _textView.backgroundColor = [UIColor clearColor];
-        _textView.font = CYPingFangSCRegular(14.f);
+        _textView.font = DKFont(14.f);
         _textView.zw_placeHolder = @"写点什么吧";
     }
     return _textView;
@@ -370,8 +326,11 @@
     if (!_confirmBtn) {
         _confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _confirmBtn.layer.cornerRadius = 20.f;
-        _confirmBtn.backgroundColor =kShareBtnColor;
+        _confirmBtn.layer.masksToBounds = YES;
+        [_confirmBtn setBackgroundImage:[UIImage imageWithColor:kMainColor] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage imageWithColor:[kMainColor colorWithAlphaComponent:.8f]] forState:UIControlStateHighlighted];
         [_confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
+        _confirmBtn.titleLabel.font = DKFont(16.f);
         [_confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [[_confirmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
@@ -384,23 +343,23 @@
 }
 
 
-- (UIButton *) shareBtn{
-    @weakify(self);
-    if (!_shareBtn) {
-        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _shareBtn.layer.cornerRadius = 20.f;
-        _shareBtn.backgroundColor =kShareBtnColor;
-        [_shareBtn setTitle:@"分享" forState:UIControlStateNormal];
-        [_shareBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-                @strongify(self);
-                self.signModel.text = self.textView.text;
-                self.share?self.share():nil;
-            [self hide];
-        }];
-    }
-    return _shareBtn;
-}
+//- (UIButton *) shareBtn{
+//    @weakify(self);
+//    if (!_shareBtn) {
+//        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        _shareBtn.layer.cornerRadius = 20.f;
+//        _shareBtn.backgroundColor =kShareBtnColor;
+//        [_shareBtn setTitle:@"分享" forState:UIControlStateNormal];
+//        [_shareBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//                @strongify(self);
+//                self.signModel.text = self.textView.text;
+//                self.share?self.share():nil;
+//            [self hide];
+//        }];
+//    }
+//    return _shareBtn;
+//}
 
 - (UIButton *) closeBtn{
     @weakify(self);

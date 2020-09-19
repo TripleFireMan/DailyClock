@@ -25,5 +25,6 @@
 #import "DKAlert.h"
 #import "FBLPromises.h"
 #import "MBProgressHUD.h"
-
+#import "HttpTool.h"
+#import "URL.h"
 #endif /* PrefixHeader_pch */

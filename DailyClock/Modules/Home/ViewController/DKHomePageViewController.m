@@ -108,7 +108,7 @@
             [self p_save:model];
         }
         else{
-            [DKSharePopView showOnView:self.view confirmAction:^{
+            [DKSharePopView showOnView:[UIApplication sharedApplication].keyWindow confirmAction:^{
                 [self p_save:model];
             } shareAction:^{
                 [self p_save:model];
