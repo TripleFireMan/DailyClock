@@ -17,15 +17,57 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>23</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>NSExceptionDomains</key>
+			<dict>
+				<key>http://192.168.0.102:8000/ </key>
+				<dict>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.0</string>
+				</dict>
+				<key>http://192.168.6.77:8000/</key>
+				<dict>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.0</string>
+				</dict>
+				<key>http://chengyan.shop/</key>
+				<dict>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.0</string>
+				</dict>
+				<key>http://localhost/</key>
+				<dict>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.0</string>
+				</dict>
+				<key>http://www.biqugezw.com/</key>
+				<dict>
+					<key>NSExceptionMinimumTLSVersion</key>
+					<string>TLSv1.0</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>极简打卡需要使用您的相机，以便用于上传分享照片</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>极简打卡需要访问您的地理位置，才能给更好的分享给他人</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>极简打卡需要访问您的地理位置，才能给更好的分享给他人</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>我们需要地理位置信息，以提供更好的分享服务</string>
+	<string>极简打卡需要访问您的地理位置，才能给更好的分享给他人</string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>极简打卡需要访问您的地理位置，才能给更好的分享给他人</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>极简打卡需要访问您的相册，以方便您体验照片上传等服务</string>
 	<key>NSPhotoLibraryUsageDescription</key>

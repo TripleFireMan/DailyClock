@@ -9,12 +9,12 @@
 #ifndef URL_h
 #define URL_h
 
-#ifdef DEBUG
-//#define HOST        @"http://0.0.0.0:8000/"
-#define HOST        @"http://192.168.0.102:8000/"
-#else
+//#ifdef DEBUG
+////#define HOST        @"http://0.0.0.0:8000/"
+//#define HOST        @"http://192.168.0.102:8000/"
+//#else
 #define HOST        @"http://chengyan.shop/"
-#endif
+//#endif
 
 #define FeedBack            HOST@"dailyClock/feedBack?"
 #define UploadImge          HOST@"save_profile?"

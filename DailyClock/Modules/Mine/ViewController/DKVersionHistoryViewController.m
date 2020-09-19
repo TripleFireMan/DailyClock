@@ -44,22 +44,33 @@
 #pragma mark - api
 - (void) loadData
 {
+    @weakify(self);
     [HttpTool GET:VersionHistory parameters:nil HUD:YES success:^(id responseObject) {
         NSInteger status = [[responseObject objectForKey:@"status"] integerValue];
         if (status==0) {
             NSArray *versions = [NSArray modelArrayWithClass:[DKVersionModel class] json:[responseObject objectForKey:@"data"]];
-            [self.dataSource addObjectsFromArray:versions];
-            [self.tableView reloadData];
+            if (versions.count != 0) {
+                [self.dataSource addObjectsFromArray:versions];
+                [self.tableView reloadData];
+            }
+            else{
+                [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+                    @strongify(self);
+                    [self loadData];
+                }  ] ;
+            }
         }
         else{
-            [self.tableView cy_showEmptyImage:@"BeginTargetTip" clickRefresh:^{
-                
-            }];
+            [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+                @strongify(self);
+                [self loadData];
+            }  ] ;
         }
     } failure:^(NSError *error) {
-        [self.tableView cy_showEmptyImage:@"BeginTargetTip" clickRefresh:^{
-            
-        }];
+        [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+            @strongify(self);
+            [self loadData];
+        }  ] ;
     }];
 }
 #pragma mark - model event

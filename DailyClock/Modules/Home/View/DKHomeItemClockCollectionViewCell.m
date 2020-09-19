@@ -31,7 +31,7 @@
     
     
     NSDate *today = [NSDate date];
-    if ([today weekday] == _weekModel.weekday) {
+    if ([self isSameDay:today date2:_weekModel.date]) {
         self.textLabel.text = @"打卡";
         self.textLabel.font = DKFont(14);
         
@@ -76,7 +76,7 @@
     __block BOOL isSigned = NO;
     
     [[self.model signModels] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj.date.weekday == weekModel.weekday) {
+        if ([self isSameDay:obj.date date2:weekModel.date]) {
             isSigned = YES;
         }
     }];
@@ -156,6 +156,14 @@
         _dakaImageView.tintColor = kMainColor;
     }
     return _dakaImageView;
+}
+
+- (BOOL)isSameDay:(NSDate *)date1 date2:(NSDate *)date2{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSDateComponents *comp1 = [calendar components:unitFlag fromDate:date1];
+    NSDateComponents *comp2 = [calendar components:unitFlag fromDate:date2];
+    return (([comp1 day] == [comp2 day]) && ([comp1 month] == [comp2 month]) && ([comp1 year] == [comp2 year]));
 }
 
 @end

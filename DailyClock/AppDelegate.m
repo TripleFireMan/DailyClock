@@ -22,7 +22,6 @@
     
     /// 初始化
     [[DKApplication cy_shareInstance] setup:launchOptions];
-    
     return YES;
 }
 

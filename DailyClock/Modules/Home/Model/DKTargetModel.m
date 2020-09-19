@@ -37,10 +37,16 @@
     if (!_weekSettings) {
         _weekSettings = [NSMutableArray array];
         NSArray *weekNames = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
+        NSString *weekInfo = [self getWeekTime];
+        NSString *zhouyi = [[weekInfo componentsSeparatedByString:@"-"] firstObject];
+        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+        formater.dateFormat = @"YYYY年MM月dd日";
+        NSDate *zhouyiDate = [formater dateFromString:zhouyi];
         for (int i = 0; i < 7; i++) {
             DKTargetPinCiWeekModel *weekModel = [DKTargetPinCiWeekModel new];
             weekModel.isSelected = YES;
             weekModel.weekday = i+2;
+            weekModel.date = [zhouyiDate dateByAddingDays:i];
             if (i==6) {
                 weekModel.weekday = 1;
             }
@@ -48,8 +54,70 @@
             [_weekSettings addObject:weekModel];
         }
     }
+    
+    NSString *weekInfo = [self getWeekTime];
+    NSString *zhouyi = [[weekInfo componentsSeparatedByString:@"-"] firstObject];
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    formater.dateFormat = @"YYYY年MM月dd日";
+    NSDate *zhouyiDate = [formater dateFromString:zhouyi];
+    
+    [_weekSettings enumerateObjectsUsingBlock:^(DKTargetPinCiWeekModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.date = [zhouyiDate dateByAddingDays:idx];
+    }];
+    
+    
     return _weekSettings;
 }
+
+- (NSString *)getWeekTime
+{
+    NSDate *nowDate = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comp = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday  fromDate:nowDate];
+    // 获取今天是周几
+    NSInteger weekDay = [comp weekday];
+    // 获取几天是几号
+    NSInteger day = [comp day];
+    NSLog(@"%ld----%ld",(long)weekDay,(long)day);
+
+    // 计算当前日期和本周的星期一和星期天相差天数
+    long firstDiff,lastDiff;
+    //    weekDay = 1; weekDay == 1 == 周日
+    if (weekDay == 1)
+    {
+        firstDiff = -6;
+        lastDiff = 0;
+    }
+    else
+    {
+        firstDiff = [calendar firstWeekday] - weekDay + 1;
+        lastDiff = 8 - weekDay;
+    }
+    NSLog(@"firstDiff: %ld   lastDiff: %ld",firstDiff,lastDiff);
+    
+    // 在当前日期(去掉时分秒)基础上加上差的天数
+    NSDateComponents *baseDayComp = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay  fromDate:nowDate];
+
+    //获取周一日期
+    [baseDayComp setDay:day + firstDiff];
+    NSDate *firstDayOfWeek = [calendar dateFromComponents:baseDayComp];
+    
+    //获取周末日期
+    [baseDayComp setDay:day + lastDiff];
+    NSDate *lastDayOfWeek = [calendar dateFromComponents:baseDayComp];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY年MM月dd日"];
+    NSString *firstDay = [formatter stringFromDate:firstDayOfWeek];
+    NSString *lastDay = [formatter stringFromDate:lastDayOfWeek];
+    NSLog(@"%@=======%@",firstDay,lastDay);
+    
+    NSString *dateStr = [NSString stringWithFormat:@"%@-%@",firstDay,lastDay];
+    
+    return dateStr;
+    
+}
+
 
 - (NSDate *) startDate{
     if (!_startDate) {
@@ -123,21 +191,26 @@
 - (NSInteger) continueCont{
 
     __block NSInteger count = 0;
-    __block NSDate *day = [self.signModels lastObject].date;
     
-    [[[self.signModels reverseObjectEnumerator] allObjects] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj.date isToday] || [obj.date isYesterday]) {
+    
+//    NSArray <NSDate *>* dates = [self.signModels valueForKeyPath:@"date"];
+    NSArray * signModels = [self.signModels sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
+    NSArray * dates = [signModels valueForKeyPath:@"date"];
+    __block NSDate *day = [dates firstObject];
+    
+    [dates enumerateObjectsUsingBlock:^(NSDate * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isToday] || [obj isYesterday]) {
             count++;
         }
         else{
-            if ([day timeIntervalSinceDate:obj.date] > 24 * 60 * 60) {
+            if ([day timeIntervalSinceDate:obj] > 24 * 60 * 60) {
                 *stop = YES;
             }
             else{
                 count++;
             }
         }
-        day = obj.date;
+        day = obj;
     }];
     
     return count;

@@ -121,10 +121,14 @@
     
     self.continueLabel.attributedText = attcontinueContText;
     
-    NSString *targetCountText = [NSString stringWithFormat:@"目标 %@ 次",@([_model targetCount]-_model.signModels.count)];
+    NSInteger targetCount= [_model targetCount]-_model.signModels.count;
+    if (targetCount <= 0) {
+        targetCount = 0;
+    }
+    NSString *targetCountText = [NSString stringWithFormat:@"目标 %ld 次",targetCount];
     NSMutableAttributedString *atttargetCountText = [[NSMutableAttributedString alloc] initWithString:targetCountText];
     atttargetCountText.font = DKFont(13);
-    [atttargetCountText setFont:CYBebas(13) range:[targetCountText rangeOfString:[NSString stringWithFormat:@"%@",@([_model targetCount])]]];
+    [atttargetCountText setFont:CYBebas(13) range:[targetCountText rangeOfString:[NSString stringWithFormat:@"%ld",targetCount]]];
     
     self.totalCountLabel.attributedText = atttargetCountText;
     [self.collectionView reloadData];

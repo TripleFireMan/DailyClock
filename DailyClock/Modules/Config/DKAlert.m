@@ -12,7 +12,7 @@
 NSInteger DKAlertDone = 100;
 
 @interface DKAlert () <FCAlertViewDelegate>
-
+@property (nonatomic, copy) void(^Click)(NSInteger idx, NSString *idxTitle);
 @end
 
 @implementation DKAlert
@@ -45,17 +45,31 @@ NSInteger DKAlertDone = 100;
     
     
     alertView.delegate = [DKAlert cy_shareInstance];
-    [[[DKAlert cy_shareInstance] rac_signalForSelector:@selector(FCAlertView:clickedButtonIndex:buttonTitle:) fromProtocol:@protocol(FCAlertViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
-        NSNumber *first = [x second];
-        NSString *titles = [x third];
-        clickAction?clickAction([first intValue],titles):nil;
-    }];
-        
+    [DKAlert cy_shareInstance].Click = clickAction;
+//    [[[DKAlert cy_shareInstance] rac_signalForSelector:@selector(FCAlertView:clickedButtonIndex:buttonTitle:) fromProtocol:@protocol(FCAlertViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
+//        NSNumber *first = [x second];
+//        NSString *titles = [x third];
+//        clickAction?clickAction([first intValue],titles):nil;
+//    }];
+//
+//
+//    [[[DKAlert cy_shareInstance] rac_signalForSelector:@selector(FCAlertDoneButtonClicked:) fromProtocol:@protocol(FCAlertViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
+//        clickAction?clickAction(DKAlertDone,done):nil;
+//    }];
     
-    [[[DKAlert cy_shareInstance] rac_signalForSelector:@selector(FCAlertDoneButtonClicked:) fromProtocol:@protocol(FCAlertViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
-        clickAction?clickAction(DKAlertDone,done):nil;
-    }];
     
-    
+}
+
+- (void) FCAlertDoneButtonClicked:(FCAlertView *)alertView{
+    if (self.Click) {
+        self.Click(DKAlertDone, nil);
+    }
+}
+
+- (void) FCAlertView:(FCAlertView *)alertView clickedButtonIndex:(NSInteger)index buttonTitle:(NSString *)title
+{
+    if (self.Click) {
+        self.Click(index, title);
+    }
 }
 @end

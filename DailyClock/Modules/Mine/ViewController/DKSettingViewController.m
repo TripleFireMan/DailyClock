@@ -7,6 +7,7 @@
 #import "DKSettingViewController.h"
 #import "CYBaseNavigationBar.h"
 #import "DKAboutUsViewController.h"
+#import "DKFontSettingViewController.h"
 
 @interface DKSettingViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -65,7 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *titles = @[@"关于我们",@"用户协议",@"隐私政策",@"给我们好评"];
+    NSArray *titles = @[@"关于我们",@"用户协议",@"隐私政策",@"给我们好评",@"字体设置"];
     static NSString *identifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell==nil) {
@@ -80,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,6 +104,10 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1531050825&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"] options:@{} completionHandler:^(BOOL success) {
             
         }];
+    }
+    else if (indexPath.row == 4){
+        DKFontSettingViewController *vc = [DKFontSettingViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

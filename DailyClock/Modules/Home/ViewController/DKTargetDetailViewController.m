@@ -60,7 +60,11 @@
     
     NSMutableAttributedString *l2txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@   天",@(self.model.continueCont)]];
     
-    NSMutableAttributedString *l3txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@  天",@(self.model.targetCount-self.model.signModels.count)]];
+    NSInteger targetCount = self.model.targetCount-self.model.signModels.count;
+    if (targetCount < 0) {
+        targetCount = 0;
+    }
+    NSMutableAttributedString *l3txt = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld  天",targetCount]];
     
     NSMutableAttributedString *l4txt = [[NSMutableAttributedString alloc] initWithString:[[self.model createDate] stringWithFormat:@"yyyy.MM.dd"]];
     
@@ -328,8 +332,56 @@
         return NO;
     }
     else{
-        return YES;
+        
+        [DKAlert showTitle:@"提示" subTitle:@"您是否要补卡？" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
+            if (idx == DKAlertDone) {
+                DKSignModel *signModel = [DKSignModel new];
+                signModel.date = date;
+                [self.model.signModels addObject:signModel];
+                [self p_config];
+                [[DKTargetManager cy_shareInstance] cy_save];
+            }
+        } doneTitle:@"确定" array:@[@"取消"]];
+        
+        return NO;
     }
+}
+
+- (BOOL) calendar:(FSCalendar *)calendar shouldDeselectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
+{
+    __block BOOL dateIsDaka = NO;
+    NSMutableArray *removeData = @[].mutableCopy;
+    __block DKSignModel *findObj = nil;
+    [self.model.signModels enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([self isSameDay:date date2:obj.date]) {
+            dateIsDaka = YES;
+            findObj = obj;
+            *stop = YES;
+        }
+    }];
+    
+    if (dateIsDaka) {
+        [DKAlert showTitle:@"提示" subTitle:@"确定取消打卡？" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
+            if (idx == DKAlertDone) {
+                [self.model.signModels removeObject:findObj];
+                [self.calendar deselectDate:findObj.date];
+                [self p_config];
+                [[DKTargetManager cy_shareInstance] cy_save];
+            }
+        } doneTitle:@"确定" array:@[@"取消"]];
+    }
+    
+    return NO;
+}
+
+
+
+- (BOOL)isSameDay:(NSDate *)date1 date2:(NSDate *)date2{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSDateComponents *comp1 = [calendar components:unitFlag fromDate:date1];
+    NSDateComponents *comp2 = [calendar components:unitFlag fromDate:date2];
+    return (([comp1 day] == [comp2 day]) && ([comp1 month] == [comp2 month]) && ([comp1 year] == [comp2 year]));
 }
 
 - (DKDetailAnalyticsView *) l1{

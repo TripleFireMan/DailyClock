@@ -68,6 +68,7 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 
 @property (nonatomic, copy  ) NSString *weekName;
 @property (nonatomic, assign) NSInteger weekday;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, assign) BOOL isSelected;
 - (BOOL) isToday;
 @end
