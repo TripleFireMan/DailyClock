@@ -30,7 +30,7 @@
     "show_complete_frame": false,
     "stack_title" : true,
     "title_below_image": false,
-    "frame": "GOLD"
+    "frame": "WHITE"
   },
 
 
@@ -62,7 +62,13 @@
     {
       "filter": "5",
       "keyword": {
-        "color": "#31bb48"
+        "color": "#d21559"
+      }
+    },
+    {
+      "filter": "6",
+      "keyword": {
+        "color": "#feb909"
       }
     }
   ]
