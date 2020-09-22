@@ -27,6 +27,10 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.isAccessibilityElement = NO;
+        self.contentView.isAccessibilityElement = YES;
+        
+        [self.contentView setAccessibilityLabel:@"homeItemCell"];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupSubviews];
         [self addConstrainss];

@@ -62,7 +62,6 @@
     @weakify(self);
     self.titleLabel.text = self.editModel? @"编辑目标": @"设置目标";
     self.shouldShowBackBtn = YES;
-    self.backBtn.tintColor = kThemeGray;
     self.shouldShowBottomLine = YES;
     
     if (self.editModel) {
@@ -355,6 +354,7 @@
         _nameMaskView.layer.cornerRadius = 6.f;
         _nameMaskView.backgroundColor = kContainerColor;
         _nameMaskView.layer.masksToBounds = YES;
+        
     }
     return _nameMaskView;
 }

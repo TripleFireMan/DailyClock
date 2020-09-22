@@ -76,7 +76,8 @@
         _icon.image = [UIImage imageNamed:@"dk_icon"];
 //        _icon.layer.borderColor = [UIColor darkTextColor].CGColor;
 //        _icon.layer.borderWidth = 1;
-//        _icon.layer.cornerRadius = 40.f;
+        _icon.layer.cornerRadius = 40.f;
+        _icon.layer.masksToBounds = YES;
     }
     return _icon;
 }
@@ -85,7 +86,12 @@
     if (!_namelabel) {
         _namelabel = [UILabel new];
         _namelabel.font = DKFont(17);
-        _namelabel.textColor = kTitleColor;
+        if (@available(iOS 13.0, *)) {
+            _namelabel.textColor = [UIColor labelColor];
+        } else {
+            // Fallback on earlier versions
+            _namelabel.textColor = kTitleColor;
+        }
         _namelabel.text = @"极简打卡";
     }
     return _namelabel;
@@ -95,7 +101,12 @@
     if (!_slogenLabel) {
         _slogenLabel = [UILabel new];
         _slogenLabel.font = DKFont(15);
-        _slogenLabel.textColor = kSubTitleColor;
+        if (@available(iOS 13.0, *)) {
+            _slogenLabel.textColor = [UIColor secondaryLabelColor];
+        } else {
+            // Fallback on earlier versions
+            _namelabel.textColor = kSubTitleColor;
+        }
         _slogenLabel.text = @"每天进步一点点";
     }
     return _slogenLabel;
@@ -105,7 +116,13 @@
     if (!_versionLabel) {
         _versionLabel = [UILabel new];
         _versionLabel.font = DKFont(15.f);
-        _versionLabel.textColor = [UIColor darkTextColor];
+        if (@available(iOS 13.0, *)) {
+            _versionLabel.textColor = [UIColor secondaryLabelColor];
+        } else {
+            // Fallback on earlier versions
+            _versionLabel.textColor = kSubTitleColor;
+        }
+        
         _versionLabel.text = [NSString stringWithFormat:@"版本：%@",APPVersion];
     }
     return _versionLabel;

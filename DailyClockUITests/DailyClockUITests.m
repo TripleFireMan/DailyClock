@@ -32,23 +32,9 @@
 }
 
 - (void)testExample {
-    
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"NavView Add"] tap];
-    [Snapshot snapshot:@"1" timeWaitingForIdle:10];
-    [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"\u65e9\u8d77"]/*[[".cells.staticTexts[@\"\\u65e9\\u8d77\"]",".staticTexts[@\"\\u65e9\\u8d77\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
-    [Snapshot snapshot:@"2" timeWaitingForIdle:10];
-    [app.buttons[@"\u4fdd\u5b58"] tap];
-    [app.tabBars.buttons[@"\u6211\u7684"] tap];
-    [Snapshot snapshot:@"3" timeWaitingForIdle:10];
-    XCUIElementQuery *cellsQuery = app.collectionViews.cells;
-    [[cellsQuery.otherElements containingType:XCUIElementTypeImage identifier:@"download"].element tap];
-    [Snapshot snapshot:@"4" timeWaitingForIdle:10];
-    XCUIElement *backButton = app.buttons[@"back"];
-    [backButton tap];
-    [[cellsQuery.otherElements containingType:XCUIElementTypeImage identifier:@"faq"].element tap];
-    [Snapshot snapshot:@"5" timeWaitingForIdle:10];
-    [backButton tap];
+    [[[XCUIApplication alloc] init].tables/*@START_MENU_TOKEN@*/.otherElements[@"homeItemCell"]/*[[".cells.otherElements[@\"homeItemCell\"]",".otherElements[@\"homeItemCell\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+            
+            
     
 }
 

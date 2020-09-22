@@ -41,8 +41,9 @@
     [super viewDidLoad];
     self.titleLabel.text = @"个人中心";
     self.shouldShowBackBtn = NO;
-    [self.collectionView reloadData];
     
+    [self.collectionView reloadData];
+
 }
 
 - (void) setupSubView
@@ -94,7 +95,11 @@
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        if (@available(iOS 13.0, *)) {
+            _collectionView.backgroundColor = [UIColor systemBackgroundColor];
+        } else {
+            _collectionView.backgroundColor = [UIColor whiteColor];
+        }
         _collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30);
         [_collectionView cy_adjustForIOS13];
         _collectionView.alwaysBounceVertical = YES;

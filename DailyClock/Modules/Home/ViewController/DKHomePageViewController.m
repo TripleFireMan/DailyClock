@@ -37,6 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor  =[UIColor systemBackgroundColor];
+    } else {
+        // Fallback on earlier versions
+        self.view.backgroundColor  =[UIColor whiteColor];
+    }
     self.titleLabel.text = @"打卡";
     self.shouldShowBackBtn = NO;
 }
@@ -206,7 +212,19 @@
         _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         UIImage *addImg = [[UIImage imageNamed:@"NavView_Add"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [_addBtn setImage:addImg forState:UIControlStateNormal];
-        _addBtn.tintColor = kThemeGray;
+        if (@available(iOS 13, *)) {
+            UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                    return  kThemeGray;
+                }else{
+                    return [UIColor whiteColor];
+                }
+            }];
+            _addBtn.tintColor = bgColor;
+        } else {
+            _addBtn.tintColor = kThemeGray;
+        }
+
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             DKCreateTargetViewController *vc = [DKCreateTargetViewController new];
@@ -226,7 +244,6 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:[DKHomeItemTableViewCell class] forCellReuseIdentifier:@"DKHomeItemTableViewCell"];
     }
     return _tableView;

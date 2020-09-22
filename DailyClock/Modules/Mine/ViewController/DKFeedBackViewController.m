@@ -44,7 +44,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"问题反馈"];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     [self setupSubview];
     [self addConstraints];
     [self bindViews];
@@ -61,7 +61,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     self.scrollView = [UIScrollView new];
     self.scrollView.alwaysBounceVertical = YES;
     self.scrollView.delaysContentTouches = NO;
-    self.scrollView.backgroundColor = [UIColor whiteColor];
+//    self.scrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.scrollView];
     
     self.phoneView = [UIView new];

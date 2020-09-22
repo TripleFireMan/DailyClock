@@ -125,7 +125,6 @@
         _tableView.delegate = self;
         _tableView.rowHeight = 58;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
-        _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView cy_adjustForIOS13];
     }
     return _tableView;

@@ -45,7 +45,11 @@
 
 - (void) setupSubviews
 {
-    self.contentView.backgroundColor = kBackGroungColor;
+    if (@available(iOS 13.0, *)) {
+        self.contentView.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
     [self.contentView addSubview:self.containerView];
     [self.containerView addSubview:self.versionLabel];
     [self.contentView addSubview:self.timeLabel];
@@ -86,7 +90,12 @@
     NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:self.model.des];
     att.lineSpacing = 20.f;
     att.font = DKFont(14);
-    att.color = kTitleColor;
+    if (@available(iOS 13.0, *)) {
+        att.color = [UIColor labelColor];
+    } else {
+        // Fallback on earlier versions
+        att.color = kSubTitleColor;
+    }
     self.desLabel.attributedText = att;
 }
 
@@ -94,7 +103,12 @@
     if (!_versionLabel) {
         _versionLabel = [UILabel new];
         _versionLabel.font = DKFont(14);
-        _versionLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13.0, *)) {
+            _versionLabel.textColor = [UIColor labelColor];
+        } else {
+            // Fallback on earlier versions
+            _versionLabel.textColor = [UIColor blackColor];
+        }
     }
     return _versionLabel;
 }
@@ -103,7 +117,12 @@
     if (!_timeLabel) {
         _timeLabel = [UILabel new];
         _timeLabel.font = DKFont(13);
-        _timeLabel.textColor = kSubTitleColor;
+        if (@available(iOS 13.0, *)) {
+            _timeLabel.textColor = [UIColor secondaryLabelColor];
+        } else {
+            // Fallback on earlier versions
+            _timeLabel.textColor = kSubTitleColor;
+        }
         _timeLabel.text = @"";
     }
     return _timeLabel;

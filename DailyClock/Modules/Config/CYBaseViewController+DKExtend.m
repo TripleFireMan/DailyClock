@@ -20,10 +20,20 @@
 
 - (void)dkViewDidLoad{
     [self dkViewDidLoad];
-    self.headerView.backgroundColor = [UIColor whiteColor];
-    self.titleLabel.textColor = [UIColor blackColor];
+    
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+        self.headerView.backgroundColor = [UIColor systemBackgroundColor];
+        self.titleLabel.textColor = [UIColor labelColor];
+        self.backBtn.tintColor = [UIColor labelColor];
+    } else {
+        // Fallback on earlier versions
+        self.headerView.backgroundColor = [UIColor whiteColor];
+        self.titleLabel.textColor = [UIColor blackColor];
+        self.backBtn.tintColor = [UIColor darkGrayColor];
+    }
+    
     self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
-    self.backBtn.tintColor = [UIColor darkGrayColor];
 }
 
 

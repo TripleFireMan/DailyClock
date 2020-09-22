@@ -27,7 +27,6 @@
     [super viewDidLoad];
     self.titleLabel.text = @"添加目标";
     self.shouldShowBackBtn = YES;
-    self.backBtn.tintColor = kThemeGray;
 }
 
 - (void) setupSubView
@@ -101,7 +100,6 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:[DKCreateTargetCell class] forCellReuseIdentifier:@"DKCreateTargetCell"];
         [_tableView registerClass:[DKCustomeTargetCell class] forCellReuseIdentifier:@"DKCustomeTargetCell"];
         [_tableView cy_adjustForIOS13];

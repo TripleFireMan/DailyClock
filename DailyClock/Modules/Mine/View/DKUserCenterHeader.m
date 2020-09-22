@@ -55,7 +55,21 @@
 - (UIImageView *) icon{
     if (!_icon) {
         _icon = [UIImageView new];
-        _icon.image = [UIImage imageNamed:@"dk_icon"];
+        _icon.layer.cornerRadius = 40.f;
+        _icon.layer.masksToBounds = YES;
+        _icon.image = [[UIImage imageNamed:@"dk_icon"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+//        if (@available(iOS 13, *)) {
+//            UIColor *tintColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+//                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+//                    return [UIColor whiteColor];
+//                }
+//                else{
+//                    return [UIColor redColor];
+//                }
+//            }];
+//            _icon.tintColor  =tintColor;
+//
+//        }
     }
     return _icon;
 }
@@ -64,7 +78,12 @@
     if (!_namelbl) {
         _namelbl = [UILabel new];
         _namelbl.font = [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:15];
-        _namelbl.textColor = kSubTitleColor;
+        if (@available(iOS 13, *)) {
+            _namelbl.textColor = [UIColor labelColor];
+        } else {
+            _namelbl.textColor = kSubTitleColor;
+        }
+        
         _namelbl.text = @"每天进步一点点";
     }
     return _namelbl;

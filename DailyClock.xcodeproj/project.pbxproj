@@ -164,9 +164,6 @@
 		4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
 		4CA97757251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
 		4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */; };
-		4CA9775B251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
-		4CA9775C251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
-		4CA9775D251607B60041EB7D /* dd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775A251607B60041EB7D /* dd.m */; };
 		4CA9776025160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
 		4CA9776125160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
 		4CA9776225160EE40041EB7D /* DKVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9775F25160EE40041EB7D /* DKVersionModel.m */; };
@@ -180,15 +177,6 @@
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
-		4CE63C142509B830007EC122 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C132509B830007EC122 /* keyword.strings */; };
-		4CE63C152509B830007EC122 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C132509B830007EC122 /* keyword.strings */; };
-		4CE63C162509B830007EC122 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C132509B830007EC122 /* keyword.strings */; };
-		4CE63C1C2509B85F007EC122 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1B2509B85E007EC122 /* Framefile.json */; };
-		4CE63C1D2509B85F007EC122 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1B2509B85E007EC122 /* Framefile.json */; };
-		4CE63C1E2509B85F007EC122 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1B2509B85E007EC122 /* Framefile.json */; };
-		4CE63C202509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
-		4CE63C212509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
-		4CE63C222509BDA8007EC122 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C1F2509BDA8007EC122 /* title.strings */; };
 		4CEDD5A9250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
 		4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
 		4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */; };
@@ -335,8 +323,6 @@
 		4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionHistoryViewController.m; sourceTree = "<group>"; };
 		4CA97754251605E10041EB7D /* DKVersionHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKVersionHistoryCell.h; sourceTree = "<group>"; };
 		4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionHistoryCell.m; sourceTree = "<group>"; };
-		4CA97759251607B60041EB7D /* dd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dd.h; sourceTree = "<group>"; };
-		4CA9775A251607B60041EB7D /* dd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dd.m; sourceTree = "<group>"; };
 		4CA9775E25160EE40041EB7D /* DKVersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKVersionModel.h; sourceTree = "<group>"; };
 		4CA9775F25160EE40041EB7D /* DKVersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKVersionModel.m; sourceTree = "<group>"; };
 		4CA9776325164BB20041EB7D /* DKFontSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFontSettingViewController.h; sourceTree = "<group>"; };
@@ -346,9 +332,6 @@
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
-		4CE63C132509B830007EC122 /* keyword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "fastlane/screenshots/en-US/keyword.strings"; sourceTree = "<group>"; };
-		4CE63C1B2509B85E007EC122 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = fastlane/screenshots/Framefile.json; sourceTree = "<group>"; };
-		4CE63C1F2509BDA8007EC122 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "fastlane/screenshots/en-US/title.strings"; sourceTree = "<group>"; };
 		4CEDD5A8250F753A00092940 /* DKSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKSettingViewController.xib; sourceTree = "<group>"; };
 		4CEDD5B32512104600092940 /* CYBaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYBaseNavigationBar.h; sourceTree = "<group>"; };
 		4CEDD5B42512104600092940 /* CYBaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavigationBar.m; sourceTree = "<group>"; };
@@ -401,9 +384,6 @@
 		4C1CCE5F24FE49680004EF4E = {
 			isa = PBXGroup;
 			children = (
-				4CE63C132509B830007EC122 /* keyword.strings */,
-				4CE63C1B2509B85E007EC122 /* Framefile.json */,
-				4CE63C1F2509BDA8007EC122 /* title.strings */,
 				4C1CCE6A24FE49680004EF4E /* DailyClock */,
 				4C1CCE8624FE49690004EF4E /* DailyClockTests */,
 				4C1CCE9124FE49690004EF4E /* DailyClockUITests */,
@@ -426,11 +406,8 @@
 		4C1CCE6A24FE49680004EF4E /* DailyClock */ = {
 			isa = PBXGroup;
 			children = (
-				4CA97737251464890041EB7D /* Tools */,
 				4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */,
 				4C51AD22250CB7AA007DEB77 /* 打卡.entitlements */,
-				4CE63C0D250905FB007EC122 /* Resources */,
-				4C8DA0B72500E6A300112389 /* Modules */,
 				4C1CCE6B24FE49680004EF4E /* AppDelegate.h */,
 				4C1CCE6C24FE49680004EF4E /* AppDelegate.m */,
 				4C1CCE7724FE49690004EF4E /* Assets.xcassets */,
@@ -441,6 +418,9 @@
 				4C07A92C250121DE0064CB76 /* DKTheme.h */,
 				4C51AD28250CBC8F007DEB77 /* Config.h */,
 				4CA977492515DDF40041EB7D /* URL.h */,
+				4CA97737251464890041EB7D /* Tools */,
+				4CE63C0D250905FB007EC122 /* Resources */,
+				4C8DA0B72500E6A300112389 /* Modules */,
 			);
 			path = DailyClock;
 			sourceTree = "<group>";
@@ -540,8 +520,6 @@
 				4CA97750251604450041EB7D /* DKVersionHistoryViewController.m */,
 				4CA9776325164BB20041EB7D /* DKFontSettingViewController.h */,
 				4CA9776425164BB20041EB7D /* DKFontSettingViewController.m */,
-				4CA97759251607B60041EB7D /* dd.h */,
-				4CA9775A251607B60041EB7D /* dd.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -817,7 +795,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */,
-				4CE63C202509BDA8007EC122 /* title.strings in Resources */,
 				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
 				4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */,
 				4CEDD5A9250F753A00092940 /* DKSettingViewController.xib in Resources */,
@@ -827,10 +804,8 @@
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4C91B7962513B25C00C8F594 /* userregiest.html in Resources */,
-				4CE63C1C2509B85F007EC122 /* Framefile.json in Resources */,
 				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
-				4CE63C142509B830007EC122 /* keyword.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,16 +816,13 @@
 				4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
-				4CE63C1D2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA7251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
-				4CE63C152509B830007EC122 /* keyword.strings in Resources */,
 				4C51AD07250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7932513AF8C00C8F594 /* private.html in Resources */,
 				4C91B7972513B25C00C8F594 /* userregiest.html in Resources */,
-				4CE63C212509BDA8007EC122 /* title.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,16 +833,13 @@
 				4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
-				4CE63C1E2509B85F007EC122 /* Framefile.json in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA8251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
-				4CE63C162509B830007EC122 /* keyword.strings in Resources */,
 				4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7942513AF8C00C8F594 /* private.html in Resources */,
 				4C91B7982513B25C00C8F594 /* userregiest.html in Resources */,
-				4CE63C222509BDA8007EC122 /* title.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,7 +935,6 @@
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */,
-				4CA9775B251607B60041EB7D /* dd.m in Sources */,
 				4CA9776A25164C050041EB7D /* DKFontModel.m in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
@@ -1043,7 +1011,6 @@
 				4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
-				4CA9775C251607B60041EB7D /* dd.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4CA9776625164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
@@ -1079,7 +1046,6 @@
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */,
-				4CA9775D251607B60041EB7D /* dd.m in Sources */,
 				4CA9776C25164C050041EB7D /* DKFontModel.m in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
