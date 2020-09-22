@@ -13,7 +13,19 @@
 - (id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = kContainerColor;
+        if (@available(iOS 13, *)) {
+            UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                    return kContainerColor;
+                }
+                else{
+                    return RGBColor(44, 44, 44);
+                }
+            }];
+            self.backgroundColor=  bgColor;
+        } else {
+            self.backgroundColor = kContainerColor;
+        }
         [self setUpSubviews];
         [self addConstraintss];
     }
@@ -41,7 +53,12 @@
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
         _titleLabel.font = DKBoldFont(13);
-        _titleLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _titleLabel.textColor = [UIColor labelColor];
+        } else {
+            _titleLabel.textColor = [UIColor blackColor];
+        }
+        
         _titleLabel.text = @"";
     }
     return _titleLabel;
@@ -51,7 +68,12 @@
     if (!_subtitleLabel) {
         _subtitleLabel = [UILabel new];
         _subtitleLabel.font = DKFont(13);
-        _subtitleLabel.textColor = RGBColor(68, 68, 68);
+        
+        if (@available(iOS 13, *)) {
+            _subtitleLabel.textColor = [UIColor secondaryLabelColor];
+        } else {
+            _subtitleLabel.textColor = RGBColor(68, 68, 68);
+        }
         _subtitleLabel.text = @"";
     }
     return _subtitleLabel;

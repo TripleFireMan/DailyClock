@@ -38,8 +38,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.shouldShowBackBtn = YES;
-    self.shouldShowBottomLine = YES;
-    self.backBtn.tintColor = kThemeGray;
+    
+    UIColor *color = kBackGroungColor;
+    if (@available(iOS 13, *)) {
+        color = [UIColor systemBackgroundColor];
+    }
+    self.view.backgroundColor = color;
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -217,6 +221,19 @@
     if (!_calendarContainer) {
         _calendarContainer = [UIView new];
         _calendarContainer.backgroundColor = kContainerColor;
+        if (@available(iOS 13, *)) {
+            UIColor *bgcolor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                    return kContainerColor;
+                }
+                else{
+                    return RGBColor(44, 44, 44);
+                }
+            }];
+            _calendarContainer.backgroundColor = bgcolor;
+        } else {
+            _calendarContainer.backgroundColor = kContainerColor;
+        }
         _calendarContainer.layer.cornerRadius = 12.f;
     }
     return _calendarContainer;
@@ -230,10 +247,19 @@
         _calendar.firstWeekday = 2;
         _calendar.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
         _calendar.backgroundColor = [UIColor clearColor];
-        _calendar.appearance.headerTitleColor = [UIColor blackColor];
-        _calendar.appearance.weekdayTextColor = [UIColor blackColor];
-        _calendar.appearance.borderDefaultColor = kMainColor;
-        _calendar.appearance.borderSelectionColor = [UIColor blackColor];
+        
+        if (@available(iOS 13, *)) {
+            _calendar.appearance.headerTitleColor = [UIColor labelColor];
+            _calendar.appearance.weekdayTextColor = [UIColor labelColor];
+            _calendar.appearance.borderSelectionColor = [UIColor labelColor];
+            _calendar.appearance.borderDefaultColor = kMainColor;
+        } else {
+            _calendar.appearance.headerTitleColor = [UIColor blackColor];
+            _calendar.appearance.weekdayTextColor = [UIColor blackColor];
+            _calendar.appearance.borderDefaultColor = kMainColor;
+            _calendar.appearance.borderSelectionColor = [UIColor blackColor];
+        }
+
         
         _calendar.appearance.titleFont = DKFont(FSCalendarStandardTitleTextSize);
         _calendar.appearance.subtitleFont = DKFont(FSCalendarStandardSubtitleTextSize);
@@ -389,6 +415,9 @@
         _l1 = [DKDetailAnalyticsView new];
         _l1.subtitleLabel.text = @"已打卡";
         _l1.layer.cornerRadius = 12.f;
+        
+        
+        
     }
     return _l1;
 }
@@ -435,7 +464,12 @@
     if (!_analyticsLabel) {
         _analyticsLabel = [UILabel new];
         _analyticsLabel.font = DKBoldFont(18);
-        _analyticsLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13.0, *)) {
+            _analyticsLabel.textColor = [UIColor labelColor];
+        } else {
+            // Fallback on earlier versions
+            _analyticsLabel.textColor = [UIColor blackColor];
+        }
         _analyticsLabel.text = @"打卡统计";
     }
     return _analyticsLabel;

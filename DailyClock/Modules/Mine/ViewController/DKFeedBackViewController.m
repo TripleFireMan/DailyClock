@@ -44,7 +44,6 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"问题反馈"];
-//    self.view.backgroundColor = [UIColor whiteColor];
     [self setupSubview];
     [self addConstraints];
     [self bindViews];
@@ -61,21 +60,19 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     self.scrollView = [UIScrollView new];
     self.scrollView.alwaysBounceVertical = YES;
     self.scrollView.delaysContentTouches = NO;
-//    self.scrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.scrollView];
     
     self.phoneView = [UIView new];
-    self.phoneView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.phoneView];
     
     self.phoneLbl = [UILabel new];
     self.phoneLbl.text = @"请输入手机号码";
     self.phoneLbl.font = DKBoldFont(16);
-    self.phoneLbl.textColor = RGBColor(32, 32, 32);
+    
     [self.phoneView addSubview:self.phoneLbl];
     
     self.phoneTFContent = [UIView new];
-    self.phoneTFContent.backgroundColor = BG_GRAY_COLOR;
+
     self.phoneTFContent.layer.cornerRadius = 5.f;
     [self.phoneView addSubview:self.phoneTFContent];
     
@@ -88,37 +85,43 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     self.phoneTF.placeholder = @"请输入手机号码，仅用于我们向您核实问题";
     self.phoneTF.font = DKFont(15);
     self.phoneTF.keyboardType = UIKeyboardTypeNumberPad;
-    self.phoneTF.textColor = RGBColor(32, 32, 32);
+    
+    
+    
     [self.phoneTFContent addSubview:self.phoneTF];
     
     self.feedBackView = [UIView new];
-    self.feedBackView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.feedBackView];
     
     self.feedBackLbl = [UILabel new];
     self.feedBackLbl.text = @"请输入反馈内容";
     self.feedBackLbl.font = DKBoldFont(16);
-    self.feedBackLbl.textColor = RGBColor(32, 32, 32);
+    
     [self.feedBackView addSubview:self.feedBackLbl];
     
     self.feedBackContentView = [UIView new];
-    self.feedBackContentView.backgroundColor = BG_GRAY_COLOR;
+
+
+
+    
+    
+    
     self.feedBackContentView.layer.cornerRadius = 5.f;
     [self.feedBackView addSubview:self.feedBackContentView];
     
     self.feedBackTextView = [UITextView new];
     //    self.textView.text = @"请输入您申请换卡的理由";
-    self.feedBackTextView.textColor = RGBColor(120, 120, 120);
+    
     self.feedBackTextView.delegate = self;
     self.feedBackTextView.layer.cornerRadius = 5.0f;
-    self.feedBackTextView.backgroundColor = BG_GRAY_COLOR;
+    
     [self.feedBackContentView addSubview:self.feedBackTextView];
     
     // _placeholderLabel
     UILabel *placeHolderLabel = [[UILabel alloc] init];
     placeHolderLabel.text = @"在此输入您遇到的问题，很抱歉给您带来不好的体验，我们会尽快和您联系";
     placeHolderLabel.numberOfLines = 0;
-    placeHolderLabel.textColor = RGBColor(192, 192, 192);
+    
     [placeHolderLabel sizeToFit];
     [self.feedBackTextView addSubview:placeHolderLabel];
     
@@ -129,19 +132,55 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     
     
     self.feedBackNumberLbl = [UILabel new];
-    self.feedBackNumberLbl.textColor = RGBColor(120, 120, 120);
+    
     self.feedBackNumberLbl.text = @"0/150";
     self.feedBackNumberLbl.textAlignment = NSTextAlignmentRight;
     self.feedBackNumberLbl.font = CYBebas(15);
     [self.feedBackView addSubview:self.feedBackNumberLbl];
     
     self.imgContentView = [UIView new];
-    self.imgContentView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.imgContentView];
     
     self.imgBGView = [UIView new];
-    self.imgBGView.backgroundColor = BG_GRAY_COLOR;
+    
     [self.imgContentView addSubview:self.imgBGView];
+    
+    
+    if (@available(iOS 13, *)) {
+        UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                return BG_GRAY_COLOR;
+            }
+            else{
+                return RGBColor(44, 44, 44);
+            }
+        }];
+        self.feedBackContentView.backgroundColor = bgColor;
+        self.imgBGView.backgroundColor = bgColor;
+        self.phoneTFContent.backgroundColor = bgColor;
+        
+        self.phoneTF.textColor = [UIColor labelColor];
+        self.feedBackNumberLbl.textColor = [UIColor secondaryLabelColor];
+        placeHolderLabel.textColor = [UIColor placeholderTextColor];
+        self.feedBackTextView.textColor = [UIColor secondaryLabelColor];
+        self.feedBackLbl.textColor = [UIColor labelColor];
+        self.phoneLbl.textColor = [UIColor labelColor];
+        self.feedBackTextView.backgroundColor = bgColor;
+    } else {
+        self.feedBackContentView.backgroundColor = BG_GRAY_COLOR;
+        self.imgBGView.backgroundColor = BG_GRAY_COLOR;
+        self.phoneTFContent.backgroundColor = BG_GRAY_COLOR;
+        
+        self.phoneTF.textColor = RGBColor(32, 32, 32);
+        self.feedBackNumberLbl.textColor = RGBColor(120, 120, 120);
+        placeHolderLabel.textColor = RGBColor(192, 192, 192);
+        self.feedBackTextView.textColor = RGBColor(120, 120, 120);
+        self.feedBackLbl.textColor = RGBColor(32, 32, 32);
+        self.phoneLbl.textColor = RGBColor(32, 32, 32);
+        self.feedBackTextView.backgroundColor = BG_GRAY_COLOR;
+    }
+    
+    
     
     self.imageView = [UIImageView new];
     self.imageView.layer.cornerRadius = 5.0f;

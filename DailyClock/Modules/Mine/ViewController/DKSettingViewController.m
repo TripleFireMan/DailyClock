@@ -32,9 +32,7 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"设置";
-    self.shouldShowBottomLine = YES;
     self.shouldShowBackBtn = YES;
-    self.backBtn.tintColor = [UIColor darkGrayColor];
     
 }
 
