@@ -143,7 +143,7 @@
 - (UIView *) container{
     if (!_container) {
         _container = [UIView new];
-        _container.backgroundColor = kContainerColor;
+        _container.backgroundColor = DKIOS13ContainerColor();
         _container.layer.cornerRadius = 12.f;
         _container.layer.masksToBounds = YES;
     }
@@ -154,7 +154,7 @@
     if (!_containerTitleLbl) {
         _containerTitleLbl = [UILabel new];
         _containerTitleLbl.font = DKBoldFont(15);
-        _containerTitleLbl.textColor = kMainColor;
+        _containerTitleLbl.textColor = DKIOS13LabelColor();
         _containerTitleLbl.text = @"自动备份数据";
     }
     return _containerTitleLbl;
@@ -164,7 +164,7 @@
     if (!_containerSubtitleLbl) {
         _containerSubtitleLbl = [UILabel new];
         _containerSubtitleLbl.font = DKFont(15);
-        _containerSubtitleLbl.textColor = kSubTitleColor;
+        _containerSubtitleLbl.textColor = DKIOS13SecondLabelColor();
         _containerSubtitleLbl.text = @"自动每24小时备份一次数据";
     }
     return _containerSubtitleLbl;
@@ -174,7 +174,7 @@
     if (!_icloundLabel) {
         _icloundLabel = [UILabel new];
         _icloundLabel.font = DKBoldFont(15);
-        _icloundLabel.textColor = kSubTitleColor;
+        _icloundLabel.textColor = DKIOS13SecondLabelColor();
         _icloundLabel.text = @"备份到iCloud云盘";
     }
     return _icloundLabel;
@@ -185,7 +185,7 @@
         _beifenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_beifenBtn setTitle:@"备份到iCloud云盘" forState:UIControlStateNormal];
         _beifenBtn.titleLabel.font = DKFont(15);
-        [_beifenBtn setTitleColor:kTitleColor forState:UIControlStateNormal];
+        [_beifenBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
         [_beifenBtn setBackgroundImage:[UIImage imageWithColor:kMainColor] forState:UIControlStateNormal];
         [_beifenBtn setBackgroundImage:[UIImage imageWithColor:[kMainColor colorWithAlphaComponent:0.8]] forState:UIControlStateHighlighted];
         _beifenBtn.layer.cornerRadius = 22;
@@ -223,7 +223,7 @@
         _huifuBtn.titleLabel.font = DKFont(15);
         _huifuBtn.layer.cornerRadius = 22;
         _huifuBtn.layer.masksToBounds = YES;
-        [_huifuBtn setTitleColor:kTitleColor forState:UIControlStateNormal];
+        [_huifuBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
         [_huifuBtn setBackgroundImage:[UIImage imageWithColor:kMainColor] forState:UIControlStateNormal];
         [_huifuBtn setBackgroundImage:[UIImage imageWithColor:[kMainColor colorWithAlphaComponent:0.8]] forState:UIControlStateHighlighted];
         [[_huifuBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -266,7 +266,7 @@
     if (!_lastUpdateTimeLabel) {
         _lastUpdateTimeLabel = [UILabel new];
         _lastUpdateTimeLabel.font = DKFont(13);
-        _lastUpdateTimeLabel.textColor = kSummaryColor;
+        _lastUpdateTimeLabel.textColor = DKIOS13PlaceholderTextColor();
         if ([DKApplication cy_shareInstance].lastBackupDate!=nil) {
             _lastUpdateTimeLabel.text = [NSString stringWithFormat:@"上次备份时间：%@",[[DKApplication cy_shareInstance].lastBackupDate stringWithFormat:@"yyyy-MM-dd hh:mm:ss" ]];
         }

@@ -33,8 +33,8 @@
     UITabBarController *tabbar = [[UITabBarController alloc] init];
     [tabbar addChildViewController:homeNavi];
     [tabbar addChildViewController:mineNavi];
-    tabbar.tabBar.tintColor = [UIColor systemBackgroundColor];
-
+    tabbar.tabBar.tintColor = DKIOS13LabelColor();
+    
     app.window.rootViewController = tabbar;
     
     [app.window makeKeyAndVisible];

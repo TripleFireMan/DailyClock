@@ -45,11 +45,7 @@
 
 - (void) setupSubviews
 {
-    if (@available(iOS 13.0, *)) {
-        self.contentView.backgroundColor = [UIColor systemBackgroundColor];
-    } else {
-        self.contentView.backgroundColor = [UIColor whiteColor];
-    }
+    self.contentView.backgroundColor = DKIOS13BackgroundColor();
     [self.contentView addSubview:self.containerView];
     [self.containerView addSubview:self.versionLabel];
     [self.contentView addSubview:self.timeLabel];

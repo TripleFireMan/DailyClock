@@ -203,17 +203,27 @@
             count++;
         }
         else{
-            if ([day timeIntervalSinceDate:obj] > 24 * 60 * 60) {
-                *stop = YES;
+            if ([self isContinueDay:day date2:obj] == 1) {
+                count++;
+                
             }
             else{
-                count++;
+                *stop = YES;
             }
         }
         day = obj;
     }];
     
     return count;
+}
+
+- (NSInteger)isContinueDay:(NSDate *)date1 date2:(NSDate *)date2{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    
+    NSDateComponents *com = [calendar components:unitFlag fromDate:date1 toDate:date2 options:NSCalendarWrapComponents];
+    NSInteger days = labs([com day]);
+    return days;
 }
 
 
