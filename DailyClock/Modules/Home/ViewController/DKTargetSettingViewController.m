@@ -62,7 +62,6 @@
     @weakify(self);
     self.titleLabel.text = self.editModel? @"编辑目标": @"设置目标";
     self.shouldShowBackBtn = YES;
-    self.shouldShowBottomLine = YES;
     
     if (self.editModel) {
         self.model = self.editModel;
@@ -333,7 +332,7 @@
 - (UIView *) nameContainer{
     if (!_nameContainer) {
         _nameContainer = [UIView new];
-        _nameContainer.backgroundColor = [UIColor whiteColor];
+//        _nameContainer.backgroundColor = [UIColor whiteColor];
     }
     return _nameContainer;
 }
@@ -342,7 +341,12 @@
     if (!_nameLabel) {
         _nameLabel = [UILabel new];
         _nameLabel.font = DKFont(16);
-        _nameLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _nameLabel.textColor = [UIColor labelColor];
+        } else {
+            _nameLabel.textColor = [UIColor blackColor];
+        }
+        
         _nameLabel.text = @"目标名称";
     }
     return _nameLabel;
@@ -352,7 +356,8 @@
     if (!_nameMaskView) {
         _nameMaskView = [UIView new];
         _nameMaskView.layer.cornerRadius = 6.f;
-        _nameMaskView.backgroundColor = kContainerColor;
+        _nameMaskView.backgroundColor = DKIOS13BackgroundColor();
+        
         _nameMaskView.layer.masksToBounds = YES;
         
     }
@@ -363,10 +368,15 @@
     if (!_nameTF) {
         _nameTF = [[UITextField alloc] init];
         _nameTF.font = DKFont(14.f);
-        _nameTF.textColor = [UIColor blackColor];
+        _nameTF.textColor = DKIOS13LabelColor();
         NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:@"起一个能坚持下来的名字吧~"];
         placeholder.font = DKFont(14.f);
-        placeholder.color = RGBColor(195, 196, 192);
+        if (@available(iOS 13, *)) {
+            placeholder.color = [UIColor labelColor];
+        } else {
+            placeholder.color = RGBColor(195, 196, 192);
+        }
+        
         _nameTF.attributedPlaceholder = placeholder;
     }
     return _nameTF;
@@ -375,10 +385,12 @@
 - (UIView *) nameBlank{
     if (!_nameBlank) {
         _nameBlank = [UIView new];
-        _nameBlank.backgroundColor = kBackGroungColor;
+        _nameBlank.backgroundColor = DKIOS13BackgroundColor();
     }
     return _nameBlank;
 }
+
+
 
 - (UIView *) timeContainer{
     if (!_timeContainer) {
@@ -393,7 +405,7 @@
         _timeMaskView = [UIView new];
         _timeMaskView.layer.cornerRadius = 6.f;
         _timeMaskView.layer.masksToBounds = YES;
-        _timeMaskView.backgroundColor = kContainerColor;
+        _timeMaskView.backgroundColor = DKIOS13BackgroundColor();
     }
     return _timeMaskView;
 }
@@ -402,7 +414,11 @@
     if (!_timeLabel) {
         _timeLabel = [UILabel new];
         _timeLabel.font = DKFont(16);
-        _timeLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _timeLabel.textColor = [UIColor labelColor];
+        } else {
+            _timeLabel.textColor = [UIColor blackColor];
+        }
         _timeLabel.text = @"起止时间";
     }
     return _timeLabel;
@@ -412,7 +428,11 @@
     if (!_startTimeLabel) {
         _startTimeLabel = [UILabel new];
         _startTimeLabel.font = DKFont(12);
-        _startTimeLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _startTimeLabel.textColor = [UIColor labelColor];
+        } else {
+            _startTimeLabel.textColor = [UIColor blackColor];
+        }
         _startTimeLabel.text = @"开始时间";
     }
     return _startTimeLabel;
@@ -422,7 +442,11 @@
     if (!_endTimeLabel) {
         _endTimeLabel = [UILabel new];
         _endTimeLabel.font = DKFont(12);
-        _endTimeLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _endTimeLabel.textColor = [UIColor labelColor];
+        } else {
+            _endTimeLabel.textColor = [UIColor blackColor];
+        }
         _endTimeLabel.text = @"结束时间";
     }
     return _endTimeLabel;
@@ -433,6 +457,11 @@
         _totalDays = [UILabel new];
         _totalDays.font = DKFont(14);
         _totalDays.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _totalDays.textColor = [UIColor labelColor];
+        } else {
+            _totalDays.textColor = [UIColor blackColor];
+        }
         [self p_configTotalInfo];
     }
     return _totalDays;
@@ -442,7 +471,13 @@
     @weakify(self);
     if (!_startTimeBtn) {
         _startTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_startTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        if (@available(iOS 13, *)) {
+            [_startTimeBtn setTitleColor:[UIColor labelColor] forState:UIControlStateNormal];
+        } else {
+            [_startTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
+        
         _startTimeBtn.titleLabel.font = DKFont(12.f);
         [_startTimeBtn setTitle:[self stringWithDate:self.model.startDate] forState:UIControlStateNormal];
         [[_startTimeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -478,7 +513,11 @@
     @weakify(self);
     if (!_endTimeBtn) {
         _endTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_endTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        if (@available(iOS 13, *)) {
+            [_endTimeBtn setTitleColor:[UIColor labelColor] forState:UIControlStateNormal];
+        } else {
+            [_endTimeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
         _endTimeBtn.titleLabel.font = DKFont(12.f);
         [_endTimeBtn setTitle:[self stringWithDate:self.model.endDate] forState:UIControlStateNormal];
         [[_endTimeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -507,7 +546,7 @@
 - (UIView *) timeBlank{
     if (!_timeBlank) {
         _timeBlank = [UIView new];
-        _timeBlank.backgroundColor = kBackGroungColor;
+        _timeBlank.backgroundColor = DKIOS13BackgroundColor();
     }
     return _timeBlank;
 }
@@ -524,7 +563,11 @@
         _pingciLabel = [UILabel new];
         _pingciLabel.text = @"目标频次";
         _pingciLabel.font = DKFont(16.f);
-        _pingciLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _pingciLabel.textColor = [UIColor labelColor];
+        } else {
+            _pingciLabel.textColor = [UIColor blackColor];
+        }
     }
     return _pingciLabel;
 }
@@ -540,7 +583,7 @@
 - (UIView *) pingciBlank{
     if (!_pingciBlank) {
         _pingciBlank = [UIView new];
-        _pingciBlank.backgroundColor = kBackGroungColor;
+        _pingciBlank.backgroundColor = DKIOS13BackgroundColor();
     }
     return _pingciBlank;
 }
@@ -556,7 +599,11 @@
     if (!_rizhiLabel) {
         _rizhiLabel = [UILabel new];
         _rizhiLabel.font = DKFont(16.f);
-        _rizhiLabel.textColor = [UIColor blackColor];
+        if (@available(iOS 13, *)) {
+            _rizhiLabel.textColor = [UIColor labelColor];
+        } else {
+            _rizhiLabel.textColor = [UIColor blackColor];
+        }
         _rizhiLabel.text = @"日志设置";
     }
     return _rizhiLabel;
@@ -566,7 +613,11 @@
     if (!_rizhiTextLabel) {
         _rizhiTextLabel = [UILabel new];
         _rizhiTextLabel.font = DKFont(12);
-        _rizhiTextLabel.textColor = [UIColor darkTextColor];
+        if (@available(iOS 13, *)) {
+            _rizhiTextLabel.textColor = [UIColor secondaryLabelColor];
+        } else {
+            _rizhiTextLabel.textColor = [UIColor darkTextColor];
+        }
         _rizhiTextLabel.text = @"是否自动弹出打卡日志";
     }
     return _rizhiTextLabel;
@@ -589,7 +640,7 @@
 - (UIView *)rizhiBlank{
     if (!_rizhiBlank) {
         _rizhiBlank = [UIView new];
-        _rizhiBlank.backgroundColor = kBackGroungColor;
+        _rizhiBlank.backgroundColor = DKIOS13BackgroundColor();
     }
     return _rizhiBlank;
 }

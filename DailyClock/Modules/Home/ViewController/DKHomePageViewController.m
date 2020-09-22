@@ -212,18 +212,7 @@
         _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         UIImage *addImg = [[UIImage imageNamed:@"NavView_Add"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [_addBtn setImage:addImg forState:UIControlStateNormal];
-        if (@available(iOS 13, *)) {
-            UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                    return  kThemeGray;
-                }else{
-                    return [UIColor whiteColor];
-                }
-            }];
-            _addBtn.tintColor = bgColor;
-        } else {
-            _addBtn.tintColor = kThemeGray;
-        }
+        _addBtn.tintColor = DKIOS13LabelColor();
 
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);

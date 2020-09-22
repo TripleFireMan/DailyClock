@@ -220,20 +220,7 @@
 - (UIView *) calendarContainer{
     if (!_calendarContainer) {
         _calendarContainer = [UIView new];
-        _calendarContainer.backgroundColor = kContainerColor;
-        if (@available(iOS 13, *)) {
-            UIColor *bgcolor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                    return kContainerColor;
-                }
-                else{
-                    return RGBColor(44, 44, 44);
-                }
-            }];
-            _calendarContainer.backgroundColor = bgcolor;
-        } else {
-            _calendarContainer.backgroundColor = kContainerColor;
-        }
+        _calendarContainer.backgroundColor = DKIOS13ContainerColor();
         _calendarContainer.layer.cornerRadius = 12.f;
     }
     return _calendarContainer;

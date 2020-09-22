@@ -146,39 +146,17 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     [self.imgContentView addSubview:self.imgBGView];
     
     
-    if (@available(iOS 13, *)) {
-        UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                return BG_GRAY_COLOR;
-            }
-            else{
-                return RGBColor(44, 44, 44);
-            }
-        }];
-        self.feedBackContentView.backgroundColor = bgColor;
-        self.imgBGView.backgroundColor = bgColor;
-        self.phoneTFContent.backgroundColor = bgColor;
-        
-        self.phoneTF.textColor = [UIColor labelColor];
-        self.feedBackNumberLbl.textColor = [UIColor secondaryLabelColor];
-        placeHolderLabel.textColor = [UIColor placeholderTextColor];
-        self.feedBackTextView.textColor = [UIColor secondaryLabelColor];
-        self.feedBackLbl.textColor = [UIColor labelColor];
-        self.phoneLbl.textColor = [UIColor labelColor];
-        self.feedBackTextView.backgroundColor = bgColor;
-    } else {
-        self.feedBackContentView.backgroundColor = BG_GRAY_COLOR;
-        self.imgBGView.backgroundColor = BG_GRAY_COLOR;
-        self.phoneTFContent.backgroundColor = BG_GRAY_COLOR;
-        
-        self.phoneTF.textColor = RGBColor(32, 32, 32);
-        self.feedBackNumberLbl.textColor = RGBColor(120, 120, 120);
-        placeHolderLabel.textColor = RGBColor(192, 192, 192);
-        self.feedBackTextView.textColor = RGBColor(120, 120, 120);
-        self.feedBackLbl.textColor = RGBColor(32, 32, 32);
-        self.phoneLbl.textColor = RGBColor(32, 32, 32);
-        self.feedBackTextView.backgroundColor = BG_GRAY_COLOR;
-    }
+    self.feedBackContentView.backgroundColor = DKIOS13BackgroundColor();
+    self.imgBGView.backgroundColor = DKIOS13BackgroundColor();
+    self.phoneTFContent.backgroundColor = DKIOS13BackgroundColor();
+    
+    self.phoneTF.textColor = DKIOS13LabelColor();
+    self.feedBackNumberLbl.textColor = DKIOS13LabelColor();
+    placeHolderLabel.textColor = DKIOS13PlaceholderTextColor();
+    self.feedBackTextView.textColor = DKIOS13PlaceholderTextColor();
+    self.feedBackLbl.textColor = DKIOS13LabelColor();
+    self.phoneLbl.textColor = DKIOS13LabelColor();
+    self.feedBackTextView.backgroundColor = DKIOS13BackgroundColor();
     
     
     

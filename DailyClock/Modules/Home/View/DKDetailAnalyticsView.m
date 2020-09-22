@@ -13,19 +13,7 @@
 - (id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        if (@available(iOS 13, *)) {
-            UIColor *bgColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                    return kContainerColor;
-                }
-                else{
-                    return RGBColor(44, 44, 44);
-                }
-            }];
-            self.backgroundColor=  bgColor;
-        } else {
-            self.backgroundColor = kContainerColor;
-        }
+        self.backgroundColor = DKIOS13ContainerColor();
         [self setUpSubviews];
         [self addConstraintss];
     }

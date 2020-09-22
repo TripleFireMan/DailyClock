@@ -58,4 +58,61 @@
 #define CYZcool(x)              [UIFont fontWithName:@"HappyZcool-2016" size:x]
 #define DKFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:(x)]
 #define DKBoldFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:(x)]
+
+static inline UIColor * DKIOS13BackgroundColor(){
+    if (@available(iOS 13, *)) {
+        UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                return kBackGroungColor;
+            }
+            else{
+                return RGBColor(44, 44, 44);
+            }
+        }];
+        return bgClor;
+    } else {
+        return kBackGroungColor;
+    }
+}
+
+static inline UIColor * DKIOS13ContainerColor(){
+    if (@available(iOS 13, *)) {
+        UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                return kContainerColor;
+            }
+            else{
+                return RGBColor(44, 44, 44);
+            }
+        }];
+        return bgClor;
+    } else {
+        return kContainerColor;
+    }
+}
+
+static inline UIColor * DKIOS13LabelColor(){
+    if (@available(iOS 13, *)) {
+        return [UIColor labelColor];
+    } else {
+        return [UIColor blackColor];
+    }
+}
+
+static inline UIColor * DKIOS13SecondLabelColor(){
+    if (@available(iOS 13, *)) {
+        return [UIColor secondaryLabelColor];
+    } else {
+        return RGBColor(120, 120, 120);
+    }
+}
+
+static inline UIColor * DKIOS13PlaceholderTextColor(){
+    if (@available(iOS 13, *)) {
+        return [UIColor placeholderTextColor];
+    } else {
+        return RGBColor(192, 192, 192);
+    }
+}
+
 #endif /* DKTheme_h */
