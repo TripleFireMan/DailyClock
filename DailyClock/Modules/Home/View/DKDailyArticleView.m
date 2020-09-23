@@ -160,19 +160,57 @@
 - (void) configModel:(id)model
 {
     self.model = model;
-    self.articleLabel.text = @"日志信息";
+    
+    if (self.model.rizhi.count == 0) {
+        self.articleLabel.text = @"";
+        [self.redPoint mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.offset(0);
+            make.left.offset(0);
+            make.width.height.offset(0);
+        }];
+        
+        [self.articleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.offset(0);
+            make.left.offset(0);
+            make.width.height.offset(0);
+        }];
+        [self.stakeView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.articleLabel.mas_bottom).offset(0);
+            make.left.offset(0);
+            make.right.offset(0);
+            make.bottom.offset(0);
+        }];
+        
+    }
+    else{
+        self.articleLabel.text = @"日志信息";
+        [self.redPoint mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.offset(15);
+            make.left.offset(0);
+            make.width.height.offset(8);
+        }];
+        
+        [self.articleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.redPoint.mas_right).offset(10);
+            make.right.offset(-15);
+            make.top.offset(15);
+        }];
+        
+        [self.stakeView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.articleLabel.mas_bottom).offset(15);
+            make.left.offset(0);
+            make.right.offset(0);
+            make.bottom.offset(-10);
+        }];
+    }
+    
     [[self.stakeView subviews] enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
     
-    NSMutableArray <DKSignModel *>*signs = [NSMutableArray new];
-    [[[self.model.signModels reverseObjectEnumerator] allObjects] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        if (idx < 3) {
-//
-//        }
-        [signs addObject:obj];
-    }];
-    
+    NSMutableArray <DKSignModel *>*signs = [[self model] rizhi];
+    NSSortDescriptor *des = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+    signs = [[signs sortedArrayUsingDescriptors:@[des]]mutableCopy];
     [signs enumerateObjectsUsingBlock:^(DKSignModel *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         DKDailyArticleItemView *view =[DKDailyArticleItemView new];
         view.targetModel = self.model;

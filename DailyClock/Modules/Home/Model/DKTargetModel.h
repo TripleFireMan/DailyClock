@@ -61,6 +61,8 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 
 /// 连续次数
 - (NSInteger) continueCont;
+
+- (NSMutableArray <DKSignModel *> *) rizhi;
 @end
 
 

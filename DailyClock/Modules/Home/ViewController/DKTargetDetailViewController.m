@@ -372,7 +372,6 @@
 - (BOOL) calendar:(FSCalendar *)calendar shouldDeselectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
 {
     __block BOOL dateIsDaka = NO;
-    NSMutableArray *removeData = @[].mutableCopy;
     __block DKSignModel *findObj = nil;
     [self.model.signModels enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([self isSameDay:date date2:obj.date]) {
@@ -383,7 +382,7 @@
     }];
     
     if (dateIsDaka) {
-        [DKAlert showTitle:@"提示" subTitle:@"确定取消打卡？" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
+        [DKAlert showTitle:@"提示" subTitle:@"确定取消打卡,取消打卡后，日志信息也会删除？" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
             if (idx == DKAlertDone) {
                 [self.model.signModels removeObject:findObj];
                 [self.calendar deselectDate:findObj.date];

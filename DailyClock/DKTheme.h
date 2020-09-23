@@ -95,7 +95,7 @@ static inline UIColor * DKIOS13ContainerColor(){
     if (@available(iOS 13, *)) {
         UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                return kContainerColor;
+                return kBackGroungColor;
             }
             else{
                 return RGBColor(44, 44, 44);
@@ -103,7 +103,7 @@ static inline UIColor * DKIOS13ContainerColor(){
         }];
         return bgClor;
     } else {
-        return kContainerColor;
+        return kBackGroungColor;
     }
 }
 

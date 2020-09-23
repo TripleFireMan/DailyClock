@@ -227,6 +227,16 @@
 }
 
 
+- (NSMutableArray <DKSignModel *> *)rizhi{
+    NSMutableArray <DKSignModel *>*signs = [NSMutableArray new];
+    [[[self.signModels reverseObjectEnumerator] allObjects] enumerateObjectsUsingBlock:^(DKSignModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (!CYStringIsEmpty(obj.text) && signs.count < 3) {
+            [signs addObject:obj];
+        }
+    }];
+    return signs;
+}
+
 @end
 
 @implementation DKTargetPinCiWeekModel
