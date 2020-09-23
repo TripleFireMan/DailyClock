@@ -173,6 +173,9 @@
 		4CA9776A25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
 		4CA9776B25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
 		4CA9776C25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
+		4CD225A0251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
+		4CD225A1251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
+		4CD225A2251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
 		4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */; };
 		4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
 		4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4CE63C0F25090613007EC122 /* BEBAS___.TTF */; };
@@ -329,6 +332,8 @@
 		4CA9776425164BB20041EB7D /* DKFontSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontSettingViewController.m; sourceTree = "<group>"; };
 		4CA9776825164C050041EB7D /* DKFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFontModel.h; sourceTree = "<group>"; };
 		4CA9776925164C050041EB7D /* DKFontModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontModel.m; sourceTree = "<group>"; };
+		4CD2259E251A27B900285ED4 /* DKDailyArticleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyArticleView.h; sourceTree = "<group>"; };
+		4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyArticleView.m; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CE63C0B2508C0D4007EC122 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4CE63C0F25090613007EC122 /* BEBAS___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BEBAS___.TTF"; sourceTree = "<group>"; };
@@ -610,6 +615,8 @@
 				4CF6868E25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m */,
 				4C993BA92513482A0082F86D /* DKDetailAnalyticsView.h */,
 				4C993BAA2513482A0082F86D /* DKDetailAnalyticsView.m */,
+				4CD2259E251A27B900285ED4 /* DKDailyArticleView.h */,
+				4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -955,6 +962,7 @@
 				4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4CD225A0251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C91B7A025144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
@@ -1031,6 +1039,7 @@
 				4C993BB6251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
 				4C993BB1251371890082F86D /* DKAlert.m in Sources */,
 				4CA9776B25164C050041EB7D /* DKFontModel.m in Sources */,
+				4CD225A1251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 				4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */,
 				4CA9774225148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
@@ -1066,6 +1075,7 @@
 				4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */,
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4CD225A2251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C91B7A225144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
@@ -1240,7 +1250,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1250,6 +1260,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1267,7 +1278,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡Release.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1277,6 +1288,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";

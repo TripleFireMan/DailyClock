@@ -59,6 +59,22 @@
 #define DKFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:(x)]
 #define DKBoldFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:(x)]
 
+static inline UIColor * DKIOS13SystemBackgroundColor(){
+    if (@available(iOS 13, *)) {
+        UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+                return [UIColor whiteColor];
+            }
+            else{
+                return [UIColor blackColor];
+            }
+        }];
+        return bgClor;
+    } else {
+        return [UIColor blackColor];
+    }
+}
+
 static inline UIColor * DKIOS13BackgroundColor(){
     if (@available(iOS 13, *)) {
         UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {

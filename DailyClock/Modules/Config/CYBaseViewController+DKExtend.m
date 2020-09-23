@@ -28,6 +28,7 @@
         self.backBtn.tintColor = [UIColor labelColor];
     } else {
         // Fallback on earlier versions
+        self.view.backgroundColor = [UIColor whiteColor];
         self.headerView.backgroundColor = [UIColor whiteColor];
         self.titleLabel.textColor = [UIColor blackColor];
         self.backBtn.tintColor = [UIColor darkGrayColor];

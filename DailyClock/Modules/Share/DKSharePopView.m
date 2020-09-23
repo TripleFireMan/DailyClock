@@ -85,8 +85,8 @@
           [UIView animateWithDuration:0.35 animations:^{
               [self.container mas_remakeConstraints:^(MASConstraintMaker *make) {
                   make.centerX.offset(0);
-                  make.left.offset(15);
-                  make.right.offset(-15);
+                  make.left.offset(30);
+                  make.right.offset(-35);
                   make.bottom.offset(-keyboardHeight-20);
               }];
               [self layoutIfNeeded];
@@ -101,8 +101,8 @@
           [UIView animateWithDuration:0.35 animations:^{
             [self.container mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.center.offset(0);
-                make.left.offset(15);
-                make.right.offset(-15);
+                make.left.offset(30);
+                make.right.offset(-30);
             }];
             [self layoutIfNeeded];
           } completion:^(BOOL finished) {
@@ -137,8 +137,8 @@
     
     [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.offset(0);
-        make.left.offset(15);
-        make.right.offset(-15);
+        make.left.offset(30);
+        make.right.offset(-30);
 //        make.height.offset(800);
     }];
     
@@ -186,7 +186,7 @@
     [self.confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.textContaierView.mas_bottom).offset(15);
 //        make.left.offset(30);
-        make.width.offset(kScreenSize.width - 30 -60);
+        make.width.offset(kScreenSize.width - 60 -60);
         make.height.offset(40);
         make.bottom.offset(-20);
         make.centerX.offset(0);
@@ -255,7 +255,7 @@
 - (UIView *) container{
     if (!_container) {
         _container = [UIView new];
-        _container.backgroundColor = [UIColor whiteColor];
+        _container.backgroundColor = DKIOS13SystemBackgroundColor();
         _container.layer.shadowColor = RGBColor(100, 100, 100).CGColor;
         _container.layer.shadowOpacity = 1;
         _container.layer.cornerRadius = 12.f;
@@ -283,7 +283,7 @@
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
         _titleLabel.font = CYPingFangSCMedium(18);
-        _titleLabel.textColor = kTitleColor;
+        _titleLabel.textColor = DKIOS13LabelColor();
         _titleLabel.text = @"恭喜你~";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -294,7 +294,7 @@
     if (!_messageLabel) {
         _messageLabel = [UILabel new];
         _messageLabel.font = CYPingFangSCMedium(14);
-        _messageLabel.textColor = kSubTitleColor;
+        _messageLabel.textColor = DKIOS13BackgroundColor();
         _messageLabel.text = @"您已累计打卡10次，连续打卡5次，距离目标还要10次，加油吧~~~";
         _messageLabel.numberOfLines = 0;
         _messageLabel.textAlignment = NSTextAlignmentCenter;
@@ -306,7 +306,7 @@
     if (!_textContaierView) {
         _textContaierView = [UIView new];
         _textContaierView.layer.cornerRadius = 6.f;
-        _textContaierView.backgroundColor = kContainerColor;
+        _textContaierView.backgroundColor = DKIOS13ContainerColor();
     }
     return _textContaierView;
 }
@@ -314,6 +314,7 @@
 - (UITextView *) textView{
     if (!_textView) {
         _textView = [UITextView new];
+        _textView.textColor = DKIOS13SecondLabelColor();
         _textView.backgroundColor = [UIColor clearColor];
         _textView.font = DKFont(14.f);
         _textView.zw_placeHolder = @"写点什么吧";

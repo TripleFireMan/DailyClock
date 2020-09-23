@@ -10,6 +10,7 @@
 #import "FSCalendar.h"
 #import "DKDetailAnalyticsView.h"
 #import "DKTargetSettingViewController.h"
+#import "DKDailyArticleView.h"
 
 @interface DKTargetDetailViewController ()<FSCalendarDataSource, FSCalendarDelegate,FSCalendarDelegateAppearance>
 
@@ -19,7 +20,7 @@
 
 @property (nonatomic, strong) UIImageView *redPoint;
 @property (nonatomic, strong) UILabel *analyticsLabel;
-
+@property (nonatomic, strong) DKDailyArticleView *articleView;
 @property (nonatomic, strong) DKDetailAnalyticsView *l1;
 @property (nonatomic, strong) DKDetailAnalyticsView *l2;
 @property (nonatomic, strong) DKDetailAnalyticsView *l3;
@@ -97,12 +98,14 @@
         self.stopBtn.hidden = YES;
         self.activeBtn.hidden = NO;
     }
+    [self.articleView configModel:self.model];
 }
 
 - (void) setupSubView{
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.calendarContainer];
     [self.calendarContainer addSubview:self.calendar];
+    [self.scrollView addSubview:self.articleView];
     [self.scrollView addSubview:self.redPoint];
     [self.scrollView addSubview:self.analyticsLabel];
     [self.scrollView addSubview:self.l1];
@@ -130,10 +133,16 @@
         make.height.offset(310);
     }];
     
+    [self.articleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(15);
+        make.right.offset(-15);
+        make.top.mas_equalTo(self.calendarContainer.mas_bottom).offset(0);
+    }];
+    
     [self.redPoint mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(15);
         make.width.height.offset(8);
-        make.top.mas_equalTo(self.calendarContainer.mas_bottom).offset(30);
+        make.top.mas_equalTo(self.articleView.mas_bottom).offset(15);
     }];
     
     [self.analyticsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -436,6 +445,13 @@
     return _l4;
 }
 
+- (DKDailyArticleView *) articleView{
+    if (!_articleView) {
+        _articleView = [DKDailyArticleView new];
+    }
+    return _articleView;
+}
+
 - (UIImageView *) redPoint{
     if (!_redPoint) {
         _redPoint = [UIImageView new];
@@ -461,6 +477,7 @@
     }
     return _analyticsLabel;
 }
+
 
 - (UIButton *) activeBtn{
     @weakify(self);

@@ -295,8 +295,8 @@
         _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_saveBtn setTitle:@"保存" forState:UIControlStateNormal];
         _saveBtn.titleLabel.font = DKFont(16.f);
-        [_saveBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_saveBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+        [_saveBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:DKIOS13SecondLabelColor() forState:UIControlStateHighlighted];
         [[_saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             if (CYStringIsEmpty(self.nameTF.text)) {
