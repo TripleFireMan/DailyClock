@@ -23,7 +23,7 @@
     
     /// 初始化
     [[DKApplication cy_shareInstance] setup:launchOptions];
-    
+    [self p_save];
     return YES;
 }
 
@@ -38,14 +38,28 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService setBadge:0];
     [application setApplicationIconBadgeNumber:0];
     
+    [self p_save];
+}
+
+- (void) p_save{
     NSUserDefaults *userDefault =  [[NSUserDefaults alloc] initWithSuiteName:@"group.com.chengyan.DailyClock"];
     DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] firstObject];
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    [dictionary setObject:model.icon forKey:@"icon"];
-    [dictionary setObject:model.title forKey:@"title"];
-    [dictionary setObject:[NSString stringWithFormat:@"%@次",@(model.signModels.count)] forKey:@"days"];
-    [dictionary setObject:model.backgroundImage forKey:@"bg"];
-    [dictionary setObject:@(NO) forKey:@"sign"];
+    if (model) {
+        
+        [dictionary setObject:model.icon forKey:@"icon"];
+        [dictionary setObject:model.title forKey:@"title"];
+        [dictionary setObject:[NSString stringWithFormat:@"%@次",@(model.signModels.count)] forKey:@"days"];
+        [dictionary setObject:model.backgroundImage forKey:@"bg"];
+        [dictionary setObject:@(NO) forKey:@"sign"];
+    }
+    else{
+        [dictionary setObject:@"dog" forKey:@"icon"];
+        [dictionary setObject:@"遛狗" forKey:@"title"];
+        [dictionary setObject:[NSString stringWithFormat:@"%@次",@(1)] forKey:@"days"];
+        [dictionary setObject:@"bbg1" forKey:@"bg"];
+        [dictionary setObject:@(NO) forKey:@"sign"];
+    }
     [userDefault setObject:dictionary forKey:@"shareData"];
     [userDefault synchronize];
 }
