@@ -82,6 +82,11 @@
 		4C51AD58250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
 		4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
 		4C51AD5A250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
+		4C8C5338251C9FA100AF9DCA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */; };
+		4C8C533A251C9FA100AF9DCA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */; };
+		4C8C533D251C9FA100AF9DCA /* DailyClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C533C251C9FA100AF9DCA /* DailyClockWidget.swift */; };
+		4C8C533F251C9FA100AF9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8C533E251C9FA100AF9DCA /* Assets.xcassets */; };
+		4C8C5343251C9FA100AF9DCA /* DailyClockWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
 		4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DA0BA2500E6D700112389 /* DKApplication.m */; };
@@ -208,7 +213,28 @@
 			remoteGlobalIDString = 4C1CCE6724FE49680004EF4E;
 			remoteInfo = DailyClock;
 		};
+		4C8C5341251C9FA100AF9DCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1CCE6024FE49680004EF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C8C5335251C9FA100AF9DCA;
+			remoteInfo = DailyClockWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C8C5344251C9FA100AF9DCA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C8C5343251C9FA100AF9DCA /* DailyClockWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +298,13 @@
 		4C51AD52250F29C8007DEB77 /* DKSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSettingViewController.m; sourceTree = "<group>"; };
 		4C51AD56250F3A13007DEB77 /* DKUserCenterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKUserCenterHeader.h; sourceTree = "<group>"; };
 		4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKUserCenterHeader.m; sourceTree = "<group>"; };
+		4C66C908251CE8DD0007713D /* DailyClockWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyClockWidgetExtension.entitlements; sourceTree = "<group>"; };
+		4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4C8C533C251C9FA100AF9DCA /* DailyClockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClockWidget.swift; sourceTree = "<group>"; };
+		4C8C533E251C9FA100AF9DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C8C5340251C9FA100AF9DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DA0B92500E6D700112389 /* DKApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKApplication.h; sourceTree = "<group>"; };
 		4C8DA0BA2500E6D700112389 /* DKApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKApplication.m; sourceTree = "<group>"; };
 		4C8DA0BE2500E74600112389 /* DKApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKApplication+Window.h"; sourceTree = "<group>"; };
@@ -373,6 +406,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C8C5333251C9FA100AF9DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8C533A251C9FA100AF9DCA /* SwiftUI.framework in Frameworks */,
+				4C8C5338251C9FA100AF9DCA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -382,6 +424,8 @@
 				4CA9773D2514711E0041EB7D /* CloudKit.framework */,
 				282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */,
 				799B35C738A5B9A293ACE11D /* libPods-DailyClockUITests.a */,
+				4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */,
+				4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,9 +433,11 @@
 		4C1CCE5F24FE49680004EF4E = {
 			isa = PBXGroup;
 			children = (
+				4C66C908251CE8DD0007713D /* DailyClockWidgetExtension.entitlements */,
 				4C1CCE6A24FE49680004EF4E /* DailyClock */,
 				4C1CCE8624FE49690004EF4E /* DailyClockTests */,
 				4C1CCE9124FE49690004EF4E /* DailyClockUITests */,
+				4C8C533B251C9FA100AF9DCA /* DailyClockWidget */,
 				4C1CCE6924FE49680004EF4E /* Products */,
 				D150DA5740767EA867855DD7 /* Pods */,
 				48001CCFE284ABAC9CB3594C /* Frameworks */,
@@ -404,6 +450,7 @@
 				4C1CCE6824FE49680004EF4E /* 打卡.app */,
 				4C1CCE8324FE49690004EF4E /* DailyClockTests.xctest */,
 				4C1CCE8E24FE49690004EF4E /* DailyClockUITests.xctest */,
+				4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -527,6 +574,16 @@
 				4CA9776425164BB20041EB7D /* DKFontSettingViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4C8C533B251C9FA100AF9DCA /* DailyClockWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4C8C533C251C9FA100AF9DCA /* DailyClockWidget.swift */,
+				4C8C533E251C9FA100AF9DCA /* Assets.xcassets */,
+				4C8C5340251C9FA100AF9DCA /* Info.plist */,
+			);
+			path = DailyClockWidget;
 			sourceTree = "<group>";
 		};
 		4C8DA0B72500E6A300112389 /* Modules */ = {
@@ -705,10 +762,12 @@
 				4C1CCE6524FE49680004EF4E /* Frameworks */,
 				4C1CCE6624FE49680004EF4E /* Resources */,
 				EE9799733FE7EE73199734B0 /* [CP] Copy Pods Resources */,
+				4C8C5344251C9FA100AF9DCA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C8C5342251C9FA100AF9DCA /* PBXTargetDependency */,
 			);
 			name = DailyClock;
 			productName = DailyClock;
@@ -753,12 +812,30 @@
 			productReference = 4C1CCE8E24FE49690004EF4E /* DailyClockUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4C8C5335251C9FA100AF9DCA /* DailyClockWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C8C5347251C9FA100AF9DCA /* Build configuration list for PBXNativeTarget "DailyClockWidgetExtension" */;
+			buildPhases = (
+				4C8C5332251C9FA100AF9DCA /* Sources */,
+				4C8C5333251C9FA100AF9DCA /* Frameworks */,
+				4C8C5334251C9FA100AF9DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyClockWidgetExtension;
+			productName = DailyClockWidgetExtension;
+			productReference = 4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4C1CCE6024FE49680004EF4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = cheng.yan;
 				TargetAttributes = {
@@ -773,6 +850,9 @@
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
 						TestTargetID = 4C1CCE6724FE49680004EF4E;
+					};
+					4C8C5335251C9FA100AF9DCA = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -792,6 +872,7 @@
 				4C1CCE6724FE49680004EF4E /* DailyClock */,
 				4C1CCE8224FE49690004EF4E /* DailyClockTests */,
 				4C1CCE8D24FE49690004EF4E /* DailyClockUITests */,
+				4C8C5335251C9FA100AF9DCA /* DailyClockWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -847,6 +928,14 @@
 				4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7942513AF8C00C8F594 /* private.html in Resources */,
 				4C91B7982513B25C00C8F594 /* userregiest.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C8C5334251C9FA100AF9DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8C533F251C9FA100AF9DCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1193,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C8C5332251C9FA100AF9DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8C533D251C9FA100AF9DCA /* DailyClockWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1116,6 +1213,11 @@
 			isa = PBXTargetDependency;
 			target = 4C1CCE6724FE49680004EF4E /* DailyClock */;
 			targetProxy = 4C1CCE8F24FE49690004EF4E /* PBXContainerItemProxy */;
+		};
+		4C8C5342251C9FA100AF9DCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C8C5335251C9FA100AF9DCA /* DailyClockWidgetExtension */;
+			targetProxy = 4C8C5341251C9FA100AF9DCA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1390,6 +1492,60 @@
 			};
 			name = Release;
 		};
+		4C8C5345251C9FA100AF9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				INFOPLIST_FILE = DailyClockWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C8C5346251C9FA100AF9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M99LZTCK8N;
+				INFOPLIST_FILE = DailyClockWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1425,6 +1581,15 @@
 			buildConfigurations = (
 				4C1CCE9E24FE49690004EF4E /* Debug */,
 				4C1CCE9F24FE49690004EF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C8C5347251C9FA100AF9DCA /* Build configuration list for PBXNativeTarget "DailyClockWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8C5345251C9FA100AF9DCA /* Debug */,
+				4C8C5346251C9FA100AF9DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
