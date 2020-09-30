@@ -1,9 +1,11 @@
 platform :ios, '9.0'
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
 inhibit_all_warnings!
 
 def DKPods()
-  pod 'CYKit',:git => 'https://github.com/TripleFireMan/CYKit.git'
+#  pod 'CYKit',:git => 'https://github.com/TripleFireMan/CYKit.git'
+  pod 'CYKit'
   pod 'Masonry', '1.1.0'
   pod 'SDWebImage', '5.5.2'
   pod 'IQKeyboardManager', '6.4.2'                                 #键盘处理
@@ -19,6 +21,7 @@ def DKPods()
   pod 'FCAlertView'
   pod 'MBProgressHUD'
   pod 'UMCCommon'
+  pod 'SnapKit'
 end
 
 target 'DailyClock' do

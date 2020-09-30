@@ -8,6 +8,7 @@
 
 #ifndef DKTheme_h
 #define DKTheme_h
+#import "UIColor+YYAdd.h"
 
 #define kThemeGray              [UIColor darkGrayColor]
 #define kThemeBackgrounColor    [UIColor colorWithHexString:@"#e0e0e0"]

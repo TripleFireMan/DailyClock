@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) DKSignModel *model;
 @property (nonatomic, strong) DKTargetModel *targetModel;
+
 @end
 
 
@@ -115,6 +116,7 @@
 @property (nonatomic, strong) UILabel *articleLabel;
 @property (nonatomic, strong) UIStackView *stakeView;
 @property (nonatomic, strong) DKTargetModel *model;
+@property (nonatomic, strong) UIButton *checkMore;//查看更多
 @end
 
 @implementation DKDailyArticleView
@@ -134,6 +136,7 @@
     [self addSubview:self.redPoint];
     [self addSubview:self.articleLabel];
     [self addSubview:self.stakeView];
+    [self addSubview:self.checkMore];
 }
 
 - (void) addConstrainss
@@ -147,13 +150,20 @@
     [self.articleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.redPoint.mas_right).offset(10);
         make.right.offset(-15);
-        make.top.offset(15);
+        make.centerY.mas_equalTo(self.redPoint);
     }];
+    
     [self.stakeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.articleLabel.mas_bottom).offset(15);
         make.left.offset(0);
         make.right.offset(0);
         make.bottom.offset(-10);
+    }];
+    
+    [self.checkMore mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(0);
+        make.centerY.mas_equalTo(self.redPoint);
+        make.height.offset(40);
     }];
 }
 
@@ -170,7 +180,7 @@
         }];
         
         [self.articleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(0);
+            make.centerY.mas_equalTo(self.redPoint);
             make.left.offset(0);
             make.width.height.offset(0);
         }];
@@ -185,7 +195,7 @@
     else{
         self.articleLabel.text = @"日志信息";
         [self.redPoint mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(15);
+            make.top.offset(20);
             make.left.offset(0);
             make.width.height.offset(8);
         }];
@@ -193,7 +203,7 @@
         [self.articleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.redPoint.mas_right).offset(10);
             make.right.offset(-15);
-            make.top.offset(15);
+            make.centerY.mas_equalTo(self.redPoint);
         }];
         
         [self.stakeView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -220,6 +230,9 @@
             make.width.offset(kScreenSize.width - 30);
         }];
     }];
+    
+    self.checkMore.hidden = self.model.signModels.count < 3;
+    
 }
 
 - (UILabel *) articleLabel{
@@ -252,5 +265,21 @@
         _stakeView.backgroundColor = DKIOS13ContainerColor();
     }
     return _stakeView;
+}
+
+- (UIButton *) checkMore{
+    @weakify(self);
+    if (!_checkMore) {
+        _checkMore = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_checkMore setTitle:@"查看更多" forState:UIControlStateNormal];
+        _checkMore.titleLabel.font = DKFont(14);
+        [_checkMore setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
+//        _checkMore.backgroundColor = [UIColor redColor];
+        [[_checkMore rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self);
+            self.checkMoreAction ? self.checkMoreAction() : nil;
+        }];
+    }
+    return _checkMore;
 }
 @end

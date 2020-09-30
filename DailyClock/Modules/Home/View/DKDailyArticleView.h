@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKDailyArticleView : UIView
 
+
+@property (nonatomic, copy) CYVoidBlock checkMoreAction;
+
 - (void) configModel:(id)model;
 
 @end

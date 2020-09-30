@@ -49,9 +49,6 @@
 		4C1CCE7E24FE49690004EF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7D24FE49690004EF4E /* main.m */; };
 		4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE8724FE49690004EF4E /* DailyClockTests.m */; };
 		4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */; };
-		4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
-		4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
-		4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */; };
 		4C51ACFF250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
 		4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
 		4C51AD01250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
@@ -82,6 +79,12 @@
 		4C51AD58250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
 		4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
 		4C51AD5A250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */; };
+		4C7DA7A72524191A00B58B59 /* DKDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */; };
+		4C7DA7A82524191A00B58B59 /* DKDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */; };
+		4C7DA7A92524191A00B58B59 /* DKDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */; };
+		4C7DA7B725242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
+		4C7DA7B825242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
+		4C7DA7B925242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
 		4C8C5338251C9FA100AF9DCA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */; };
 		4C8C533A251C9FA100AF9DCA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */; };
 		4C8C533D251C9FA100AF9DCA /* DailyClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C533C251C9FA100AF9DCA /* DailyClockWidget.swift */; };
@@ -278,7 +281,6 @@
 		4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyClockUITests.m; sourceTree = "<group>"; };
 		4C1CCE9424FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "简胖娃.ttf"; sourceTree = "<group>"; };
 		4C51ACFD250B4BD6007DEB77 /* DKSharePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSharePopView.h; sourceTree = "<group>"; };
 		4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSharePopView.m; sourceTree = "<group>"; };
 		4C51AD04250B53E4007DEB77 /* img_bling_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bling_0.png; sourceTree = "<group>"; };
@@ -299,6 +301,10 @@
 		4C51AD56250F3A13007DEB77 /* DKUserCenterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKUserCenterHeader.h; sourceTree = "<group>"; };
 		4C51AD57250F3A13007DEB77 /* DKUserCenterHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKUserCenterHeader.m; sourceTree = "<group>"; };
 		4C66C908251CE8DD0007713D /* DailyClockWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyClockWidgetExtension.entitlements; sourceTree = "<group>"; };
+		4C7DA7A42524191900B58B59 /* DailyClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClock-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C7DA7A52524191900B58B59 /* DailyClockTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDailyListViewController.swift; sourceTree = "<group>"; };
+		4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDailyItemCell.swift; sourceTree = "<group>"; };
 		4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -634,6 +640,8 @@
 			children = (
 				4C8DA0C82500E8AA00112389 /* DKHomePageViewController.h */,
 				4C8DA0C92500E8AA00112389 /* DKHomePageViewController.m */,
+				4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */,
+				4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */,
 				4C8DA0D22500F16100112389 /* DKCreateTargetViewController.h */,
 				4C8DA0D32500F16100112389 /* DKCreateTargetViewController.m */,
 				4C07A9322501DDE80064CB76 /* DKTargetSettingViewController.h */,
@@ -643,6 +651,8 @@
 				4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */,
 				4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */,
 				4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */,
+				4C7DA7A42524191900B58B59 /* DailyClock-Bridging-Header.h */,
+				4C7DA7A52524191900B58B59 /* DailyClockTests-Bridging-Header.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -732,7 +742,6 @@
 		4CE63C0E25090613007EC122 /* TTF */ = {
 			isa = PBXGroup;
 			children = (
-				4C51ACF8250B4B49007DEB77 /* 简胖娃.ttf */,
 				4C993BA5251256700082F86D /* zcool.ttf */,
 				4CE63C0F25090613007EC122 /* BEBAS___.TTF */,
 			);
@@ -841,9 +850,11 @@
 				TargetAttributes = {
 					4C1CCE6724FE49680004EF4E = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1200;
 					};
 					4C1CCE8224FE49690004EF4E = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1200;
 						TestTargetID = 4C1CCE6724FE49680004EF4E;
 					};
 					4C1CCE8D24FE49690004EF4E = {
@@ -890,7 +901,6 @@
 				4C91B7922513AF8C00C8F594 /* private.html in Resources */,
 				4C993BA6251256700082F86D /* zcool.ttf in Resources */,
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
-				4C51ACF9250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4C91B7962513B25C00C8F594 /* userregiest.html in Resources */,
 				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
@@ -903,7 +913,6 @@
 			files = (
 				4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
-				4C51ACFA250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA7251256700082F86D /* zcool.ttf in Resources */,
@@ -920,7 +929,6 @@
 			files = (
 				4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
-				4C51ACFB250B4B49007DEB77 /* 简胖娃.ttf in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
 				4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA8251256700082F86D /* zcool.ttf in Resources */,
@@ -1032,6 +1040,7 @@
 				4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4CA9776A25164C050041EB7D /* DKFontModel.m in Sources */,
+				4C7DA7B725242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
@@ -1048,6 +1057,7 @@
 				4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C07A9392501DE740064CB76 /* DKTargetManager.m in Sources */,
 				4CA97751251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
+				4C7DA7A72524191A00B58B59 /* DKDailyListViewController.swift in Sources */,
 				4CF6868F25072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A9482501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C07A952250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
@@ -1097,6 +1107,7 @@
 				4C07A93F2501DE920064CB76 /* DKSignModel.m in Sources */,
 				4CA9774D2515EABE0041EB7D /* DKResultObject.m in Sources */,
 				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
+				4C7DA7B825242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
 				4CA97752251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
@@ -1127,6 +1138,7 @@
 				4C8DA0BC2500E6D700112389 /* DKApplication.m in Sources */,
 				4C993BB6251399D80082F86D /* DKMinePageCollectionViewCell.m in Sources */,
 				4C993BB1251371890082F86D /* DKAlert.m in Sources */,
+				4C7DA7A82524191A00B58B59 /* DKDailyListViewController.swift in Sources */,
 				4CA9776B25164C050041EB7D /* DKFontModel.m in Sources */,
 				4CD225A1251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
@@ -1145,6 +1157,7 @@
 				4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */,
 				4CA9776C25164C050041EB7D /* DKFontModel.m in Sources */,
+				4C7DA7B925242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
@@ -1161,6 +1174,7 @@
 				4C8DA0D12500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C07A94A2501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4CA97753251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
+				4C7DA7A92524191A00B58B59 /* DKDailyListViewController.swift in Sources */,
 				4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */,
 				4C07A94F2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9452501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
@@ -1236,6 +1250,7 @@
 		4C1CCE9524FE49690004EF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1288,12 +1303,14 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
 			};
 			name = Debug;
 		};
 		4C1CCE9624FE49690004EF4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1339,6 +1356,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1347,12 +1365,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9379C958B874918AE348D55D /* Pods-DailyClock.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1366,6 +1385,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClock/Modules/Home/ViewController/DailyClock-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1375,12 +1397,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9A558477B0ECD84E2FE50A3 /* Pods-DailyClock.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡Release.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1394,6 +1417,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClock/Modules/Home/ViewController/DailyClock-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1402,7 +1427,9 @@
 		4C1CCE9B24FE49690004EF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
@@ -1415,6 +1442,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClock/Modules/Home/ViewController/DailyClockTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/打卡.app/打卡";
 			};
@@ -1423,7 +1454,9 @@
 		4C1CCE9C24FE49690004EF4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
@@ -1436,6 +1469,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chenyan.DailyClockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyClock/Modules/Home/ViewController/DailyClockTests-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/打卡.app/打卡";
 			};
@@ -1445,6 +1481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AE3C1F289771F0B8EEF3112 /* Pods-DailyClockUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1471,6 +1508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3491C9716A45D76C310454C9 /* Pods-DailyClockUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1501,6 +1539,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1509,13 +1548,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1528,6 +1568,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1536,13 +1577,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

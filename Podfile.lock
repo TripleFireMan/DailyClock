@@ -14,28 +14,18 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - CYKit (0.7.18):
+  - CYKit (0.7.32):
     - AFNetworking
-    - CYKit/Categorys (= 0.7.18)
-    - CYKit/Class (= 0.7.18)
-    - CYKit/UIKit (= 0.7.18)
+    - CYKit/Categorys (= 0.7.32)
+    - CYKit/Class (= 0.7.32)
+    - CYKit/UIKit (= 0.7.32)
     - FastCoding
     - Masonry
     - MJExtension (= 3.2.2)
     - MJRefresh (= 3.2.2)
     - ReactiveObjC
     - XHToast
-    - YYKit
-  - CYKit/Categorys (0.7.18):
-    - AFNetworking
-    - FastCoding
-    - Masonry
-    - MJExtension (= 3.2.2)
-    - MJRefresh (= 3.2.2)
-    - ReactiveObjC
-    - XHToast
-    - YYKit
-  - CYKit/Class (0.7.18):
+  - CYKit/Categorys (0.7.32):
     - AFNetworking
     - FastCoding
     - Masonry
@@ -43,8 +33,7 @@ PODS:
     - MJRefresh (= 3.2.2)
     - ReactiveObjC
     - XHToast
-    - YYKit
-  - CYKit/UIKit (0.7.18):
+  - CYKit/Class (0.7.32):
     - AFNetworking
     - FastCoding
     - Masonry
@@ -52,7 +41,14 @@ PODS:
     - MJRefresh (= 3.2.2)
     - ReactiveObjC
     - XHToast
-    - YYKit
+  - CYKit/UIKit (0.7.32):
+    - AFNetworking
+    - FastCoding
+    - Masonry
+    - MJExtension (= 3.2.2)
+    - MJRefresh (= 3.2.2)
+    - ReactiveObjC
+    - XHToast
   - CYLTabBarController/Core (1.28.3)
   - CYLTabBarController/Lottie (1.28.3):
     - CYLTabBarController/Core
@@ -74,7 +70,8 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
-  - UMCCommon (7.1.1)
+  - SnapKit (4.2.0)
+  - UMCCommon (7.1.3)
   - XHToast (1.4.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -83,7 +80,7 @@ PODS:
   - ZWPlaceHolder (0.0.2)
 
 DEPENDENCIES:
-  - CYKit (from `https://github.com/TripleFireMan/CYKit.git`)
+  - CYKit
   - CYLTabBarController/Lottie (= 1.28.3)
   - FastCoding (= 3.3)
   - FCAlertView
@@ -94,6 +91,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
+  - SnapKit
   - UMCCommon
   - XHToast
   - YYKit
@@ -103,6 +101,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
+    - CYKit
     - CYLTabBarController
     - FastCoding
     - FCAlertView
@@ -118,24 +117,16 @@ SPEC REPOS:
     - PromisesObjC
     - ReactiveObjC
     - SDWebImage
+    - SnapKit
     - UMCCommon
     - XHToast
     - YYKit
     - ZWLimitCounter
     - ZWPlaceHolder
 
-EXTERNAL SOURCES:
-  CYKit:
-    :git: https://github.com/TripleFireMan/CYKit.git
-
-CHECKOUT OPTIONS:
-  CYKit:
-    :commit: 0ebbcea733b6b1bafa44febff1e97fa43ad5578c
-    :git: https://github.com/TripleFireMan/CYKit.git
-
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  CYKit: 3aca21bbbd548d9d817fe2be055ac86767ab93ad
+  CYKit: 7853400048a66f52ac86d99bbb46442b6933f6a9
   CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
@@ -151,12 +142,13 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
-  UMCCommon: f455f92c125342e360d6ad9eafe484945351eeb5
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  UMCCommon: 0cb2629b93884531621100ed66ff2bca8b181f1f
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 1073cbaf7acb33c5c4aafb34d4f192cce747fdf5
+PODFILE CHECKSUM: 816ad7b022929227346490002dab2eb74f2496ba
 
 COCOAPODS: 1.9.1

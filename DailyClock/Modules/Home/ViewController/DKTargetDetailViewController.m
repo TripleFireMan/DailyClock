@@ -11,6 +11,7 @@
 #import "DKDetailAnalyticsView.h"
 #import "DKTargetSettingViewController.h"
 #import "DKDailyArticleView.h"
+#import "DailyClock-Swift.h"
 
 @interface DKTargetDetailViewController ()<FSCalendarDataSource, FSCalendarDelegate,FSCalendarDelegateAppearance>
 
@@ -445,8 +446,15 @@
 }
 
 - (DKDailyArticleView *) articleView{
+    @weakify(self);
     if (!_articleView) {
         _articleView = [DKDailyArticleView new];
+        _articleView.checkMoreAction = ^{
+            @strongify(self);
+            DKDailyListViewController *list = [DKDailyListViewController new];
+            list.data = self.model;
+            [self.navigationController pushViewController:list animated:YES];
+        };
     }
     return _articleView;
 }
