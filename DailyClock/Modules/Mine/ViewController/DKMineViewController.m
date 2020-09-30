@@ -101,7 +101,6 @@
             _collectionView.backgroundColor = [UIColor whiteColor];
         }
         _collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30);
-        [_collectionView cy_adjustForIOS13];
         _collectionView.alwaysBounceVertical = YES;
         [_collectionView registerClass:[DKUserCenterHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"DKUserCenterHeader"];
         [_collectionView registerClass:[DKUserCenterFooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"DKUserCenterFooter"];

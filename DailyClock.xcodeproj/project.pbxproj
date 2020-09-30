@@ -85,6 +85,7 @@
 		4C7DA7B725242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
 		4C7DA7B825242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
 		4C7DA7B925242DAD00B58B59 /* DKDailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */; };
+		4C7DA8472524627900B58B59 /* com.css in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DA8462524627900B58B59 /* com.css */; };
 		4C8C5338251C9FA100AF9DCA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */; };
 		4C8C533A251C9FA100AF9DCA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */; };
 		4C8C533D251C9FA100AF9DCA /* DailyClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C533C251C9FA100AF9DCA /* DailyClockWidget.swift */; };
@@ -305,6 +306,7 @@
 		4C7DA7A52524191900B58B59 /* DailyClockTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C7DA7A62524191A00B58B59 /* DKDailyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDailyListViewController.swift; sourceTree = "<group>"; };
 		4C7DA7B625242DAD00B58B59 /* DKDailyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDailyItemCell.swift; sourceTree = "<group>"; };
+		4C7DA8462524627900B58B59 /* com.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = com.css; sourceTree = "<group>"; };
 		4C8C5336251C9FA100AF9DCA /* DailyClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8C5337251C9FA100AF9DCA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4C8C5339251C9FA100AF9DCA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -733,6 +735,7 @@
 			children = (
 				4C91B7952513B25B00C8F594 /* userregiest.html */,
 				4C91B7912513AF8B00C8F594 /* private.html */,
+				4C7DA8462524627900B58B59 /* com.css */,
 				4C51AD02250B53E4007DEB77 /* Lottie */,
 				4CE63C0E25090613007EC122 /* TTF */,
 			);
@@ -902,6 +905,7 @@
 				4C993BA6251256700082F86D /* zcool.ttf in Resources */,
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C91B7962513B25C00C8F594 /* userregiest.html in Resources */,
+				4C7DA8472524627900B58B59 /* com.css in Resources */,
 				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 			);

@@ -123,7 +123,6 @@
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView cy_adjustForIOS13];
         [_tableView registerClass:[DKVersionHistoryCell class] forCellReuseIdentifier:@"DKVersionHistoryCell"];
         
     }

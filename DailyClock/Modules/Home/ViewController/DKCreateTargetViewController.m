@@ -102,7 +102,6 @@
         _tableView.delegate = self;
         [_tableView registerClass:[DKCreateTargetCell class] forCellReuseIdentifier:@"DKCreateTargetCell"];
         [_tableView registerClass:[DKCustomeTargetCell class] forCellReuseIdentifier:@"DKCustomeTargetCell"];
-        [_tableView cy_adjustForIOS13];
     }
     return _tableView;
 }

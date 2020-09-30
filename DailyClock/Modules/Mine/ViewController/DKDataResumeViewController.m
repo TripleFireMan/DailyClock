@@ -135,7 +135,6 @@
         _scrollView = [UIScrollView new];
         _scrollView.alwaysBounceVertical = YES;
         _scrollView.delaysContentTouches = NO;
-        [_scrollView cy_adjustForIOS13];
     }
     return _scrollView;
 }

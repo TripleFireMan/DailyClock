@@ -213,7 +213,6 @@
         [_collectionView registerClass:[DKHomeItemClockCollectionViewCell class] forCellWithReuseIdentifier:@"DKHomeItemClockCollectionViewCell"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-//        [_collectionView cy_adjustForIOS13];
     }
     return _collectionView;
 }

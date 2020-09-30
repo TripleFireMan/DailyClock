@@ -323,7 +323,6 @@
 - (UIScrollView *) scrollView{
     if (!_scrollView) {
         _scrollView = [UIScrollView new];
-        [_scrollView cy_adjustForIOS13];
         _scrollView .alwaysBounceVertical = YES;
     }
     return _scrollView;

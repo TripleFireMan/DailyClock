@@ -101,7 +101,6 @@
         [_collectionView registerClass:[DKWeekCollectionViewCell class] forCellWithReuseIdentifier:@"DKWeekCollectionViewCell"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        [_collectionView cy_adjustForIOS13];
     }
     return _collectionView;
 }
