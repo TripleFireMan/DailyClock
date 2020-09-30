@@ -61,7 +61,7 @@ class DKDailyItemCell: UITableViewCell {
             self.messageLabel.textColor = UIColor.gray
         }
         self.line = UIView()
-        self.line.backgroundColor = UIColor.init(hexString: "#e0e0e0")
+        self.line.backgroundColor = DKIOS13BackgroundColor()
         
         self.contentView.addSubview(self.img)
         self.contentView.addSubview(self.nameLabel)

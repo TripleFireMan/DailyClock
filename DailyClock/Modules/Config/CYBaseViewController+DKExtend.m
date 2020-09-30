@@ -26,6 +26,8 @@
         self.headerView.backgroundColor = [UIColor systemBackgroundColor];
         self.titleLabel.textColor = [UIColor labelColor];
         self.backBtn.tintColor = [UIColor labelColor];
+        self.overrideUserInterfaceStyle = UIUserInterfaceStyleUnspecified;
+        self.view.overrideUserInterfaceStyle = UIUserInterfaceStyleUnspecified;
     } else {
         // Fallback on earlier versions
         self.view.backgroundColor = [UIColor whiteColor];

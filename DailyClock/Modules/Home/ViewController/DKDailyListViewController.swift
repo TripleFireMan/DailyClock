@@ -18,8 +18,8 @@ class DKDailyListViewController: CYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.text = "日志列表"
-        self.shouldShowBottomLine = true
         self.setupUI()
+        self.shouldShowBottomLine = false
     }
     
     override func viewWillAppear(_ animated: Bool) {

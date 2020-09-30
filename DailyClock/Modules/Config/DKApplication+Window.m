@@ -34,6 +34,7 @@
     [tabbar addChildViewController:homeNavi];
     [tabbar addChildViewController:mineNavi];
     tabbar.tabBar.tintColor = DKIOS13LabelColor();
+
     
     app.window.rootViewController = tabbar;
     
