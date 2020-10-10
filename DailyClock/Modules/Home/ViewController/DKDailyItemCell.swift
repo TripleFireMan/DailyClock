@@ -36,7 +36,7 @@ class DKDailyItemCell: UITableViewCell {
         self.img = UIImageView.init()
         
         self.nameLabel = UILabel.init()
-        self.nameLabel.font = UIFont.systemFont(ofSize: 15)
+        self.nameLabel.font = DKThemeFont(15)
         if #available(iOS 13.0, *) {
             self.nameLabel.textColor = UIColor.label
         } else {
@@ -44,7 +44,7 @@ class DKDailyItemCell: UITableViewCell {
         }
 
         self.dateLabel = UILabel.init()
-        self.dateLabel.font = UIFont.systemFont(ofSize: 14)
+        self.dateLabel.font = DKThemeFont(14)
         if #available(iOS 13.0, *) {
             self.dateLabel.textColor = UIColor.tertiaryLabel
         } else {
@@ -53,7 +53,8 @@ class DKDailyItemCell: UITableViewCell {
         }
         self.messageLabel = UILabel.init()
         self.messageLabel.numberOfLines = 0
-        self.messageLabel.font = UIFont.systemFont(ofSize: 13)
+        self.messageLabel.font = DKThemeFont(13)
+        
         self.messageLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.vertical)
         if #available(iOS 13.0, *) {
             self.messageLabel.textColor = UIColor.secondaryLabel

@@ -151,6 +151,21 @@
 		4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
 		4C993BCB2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
 		4C993BCC2513A7B90082F86D /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C993BC52513A7B90082F86D /* CacheTool.m */; };
+		4C9CDA4125308A5C00869493 /* DKDailyArticleReminderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA4025308A5C00869493 /* DKDailyArticleReminderView.m */; };
+		4C9CDA4225308A5C00869493 /* DKDailyArticleReminderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA4025308A5C00869493 /* DKDailyArticleReminderView.m */; };
+		4C9CDA4325308A5C00869493 /* DKDailyArticleReminderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA4025308A5C00869493 /* DKDailyArticleReminderView.m */; };
+		4C9CDA4A2530A37B00869493 /* DKDailyClockAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */; };
+		4C9CDA4B2530A37B00869493 /* DKDailyClockAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */; };
+		4C9CDA4C2530A37B00869493 /* DKDailyClockAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */; };
+		4C9CDA532530A39300869493 /* DKDailyClockTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */; };
+		4C9CDA542530A39300869493 /* DKDailyClockTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */; };
+		4C9CDA552530A39300869493 /* DKDailyClockTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */; };
+		4C9CDA5C2530A6E000869493 /* DKReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA5B2530A6E000869493 /* DKReminder.m */; };
+		4C9CDA5D2530A6E000869493 /* DKReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA5B2530A6E000869493 /* DKReminder.m */; };
+		4C9CDA5E2530A6E000869493 /* DKReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDA5B2530A6E000869493 /* DKReminder.m */; };
+		4C9CDAB925319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
+		4C9CDABA25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
+		4C9CDABB25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
 		4CA97733251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97735251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
@@ -350,6 +365,16 @@
 		4C993BC42513A7B90082F86D /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		4C993BC52513A7B90082F86D /* CacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
 		4C993BC62513A7B90082F86D /* CacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
+		4C9CDA3F25308A5C00869493 /* DKDailyArticleReminderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyArticleReminderView.h; sourceTree = "<group>"; };
+		4C9CDA4025308A5C00869493 /* DKDailyArticleReminderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyArticleReminderView.m; sourceTree = "<group>"; };
+		4C9CDA482530A37B00869493 /* DKDailyClockAddCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyClockAddCell.h; sourceTree = "<group>"; };
+		4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockAddCell.m; sourceTree = "<group>"; };
+		4C9CDA512530A39300869493 /* DKDailyClockTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyClockTimeCell.h; sourceTree = "<group>"; };
+		4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockTimeCell.m; sourceTree = "<group>"; };
+		4C9CDA5A2530A6E000869493 /* DKReminder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKReminder.h; sourceTree = "<group>"; };
+		4C9CDA5B2530A6E000869493 /* DKReminder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKReminder.m; sourceTree = "<group>"; };
+		4C9CDAB725319D4500869493 /* DKDailyClockTimeSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyClockTimeSettingView.h; sourceTree = "<group>"; };
+		4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockTimeSettingView.m; sourceTree = "<group>"; };
 		4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDataResumeViewController.h; sourceTree = "<group>"; };
 		4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDataResumeViewController.m; sourceTree = "<group>"; };
 		4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "打卡Release.entitlements"; sourceTree = "<group>"; };
@@ -686,6 +711,14 @@
 				4C993BAA2513482A0082F86D /* DKDetailAnalyticsView.m */,
 				4CD2259E251A27B900285ED4 /* DKDailyArticleView.h */,
 				4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */,
+				4C9CDA3F25308A5C00869493 /* DKDailyArticleReminderView.h */,
+				4C9CDA4025308A5C00869493 /* DKDailyArticleReminderView.m */,
+				4C9CDA482530A37B00869493 /* DKDailyClockAddCell.h */,
+				4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */,
+				4C9CDA512530A39300869493 /* DKDailyClockTimeCell.h */,
+				4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */,
+				4C9CDAB725319D4500869493 /* DKDailyClockTimeSettingView.h */,
+				4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -699,6 +732,8 @@
 				4C8DA0DB2500F3E500112389 /* DKTargetModel.m */,
 				4C07A93C2501DE920064CB76 /* DKSignModel.h */,
 				4C07A93D2501DE920064CB76 /* DKSignModel.m */,
+				4C9CDA5A2530A6E000869493 /* DKReminder.h */,
+				4C9CDA5B2530A6E000869493 /* DKReminder.m */,
 				4C8DA0D72500F18C00112389 /* targets.json */,
 			);
 			path = Model;
@@ -1043,6 +1078,7 @@
 				4C07A92F250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4CA97756251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B52512104600092940 /* CYBaseNavigationBar.m in Sources */,
+				4C9CDA5C2530A6E000869493 /* DKReminder.m in Sources */,
 				4CA9776A25164C050041EB7D /* DKFontModel.m in Sources */,
 				4C7DA7B725242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
@@ -1054,8 +1090,10 @@
 				4C91B79B25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC02513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
+				4C9CDA532530A39300869493 /* DKDailyClockTimeCell.m in Sources */,
 				4C07C4422506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C07C44C250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
+				4C9CDA4A2530A37B00869493 /* DKDailyClockAddCell.m in Sources */,
 				4CA9774125148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
 				4CA9776025160EE40041EB7D /* DKVersionModel.m in Sources */,
 				4C8DA0DD2500F3E500112389 /* DKTargetModel.m in Sources */,
@@ -1068,6 +1106,7 @@
 				4CD225A0251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C91B7A025144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
+				4C9CDAB925319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */,
 				4C51AD53250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C8DA0CA2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4C993BC72513A7B90082F86D /* DataTool.m in Sources */,
@@ -1086,6 +1125,7 @@
 				4CA977462515D61E0041EB7D /* HttpTool.m in Sources */,
 				4C8DA0C02500E74600112389 /* DKApplication+Window.m in Sources */,
 				4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C9CDA4125308A5C00869493 /* DKDailyArticleReminderView.m in Sources */,
 				4C91B78E2513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,
 				4C07C44725061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
 				4C8DA0D42500F16100112389 /* DKCreateTargetViewController.m in Sources */,
@@ -1098,6 +1138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9CDA542530A39300869493 /* DKDailyClockTimeCell.m in Sources */,
 				4C993BCB2513A7B90082F86D /* CacheTool.m in Sources */,
 				4C8DA0DE2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4C993BC12513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
@@ -1112,9 +1153,11 @@
 				4CA9774D2515EABE0041EB7D /* DKResultObject.m in Sources */,
 				4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */,
 				4C7DA7B825242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
+				4C9CDA4225308A5C00869493 /* DKDailyArticleReminderView.m in Sources */,
 				4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D52500F16100112389 /* DKCreateTargetViewController.m in Sources */,
 				4CA97752251604450041EB7D /* DKVersionHistoryViewController.m in Sources */,
+				4C9CDA5D2530A6E000869493 /* DKReminder.m in Sources */,
 				4CA9773B2514649F0041EB7D /* DKDocument.m in Sources */,
 				4C8DA0D02500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4C51AD26250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
@@ -1124,6 +1167,7 @@
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
+				4C9CDA4B2530A37B00869493 /* DKDailyClockAddCell.m in Sources */,
 				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4CA9776625164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
 				4C91B78F2513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,
@@ -1132,6 +1176,7 @@
 				4C07A930250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C91B7A125144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
 				4CA97757251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
+				4C9CDABA25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */,
 				4C07C4432506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4C51AD54250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */,
@@ -1160,6 +1205,7 @@
 				4C8DA0DF2500F3E500112389 /* DKTargetModel.m in Sources */,
 				4CA97758251605E10041EB7D /* DKVersionHistoryCell.m in Sources */,
 				4CEDD5B72512104600092940 /* CYBaseNavigationBar.m in Sources */,
+				4C9CDA5E2530A6E000869493 /* DKReminder.m in Sources */,
 				4CA9776C25164C050041EB7D /* DKFontModel.m in Sources */,
 				4C7DA7B925242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
@@ -1171,8 +1217,10 @@
 				4C91B79D25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC22513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C07A9402501DE920064CB76 /* DKSignModel.m in Sources */,
+				4C9CDA552530A39300869493 /* DKDailyClockTimeCell.m in Sources */,
 				4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */,
 				4C8DA0D62500F16100112389 /* DKCreateTargetViewController.m in Sources */,
+				4C9CDA4C2530A37B00869493 /* DKDailyClockAddCell.m in Sources */,
 				4CA9774325148AC50041EB7D /* DKFeedBackViewController.m in Sources */,
 				4CA9776225160EE40041EB7D /* DKVersionModel.m in Sources */,
 				4C8DA0D12500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
@@ -1185,6 +1233,7 @@
 				4CD225A2251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C91B7A225144E5C00C8F594 /* DKPausedTargetViewController.m in Sources */,
+				4C9CDABB25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */,
 				4C51AD55250F29C8007DEB77 /* DKSettingViewController.m in Sources */,
 				4C07A9362501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C993BC92513A7B90082F86D /* DataTool.m in Sources */,
@@ -1203,6 +1252,7 @@
 				4CA977482515D61E0041EB7D /* HttpTool.m in Sources */,
 				4CF6869125072B8B00F47D85 /* DKHomeItemClockCollectionViewCell.m in Sources */,
 				4C07A954250223BF0064CB76 /* DKPingCiSettingWeekMonthView.m in Sources */,
+				4C9CDA4325308A5C00869493 /* DKDailyArticleReminderView.m in Sources */,
 				4C91B7902513AA8200C8F594 /* DKAboutUsViewController.m in Sources */,
 				4C8DA0BD2500E6D700112389 /* DKApplication.m in Sources */,
 				4C07A93B2501DE740064CB76 /* DKTargetManager.m in Sources */,

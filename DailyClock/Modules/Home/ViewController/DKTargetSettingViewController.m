@@ -7,6 +7,8 @@
 #import "DKTargetSettingViewController.h"
 #import "DKPingCiSettingView.h"
 #import "DKDateSelectView.h"
+#import "DKDailyArticleReminderView.h"
+#import "DKDailyClockTimeSettingView.h"
 
 @interface DKTargetSettingViewController ()
 /// 内容区
@@ -49,12 +51,18 @@
 @property (nonatomic, strong) DKTargetModel *model;
 
 @property (nonatomic, strong) UIButton  *saveBtn;
+
+@property (nonatomic, strong) DKDailyArticleReminderView *reminderView;
+
 @end
 
 @implementation DKTargetSettingViewController
 
 #pragma mark - def
-
+- (void) dealloc{
+    /// 页面消失的时候，需要将提醒信息清空
+    _targetModel.reminders = nil;
+}
 #pragma mark - override
 - (void)viewDidLoad
 {
@@ -66,11 +74,13 @@
     if (self.editModel) {
         self.model = self.editModel;
         self.nameTF.text = self.model.title;
+        [self.reminderView configModel:self.model];
     }
     else{
         if (self.targetModel.ID != 0) {
             self.nameTF.text = self.targetModel.title;
         }
+        self.model = self.targetModel;
     }
     
     [RACObserve(self.segment, selectedSegmentIndex) subscribeNext:^(id  _Nullable x) {
@@ -80,6 +90,10 @@
     }];
     
     
+}
+
+- (void) backbtn{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) setupSubView
@@ -101,6 +115,8 @@
     [self.timeMaskView addSubview:self.startTimeBtn];
     [self.timeMaskView addSubview:self.endTimeBtn];
     [self.timeContainer addSubview:self.timeBlank];
+    
+    [self.scrollView addSubview:self.reminderView];
     
     [self.scrollView addSubview:self.pingciContainer];
     [self.pingciContainer addSubview:self.pingciLabel];
@@ -208,9 +224,15 @@
         make.height.offset(10);
     }];
     
-    [self.pingciContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.reminderView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.offset(0);
         make.top.mas_equalTo(self.timeContainer.mas_bottom);
+//        make.height.offset(200);
+    }];
+    
+    [self.pingciContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.offset(0);
+        make.top.mas_equalTo(self.reminderView.mas_bottom);
     }];
     
     [self.pingciLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -240,6 +262,7 @@
         make.left.offset(0);
         make.right.offset(0);
         make.top.mas_equalTo(self.pingciContainer.mas_bottom).offset(0);
+        make.bottom.offset(0);
     }];
 
     [self.rizhiLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -277,7 +300,7 @@
     self.model.icon = _targetModel.icon;
     self.model.backgroundImage = _targetModel.backgroundImage;
     self.model.ID = _targetModel.ID;
-    
+    [self.reminderView configModel:_targetModel];
 }
 #pragma mark 1 notification
 #pragma mark 2 KVO
@@ -548,6 +571,20 @@
         _timeBlank.backgroundColor = DKIOS13BackgroundColor();
     }
     return _timeBlank;
+}
+
+- (DKDailyArticleReminderView *)reminderView{
+    @weakify(self);
+    if (!_reminderView) {
+        _reminderView = [DKDailyArticleReminderView new];
+        _reminderView.block = ^(id obj) {
+            @strongify(self);
+            [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
+                
+            }];
+        };
+    }
+    return _reminderView;
 }
 
 - (UIView *) pingciContainer{

@@ -26,6 +26,17 @@
     return _uniqueId;
 }
 
+- (NSMutableArray <DKReminder *> *) reminders{
+    if (!_reminders) {
+        _reminders = [NSMutableArray array];
+        DKReminder *reminder = [DKReminder new];
+        reminder.isAdd = YES;
+        reminder.targetModel = self;
+        [_reminders addObject:reminder];
+    }
+    return _reminders;
+}
+
 - (NSMutableArray <DKSignModel *> *)signModels{
     if (!_signModels) {
         _signModels = [NSMutableArray array];

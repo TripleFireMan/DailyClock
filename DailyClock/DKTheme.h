@@ -9,7 +9,8 @@
 #ifndef DKTheme_h
 #define DKTheme_h
 #import "UIColor+YYAdd.h"
-
+#import "DKApplication.h"
+#import "NSObject+CYAddition.h"
 #define kThemeGray              [UIColor darkGrayColor]
 #define kThemeBackgrounColor    [UIColor colorWithHexString:@"#e0e0e0"]
 #define kThemeLineColor         [UIColor colorWithHexString:@"#b2b2b2"]
@@ -59,6 +60,14 @@
 #define CYZcool(x)              [UIFont fontWithName:@"HappyZcool-2016" size:x]
 #define DKFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:(x)]
 #define DKBoldFont(x)               [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:(x)]
+
+static inline UIFont * DKThemeFont(CGFloat x){
+    return [UIFont fontWithName:[DKApplication cy_shareInstance].fontName size:(x)];
+}
+
+static inline UIFont * DKThemeBoldFont(CGFloat x){
+    return [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:(x)];
+}
 
 static inline UIColor * DKIOS13SystemBackgroundColor(){
     if (@available(iOS 13, *)) {

@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DKSignModel.h"
-
+#import "DKReminder.h"
 @class DKTargetPinCiWeekModel;
 
 typedef NS_ENUM(NSInteger, DKTargetPinCiType){
@@ -53,6 +53,8 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 @property (nonatomic, strong) NSDate *createDate;
 /// 自动弹打卡日志
 @property (nonatomic, assign) BOOL shouldAutoDaily;
+/// 提醒时间
+@property (nonatomic, strong) NSMutableArray <DKReminder *> * reminders;
 
 - (BOOL) isSignByDate:(NSDate *)date;
 

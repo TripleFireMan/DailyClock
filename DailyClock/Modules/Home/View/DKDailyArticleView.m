@@ -190,10 +190,11 @@
             make.right.offset(0);
             make.bottom.offset(0);
         }];
-        
+        self.checkMore.hidden = YES;
     }
     else{
         self.articleLabel.text = @"日志信息";
+        self.checkMore.hidden = NO;
         [self.redPoint mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.offset(20);
             make.left.offset(0);
@@ -231,7 +232,7 @@
         }];
     }];
     
-    self.checkMore.hidden = self.model.signModels.count < 3;
+//    self.checkMore.hidden = (self.model.signModels.count < 3;
     
 }
 
