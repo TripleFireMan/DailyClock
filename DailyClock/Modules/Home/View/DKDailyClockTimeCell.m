@@ -20,9 +20,12 @@
 - (id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        self.clipsToBounds = NO;
+        self.contentView.clipsToBounds  =NO;
         [self.contentView addSubview:self.container];
         [self.container addSubview:self.addImageView];
         [self.container addSubview:self.topimageView];
+        [self.container addSubview:self.deleteImageView];
         [self.container addSubview:self.timeLabel];
         
         [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -33,6 +36,12 @@
             make.centerX.offset(0);
             make.top.offset(10);
             make.width.height.offset(28);
+        }];
+        
+        [self.deleteImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.offset(6);
+            make.top.offset(-6);
+            make.width.height.offset(20);
         }];
         
         [self.addImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,14 +63,16 @@
     self.addImageView.hidden = YES;
     self.topimageView.hidden = YES;
     self.timeLabel.hidden = YES;
-    
+    self.deleteImageView.hidden = YES;
     if (_model.isAdd) {
         self.addImageView.hidden = NO;
+        
     }
     else{
         self.timeLabel.hidden = NO;
         self.topimageView.hidden = NO;
         self.timeLabel.text = [_model.clockDate stringWithFormat:@"HH:mm"];
+        self.deleteImageView.hidden = NO;
     }
     
 }
@@ -89,7 +100,7 @@
         _container = [UIView new];
         _container.backgroundColor = DKIOS13BackgroundColor();
         _container.layer.cornerRadius = 12.f;
-        _container.layer.masksToBounds = YES;
+//        _container.layer.masksToBounds = YES;
     }
     return _container;
 }

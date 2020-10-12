@@ -7,6 +7,8 @@
 //
 
 #import "DKDailyClockTimeSettingView.h"
+#import "DKDailyClockMusicItemCell.h"
+#import "DKPlayMusicModel.h"
 
 #define MAX_COUNT 10000
 
@@ -27,6 +29,10 @@
 
 @property (nonatomic, strong) NSMutableArray *pickerDataSource;
 @property (nonatomic, strong) NSMutableArray *leftPickerDataSource;
+@property (nonatomic, strong) NSMutableArray *tableViewDatasource;
+
+@property (nonatomic, strong) DKReminder *reminder;
+
 @end
 
 @implementation DKDailyClockTimeSettingView
@@ -78,8 +84,16 @@
     [self.container addSubview:self.cancleBtn];
     [self.container addSubview:self.confirmBtn];
     
+    NSDate *current = [NSDate date];
     for (int i = 0; i < self.pickerDataSource.count; i++) {
-        [self.pickerView selectRow:MAX_COUNT/2 inComponent:i animated:NO];
+        if (i == 0) {
+            NSInteger hour = MAX_COUNT/2 - 8 + current.hour;
+            [self.pickerView selectRow:hour inComponent:i animated:NO];
+        }
+        else{
+            NSInteger minute = MAX_COUNT/2 - 20 + current.minute;
+            [self.pickerView selectRow:minute inComponent:i animated:NO];
+        }
     }
     @weakify(self);
     [RACObserve(self.segment, selectedSegmentIndex) subscribeNext:^(id  _Nullable x) {
@@ -170,7 +184,58 @@
     self.titleLabel.text = _model.title;
 }
 
+#pragma mark - tableViewDelegates
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DKPlayMusicModel *musicName = [self.tableViewDatasource objectAtIndex:indexPath.row];
+    static NSString *identifier = @"DKDailyClockMusicItemCell";
+    DKDailyClockMusicItemCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    [cell configModel:musicName];
+    cell.reminder = self.reminder;
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tableViewDatasource.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    DKPlayMusicModel *musicName = [self.tableViewDatasource objectAtIndex:indexPath.row];
+    DKDailyClockMusicItemCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell stop];
+    // 置空
+    for (DKPlayMusicModel *model in self.tableViewDatasource) {
+        model.isPlaying = NO;
+    }
+    
+    [tableView reloadData];
+    
+    self.reminder.alert = musicName.alert;
+    musicName.isPlaying = YES;
+    cell.reminder = self.reminder;
+    
+    [cell start];
+}
+
+- (void) tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    DKDailyClockMusicItemCell *musicCell = (DKDailyClockMusicItemCell *) cell;
+    [musicCell stop];
+}
+
+
 #pragma mark - lazy
+
+
+- (DKReminder *) reminder{
+    if (!_reminder) {
+        _reminder = [DKReminder new];
+    }
+    return _reminder;
+}
 
 - (UIView *) backgroundView{
     if (!_backgroundView) {
@@ -233,9 +298,11 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        _tableView.dataSource = self;
-//        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.backgroundColor  =[UIColor clearColor];
         [_tableView cy_adjustForIOS13];
+        [_tableView registerClass:[DKDailyClockMusicItemCell class] forCellReuseIdentifier:@"DKDailyClockMusicItemCell"];
     }
     return _tableView;
 }
@@ -266,9 +333,7 @@
     if (pickerView == self.leftPickerView) {
         return self.leftPickerDataSource.count;
     }
-    else{
-        return MAX_COUNT;
-    }
+    return MAX_COUNT;
 }
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
@@ -347,7 +412,12 @@
                 info[@"title"] = leftTitle;
                 info[@"hour"] = hour;
                 info[@"minute"] = minute;
-                self.block(info);
+                
+                self.reminder.clockDate = [NSDate dateWithString:[NSString stringWithFormat:@"%@:%@",hour,minute] format:@"HH:mm"];
+                self.reminder.dayOfWeeks = leftTitle;
+                
+                
+                self.block(self.reminder);
             }
             [self hide];
         }];
@@ -399,5 +469,41 @@
         [_leftPickerDataSource addObject:@"周日"];
     }
     return _leftPickerDataSource;
+}
+
+- (NSMutableArray *) tableViewDatasource{
+    if (!_tableViewDatasource) {
+        _tableViewDatasource = @[].mutableCopy;
+        
+        [_tableViewDatasource addObject:@"Arpeggio Interlude Guitar"];
+        [_tableViewDatasource addObject:@"Be Together"];
+        [_tableViewDatasource addObject:@"Breathless"];
+        [_tableViewDatasource addObject:@"Brooklyn Nights Guitar"];
+        [_tableViewDatasource addObject:@"Deep Electric Piano"];
+        [_tableViewDatasource addObject:@"Empire State Harp"];
+        [_tableViewDatasource addObject:@"Funk Era Piano"];
+        [_tableViewDatasource addObject:@"In Valley"];
+        [_tableViewDatasource addObject:@"Inferno Disco Electric Piano"];
+
+        [_tableViewDatasource addObject:@"Longing Piano"];
+        [_tableViewDatasource addObject:@"Moving On Bell"];
+        [_tableViewDatasource addObject:@"Shining Star Electric Piano"];
+        [_tableViewDatasource addObject:@"Sugar Sweet Guitar"];
+        [_tableViewDatasource addObject:@"Twilight"];
+        [_tableViewDatasource addObject:@"Across the Liffey Lead Guitar"];
+        
+        NSMutableArray *tem = @[].mutableCopy;
+        for (NSString *music in _tableViewDatasource) {
+            DKPlayMusicModel *musicModel = [DKPlayMusicModel new ];
+            musicModel.alert = music;
+            [tem addObject:musicModel];
+        }
+        
+        [_tableViewDatasource removeAllObjects];
+        [_tableViewDatasource addObjectsFromArray:tem];
+        
+        
+    }
+    return _tableViewDatasource;
 }
 @end

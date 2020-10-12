@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DKDailyArticleReminderView : UIView
 @property (nonatomic, copy  ) CYIDBlock block;
 - (void) configModel:(id)model;
+- (void) reload;
 @end
 
 NS_ASSUME_NONNULL_END

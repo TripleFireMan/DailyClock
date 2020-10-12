@@ -80,7 +80,6 @@
         if (self.targetModel.ID != 0) {
             self.nameTF.text = self.targetModel.title;
         }
-        self.model = self.targetModel;
     }
     
     [RACObserve(self.segment, selectedSegmentIndex) subscribeNext:^(id  _Nullable x) {
@@ -579,9 +578,32 @@
         _reminderView = [DKDailyArticleReminderView new];
         _reminderView.block = ^(id obj) {
             @strongify(self);
-            [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
-                
-            }];
+            if ([obj isAdd]) {
+                [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
+                    DKReminder *reminder = (DKReminder *)obj;
+                    if (self.editModel) {
+                        [self.model.reminders addObject:reminder];
+                    }
+                    else{
+                        [self.targetModel.reminders addObject:reminder];
+                    }
+                    [self.reminderView reload];
+                }];
+            }
+            else{
+                [DKAlert showTitle:@"提示" subTitle:@"确定要删除该提醒么" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
+                    if (idx == DKAlertDone) {
+                        if (self.editModel) {
+                            [self.model.reminders removeObject:obj];
+                        }
+                        else{
+                            [self.targetModel.reminders removeObject:obj];
+                        }
+                        [self.reminderView reload];
+                    }
+                } doneTitle:@"确定" array:@[@"取消"]];
+            }
+
         };
     }
     return _reminderView;

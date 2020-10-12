@@ -79,6 +79,10 @@ UICollectionViewDelegateFlowLayout>
     [self.collectionView reloadData];
 }
 
+- (void) reload {
+    [self.collectionView reloadData];
+}
+
 #pragma mark - CollectionViewDelegate
 
 - (__kindof UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -122,6 +126,7 @@ UICollectionViewDelegateFlowLayout>
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.clipsToBounds = NO;
         [_collectionView registerClass:[DKDailyClockTimeCell class] forCellWithReuseIdentifier:@"DKDailyClockTimeCell"];
     }
     return _collectionView;

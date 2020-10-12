@@ -166,6 +166,81 @@
 		4C9CDAB925319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
 		4C9CDABA25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
 		4C9CDABB25319D4500869493 /* DKDailyClockTimeSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */; };
+		4C9CDCBD25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCBC25332F6300869493 /* Across the Liffey Lead Guitar.caf */; };
+		4C9CDCBE25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCBC25332F6300869493 /* Across the Liffey Lead Guitar.caf */; };
+		4C9CDCBF25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCBC25332F6300869493 /* Across the Liffey Lead Guitar.caf */; };
+		4C9CDCF025332F7000869493 /* Twilight.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE225332F6F00869493 /* Twilight.caf */; };
+		4C9CDCF125332F7000869493 /* Twilight.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE225332F6F00869493 /* Twilight.caf */; };
+		4C9CDCF225332F7000869493 /* Twilight.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE225332F6F00869493 /* Twilight.caf */; };
+		4C9CDCF325332F7000869493 /* Shining Star Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE325332F6F00869493 /* Shining Star Electric Piano.caf */; };
+		4C9CDCF425332F7000869493 /* Shining Star Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE325332F6F00869493 /* Shining Star Electric Piano.caf */; };
+		4C9CDCF525332F7000869493 /* Shining Star Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE325332F6F00869493 /* Shining Star Electric Piano.caf */; };
+		4C9CDCF625332F7000869493 /* Be Together.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE425332F6F00869493 /* Be Together.caf */; };
+		4C9CDCF725332F7000869493 /* Be Together.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE425332F6F00869493 /* Be Together.caf */; };
+		4C9CDCF825332F7000869493 /* Be Together.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE425332F6F00869493 /* Be Together.caf */; };
+		4C9CDCF925332F7000869493 /* Funk Era Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE525332F6F00869493 /* Funk Era Piano.caf */; };
+		4C9CDCFA25332F7000869493 /* Funk Era Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE525332F6F00869493 /* Funk Era Piano.caf */; };
+		4C9CDCFB25332F7000869493 /* Funk Era Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE525332F6F00869493 /* Funk Era Piano.caf */; };
+		4C9CDCFC25332F7000869493 /* Longing Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE625332F7000869493 /* Longing Piano.caf */; };
+		4C9CDCFD25332F7000869493 /* Longing Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE625332F7000869493 /* Longing Piano.caf */; };
+		4C9CDCFE25332F7000869493 /* Longing Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE625332F7000869493 /* Longing Piano.caf */; };
+		4C9CDCFF25332F7000869493 /* Sugar Sweet Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE725332F7000869493 /* Sugar Sweet Guitar.caf */; };
+		4C9CDD0025332F7000869493 /* Sugar Sweet Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE725332F7000869493 /* Sugar Sweet Guitar.caf */; };
+		4C9CDD0125332F7000869493 /* Sugar Sweet Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE725332F7000869493 /* Sugar Sweet Guitar.caf */; };
+		4C9CDD0225332F7000869493 /* Moving On Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE825332F7000869493 /* Moving On Bell.caf */; };
+		4C9CDD0325332F7000869493 /* Moving On Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE825332F7000869493 /* Moving On Bell.caf */; };
+		4C9CDD0425332F7000869493 /* Moving On Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE825332F7000869493 /* Moving On Bell.caf */; };
+		4C9CDD0525332F7000869493 /* Breathless.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE925332F7000869493 /* Breathless.caf */; };
+		4C9CDD0625332F7000869493 /* Breathless.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE925332F7000869493 /* Breathless.caf */; };
+		4C9CDD0725332F7000869493 /* Breathless.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCE925332F7000869493 /* Breathless.caf */; };
+		4C9CDD0825332F7000869493 /* Deep Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEA25332F7000869493 /* Deep Electric Piano.caf */; };
+		4C9CDD0925332F7000869493 /* Deep Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEA25332F7000869493 /* Deep Electric Piano.caf */; };
+		4C9CDD0A25332F7000869493 /* Deep Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEA25332F7000869493 /* Deep Electric Piano.caf */; };
+		4C9CDD0B25332F7000869493 /* Empire State Harp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEB25332F7000869493 /* Empire State Harp.caf */; };
+		4C9CDD0C25332F7000869493 /* Empire State Harp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEB25332F7000869493 /* Empire State Harp.caf */; };
+		4C9CDD0D25332F7000869493 /* Empire State Harp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEB25332F7000869493 /* Empire State Harp.caf */; };
+		4C9CDD0E25332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEC25332F7000869493 /* Inferno Disco Electric Piano.caf */; };
+		4C9CDD0F25332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEC25332F7000869493 /* Inferno Disco Electric Piano.caf */; };
+		4C9CDD1025332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEC25332F7000869493 /* Inferno Disco Electric Piano.caf */; };
+		4C9CDD1125332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCED25332F7000869493 /* Arpeggio Interlude Guitar.caf */; };
+		4C9CDD1225332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCED25332F7000869493 /* Arpeggio Interlude Guitar.caf */; };
+		4C9CDD1325332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCED25332F7000869493 /* Arpeggio Interlude Guitar.caf */; };
+		4C9CDD1425332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEE25332F7000869493 /* Brooklyn Nights Guitar.caf */; };
+		4C9CDD1525332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEE25332F7000869493 /* Brooklyn Nights Guitar.caf */; };
+		4C9CDD1625332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEE25332F7000869493 /* Brooklyn Nights Guitar.caf */; };
+		4C9CDD1725332F7000869493 /* In Valley.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEF25332F7000869493 /* In Valley.caf */; };
+		4C9CDD1825332F7000869493 /* In Valley.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEF25332F7000869493 /* In Valley.caf */; };
+		4C9CDD1925332F7000869493 /* In Valley.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDCEF25332F7000869493 /* In Valley.caf */; };
+		4C9CDD2A25332F8800869493 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2225332F8700869493 /* pop.mp3 */; };
+		4C9CDD2B25332F8800869493 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2225332F8700869493 /* pop.mp3 */; };
+		4C9CDD2C25332F8800869493 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2225332F8700869493 /* pop.mp3 */; };
+		4C9CDD2D25332F8800869493 /* Fantacy 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */; };
+		4C9CDD2E25332F8800869493 /* Fantacy 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */; };
+		4C9CDD2F25332F8800869493 /* Fantacy 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */; };
+		4C9CDD3025332F8800869493 /* Fantacy 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */; };
+		4C9CDD3125332F8800869493 /* Fantacy 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */; };
+		4C9CDD3225332F8800869493 /* Fantacy 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */; };
+		4C9CDD3325332F8800869493 /* knock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2525332F8800869493 /* knock.mp3 */; };
+		4C9CDD3425332F8800869493 /* knock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2525332F8800869493 /* knock.mp3 */; };
+		4C9CDD3525332F8800869493 /* knock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2525332F8800869493 /* knock.mp3 */; };
+		4C9CDD3625332F8800869493 /* glassSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2625332F8800869493 /* glassSound.mp3 */; };
+		4C9CDD3725332F8800869493 /* glassSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2625332F8800869493 /* glassSound.mp3 */; };
+		4C9CDD3825332F8800869493 /* glassSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2625332F8800869493 /* glassSound.mp3 */; };
+		4C9CDD3925332F8800869493 /* switch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2725332F8800869493 /* switch.mp3 */; };
+		4C9CDD3A25332F8800869493 /* switch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2725332F8800869493 /* switch.mp3 */; };
+		4C9CDD3B25332F8800869493 /* switch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2725332F8800869493 /* switch.mp3 */; };
+		4C9CDD3C25332F8800869493 /* xixu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2825332F8800869493 /* xixu.mp3 */; };
+		4C9CDD3D25332F8800869493 /* xixu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2825332F8800869493 /* xixu.mp3 */; };
+		4C9CDD3E25332F8800869493 /* xixu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2825332F8800869493 /* xixu.mp3 */; };
+		4C9CDD3F25332F8800869493 /* ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2925332F8800869493 /* ring.mp3 */; };
+		4C9CDD4025332F8800869493 /* ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2925332F8800869493 /* ring.mp3 */; };
+		4C9CDD4125332F8800869493 /* ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9CDD2925332F8800869493 /* ring.mp3 */; };
+		4C9CDD4C2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */; };
+		4C9CDD4D2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */; };
+		4C9CDD4E2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */; };
+		4C9CDD55253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
+		4C9CDD56253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
+		4C9CDD57253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
 		4CA97733251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97735251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
@@ -375,6 +450,33 @@
 		4C9CDA5B2530A6E000869493 /* DKReminder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKReminder.m; sourceTree = "<group>"; };
 		4C9CDAB725319D4500869493 /* DKDailyClockTimeSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyClockTimeSettingView.h; sourceTree = "<group>"; };
 		4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockTimeSettingView.m; sourceTree = "<group>"; };
+		4C9CDCBC25332F6300869493 /* Across the Liffey Lead Guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Across the Liffey Lead Guitar.caf"; sourceTree = "<group>"; };
+		4C9CDCE225332F6F00869493 /* Twilight.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Twilight.caf; sourceTree = "<group>"; };
+		4C9CDCE325332F6F00869493 /* Shining Star Electric Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shining Star Electric Piano.caf"; sourceTree = "<group>"; };
+		4C9CDCE425332F6F00869493 /* Be Together.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Be Together.caf"; sourceTree = "<group>"; };
+		4C9CDCE525332F6F00869493 /* Funk Era Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Funk Era Piano.caf"; sourceTree = "<group>"; };
+		4C9CDCE625332F7000869493 /* Longing Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Longing Piano.caf"; sourceTree = "<group>"; };
+		4C9CDCE725332F7000869493 /* Sugar Sweet Guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sugar Sweet Guitar.caf"; sourceTree = "<group>"; };
+		4C9CDCE825332F7000869493 /* Moving On Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moving On Bell.caf"; sourceTree = "<group>"; };
+		4C9CDCE925332F7000869493 /* Breathless.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Breathless.caf; sourceTree = "<group>"; };
+		4C9CDCEA25332F7000869493 /* Deep Electric Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Deep Electric Piano.caf"; sourceTree = "<group>"; };
+		4C9CDCEB25332F7000869493 /* Empire State Harp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Empire State Harp.caf"; sourceTree = "<group>"; };
+		4C9CDCEC25332F7000869493 /* Inferno Disco Electric Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inferno Disco Electric Piano.caf"; sourceTree = "<group>"; };
+		4C9CDCED25332F7000869493 /* Arpeggio Interlude Guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arpeggio Interlude Guitar.caf"; sourceTree = "<group>"; };
+		4C9CDCEE25332F7000869493 /* Brooklyn Nights Guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brooklyn Nights Guitar.caf"; sourceTree = "<group>"; };
+		4C9CDCEF25332F7000869493 /* In Valley.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "In Valley.caf"; sourceTree = "<group>"; };
+		4C9CDD2225332F8700869493 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fantacy 2.mp3"; sourceTree = "<group>"; };
+		4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fantacy 1.mp3"; sourceTree = "<group>"; };
+		4C9CDD2525332F8800869493 /* knock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = knock.mp3; sourceTree = "<group>"; };
+		4C9CDD2625332F8800869493 /* glassSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = glassSound.mp3; sourceTree = "<group>"; };
+		4C9CDD2725332F8800869493 /* switch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = switch.mp3; sourceTree = "<group>"; };
+		4C9CDD2825332F8800869493 /* xixu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = xixu.mp3; sourceTree = "<group>"; };
+		4C9CDD2925332F8800869493 /* ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ring.mp3; sourceTree = "<group>"; };
+		4C9CDD4A2533302800869493 /* DKDailyClockMusicItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyClockMusicItemCell.h; sourceTree = "<group>"; };
+		4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockMusicItemCell.m; sourceTree = "<group>"; };
+		4C9CDD53253339C900869493 /* DKPlayMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPlayMusicModel.h; sourceTree = "<group>"; };
+		4C9CDD54253339C900869493 /* DKPlayMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPlayMusicModel.m; sourceTree = "<group>"; };
 		4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDataResumeViewController.h; sourceTree = "<group>"; };
 		4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDataResumeViewController.m; sourceTree = "<group>"; };
 		4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "打卡Release.entitlements"; sourceTree = "<group>"; };
@@ -717,6 +819,8 @@
 				4C9CDA492530A37B00869493 /* DKDailyClockAddCell.m */,
 				4C9CDA512530A39300869493 /* DKDailyClockTimeCell.h */,
 				4C9CDA522530A39300869493 /* DKDailyClockTimeCell.m */,
+				4C9CDD4A2533302800869493 /* DKDailyClockMusicItemCell.h */,
+				4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */,
 				4C9CDAB725319D4500869493 /* DKDailyClockTimeSettingView.h */,
 				4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */,
 			);
@@ -734,6 +838,8 @@
 				4C07A93D2501DE920064CB76 /* DKSignModel.m */,
 				4C9CDA5A2530A6E000869493 /* DKReminder.h */,
 				4C9CDA5B2530A6E000869493 /* DKReminder.m */,
+				4C9CDD53253339C900869493 /* DKPlayMusicModel.h */,
+				4C9CDD54253339C900869493 /* DKPlayMusicModel.m */,
 				4C8DA0D72500F18C00112389 /* targets.json */,
 			);
 			path = Model;
@@ -752,6 +858,36 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4C9CDCBB25332F4F00869493 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */,
+				4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */,
+				4C9CDD2625332F8800869493 /* glassSound.mp3 */,
+				4C9CDD2525332F8800869493 /* knock.mp3 */,
+				4C9CDD2225332F8700869493 /* pop.mp3 */,
+				4C9CDD2925332F8800869493 /* ring.mp3 */,
+				4C9CDD2725332F8800869493 /* switch.mp3 */,
+				4C9CDD2825332F8800869493 /* xixu.mp3 */,
+				4C9CDCED25332F7000869493 /* Arpeggio Interlude Guitar.caf */,
+				4C9CDCE425332F6F00869493 /* Be Together.caf */,
+				4C9CDCE925332F7000869493 /* Breathless.caf */,
+				4C9CDCEE25332F7000869493 /* Brooklyn Nights Guitar.caf */,
+				4C9CDCEA25332F7000869493 /* Deep Electric Piano.caf */,
+				4C9CDCEB25332F7000869493 /* Empire State Harp.caf */,
+				4C9CDCE525332F6F00869493 /* Funk Era Piano.caf */,
+				4C9CDCEF25332F7000869493 /* In Valley.caf */,
+				4C9CDCEC25332F7000869493 /* Inferno Disco Electric Piano.caf */,
+				4C9CDCE625332F7000869493 /* Longing Piano.caf */,
+				4C9CDCE825332F7000869493 /* Moving On Bell.caf */,
+				4C9CDCE325332F6F00869493 /* Shining Star Electric Piano.caf */,
+				4C9CDCE725332F7000869493 /* Sugar Sweet Guitar.caf */,
+				4C9CDCE225332F6F00869493 /* Twilight.caf */,
+				4C9CDCBC25332F6300869493 /* Across the Liffey Lead Guitar.caf */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
 		4CA97737251464890041EB7D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +904,7 @@
 		4CE63C0D250905FB007EC122 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C9CDCBB25332F4F00869493 /* music */,
 				4C91B7952513B25B00C8F594 /* userregiest.html */,
 				4C91B7912513AF8B00C8F594 /* private.html */,
 				4C7DA8462524627900B58B59 /* com.css */,
@@ -931,17 +1068,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9CDD3325332F8800869493 /* knock.mp3 in Resources */,
+				4C9CDCF625332F7000869493 /* Be Together.caf in Resources */,
 				4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */,
 				4C8DA0D82500F18C00112389 /* targets.json in Resources */,
+				4C9CDD0B25332F7000869493 /* Empire State Harp.caf in Resources */,
+				4C9CDD0525332F7000869493 /* Breathless.caf in Resources */,
 				4CE63C1025090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C9CDD1725332F7000869493 /* In Valley.caf in Resources */,
 				4CEDD5A9250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C51AD06250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7922513AF8C00C8F594 /* private.html in Resources */,
+				4C9CDCF925332F7000869493 /* Funk Era Piano.caf in Resources */,
+				4C9CDD3925332F8800869493 /* switch.mp3 in Resources */,
+				4C9CDCFC25332F7000869493 /* Longing Piano.caf in Resources */,
+				4C9CDD2A25332F8800869493 /* pop.mp3 in Resources */,
+				4C9CDD1425332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
+				4C9CDD3F25332F8800869493 /* ring.mp3 in Resources */,
+				4C9CDD3625332F8800869493 /* glassSound.mp3 in Resources */,
+				4C9CDCFF25332F7000869493 /* Sugar Sweet Guitar.caf in Resources */,
+				4C9CDD2D25332F8800869493 /* Fantacy 2.mp3 in Resources */,
+				4C9CDD1125332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
+				4C9CDD0825332F7000869493 /* Deep Electric Piano.caf in Resources */,
+				4C9CDD0225332F7000869493 /* Moving On Bell.caf in Resources */,
+				4C9CDCF025332F7000869493 /* Twilight.caf in Resources */,
+				4C9CDD3025332F8800869493 /* Fantacy 1.mp3 in Resources */,
 				4C993BA6251256700082F86D /* zcool.ttf in Resources */,
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
+				4C9CDCF325332F7000869493 /* Shining Star Electric Piano.caf in Resources */,
+				4C9CDD0E25332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */,
 				4C91B7962513B25C00C8F594 /* userregiest.html in Resources */,
+				4C9CDCBD25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */,
 				4C7DA8472524627900B58B59 /* com.css in Resources */,
 				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
+				4C9CDD3C25332F8800869493 /* xixu.mp3 in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,15 +1110,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9CDD3D25332F8800869493 /* xixu.mp3 in Resources */,
+				4C9CDD3A25332F8800869493 /* switch.mp3 in Resources */,
+				4C9CDD0925332F7000869493 /* Deep Electric Piano.caf in Resources */,
 				4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */,
+				4C9CDCF125332F7000869493 /* Twilight.caf in Resources */,
+				4C9CDD1225332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
 				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
+				4C9CDD3425332F8800869493 /* knock.mp3 in Resources */,
+				4C9CDCF425332F7000869493 /* Shining Star Electric Piano.caf in Resources */,
+				4C9CDD1525332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
+				4C9CDD0025332F7000869493 /* Sugar Sweet Guitar.caf in Resources */,
 				4CE63C1125090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C9CDD1825332F7000869493 /* In Valley.caf in Resources */,
 				4C51AD0A250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA7251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0D92500F18C00112389 /* targets.json in Resources */,
+				4C9CDD2E25332F8800869493 /* Fantacy 2.mp3 in Resources */,
+				4C9CDD3725332F8800869493 /* glassSound.mp3 in Resources */,
+				4C9CDD0625332F7000869493 /* Breathless.caf in Resources */,
+				4C9CDD0C25332F7000869493 /* Empire State Harp.caf in Resources */,
+				4C9CDD0F25332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */,
+				4C9CDCFD25332F7000869493 /* Longing Piano.caf in Resources */,
+				4C9CDD4025332F8800869493 /* ring.mp3 in Resources */,
+				4C9CDCBE25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */,
+				4C9CDCFA25332F7000869493 /* Funk Era Piano.caf in Resources */,
+				4C9CDD2B25332F8800869493 /* pop.mp3 in Resources */,
 				4C51AD07250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7932513AF8C00C8F594 /* private.html in Resources */,
+				4C9CDCF725332F7000869493 /* Be Together.caf in Resources */,
+				4C9CDD0325332F7000869493 /* Moving On Bell.caf in Resources */,
 				4C91B7972513B25C00C8F594 /* userregiest.html in Resources */,
+				4C9CDD3125332F8800869493 /* Fantacy 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,15 +1149,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9CDD3E25332F8800869493 /* xixu.mp3 in Resources */,
+				4C9CDD3B25332F8800869493 /* switch.mp3 in Resources */,
+				4C9CDD0A25332F7000869493 /* Deep Electric Piano.caf in Resources */,
 				4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */,
+				4C9CDCF225332F7000869493 /* Twilight.caf in Resources */,
+				4C9CDD1325332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
 				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
+				4C9CDD3525332F8800869493 /* knock.mp3 in Resources */,
+				4C9CDCF525332F7000869493 /* Shining Star Electric Piano.caf in Resources */,
+				4C9CDD1625332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
+				4C9CDD0125332F7000869493 /* Sugar Sweet Guitar.caf in Resources */,
 				4CE63C1225090613007EC122 /* BEBAS___.TTF in Resources */,
+				4C9CDD1925332F7000869493 /* In Valley.caf in Resources */,
 				4C51AD0B250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
 				4C993BA8251256700082F86D /* zcool.ttf in Resources */,
 				4C8DA0DA2500F18C00112389 /* targets.json in Resources */,
+				4C9CDD2F25332F8800869493 /* Fantacy 2.mp3 in Resources */,
+				4C9CDD3825332F8800869493 /* glassSound.mp3 in Resources */,
+				4C9CDD0725332F7000869493 /* Breathless.caf in Resources */,
+				4C9CDD0D25332F7000869493 /* Empire State Harp.caf in Resources */,
+				4C9CDD1025332F7000869493 /* Inferno Disco Electric Piano.caf in Resources */,
+				4C9CDCFE25332F7000869493 /* Longing Piano.caf in Resources */,
+				4C9CDD4125332F8800869493 /* ring.mp3 in Resources */,
+				4C9CDCBF25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */,
+				4C9CDCFB25332F7000869493 /* Funk Era Piano.caf in Resources */,
+				4C9CDD2C25332F8800869493 /* pop.mp3 in Resources */,
 				4C51AD08250B53E4007DEB77 /* img_bling_0.png in Resources */,
 				4C91B7942513AF8C00C8F594 /* private.html in Resources */,
+				4C9CDCF825332F7000869493 /* Be Together.caf in Resources */,
+				4C9CDD0425332F7000869493 /* Moving On Bell.caf in Resources */,
 				4C91B7982513B25C00C8F594 /* userregiest.html in Resources */,
+				4C9CDD3225332F8800869493 /* Fantacy 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,6 +1292,7 @@
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C51AD4E250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
+				4C9CDD55253339C900869493 /* DKPlayMusicModel.m in Sources */,
 				4C993BBB25139A370082F86D /* DKMineItemModel.m in Sources */,
 				4C91B79B25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC02513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
@@ -1118,6 +1325,7 @@
 				4C1CCE7E24FE49690004EF4E /* main.m in Sources */,
 				4C07A93E2501DE920064CB76 /* DKSignModel.m in Sources */,
 				4CA9774C2515EABE0041EB7D /* DKResultObject.m in Sources */,
+				4C9CDD4C2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */,
 				4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */,
 				4CA9776525164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
 				4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */,
@@ -1164,6 +1372,7 @@
 				4C07A9492501F03D0064CB76 /* DKWeekCollectionViewCell.m in Sources */,
 				4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */,
 				4C51AD59250F3A13007DEB77 /* DKUserCenterHeader.m in Sources */,
+				4C9CDD56253339C900869493 /* DKPlayMusicModel.m in Sources */,
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
@@ -1189,6 +1398,7 @@
 				4C993BB1251371890082F86D /* DKAlert.m in Sources */,
 				4C7DA7A82524191A00B58B59 /* DKDailyListViewController.swift in Sources */,
 				4CA9776B25164C050041EB7D /* DKFontModel.m in Sources */,
+				4C9CDD4D2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */,
 				4CD225A1251A27B900285ED4 /* DKDailyArticleView.m in Sources */,
 				4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */,
 				4C07A93A2501DE740064CB76 /* DKTargetManager.m in Sources */,
@@ -1213,6 +1423,7 @@
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
 				4C51AD50250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,
+				4C9CDD57253339C900869493 /* DKPlayMusicModel.m in Sources */,
 				4C993BBD25139A370082F86D /* DKMineItemModel.m in Sources */,
 				4C91B79D25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC22513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
@@ -1245,6 +1456,7 @@
 				4C07A931250128710064CB76 /* DKCustomeTargetCell.m in Sources */,
 				4C07C4442506084B0064CB76 /* DKDateSelectView.m in Sources */,
 				4CA9774E2515EABE0041EB7D /* DKResultObject.m in Sources */,
+				4C9CDD4E2533302800869493 /* DKDailyClockMusicItemCell.m in Sources */,
 				4C8DA0CC2500E8AA00112389 /* DKHomePageViewController.m in Sources */,
 				4CA9776725164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
 				4C993BCC2513A7B90082F86D /* CacheTool.m in Sources */,
@@ -1425,7 +1637,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1457,7 +1669,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡Release.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1593,7 +1805,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1622,7 +1834,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

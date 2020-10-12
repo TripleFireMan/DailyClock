@@ -9,5 +9,13 @@
 #import "DKReminder.h"
 
 @implementation DKReminder
-
+- (id) init{
+    self = [super init];
+    if (self) {
+        self.dayOfWeeks = @"每一天";
+        self.duration = DKTargetDuration_EveryDay;
+        
+    }
+    return self;
+}
 @end

@@ -37,6 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy  ) NSString *dayOfWeeks;
 /// 提醒间隔
 @property (nonatomic, assign) DKTargetDuration duration;
+/// 提示音
+@property (nonatomic, strong) NSString *alert;
+
 @end
 
 NS_ASSUME_NONNULL_END
