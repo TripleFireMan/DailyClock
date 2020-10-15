@@ -29,7 +29,8 @@
     if (self) {
         self.isAccessibilityElement = NO;
         self.contentView.isAccessibilityElement = YES;
-        
+        self.contentView.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor clearColor];
         [self.contentView setAccessibilityLabel:@"homeItemCell"];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupSubviews];

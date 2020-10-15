@@ -294,7 +294,7 @@
     if (!_messageLabel) {
         _messageLabel = [UILabel new];
         _messageLabel.font = CYPingFangSCMedium(14);
-        _messageLabel.textColor = DKIOS13BackgroundColor();
+        _messageLabel.textColor = DKIOS13ContainerColor();
         _messageLabel.text = @"您已累计打卡10次，连续打卡5次，距离目标还要10次，加油吧~~~";
         _messageLabel.numberOfLines = 0;
         _messageLabel.textAlignment = NSTextAlignmentCenter;

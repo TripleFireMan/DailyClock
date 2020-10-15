@@ -35,7 +35,7 @@
             make.centerX.offset(0);
         }];
         
-        self.contentView.backgroundColor = DKIOS13BackgroundColor();
+        self.contentView.backgroundColor = DKIOS13ContainerColor();
         self.label.textColor = DKIOS13LabelColor();
         
         self.contentView.layer.cornerRadius = 12.f;

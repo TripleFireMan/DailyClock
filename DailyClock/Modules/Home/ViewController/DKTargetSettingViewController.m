@@ -509,7 +509,7 @@
     if (!_nameMaskView) {
         _nameMaskView = [UIView new];
         _nameMaskView.layer.cornerRadius = 6.f;
-        _nameMaskView.backgroundColor = DKIOS13BackgroundColor();
+        _nameMaskView.backgroundColor = DKIOS13ContainerColor();
         
         _nameMaskView.layer.masksToBounds = YES;
         
@@ -538,7 +538,7 @@
 - (UIView *) nameBlank{
     if (!_nameBlank) {
         _nameBlank = [UIView new];
-        _nameBlank.backgroundColor = DKIOS13BackgroundColor();
+        _nameBlank.backgroundColor = DKIOS13ContainerColor();
     }
     return _nameBlank;
 }
@@ -558,7 +558,7 @@
         _timeMaskView = [UIView new];
         _timeMaskView.layer.cornerRadius = 6.f;
         _timeMaskView.layer.masksToBounds = YES;
-        _timeMaskView.backgroundColor = DKIOS13BackgroundColor();
+        _timeMaskView.backgroundColor = DKIOS13ContainerColor();
     }
     return _timeMaskView;
 }
@@ -699,7 +699,7 @@
 - (UIView *) timeBlank{
     if (!_timeBlank) {
         _timeBlank = [UIView new];
-        _timeBlank.backgroundColor = DKIOS13BackgroundColor();
+        _timeBlank.backgroundColor = DKIOS13ContainerColor();
     }
     return _timeBlank;
 }
@@ -773,7 +773,7 @@
 - (UIView *) pingciBlank{
     if (!_pingciBlank) {
         _pingciBlank = [UIView new];
-        _pingciBlank.backgroundColor = DKIOS13BackgroundColor();
+        _pingciBlank.backgroundColor = DKIOS13ContainerColor();
     }
     return _pingciBlank;
 }
@@ -830,7 +830,7 @@
 - (UIView *)rizhiBlank{
     if (!_rizhiBlank) {
         _rizhiBlank = [UIView new];
-        _rizhiBlank.backgroundColor = DKIOS13BackgroundColor();
+        _rizhiBlank.backgroundColor = DKIOS13ContainerColor();
     }
     return _rizhiBlank;
 }

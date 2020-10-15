@@ -100,11 +100,7 @@
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        if (@available(iOS 13.0, *)) {
-            _collectionView.backgroundColor = [UIColor systemBackgroundColor];
-        } else {
-            _collectionView.backgroundColor = [UIColor whiteColor];
-        }
+        _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30);
         _collectionView.alwaysBounceVertical = YES;
         [_collectionView registerClass:[DKUserCenterHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"DKUserCenterHeader"];

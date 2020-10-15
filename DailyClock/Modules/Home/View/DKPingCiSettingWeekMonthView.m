@@ -132,7 +132,7 @@
         _maskView = [UIView new];
         _maskView.layer.cornerRadius = 3.f;
         _maskView.layer.masksToBounds = YES;
-        _maskView.backgroundColor = DKIOS13BackgroundColor();
+        _maskView.backgroundColor = DKIOS13ContainerColor();
     }
     return _maskView;
 }

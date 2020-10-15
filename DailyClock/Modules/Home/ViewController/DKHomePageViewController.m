@@ -37,12 +37,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (@available(iOS 13.0, *)) {
-        self.view.backgroundColor  =[UIColor systemBackgroundColor];
-    } else {
-        // Fallback on earlier versions
-        self.view.backgroundColor  =[UIColor whiteColor];
-    }
     self.titleLabel.text = @"打卡";
     self.shouldShowBackBtn = NO;
     @weakify(self);
@@ -239,6 +233,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.backgroundColor = [UIColor clearColor];
         [_tableView registerClass:[DKHomeItemTableViewCell class] forCellReuseIdentifier:@"DKHomeItemTableViewCell"];
     }
     return _tableView;

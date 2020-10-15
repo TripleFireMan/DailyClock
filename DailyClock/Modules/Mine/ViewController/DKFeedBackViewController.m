@@ -146,9 +146,9 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     [self.imgContentView addSubview:self.imgBGView];
     
     
-    self.feedBackContentView.backgroundColor = DKIOS13BackgroundColor();
-    self.imgBGView.backgroundColor = DKIOS13BackgroundColor();
-    self.phoneTFContent.backgroundColor = DKIOS13BackgroundColor();
+    self.feedBackContentView.backgroundColor = DKIOS13ContainerColor();
+    self.imgBGView.backgroundColor = DKIOS13ContainerColor();
+    self.phoneTFContent.backgroundColor = DKIOS13ContainerColor();
     
     self.phoneTF.textColor = DKIOS13LabelColor();
     self.feedBackNumberLbl.textColor = DKIOS13LabelColor();
@@ -156,7 +156,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     self.feedBackTextView.textColor = DKIOS13PlaceholderTextColor();
     self.feedBackLbl.textColor = DKIOS13LabelColor();
     self.phoneLbl.textColor = DKIOS13LabelColor();
-    self.feedBackTextView.backgroundColor = DKIOS13BackgroundColor();
+    self.feedBackTextView.backgroundColor = DKIOS13ContainerColor();
     
     
     

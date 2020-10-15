@@ -23,6 +23,8 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.contentView.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor clearColor];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupSubviews];
         [self addConstrainss];

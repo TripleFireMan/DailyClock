@@ -81,7 +81,7 @@ static inline UIColor * DKIOS13SystemBackgroundColor(){
         }];
         return bgClor;
     } else {
-        return [UIColor blackColor];
+        return [UIColor whiteColor];
     }
 }
 
@@ -89,15 +89,15 @@ static inline UIColor * DKIOS13BackgroundColor(){
     if (@available(iOS 13, *)) {
         UIColor *bgClor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-                return kBackGroungColor;
+                return [UIColor whiteColor];
             }
             else{
-                return RGBColor(44, 44, 44);
+                return RGBColor(24, 24,28);
             }
         }];
         return bgClor;
     } else {
-        return kBackGroungColor;
+        return [UIColor whiteColor];
     }
 }
 

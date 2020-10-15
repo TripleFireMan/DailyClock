@@ -45,7 +45,7 @@
 
 - (void) setupSubviews
 {
-    self.contentView.backgroundColor = DKIOS13BackgroundColor();
+    self.contentView.backgroundColor = DKIOS13ContainerColor();
     [self.contentView addSubview:self.containerView];
     [self.containerView addSubview:self.versionLabel];
     [self.contentView addSubview:self.timeLabel];

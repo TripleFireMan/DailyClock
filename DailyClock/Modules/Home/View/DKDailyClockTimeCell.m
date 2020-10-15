@@ -98,7 +98,7 @@
 - (UIView *) container{
     if (!_container) {
         _container = [UIView new];
-        _container.backgroundColor = DKIOS13BackgroundColor();
+        _container.backgroundColor = DKIOS13ContainerColor();
         _container.layer.cornerRadius = 12.f;
 //        _container.layer.masksToBounds = YES;
     }

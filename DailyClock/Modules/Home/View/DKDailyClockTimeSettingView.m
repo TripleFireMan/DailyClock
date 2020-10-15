@@ -302,7 +302,6 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.backgroundColor  =[UIColor clearColor];
-        [_tableView cy_adjustForIOS13];
         [_tableView registerClass:[DKDailyClockMusicItemCell class] forCellReuseIdentifier:@"DKDailyClockMusicItemCell"];
     }
     return _tableView;
@@ -383,7 +382,7 @@
         [_cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
         _cancleBtn.titleLabel.font = DKFont(15);
         [_cancleBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
-        _cancleBtn.backgroundColor = DKIOS13BackgroundColor();
+        _cancleBtn.backgroundColor = DKIOS13ContainerColor();
         [[_cancleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             [self hide];
@@ -399,7 +398,7 @@
         [_confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
         _confirmBtn.titleLabel.font = DKFont(15);
         [_confirmBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
-        _confirmBtn.backgroundColor = DKIOS13BackgroundColor();
+        _confirmBtn.backgroundColor = DKIOS13ContainerColor();
         [[_confirmBtn  rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             if (self.block) {

@@ -40,12 +40,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.shouldShowBackBtn = YES;
-    
-    UIColor *color = kBackGroungColor;
-    if (@available(iOS 13, *)) {
-        color = [UIColor systemBackgroundColor];
-    }
-    self.view.backgroundColor = color;
 }
 
 - (void) viewWillAppear:(BOOL)animated{

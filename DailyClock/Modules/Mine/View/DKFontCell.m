@@ -108,7 +108,7 @@
         _donwloadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_donwloadBtn setTitle:@"下载" forState:UIControlStateNormal];
         _donwloadBtn.titleLabel.font = DKFont(14);
-        _donwloadBtn.backgroundColor = DKIOS13BackgroundColor();
+        _donwloadBtn.backgroundColor = DKIOS13ContainerColor();
         _donwloadBtn.layer.cornerRadius = 6.f;
         _donwloadBtn.layer.masksToBounds = YES;
         [_donwloadBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];

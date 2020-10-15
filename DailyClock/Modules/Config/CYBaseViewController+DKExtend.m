@@ -22,8 +22,8 @@
     [self dkViewDidLoad];
     
     if (@available(iOS 13.0, *)) {
-        self.view.backgroundColor = [UIColor systemBackgroundColor];
-        self.headerView.backgroundColor = [UIColor systemBackgroundColor];
+        self.view.backgroundColor = DKIOS13BackgroundColor();
+        self.headerView.backgroundColor = DKIOS13BackgroundColor();
         self.titleLabel.textColor = [UIColor labelColor];
         self.backBtn.tintColor = [UIColor labelColor];
         self.overrideUserInterfaceStyle = UIUserInterfaceStyleUnspecified;

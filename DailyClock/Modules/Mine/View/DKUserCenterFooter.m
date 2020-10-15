@@ -19,7 +19,7 @@
     if (self) {
         self.versionLabel = [UILabel new];
         self.versionLabel.font = DKFont(13.f);
-        self.versionLabel.textColor = [UIColor darkTextColor];
+        self.versionLabel.textColor = DKIOS13LabelColor();
         self.versionLabel.text = [NSString stringWithFormat:@"v%@",APPVersion];
         [self addSubview:self.versionLabel];
         [self.versionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
