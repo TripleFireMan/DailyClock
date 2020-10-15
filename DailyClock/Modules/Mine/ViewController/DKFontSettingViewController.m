@@ -8,8 +8,7 @@
 #import "CYRefreshFooter.h"
 #import "CYRefreshHeader.h"
 #import "DKFontModel.h"
-
-
+#import "DKFontCell.h"
 @interface DKFontSettingViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -26,6 +25,7 @@
     [super viewDidLoad];
     self.page = 1;
     self.title = @"字体设置";
+    [self loadData];
 }
 
 - (void) setupSubView
@@ -44,10 +44,34 @@
 #pragma mark - api
 - (void) loadData
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView.mj_header endRefreshing];
-        [self.tableView.mj_footer endRefreshing];
-    });
+//    @weakify(self);
+    [HttpTool GET:kDailyClockFont parameters:nil HUD:YES success:^(id responseObject) {
+        NSInteger status = [[responseObject objectForKey:@"status"] integerValue];
+        if (status==0) {
+            NSArray *versions = [NSArray modelArrayWithClass:[DKFontModel class] json:[responseObject objectForKey:@"data"]];
+            if (versions.count != 0) {
+                [self.dataSource addObjectsFromArray:versions];
+                [self.tableView reloadData];
+            }
+//                else{
+//                    [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+//                        @strongify(self);
+//                        [self loadData];
+//                    }  ] ;
+//                }
+        }
+        else{
+//                [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+//                    @strongify(self);
+//                    [self loadData];
+//                }  ] ;
+        }
+    } failure:^(NSError *error) {
+//            [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"空空思密达"  topMargin: 200 clickRefresh:^{
+//                @strongify(self);
+//                [self loadData];
+//            }  ] ;
+    }];
 }
 #pragma mark - model event
 #pragma mark 1 notification
@@ -59,19 +83,20 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DKFontModel *font = [self.dataSource objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    DKFontCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DKFontCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[DKFontCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DKFontCell"];
     }
-    cell.textLabel.text = font.fontName;
-    cell.textLabel.font=  [UIFont fontWithName:font.fontName size:15];
     
+    cell.font = font;
     if ([font.fontName isEqualToString:[DKApplication cy_shareInstance].fontName]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else{
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
+    
+    
     return cell;
 }
 
@@ -83,16 +108,22 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DKFontModel *font = [self.dataSource objectAtIndex:indexPath.row];
-    [DKApplication cy_shareInstance].fontName = font.fontName;
+    if ([font isDownloading]) {
+        [XHToast showBottomWithText:@"字体正在下载"];
+        return;
+    }
+    if (![font isDownloaded]) {
+        [XHToast showBottomWithText:@"字体还未下载，请先下载安装"];
+        return;
+    }
     [DKApplication cy_shareInstance].boldFontName = font.boldFontName;
+    [DKApplication cy_shareInstance].fontName = font.fontName;
+    
     [[DKApplication cy_shareInstance] cy_save];
     [tableView reloadData];
+    self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
     
-    [DKAlert showTitle:@"提示" subTitle:@"字体切换成功，APP重启后生效" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
-        if (idx == DKAlertDone) {
-            exit(0);
-        }
-    } doneTitle:@"确定" array:@[@"取消"]];
+    [XHToast showBottomWithText:@"字体切换成功"];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,21 +137,69 @@
     if (!_dataSource) {
         _dataSource = [NSMutableArray arrayWithCapacity:10];
         DKFontModel *font = [DKFontModel new];
+        font.name = @"系统字体";
         font.fontName = @"PingFangSC-Regular";
         font.boldFontName = @"PingFangSC-Medium";
         [_dataSource addObject:font];
         
         DKFontModel *happyFont=  [DKFontModel new];
+        happyFont.name =@"2016快乐体";
         happyFont.fontName = @"HappyZcool-2016";
         happyFont.boldFontName = @"HappyZcool-2016";
         [_dataSource addObject:happyFont];
+        
+//        DKFontModel *songT = [DKFontModel new];
+//        songT.fontName = @"KaiTi_GB2312";
+//        songT.name = @"楷体GB2312";
+//        songT.boldFontName = @"KaiTi_GB2312";
+//        songT.url = @"http://chengyan.shop/static/fonts/%E6%A5%B7%E4%BD%93_GB2312.ttf";
+//        [_dataSource addObject:songT];
+
+//        DKFontModel *DFWaWaSCW5 = [DKFontModel new];
+//        DFWaWaSCW5.name = @"娃娃体";
+//        DFWaWaSCW5.fontName = @"DFWaWaSC-W5";
+//        DFWaWaSCW5.boldFontName = @"DFWaWaSC-W5";
+//        [_dataSource addObject:DFWaWaSCW5];
+//
+//        DKFontModel *HanziPenSCW3 = [DKFontModel new];
+//        HanziPenSCW3.name = @"翩翩体";
+//        HanziPenSCW3.fontName = @"HanziPenSC-W3";
+//        HanziPenSCW3.boldFontName = @"HanziPenSC-W3";
+//        [_dataSource addObject:HanziPenSCW3];
+//
+//        DKFontModel *STYuanti_SC_Regular = [DKFontModel new];
+//        STYuanti_SC_Regular.name = @"圆体";
+//        STYuanti_SC_Regular.fontName = @"STYuanti-SC-Regular";
+//        STYuanti_SC_Regular.boldFontName = @"STYuanti-SC-Regular";
+//        [_dataSource addObject:STYuanti_SC_Regular];
+//
+//        DKFontModel *YuppyTC_Regular = [DKFontModel new];
+//        YuppyTC_Regular.name = @"雅痞-简";
+//        YuppyTC_Regular.fontName = @"YuppySC-Regular";
+//        YuppyTC_Regular.boldFontName = @"YuppySC-Regular";
+//        [_dataSource addObject:YuppyTC_Regular];
+//
+//
+//        DKFontModel *WeibeiSC_Bold = [DKFontModel new];
+//        WeibeiSC_Bold.name = @"魏碑-简";
+//        WeibeiSC_Bold.fontName = @"WeibeiSC-Bold";
+//        WeibeiSC_Bold.boldFontName = @"WeibeiSC-Bold";
+//        [_dataSource addObject:WeibeiSC_Bold];
+//
+//
+//
+//
+//
+    
     }
     return _dataSource;
 }
 
+
+
 - (UITableView *) tableView
 {
-    @weakify(self);
+//    @weakify(self);
     if (!_tableView) {
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -130,6 +209,7 @@
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[DKFontCell class] forCellReuseIdentifier:@"DKFontCell"];
 //        _tableView.mj_header = [CYRefreshHeader headerWithRefreshingBlock:^{
 //            @strongify(self);
 //            self.page = 1;

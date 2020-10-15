@@ -19,5 +19,5 @@
 #define FeedBack            HOST@"dailyClock/feedBack?"
 #define UploadImge          HOST@"save_profile?"
 #define VersionHistory      HOST@"dailyClock/versionHistory?"
-
+#define kDailyClockFont     HOST@"dailyClock/fonts"
 #endif /* URL_h */

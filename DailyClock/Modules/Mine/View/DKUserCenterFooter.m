@@ -29,4 +29,7 @@
     }
     return self;
 }
+- (void) configModel{
+    self.versionLabel.font = DKFont(13);
+}
 @end

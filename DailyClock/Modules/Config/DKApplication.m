@@ -34,7 +34,8 @@
     /// 自动备份
     [self autoBackup];
     
-
+    /// 注册下载字体
+    [self regisetFonts];
 
 }
 
@@ -43,6 +44,22 @@
     if ([[NSDate date] timeIntervalSinceDate:self.lastBackupDate] > 24 * 60 * 60 &&
         self.isAutoBeifeiShuju == YES) {
         [self p_backupToICloud];
+    }
+}
+
+- (void) regisetFonts {
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    path = [path stringByAppendingPathComponent:@"fonts"];
+    if ([manager fileExistsAtPath:path]) {
+        NSError *error = nil;
+        NSArray *items = [manager contentsOfDirectoryAtPath:path error:&error];
+        [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[NSString class]]) {
+                NSString *url = [path stringByAppendingPathComponent:obj];
+                [UIFont loadFontFromPath:url];
+            }
+        }];
     }
 }
 

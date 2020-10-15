@@ -9,7 +9,7 @@
 #import "DKAboutUsViewController.h"
 #import "DKFontSettingViewController.h"
 
-@interface DKSettingViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DKSettingViewController ()<UITableViewDelegate, UITableViewDataSource,UIFontPickerViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -33,7 +33,12 @@
     [super viewDidLoad];
     self.titleLabel.text = @"设置";
     self.shouldShowBackBtn = YES;
-    
+    @weakify(self);
+    [RACObserve([DKApplication cy_shareInstance], fontName) subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.tableView reloadData];
+        self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
+    }];
 }
 
 - (void) setupSubView
@@ -104,11 +109,45 @@
         }];
     }
     else if (indexPath.row == 4){
-        DKFontSettingViewController *vc = [DKFontSettingViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+//        if (@available(iOS 13.0, *)) {
+//
+//            UIFontPickerViewControllerConfiguration *config = [UIFontPickerViewControllerConfiguration new];
+//            config.filteredLanguagesPredicate = [UIFontPickerViewControllerConfiguration filterPredicateForFilteredLanguages:@[@"zh-Hans"]];
+//
+//            UIFontPickerViewController *fontPicker=  [[UIFontPickerViewController alloc] initWithConfiguration:config];
+//            fontPicker.delegate = self;
+//            fontPicker.modalPresentationStyle = UIModalPresentationFullScreen;
+//
+//            [self presentViewController:fontPicker animated:YES completion:nil];
+//        } else
+        {
+            DKFontSettingViewController *vc = [DKFontSettingViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+- (void) fontPickerViewControllerDidCancel:(UIFontPickerViewController *)viewController API_AVAILABLE(ios(13.0)){
+    
+}
+
+- (void) fontPickerViewControllerDidPickFont:(UIFontPickerViewController *)viewController
+API_AVAILABLE(ios(13.0)){
+    
+    UIFontDescriptor *font = viewController.selectedFontDescriptor;
+    [DKApplication cy_shareInstance].fontName = font.fontAttributes[NSFontAttributeName];
+    [DKApplication cy_shareInstance].boldFontName = font.fontAttributes[NSFontAttributeName];
+    [[DKApplication cy_shareInstance] cy_save];
+
+    [DKAlert showTitle:@"提示" subTitle:@"字体切换成功，APP重启后生效" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
+        if (idx == DKAlertDone) {
+            exit(0);
+        }
+    } doneTitle:@"确定" array:@[@"取消"]];
+
 }
 
 

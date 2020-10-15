@@ -116,7 +116,7 @@
     attCountText.font = CYBebas(20);
     [attCountText setFont:DKFont(20) range:NSMakeRange(countText.length-1, 1)];
     self.countLabel.attributedText = attCountText;
-
+    self.nameLabel.font = DKFont(16);
     NSString *continueContText = [NSString stringWithFormat:@"连续 %@ 次",@([_model continueCont])];
     NSMutableAttributedString *attcontinueContText = [[NSMutableAttributedString alloc] initWithString:continueContText];
     

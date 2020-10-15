@@ -241,6 +241,9 @@
 		4C9CDD55253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
 		4C9CDD56253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
 		4C9CDD57253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
+		4CA51F7D2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
+		4CA51F7E2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
+		4CA51F7F2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
 		4CA97733251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97734251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
 		4CA97735251456BC0041EB7D /* DKDataResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */; };
@@ -477,6 +480,8 @@
 		4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockMusicItemCell.m; sourceTree = "<group>"; };
 		4C9CDD53253339C900869493 /* DKPlayMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPlayMusicModel.h; sourceTree = "<group>"; };
 		4C9CDD54253339C900869493 /* DKPlayMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPlayMusicModel.m; sourceTree = "<group>"; };
+		4CA51F7B2536A15500FDC6DB /* DKFontCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFontCell.h; sourceTree = "<group>"; };
+		4CA51F7C2536A15500FDC6DB /* DKFontCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontCell.m; sourceTree = "<group>"; };
 		4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDataResumeViewController.h; sourceTree = "<group>"; };
 		4CA97732251456BC0041EB7D /* DKDataResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDataResumeViewController.m; sourceTree = "<group>"; };
 		4CA9773625145F7E0041EB7D /* 打卡Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "打卡Release.entitlements"; sourceTree = "<group>"; };
@@ -683,6 +688,8 @@
 				4C91B79A25144B1200C8F594 /* DKPausedTargetCell.m */,
 				4CA97754251605E10041EB7D /* DKVersionHistoryCell.h */,
 				4CA97755251605E10041EB7D /* DKVersionHistoryCell.m */,
+				4CA51F7B2536A15500FDC6DB /* DKFontCell.h */,
+				4CA51F7C2536A15500FDC6DB /* DKFontCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1289,6 +1296,7 @@
 				4C7DA7B725242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD25250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */,
+				4CA51F7D2536A15500FDC6DB /* DKFontCell.m in Sources */,
 				4C07A94D2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
 				4C51AD4E250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
@@ -1375,6 +1383,7 @@
 				4C9CDD56253339C900869493 /* DKPlayMusicModel.m in Sources */,
 				4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */,
 				4C07A94E2501F08A0064CB76 /* DKPingCiSettingView.m in Sources */,
+				4CA51F7E2536A15500FDC6DB /* DKFontCell.m in Sources */,
 				4C07A9442501EFF70064CB76 /* DKPingCiSegment.m in Sources */,
 				4C9CDA4B2530A37B00869493 /* DKDailyClockAddCell.m in Sources */,
 				4C51AD4F250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
@@ -1420,6 +1429,7 @@
 				4C7DA7B925242DAD00B58B59 /* DKDailyItemCell.swift in Sources */,
 				4C51AD27250CBBF9007DEB77 /* DKApplication+JPush.m in Sources */,
 				4C07C44925061F650064CB76 /* DKHomeItemCollectionViewCell.m in Sources */,
+				4CA51F7F2536A15500FDC6DB /* DKFontCell.m in Sources */,
 				4CE63C0C2508C0D4007EC122 /* SnapshotHelper.swift in Sources */,
 				4C51AD50250E1DA3007DEB77 /* DKTargetDetailViewController.m in Sources */,
 				4C07C44E250620940064CB76 /* DKHomeItemTableViewCell.m in Sources */,

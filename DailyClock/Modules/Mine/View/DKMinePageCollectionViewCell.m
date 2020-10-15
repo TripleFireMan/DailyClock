@@ -48,6 +48,6 @@
     _model = model;
     self.img.image = _model.img;
     self.label.text = _model.title;
-    
+    self.label.font = DKFont(14);
 }
 @end

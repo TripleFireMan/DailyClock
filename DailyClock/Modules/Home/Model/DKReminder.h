@@ -11,9 +11,6 @@
 @class DKTargetModel;
 
 typedef NS_ENUM(NSInteger, DKTargetDuration){
-    DKTargetDuration_EveryDay,
-    DKTargetDuration_Weekday,
-    DKTargetDuration_Weekends,
     DKTargetDuration_Monday,
     DKTargetDuration_Tuesday,
     DKTargetDuration_Wendsday,
@@ -21,6 +18,11 @@ typedef NS_ENUM(NSInteger, DKTargetDuration){
     DKTargetDuration_Friday,
     DKTargetDuration_Saturday,
     DKTargetDuration_Sunday,
+    
+    DKTargetDuration_EveryDay,
+    DKTargetDuration_Weekday,
+    DKTargetDuration_Weekends,
+
 };
 
 NS_ASSUME_NONNULL_BEGIN

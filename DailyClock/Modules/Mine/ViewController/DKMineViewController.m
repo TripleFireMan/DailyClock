@@ -38,12 +38,17 @@
 }
 - (void)viewDidLoad
 {
+    @weakify(self);
     [super viewDidLoad];
     self.titleLabel.text = @"个人中心";
     self.shouldShowBackBtn = NO;
     
     [self.collectionView reloadData];
-
+    [RACObserve([DKApplication cy_shareInstance], fontName) subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.collectionView reloadData];
+        self.titleLabel.font = DKBoldFont(18);
+    }];
 }
 
 - (void) setupSubView
@@ -115,6 +120,7 @@
         if (!header) {
             header = self.tableHeader;
         }
+        [header configModel:nil];
         return header;
     }
     else{
@@ -122,6 +128,7 @@
         if (!footer) {
             footer = [DKUserCenterFooter new];
         }
+        [footer configModel];
         return footer;
     }
 }

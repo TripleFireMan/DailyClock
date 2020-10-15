@@ -45,6 +45,12 @@
     }
     self.titleLabel.text = @"打卡";
     self.shouldShowBackBtn = NO;
+    @weakify(self);
+    [RACObserve([DKApplication cy_shareInstance], fontName) subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.tableView reloadData];
+        self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
+    }];
 }
 
 - (void) viewWillAppear:(BOOL)animated{

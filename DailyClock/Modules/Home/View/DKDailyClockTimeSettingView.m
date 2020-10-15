@@ -233,6 +233,7 @@
 - (DKReminder *) reminder{
     if (!_reminder) {
         _reminder = [DKReminder new];
+        _reminder.targetModel = self.model;
     }
     return _reminder;
 }
@@ -415,7 +416,6 @@
                 
                 self.reminder.clockDate = [NSDate dateWithString:[NSString stringWithFormat:@"%@:%@",hour,minute] format:@"HH:mm"];
                 self.reminder.dayOfWeeks = leftTitle;
-                
                 
                 self.block(self.reminder);
             }

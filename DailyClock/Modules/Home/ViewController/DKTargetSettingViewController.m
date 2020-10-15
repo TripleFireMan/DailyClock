@@ -9,6 +9,7 @@
 #import "DKDateSelectView.h"
 #import "DKDailyArticleReminderView.h"
 #import "DKDailyClockTimeSettingView.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface DKTargetSettingViewController ()
 /// 内容区
@@ -325,6 +326,9 @@
                 [XHToast showBottomWithText:@"请设置目标名称"];
                 return;
             }
+            
+            [self configNotifications];
+            
             self.model.title = self.nameTF.text;
             [[DKTargetManager cy_shareInstance] addTarget:self.model];
             NSMutableArray *vcs = [self.navigationController viewControllers].mutableCopy;
@@ -341,6 +345,134 @@
         }];
     }
     return _saveBtn;
+}
+
+- (void) configNotifications {
+    
+    UNUserNotificationCenter *notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
+    
+    DKTargetModel *model = nil;
+    model = self.targetModel;
+    
+    // 清除旧的本地通知
+    void(^clearOldLocalnotications)(void) = ^{
+        
+        NSMutableArray <UNNotificationRequest *>* pendings = @[].mutableCopy;
+        [notificationCenter getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+            [requests enumerateObjectsUsingBlock:^(UNNotificationRequest * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([obj.identifier isEqualToString:model.uniqueId]) {
+                    [pendings addObject:obj];
+                }
+            }];
+        }];
+        if (pendings.count!=0) {
+            [notificationCenter removePendingNotificationRequestsWithIdentifiers:[pendings valueForKeyPath:@"identifier"]];
+        }
+        
+    };
+    
+    void(^createLocalNotification)(void) = ^{
+        NSArray <DKReminder *> *reminders = model.reminders;
+        if (reminders.count!=0) {
+            
+
+            
+            
+            [reminders enumerateObjectsUsingBlock:^(DKReminder * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (obj.isAdd) {
+                    return;
+                }
+                UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+                content.title = model.title;
+                content.subtitle =@"该打卡了";
+                if (@available(iOS 12.0, *)) {
+                    content.sound = [UNNotificationSound criticalSoundNamed:obj.alert withAudioVolume:0.5];
+                } else {
+                    // Fallback on earlier versions
+                    content.sound = [UNNotificationSound defaultSound];
+                }
+                
+                if (obj.duration == DKTargetDuration_Weekday) {
+                    NSInteger hour = obj.clockDate.hour;
+                    NSInteger minute = obj.clockDate.minute;
+                    
+                    
+                    for (int i = 0; i < 5; i ++) {
+                        NSDateComponents *date = [NSDateComponents new];
+                        date.hour = hour;
+                        date.minute = minute;
+                        date.weekday = i;
+                        UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            NSLog(@"添加成功");
+                        }];
+                    }
+                }
+                else if (obj.duration == DKTargetDuration_Weekends){
+                    NSInteger hour = obj.clockDate.hour;
+                    NSInteger minute = obj.clockDate.minute;
+                    
+                    for (int i = 5; i < 7; i ++) {
+                        NSDateComponents *date = [NSDateComponents new];
+                        date.hour = hour;
+                        date.minute = minute;
+                        date.weekday = i;
+                        UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            NSLog(@"添加成功");
+                        }];
+                    }
+                }
+                else{
+                    if (obj.duration == DKTargetDuration_EveryDay) {
+                        NSInteger hour = obj.clockDate.hour;
+                        NSInteger minute = obj.clockDate.minute;
+                        NSDateComponents *date = [NSDateComponents new];
+                        date.hour = hour;
+                        date.minute = minute;
+                        UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            NSLog(@"添加成功");
+                        }];
+                    }
+                    else{
+                        NSInteger hour = obj.clockDate.hour;
+                        NSInteger minute = obj.clockDate.minute;
+                        NSInteger weekday = obj.duration;
+                        NSDateComponents *date = [NSDateComponents new];
+                        date.hour = hour;
+                        date.minute = minute;
+                        date.weekday = weekday;
+                        
+                        UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                            NSLog(@"添加成功");
+                        }];
+                    }
+                }
+            }];
+            
+            
+        }
+    };
+    
+    
+    
+    [notificationCenter requestAuthorizationWithOptions:UNAuthorizationOptionAlert|UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            clearOldLocalnotications();
+            createLocalNotification();
+        }
+        else{
+            [XHToast showBottomWithText:@"设置提醒失败，请确保通知打开"];
+        }
+    }];
+    
+    
 }
 - (UIScrollView *) scrollView{
     if (!_scrollView) {

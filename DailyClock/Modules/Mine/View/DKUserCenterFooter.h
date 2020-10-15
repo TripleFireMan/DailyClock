@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DKUserCenterFooter : UICollectionReusableView
-
+- (void) configModel;
 @end
 
 NS_ASSUME_NONNULL_END

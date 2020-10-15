@@ -50,7 +50,7 @@
 
 - (void) configModel:(id)model
 {
-
+    self.namelbl.font = DKFont(15);
 }
 - (UIImageView *) icon{
     if (!_icon) {
