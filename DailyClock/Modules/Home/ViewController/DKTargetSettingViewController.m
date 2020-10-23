@@ -721,27 +721,19 @@
         _reminderView.block = ^(id obj) {
             @strongify(self);
             if ([obj isAdd]) {
+                if (self.model.reminders.count >= 10) {
+                    [XHToast showBottomWithText:@"最多设置9个提醒"];
+                    return;
+                }
                 [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
                     DKReminder *reminder = (DKReminder *)obj;
                     [self.model.reminders addObject:reminder];
-//                    if (self.editModel) {
-//                        [self.model.reminders addObject:reminder];
-//                    }
-//                    else{
-//                        [self.targetModel.reminders addObject:reminder];
-//                    }
                     [self.reminderView reload];
                 }];
             }
             else{
                 [DKAlert showTitle:@"提示" subTitle:@"确定要删除该提醒么" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
                     if (idx == DKAlertDone) {
-//                        if (self.editModel) {
-//                            [self.model.reminders removeObject:obj];
-//                        }
-//                        else{
-//                            [self.targetModel.reminders removeObject:obj];
-//                        }
                         [self.model.reminders removeObject:obj];
                         [self.reminderView reload];
                     }
