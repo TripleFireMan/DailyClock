@@ -55,3 +55,6 @@ Carthage/Build
 # Fastlane
 fastlane/report.xml
 fastlane_build/
+
+# 图片
+tu/
