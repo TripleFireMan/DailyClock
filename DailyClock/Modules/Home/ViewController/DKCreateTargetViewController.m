@@ -81,8 +81,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DKTargetModel *model = [self.datasource objectAtIndex:indexPath.row];
-    DKTargetSettingViewController *settingVC = [DKTargetSettingViewController new];
-    settingVC.targetModel = model;
+    DKTargetSettingViewController *settingVC = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Insert model:model];
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 

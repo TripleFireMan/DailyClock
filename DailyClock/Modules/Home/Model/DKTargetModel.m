@@ -14,6 +14,8 @@
     self = [super init];
     if (self) {
         self.shouldAutoDaily = YES;
+        CFStringRef uuidString =  CFUUIDCreateString(NULL,CFUUIDCreate(NULL));
+        self.uniqueId = (__bridge NSString *) uuidString;
     }
     return self;
 }

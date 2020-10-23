@@ -54,34 +54,49 @@
 @property (nonatomic, strong) UIButton  *saveBtn;
 
 @property (nonatomic, strong) DKDailyArticleReminderView *reminderView;
+@property (nonatomic, assign) DKTargetSettingType type;
 
 @end
 
 @implementation DKTargetSettingViewController
 
 #pragma mark - def
-- (void) dealloc{
-    /// 页面消失的时候，需要将提醒信息清空
-    _targetModel.reminders = nil;
+
++ (instancetype) initWithTargetType:(DKTargetSettingType)type model:(DKTargetModel *)model{
+    DKTargetSettingViewController *vc = [[DKTargetSettingViewController alloc]init];
+    vc.type = type;
+    vc.model = model;
+    return vc;
 }
 #pragma mark - override
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     @weakify(self);
-    self.titleLabel.text = self.editModel? @"编辑目标": @"设置目标";
-    self.shouldShowBackBtn = YES;
     
-    if (self.editModel) {
-        self.model = self.editModel;
-        self.nameTF.text = self.model.title;
-        [self.reminderView configModel:self.model];
+    if (self.type == DKTargetSettingType_Insert) {
+        self.titleLabel.text =  @"设置目标";
     }
     else{
-        if (self.targetModel.ID != 0) {
-            self.nameTF.text = self.targetModel.title;
-        }
+        self.titleLabel.text = @"编辑目标";
     }
+    
+    
+    self.shouldShowBackBtn = YES;
+    
+    self.nameTF.text = self.model.title;
+    [self.reminderView configModel:self.model];
+    
+//    if (self.editModel) {
+//        self.model = self.editModel;
+//        self.nameTF.text = self.model.title;
+//        [self.reminderView configModel:self.model];
+//    }
+//    else{
+//        if (self.targetModel.ID != 0) {
+//            self.nameTF.text = self.targetModel.title;
+//        }
+//    }
     
     [RACObserve(self.segment, selectedSegmentIndex) subscribeNext:^(id  _Nullable x) {
         @strongify(self);
@@ -294,14 +309,14 @@
 
 #pragma mark - model event
 
-- (void) setTargetModel:(DKTargetModel *)targetModel{
-    _targetModel = targetModel;
-    self.model.title = _targetModel.title;
-    self.model.icon = _targetModel.icon;
-    self.model.backgroundImage = _targetModel.backgroundImage;
-    self.model.ID = _targetModel.ID;
-    [self.reminderView configModel:_targetModel];
-}
+//- (void) setTargetModel:(DKTargetModel *)targetModel{
+//    _targetModel = targetModel;
+//    self.model.title = _targetModel.title;
+//    self.model.icon = _targetModel.icon;
+//    self.model.backgroundImage = _targetModel.backgroundImage;
+//    self.model.ID = _targetModel.ID;
+//    [self.reminderView configModel:_targetModel];
+//}
 #pragma mark 1 notification
 #pragma mark 2 KVO
 
@@ -351,8 +366,7 @@
     
     UNUserNotificationCenter *notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
     
-    DKTargetModel *model = nil;
-    model = self.targetModel;
+    DKTargetModel *model = self.model;
     
     // 清除旧的本地通知
     void(^clearOldLocalnotications)(void) = ^{
@@ -360,24 +374,27 @@
         NSMutableArray <UNNotificationRequest *>* pendings = @[].mutableCopy;
         [notificationCenter getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
             [requests enumerateObjectsUsingBlock:^(UNNotificationRequest * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                if ([obj.identifier isEqualToString:model.uniqueId]) {
-                    [pendings addObject:obj];
+                NSArray *reminders = [model reminders];
+                for (DKReminder *reminder in reminders) {
+                    if ([reminder.uniqueID isEqualToString:obj.identifier]) {
+                        [pendings addObject:obj];
+                    }
                 }
             }];
+            
+            if (pendings.count!=0) {
+                [notificationCenter removePendingNotificationRequestsWithIdentifiers:[pendings valueForKeyPath:@"identifier"]];
+            }
+            
         }];
-        if (pendings.count!=0) {
-            [notificationCenter removePendingNotificationRequestsWithIdentifiers:[pendings valueForKeyPath:@"identifier"]];
-        }
+        
         
     };
     
     void(^createLocalNotification)(void) = ^{
         NSArray <DKReminder *> *reminders = model.reminders;
         if (reminders.count!=0) {
-            
 
-            
-            
             [reminders enumerateObjectsUsingBlock:^(DKReminder * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if (obj.isAdd) {
                     return;
@@ -385,12 +402,7 @@
                 UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
                 content.title = model.title;
                 content.subtitle =@"该打卡了";
-                if (@available(iOS 12.0, *)) {
-                    content.sound = [UNNotificationSound criticalSoundNamed:obj.alert withAudioVolume:0.5];
-                } else {
-                    // Fallback on earlier versions
-                    content.sound = [UNNotificationSound defaultSound];
-                }
+                content.sound = [UNNotificationSound soundNamed:[obj.alert stringByAppendingString:@".caf"]];
                 
                 if (obj.duration == DKTargetDuration_Weekday) {
                     NSInteger hour = obj.clockDate.hour;
@@ -403,7 +415,7 @@
                         date.minute = minute;
                         date.weekday = i;
                         UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
-                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.uniqueID content:content trigger:trigger];
                         [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
                             NSLog(@"添加成功");
                         }];
@@ -419,7 +431,7 @@
                         date.minute = minute;
                         date.weekday = i;
                         UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
-                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.uniqueID content:content trigger:trigger];
                         [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
                             NSLog(@"添加成功");
                         }];
@@ -433,7 +445,7 @@
                         date.hour = hour;
                         date.minute = minute;
                         UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
-                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.uniqueID content:content trigger:trigger];
                         [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
                             NSLog(@"添加成功");
                         }];
@@ -448,15 +460,13 @@
                         date.weekday = weekday;
                         
                         UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
-                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.targetModel.uniqueId content:content trigger:trigger];
+                        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:obj.uniqueID content:content trigger:trigger];
                         [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
                             NSLog(@"添加成功");
                         }];
                     }
                 }
             }];
-            
-            
         }
     };
     
@@ -713,24 +723,26 @@
             if ([obj isAdd]) {
                 [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
                     DKReminder *reminder = (DKReminder *)obj;
-                    if (self.editModel) {
-                        [self.model.reminders addObject:reminder];
-                    }
-                    else{
-                        [self.targetModel.reminders addObject:reminder];
-                    }
+                    [self.model.reminders addObject:reminder];
+//                    if (self.editModel) {
+//                        [self.model.reminders addObject:reminder];
+//                    }
+//                    else{
+//                        [self.targetModel.reminders addObject:reminder];
+//                    }
                     [self.reminderView reload];
                 }];
             }
             else{
                 [DKAlert showTitle:@"提示" subTitle:@"确定要删除该提醒么" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
                     if (idx == DKAlertDone) {
-                        if (self.editModel) {
-                            [self.model.reminders removeObject:obj];
-                        }
-                        else{
-                            [self.targetModel.reminders removeObject:obj];
-                        }
+//                        if (self.editModel) {
+//                            [self.model.reminders removeObject:obj];
+//                        }
+//                        else{
+//                            [self.targetModel.reminders removeObject:obj];
+//                        }
+                        [self.model.reminders removeObject:obj];
                         [self.reminderView reload];
                     }
                 } doneTitle:@"确定" array:@[@"取消"]];
@@ -765,7 +777,7 @@
 - (DKPingCiSettingView *) pingciSettingView{
     if (!_pingciSettingView) {
         _pingciSettingView = [DKPingCiSettingView new];
-        _pingciSettingView.model = self.editModel? : self.model;
+        _pingciSettingView.model = self.model;
     }
     return _pingciSettingView;
 }
@@ -818,7 +830,7 @@
     if (!_rizhiSwitch) {
         _rizhiSwitch = [[UISwitch alloc] init];
         _rizhiSwitch.onTintColor = kMainColor;
-        _rizhiSwitch.on = self.editModel?self.editModel.shouldAutoDaily:self.model.shouldAutoDaily;
+        _rizhiSwitch.on = self.model.shouldAutoDaily;
         [[_rizhiSwitch rac_newOnChannel] subscribeNext:^(NSNumber * _Nullable x) {
             @strongify(self);
             self.model.shouldAutoDaily = [x boolValue];
@@ -838,20 +850,13 @@
 - (UISegmentedControl *) segment{
     if (!_segment) {
         _segment = [[UISegmentedControl alloc] initWithItems:@[@"固定",@"每周",@"每月"]];
-        _segment.selectedSegmentIndex = self.editModel?self.editModel.pinciType:0;
+        _segment.selectedSegmentIndex = self.model.pinciType;
         _segment.tintColor = kContainerColor;
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [_segment setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
         [_segment setTitleTextAttributes:@{NSFontAttributeName:DKFont(14)} forState:UIControlStateNormal];
     }
     return _segment;
-}
-
-- (DKTargetModel *) model{
-    if (!_model) {
-        _model = [DKTargetModel new];
-    }
-    return _model;
 }
 
 - (NSString *) stringWithDate:(NSDate *) date {

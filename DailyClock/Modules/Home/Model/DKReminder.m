@@ -14,7 +14,8 @@
     if (self) {
         self.dayOfWeeks = @"每一天";
         self.duration = DKTargetDuration_EveryDay;
-        
+        CFStringRef uuidString =  CFUUIDCreateString(NULL,CFUUIDCreate(NULL));
+        self.uniqueID = (__bridge NSString *) uuidString;
     }
     return self;
 }

@@ -6,10 +6,15 @@
 #import "CYBaseViewController.h"
 #import "DKTargetModel.h"
 
+typedef NS_ENUM(NSInteger, DKTargetSettingType){
+    DKTargetSettingType_Insert,     // 新增
+    DKTargetSettingType_Modifier,   //编辑
+};
+
 @interface DKTargetSettingViewController: CYBaseViewController
 
-@property (nonatomic, strong) DKTargetModel *targetModel;
-@property (nonatomic, strong) DKTargetModel *editModel;
++ (instancetype) initWithTargetType:(DKTargetSettingType)type model:(DKTargetModel *)model;
+
 #pragma mark- as
 
 #pragma mark- model

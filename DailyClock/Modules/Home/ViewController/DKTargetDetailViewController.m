@@ -535,8 +535,7 @@
         _editBtn.backgroundColor = RGBColor(249, 216, 135);
         [[_editBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
-            DKTargetSettingViewController *vc = [DKTargetSettingViewController new];
-            vc.editModel = self.model;
+            DKTargetSettingViewController *vc = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Modifier model:self.model];
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }

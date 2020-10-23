@@ -180,8 +180,7 @@
     }];
     
     UIContextualAction *edit = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"编辑" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
-        DKTargetSettingViewController *target = [[DKTargetSettingViewController alloc] init];
-        target.editModel = model;
+        DKTargetSettingViewController *target = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Modifier model:model];
         [self.navigationController pushViewController:target animated:YES];
     }];
     edit.backgroundColor = kMainColor;

@@ -41,7 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) DKTargetDuration duration;
 /// 提示音
 @property (nonatomic, strong) NSString *alert;
-
+/// 唯一id
+@property (nonatomic, copy  ) NSString *uniqueID;
 @end
 
 NS_ASSUME_NONNULL_END
