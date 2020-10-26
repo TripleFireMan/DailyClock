@@ -56,12 +56,11 @@ NSInteger DKAlertDone = 100;
 //    [[[DKAlert cy_shareInstance] rac_signalForSelector:@selector(FCAlertDoneButtonClicked:) fromProtocol:@protocol(FCAlertViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
 //        clickAction?clickAction(DKAlertDone,done):nil;
 //    }];
-    
-    
 }
 
 - (void) FCAlertDoneButtonClicked:(FCAlertView *)alertView{
     if (self.Click) {
+        vibrate();
         self.Click(DKAlertDone, nil);
     }
 }
@@ -69,6 +68,7 @@ NSInteger DKAlertDone = 100;
 - (void) FCAlertView:(FCAlertView *)alertView clickedButtonIndex:(NSInteger)index buttonTitle:(NSString *)title
 {
     if (self.Click) {
+        vibrate();
         self.Click(index, title);
     }
 }

@@ -14,26 +14,18 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - CYKit (0.7.32):
+  - CYKit (0.7.33):
     - AFNetworking
-    - CYKit/Categorys (= 0.7.32)
-    - CYKit/Class (= 0.7.32)
-    - CYKit/UIKit (= 0.7.32)
+    - CYKit/Categorys (= 0.7.33)
+    - CYKit/Class (= 0.7.33)
+    - CYKit/UIKit (= 0.7.33)
     - FastCoding
     - Masonry
     - MJExtension (= 3.2.2)
     - MJRefresh (= 3.2.2)
     - ReactiveObjC
     - XHToast
-  - CYKit/Categorys (0.7.32):
-    - AFNetworking
-    - FastCoding
-    - Masonry
-    - MJExtension (= 3.2.2)
-    - MJRefresh (= 3.2.2)
-    - ReactiveObjC
-    - XHToast
-  - CYKit/Class (0.7.32):
+  - CYKit/Categorys (0.7.33):
     - AFNetworking
     - FastCoding
     - Masonry
@@ -41,7 +33,15 @@ PODS:
     - MJRefresh (= 3.2.2)
     - ReactiveObjC
     - XHToast
-  - CYKit/UIKit (0.7.32):
+  - CYKit/Class (0.7.33):
+    - AFNetworking
+    - FastCoding
+    - Masonry
+    - MJExtension (= 3.2.2)
+    - MJRefresh (= 3.2.2)
+    - ReactiveObjC
+    - XHToast
+  - CYKit/UIKit (0.7.33):
     - AFNetworking
     - FastCoding
     - Masonry
@@ -80,7 +80,7 @@ PODS:
   - ZWPlaceHolder (0.0.2)
 
 DEPENDENCIES:
-  - CYKit
+  - CYKit (from `https://github.com/TripleFireMan/CYKit.git`)
   - CYLTabBarController/Lottie (= 1.28.3)
   - FastCoding (= 3.3)
   - FCAlertView
@@ -92,7 +92,7 @@ DEPENDENCIES:
   - PromisesObjC (= 1.2.8)
   - SDWebImage (= 5.5.2)
   - SnapKit
-  - UMCCommon
+  - UMCCommon (= 7.1.3)
   - XHToast
   - YYKit
   - ZWLimitCounter (= 0.0.2)
@@ -101,7 +101,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
-    - CYKit
     - CYLTabBarController
     - FastCoding
     - FCAlertView
@@ -124,9 +123,18 @@ SPEC REPOS:
     - ZWLimitCounter
     - ZWPlaceHolder
 
+EXTERNAL SOURCES:
+  CYKit:
+    :git: https://github.com/TripleFireMan/CYKit.git
+
+CHECKOUT OPTIONS:
+  CYKit:
+    :commit: 7fdb3f18949127eaa3869bc7095d0089daf36ea6
+    :git: https://github.com/TripleFireMan/CYKit.git
+
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  CYKit: 7853400048a66f52ac86d99bbb46442b6933f6a9
+  CYKit: 161962dd900a94a16da342256dc7bc64830b213e
   CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
@@ -149,6 +157,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: 816ad7b022929227346490002dab2eb74f2496ba
+PODFILE CHECKSUM: d42bb8999c9422889d0f07bfab7e8e4cc66f0bf0
 
 COCOAPODS: 1.9.1

@@ -111,12 +111,18 @@
     cell.clickBlock = ^(id obj) {
         @strongify(self);
         if (![model shouldAutoDaily]) {
+            vibrate();
+            music();
             [self p_save:model];
         }
         else{
+            vibrate();
+            music();
             [DKSharePopView showOnView:[UIApplication sharedApplication].keyWindow confirmAction:^{
+                vibrate();
                 [self p_save:model];
             } shareAction:^{
+                vibrate();
                 [self p_save:model];
                 [self p_share:model];
                 
@@ -142,6 +148,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    vibrate();
     DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
     DKTargetDetailViewController *detail = [DKTargetDetailViewController new];
     detail.model = model;
@@ -215,6 +222,7 @@
 
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             DKCreateTargetViewController *vc = [DKCreateTargetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];

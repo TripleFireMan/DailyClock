@@ -31,6 +31,7 @@
     [[CYCustomTabBarController shareInstance] addChildViewController:mineNavi title:@"我的" image:[UIImage imageNamed:@"TabBar_My_Nor"] selectedImage:[UIImage imageNamed:@"TabBar_My_Sel"] color:[UIColor lightGrayColor] selectedColor:[UIColor lightGrayColor]];
     
     UITabBarController *tabbar = [[UITabBarController alloc] init];
+    tabbar.delegate = self;
     [tabbar addChildViewController:homeNavi];
     [tabbar addChildViewController:mineNavi];
     tabbar.tabBar.tintColor = DKIOS13LabelColor();
@@ -39,5 +40,10 @@
     app.window.rootViewController = tabbar;
     
     [app.window makeKeyAndVisible];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    vibrate();
 }
 @end

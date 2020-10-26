@@ -107,6 +107,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    vibrate();
     DKFontModel *font = [self.dataSource objectAtIndex:indexPath.row];
     if ([font isDownloading]) {
         [XHToast showBottomWithText:@"字体正在下载"];

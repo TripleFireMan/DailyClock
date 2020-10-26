@@ -155,6 +155,7 @@
 }
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    vibrate();
     DKMineItemModel *model = [self.dataSource objectAtIndex:indexPath.row];
     if ([model.title isEqualToString:@"已暂停目标"]) {
         DKPausedTargetViewController *vc = [DKPausedTargetViewController new];
@@ -290,6 +291,7 @@
         [_settingBtn setImage:[UIImage imageNamed:@"shezhi"] forState:UIControlStateNormal];
         [[_settingBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             DKSettingViewController *setting = [[DKSettingViewController alloc] init];
             [self.navigationController pushViewController:setting animated:YES];
         }];

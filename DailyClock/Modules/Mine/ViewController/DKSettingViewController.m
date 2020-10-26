@@ -89,6 +89,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    vibrate();
     if (indexPath.row == 0) {
         DKAboutUsViewController *vc = [DKAboutUsViewController new];
         [self.navigationController pushViewController:vc animated:YES];

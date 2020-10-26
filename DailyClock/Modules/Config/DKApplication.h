@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DKApplication : NSObject
+@interface DKApplication : NSObject<UITabBarControllerDelegate>
 
 /// 普通
 @property (nonatomic, strong) NSString *fontName;
@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *boldFontName;
 /// 是否24小时自动备份数据
 @property (nonatomic, assign) BOOL isAutoBeifeiShuju;
+/// 是否禁止震动
+@property (nonatomic, assign) BOOL forbidVibrate;
 /// 上次备份时间
 @property (nonatomic, strong) NSDate *lastBackupDate;
 

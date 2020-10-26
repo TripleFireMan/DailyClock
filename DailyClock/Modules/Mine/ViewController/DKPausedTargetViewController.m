@@ -83,6 +83,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    vibrate();
     DKTargetModel *model = [[[DKTargetManager cy_shareInstance] cancelModels] objectAtIndex:indexPath.row];
     DKTargetDetailViewController *settingVC = [[DKTargetDetailViewController alloc] init];
     settingVC.model = model;

@@ -491,6 +491,7 @@
         [[_activeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
          subscribeNext:^(__kindof UIControl * _Nullable x) {
          @strongify(self);
+            vibrate();
             self.model.status = DKTargetStatus_Doing;
             [[DKTargetManager cy_shareInstance] cy_save];
             [self p_config];
@@ -512,6 +513,7 @@
         _stopBtn.layer.cornerRadius = 22.f;
         [[_stopBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             [DKAlert showTitle:@"提示" subTitle:@"您将暂停该目标，暂停后，可从个人中心恢复" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
                 if (idx == DKAlertDone) {
                     self.model.status = DKTargetStatus_Cancel;
@@ -535,6 +537,7 @@
         _editBtn.backgroundColor = RGBColor(249, 216, 135);
         [[_editBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             DKTargetSettingViewController *vc = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Modifier model:self.model];
             [self.navigationController pushViewController:vc animated:YES];
         }];
@@ -552,6 +555,7 @@
         _deleteBtn.backgroundColor = RGBColor(255, 91, 96);
         [[_deleteBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             [DKAlert showTitle:@"提示" subTitle:@"您将永久删除此目标，删除后不可恢复" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
                 if (idx == DKAlertDone) {
                     [[DKTargetManager cy_shareInstance] removeTarget:self.model];

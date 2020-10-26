@@ -4,8 +4,8 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 inhibit_all_warnings!
 
 def DKPods()
-#  pod 'CYKit',:git => 'https://github.com/TripleFireMan/CYKit.git'
-  pod 'CYKit'
+  pod 'CYKit',:git => 'https://github.com/TripleFireMan/CYKit.git'
+#  pod 'CYKit'
   pod 'Masonry', '1.1.0'
   pod 'SDWebImage', '5.5.2'
   pod 'IQKeyboardManager', '6.4.2'                                 #键盘处理
@@ -20,7 +20,7 @@ def DKPods()
   pod 'FSCalendar'
   pod 'FCAlertView'
   pod 'MBProgressHUD'
-  pod 'UMCCommon'
+  pod 'UMCCommon','7.1.3'
   pod 'SnapKit'
 end
 

@@ -80,6 +80,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    vibrate();
     DKTargetModel *model = [self.datasource objectAtIndex:indexPath.row];
     DKTargetSettingViewController *settingVC = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Insert model:model];
     [self.navigationController pushViewController:settingVC animated:YES];

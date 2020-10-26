@@ -186,7 +186,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
     
     [[self.confirmBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
-        
+        vibrate();
         NSString *phone = self.phoneTF.text;
         NSString *content = self.feedBackTextView.text;
         NSString *title = @"极简打卡APP问题反馈";

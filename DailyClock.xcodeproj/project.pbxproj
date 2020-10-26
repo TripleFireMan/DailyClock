@@ -49,6 +49,10 @@
 		4C1CCE7E24FE49690004EF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE7D24FE49690004EF4E /* main.m */; };
 		4C1CCE8824FE49690004EF4E /* DailyClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE8724FE49690004EF4E /* DailyClockTests.m */; };
 		4C1CCE9324FE49690004EF4E /* DailyClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */; };
+		4C4719052546D84F00FDA4E9 /* drip.aac in Resources */ = {isa = PBXBuildFile; fileRef = 4C4719012546D84E00FDA4E9 /* drip.aac */; };
+		4C4719062546D84F00FDA4E9 /* spiral.aac in Resources */ = {isa = PBXBuildFile; fileRef = 4C4719022546D84E00FDA4E9 /* spiral.aac */; };
+		4C4719072546D84F00FDA4E9 /* knock.aac in Resources */ = {isa = PBXBuildFile; fileRef = 4C4719032546D84F00FDA4E9 /* knock.aac */; };
+		4C4719082546D84F00FDA4E9 /* jingle.aac in Resources */ = {isa = PBXBuildFile; fileRef = 4C4719042546D84F00FDA4E9 /* jingle.aac */; };
 		4C51ACFF250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
 		4C51AD00250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
 		4C51AD01250B4BD6007DEB77 /* DKSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */; };
@@ -375,6 +379,11 @@
 		4C1CCE9224FE49690004EF4E /* DailyClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyClockUITests.m; sourceTree = "<group>"; };
 		4C1CCE9424FE49690004EF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1CCEA024FE4B6B0004EF4E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4C4718FC2546CBA000FDA4E9 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		4C4719012546D84E00FDA4E9 /* drip.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip.aac; sourceTree = "<group>"; };
+		4C4719022546D84E00FDA4E9 /* spiral.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = spiral.aac; sourceTree = "<group>"; };
+		4C4719032546D84F00FDA4E9 /* knock.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = knock.aac; sourceTree = "<group>"; };
+		4C4719042546D84F00FDA4E9 /* jingle.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = jingle.aac; sourceTree = "<group>"; };
 		4C51ACFD250B4BD6007DEB77 /* DKSharePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSharePopView.h; sourceTree = "<group>"; };
 		4C51ACFE250B4BD6007DEB77 /* DKSharePopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSharePopView.m; sourceTree = "<group>"; };
 		4C51AD04250B53E4007DEB77 /* img_bling_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bling_0.png; sourceTree = "<group>"; };
@@ -610,6 +619,7 @@
 				4C07A92C250121DE0064CB76 /* DKTheme.h */,
 				4C51AD28250CBC8F007DEB77 /* Config.h */,
 				4CA977492515DDF40041EB7D /* URL.h */,
+				4C4718FC2546CBA000FDA4E9 /* Macro.h */,
 				4CA97737251464890041EB7D /* Tools */,
 				4CE63C0D250905FB007EC122 /* Resources */,
 				4C8DA0B72500E6A300112389 /* Modules */,
@@ -868,6 +878,10 @@
 		4C9CDCBB25332F4F00869493 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				4C4719012546D84E00FDA4E9 /* drip.aac */,
+				4C4719042546D84F00FDA4E9 /* jingle.aac */,
+				4C4719032546D84F00FDA4E9 /* knock.aac */,
+				4C4719022546D84E00FDA4E9 /* spiral.aac */,
 				4C9CDD2425332F8800869493 /* Fantacy 1.mp3 */,
 				4C9CDD2325332F8700869493 /* Fantacy 2.mp3 */,
 				4C9CDD2625332F8800869493 /* glassSound.mp3 */,
@@ -1075,6 +1089,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4719082546D84F00FDA4E9 /* jingle.aac in Resources */,
 				4C9CDD3325332F8800869493 /* knock.mp3 in Resources */,
 				4C9CDCF625332F7000869493 /* Be Together.caf in Resources */,
 				4C1CCE7B24FE49690004EF4E /* LaunchScreen.storyboard in Resources */,
@@ -1089,16 +1104,19 @@
 				4C9CDCF925332F7000869493 /* Funk Era Piano.caf in Resources */,
 				4C9CDD3925332F8800869493 /* switch.mp3 in Resources */,
 				4C9CDCFC25332F7000869493 /* Longing Piano.caf in Resources */,
+				4C4719052546D84F00FDA4E9 /* drip.aac in Resources */,
 				4C9CDD2A25332F8800869493 /* pop.mp3 in Resources */,
 				4C9CDD1425332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
 				4C9CDD3F25332F8800869493 /* ring.mp3 in Resources */,
 				4C9CDD3625332F8800869493 /* glassSound.mp3 in Resources */,
 				4C9CDCFF25332F7000869493 /* Sugar Sweet Guitar.caf in Resources */,
 				4C9CDD2D25332F8800869493 /* Fantacy 2.mp3 in Resources */,
+				4C4719062546D84F00FDA4E9 /* spiral.aac in Resources */,
 				4C9CDD1125332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
 				4C9CDD0825332F7000869493 /* Deep Electric Piano.caf in Resources */,
 				4C9CDD0225332F7000869493 /* Moving On Bell.caf in Resources */,
 				4C9CDCF025332F7000869493 /* Twilight.caf in Resources */,
+				4C4719072546D84F00FDA4E9 /* knock.aac in Resources */,
 				4C9CDD3025332F8800869493 /* Fantacy 1.mp3 in Resources */,
 				4C993BA6251256700082F86D /* zcool.ttf in Resources */,
 				4C51AD09250B53E4007DEB77 /* qqw_bling_bling.json in Resources */,
@@ -1657,7 +1675,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1689,7 +1707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1824,7 +1842,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1853,7 +1871,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

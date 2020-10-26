@@ -337,6 +337,7 @@
         [_saveBtn setTitleColor:DKIOS13SecondLabelColor() forState:UIControlStateHighlighted];
         [[_saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             if (CYStringIsEmpty(self.nameTF.text)) {
                 [XHToast showBottomWithText:@"请设置目标名称"];
                 return;
