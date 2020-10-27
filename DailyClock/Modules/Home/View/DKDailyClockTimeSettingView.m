@@ -385,6 +385,7 @@
         _cancleBtn.backgroundColor = DKIOS13ContainerColor();
         [[_cancleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             [self hide];
         }];
     }
@@ -400,6 +401,7 @@
         [_confirmBtn setTitleColor:DKIOS13LabelColor() forState:UIControlStateNormal];
         _confirmBtn.backgroundColor = DKIOS13ContainerColor();
         [[_confirmBtn  rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            vibrate();
             @strongify(self);
             if (self.block) {
                 NSMutableDictionary *info = @{}.mutableCopy;
