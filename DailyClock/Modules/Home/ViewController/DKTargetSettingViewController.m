@@ -735,6 +735,7 @@
             else{
                 [DKAlert showTitle:@"提示" subTitle:@"确定要删除该提醒么" clickAction:^(NSInteger idx, NSString * _Nonnull idxTitle) {
                     if (idx == DKAlertDone) {
+                        [self clearOldLocalnotications];
                         [self.model.reminders removeObject:obj];
                         [self.reminderView reload];
                     }
@@ -744,6 +745,25 @@
         };
     }
     return _reminderView;
+}
+
+- (void) clearOldLocalnotications{
+    UNUserNotificationCenter *notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
+    NSMutableArray <UNNotificationRequest *>* pendings = @[].mutableCopy;
+    [notificationCenter getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+        [requests enumerateObjectsUsingBlock:^(UNNotificationRequest * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSArray *reminders = [self.model reminders];
+            for (DKReminder *reminder in reminders) {
+                if ([reminder.uniqueID isEqualToString:obj.identifier]) {
+                    [pendings addObject:obj];
+                }
+            }
+        }];
+        
+        if (pendings.count!=0) {
+            [notificationCenter removePendingNotificationRequestsWithIdentifiers:[pendings valueForKeyPath:@"identifier"]];
+        }
+    }];
 }
 
 - (UIView *) pingciContainer{

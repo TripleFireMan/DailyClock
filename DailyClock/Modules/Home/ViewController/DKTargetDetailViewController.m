@@ -128,16 +128,10 @@
         make.height.offset(310);
     }];
     
-    [self.articleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(15);
-        make.right.offset(-15);
-        make.top.mas_equalTo(self.calendarContainer.mas_bottom).offset(0);
-    }];
-    
     [self.redPoint mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(15);
         make.width.height.offset(8);
-        make.top.mas_equalTo(self.articleView.mas_bottom).offset(15);
+        make.top.mas_equalTo(self.calendarContainer.mas_bottom).offset(20);
     }];
     
     [self.analyticsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -150,7 +144,7 @@
     
     [self.l1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(15);
-        make.top.mas_equalTo(self.analyticsLabel.mas_bottom).offset(20);
+        make.top.mas_equalTo(self.analyticsLabel.mas_bottom).offset(15);
         make.width.offset(itemWidth);
         make.height.offset(itemHeigt);
     }];
@@ -176,12 +170,19 @@
         make.height.offset(itemHeigt);
     }];
     
+    [self.articleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(15);
+        make.right.offset(-15);
+        make.top.mas_equalTo(self.l3.mas_bottom).offset(0);
+    }];
+    
+
+    
     CGFloat btnwidth = (kScreenSize.width -50) / 3.f;
     CGFloat btnHeight = 44.f;
     
     [self.stopBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
-        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
+        make.top.mas_equalTo(self.articleView.mas_bottom).offset(15);
         make.left.offset(15);
         make.width.offset(btnwidth);
         make.height.offset(btnHeight);
@@ -189,8 +190,7 @@
     }];
 
     [self.activeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
-        make.top.mas_equalTo(self.l3.mas_bottom).offset(30);
+        make.top.mas_equalTo(self.articleView.mas_bottom).offset(15);
         make.left.offset(15);
         make.width.offset(btnwidth);
         make.height.offset(btnHeight);

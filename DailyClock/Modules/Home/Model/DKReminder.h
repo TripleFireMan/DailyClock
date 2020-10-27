@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *alert;
 /// 唯一id
 @property (nonatomic, copy  ) NSString *uniqueID;
+/// 移除注册的提醒
+- (void) removeNotification;
 @end
 
 NS_ASSUME_NONNULL_END
