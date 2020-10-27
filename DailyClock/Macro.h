@@ -39,16 +39,6 @@ static inline void vibrate(){
 
 static inline void music(){
     dispatch_async(dispatch_get_main_queue(), ^{
-//        NSURL *system_sound_url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jingle" ofType:@"aac"]];
-//        // 第一步 创建 SystemSoundID
-//        SystemSoundID system_sound_id;
-//        AudioServicesCreateSystemSoundID((__bridge CFURLRef)system_sound_url, &system_sound_id);
-//        // 第二步 播放系统声音
-//        AudioServicesPlaySystemSound(system_sound_id);
-        
-        
-
-
         NSURL*moveMP3=[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jingle" ofType:@"aac"]];
 
         NSError*err=nil;

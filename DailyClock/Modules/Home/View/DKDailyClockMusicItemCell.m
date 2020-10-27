@@ -11,13 +11,14 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioServices.h>
 
-@interface DKDailyClockMusicItemCell ()
+@interface DKDailyClockMusicItemCell ()<AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) UIImageView *musicIcon;
 @property (nonatomic, strong) UILabel *musicName;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) CGFloat startAngle;
 @property (nonatomic, strong) DKPlayMusicModel *musicModel;
+@property (nonatomic, strong) AVAudioPlayer *player;
 @end
 
 @implementation DKDailyClockMusicItemCell
@@ -131,30 +132,16 @@
     
     if (WithMusic) {
         NSURL *system_sound_url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:self.musicModel.alert ofType:@"caf"]];
-
-            // 第一步 创建 SystemSoundID
-
-            SystemSoundID system_sound_id;
-
-            AudioServicesCreateSystemSoundID((__bridge CFURLRef)system_sound_url, &system_sound_id);
-
-            // 第二步 注册声音播放完成时间回调函数
-        self.musicModel.souid = system_sound_id;
-        AudioServicesAddSystemSoundCompletion(system_sound_id, NULL, NULL, SoundFinishedPlayingCallback, (__bridge void * _Nullable)(self));
-            // 第三步 播放系统声音
-            AudioServicesPlayAlertSound(system_sound_id);
+        NSError *error = nil;
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:system_sound_url error:&error];
+        [self.player prepareToPlay];
+        self.player.delegate = self;
+        [self.player play];
     }
 }
 
-//  第四步 声明播放完成的回调函数
-void SoundFinishedPlayingCallback(SystemSoundID sound_id, void *user_data)
-{
-    if (user_data != NULL) {
-        DKDailyClockMusicItemCell *cell = (__bridge DKDailyClockMusicItemCell *)(user_data);
-        if (cell) {
-            [cell stop];
-        }
-    }
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    [self stop];
 }
 
 
@@ -167,10 +154,8 @@ void SoundFinishedPlayingCallback(SystemSoundID sound_id, void *user_data)
     self.musicIcon.transform = CGAffineTransformIdentity;
     
     
-    //注销声音播放完成时间回调函数
-    AudioServicesRemoveSystemSoundCompletion(self.musicModel.souid);
-    // 释放 systemSoundID
-    AudioServicesDisposeSystemSoundID(self.musicModel.souid);
+    [self.player stop];
+    self.player = nil;
 }
 
 
