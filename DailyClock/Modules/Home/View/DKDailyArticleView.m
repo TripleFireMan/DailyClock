@@ -278,6 +278,7 @@
 //        _checkMore.backgroundColor = [UIColor redColor];
         [[_checkMore rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             self.checkMoreAction ? self.checkMoreAction() : nil;
         }];
     }

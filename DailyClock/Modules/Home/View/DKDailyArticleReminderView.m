@@ -97,6 +97,7 @@ UICollectionViewDelegateFlowLayout>
 }
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    vibrate();
     DKReminder *reminder = [self.model.reminders objectAtIndex:indexPath.row];
     if (self.block) {
         self.block(reminder);

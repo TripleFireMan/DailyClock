@@ -15,6 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self swizzleInstanceMethod:@selector(viewDidLoad) with:@selector(dkViewDidLoad)];
+        [self swizzleInstanceMethod:@selector(backbtn) with:@selector(dkbackbtn)];
     });
 }
 
@@ -37,6 +38,11 @@
     }
     
     self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
+}
+
+- (void)dkbackbtn{
+    vibrate();
+    [self dkbackbtn];
 }
 
 

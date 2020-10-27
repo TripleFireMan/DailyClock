@@ -19,6 +19,7 @@
         self.isAutoBeifeiShuju = YES;
         self.fontName = @"HappyZcool-2016";
         self.boldFontName = @"HappyZcool-2016";
+        self.settingItems = [DKSettingItem allSettings];
     }
     return self;
 }

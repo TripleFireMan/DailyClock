@@ -24,7 +24,9 @@ static inline void vibrate(){
     dispatch_async(dispatch_get_main_queue(), ^{
         if (@available(iOS 10, *)) {
             // 初始化震动反馈类
-            if (![DKApplication cy_shareInstance].forbidVibrate) {
+            NSPredicate *vibrateSetting = [NSPredicate predicateWithFormat:@"settingType==%ld",DKSettingItem_Vibrate];
+            DKSettingItem *item = [[[[DKApplication cy_shareInstance] settingItems] filteredArrayUsingPredicate:vibrateSetting]firstObject];
+            if (item.isOn) {
                 UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
                 // 准备
                 [generator prepare];
@@ -39,16 +41,20 @@ static inline void vibrate(){
 
 static inline void music(){
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSURL*moveMP3=[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jingle" ofType:@"aac"]];
+        NSPredicate *vibrateSetting = [NSPredicate predicateWithFormat:@"settingType==%ld",DKSettingItem_MusicForClock];
+        DKSettingItem *item = [[[[DKApplication cy_shareInstance] settingItems] filteredArrayUsingPredicate:vibrateSetting]firstObject];
+        if (item.isOn) {
+            NSURL*moveMP3=[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jingle" ofType:@"aac"]];
 
-        NSError*err=nil;
+            NSError*err=nil;
 
-        movePlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:moveMP3 error:&err];
+            movePlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:moveMP3 error:&err];
 
-        [movePlayer prepareToPlay];
-        if(err!=nil) {
-        }else{
-            [movePlayer play];
+            [movePlayer prepareToPlay];
+            if(err!=nil) {
+            }else{
+                [movePlayer play];
+            }
         }
     });
 }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FBLPromises.h"
+#import "DKSettingItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL forbidVibrate;
 /// 上次备份时间
 @property (nonatomic, strong) NSDate *lastBackupDate;
+/// 打卡设置项
+@property (nonatomic, strong) NSMutableArray <DKSettingItem *> * settingItems;
 
 - (void) setup:(NSDictionary *)launchInfo;
 

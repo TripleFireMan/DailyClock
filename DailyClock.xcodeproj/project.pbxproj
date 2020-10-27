@@ -279,6 +279,7 @@
 		4CA9776A25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
 		4CA9776B25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
 		4CA9776C25164C050041EB7D /* DKFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9776925164C050041EB7D /* DKFontModel.m */; };
+		4CC6FCD32547B1500038E70D /* DKSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC6FCD22547B1500038E70D /* DKSettingItem.m */; };
 		4CD225A0251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
 		4CD225A1251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
 		4CD225A2251A27B900285ED4 /* DKDailyArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */; };
@@ -514,6 +515,8 @@
 		4CA9776425164BB20041EB7D /* DKFontSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontSettingViewController.m; sourceTree = "<group>"; };
 		4CA9776825164C050041EB7D /* DKFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFontModel.h; sourceTree = "<group>"; };
 		4CA9776925164C050041EB7D /* DKFontModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontModel.m; sourceTree = "<group>"; };
+		4CC6FCD12547B1500038E70D /* DKSettingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSettingItem.h; sourceTree = "<group>"; };
+		4CC6FCD22547B1500038E70D /* DKSettingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSettingItem.m; sourceTree = "<group>"; };
 		4CD2259E251A27B900285ED4 /* DKDailyArticleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDailyArticleView.h; sourceTree = "<group>"; };
 		4CD2259F251A27B900285ED4 /* DKDailyArticleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyArticleView.m; sourceTree = "<group>"; };
 		4CE63C0A2508C0D4007EC122 /* DailyClockUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyClockUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -871,6 +874,8 @@
 				4CA9775F25160EE40041EB7D /* DKVersionModel.m */,
 				4CA9776825164C050041EB7D /* DKFontModel.h */,
 				4CA9776925164C050041EB7D /* DKFontModel.m */,
+				4CC6FCD12547B1500038E70D /* DKSettingItem.h */,
+				4CC6FCD22547B1500038E70D /* DKSettingItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1356,6 +1361,7 @@
 				4CA9776525164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
 				4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */,
 				4C8DA0CF2500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
+				4CC6FCD32547B1500038E70D /* DKSettingItem.m in Sources */,
 				4CA977462515D61E0041EB7D /* HttpTool.m in Sources */,
 				4C8DA0C02500E74600112389 /* DKApplication+Window.m in Sources */,
 				4C07A9432501EFF70064CB76 /* DKPingCiSegment.m in Sources */,

@@ -8,6 +8,7 @@
 #import "CYBaseNavigationBar.h"
 #import "DKAboutUsViewController.h"
 #import "DKFontSettingViewController.h"
+#import "DKSettingItem.h"
 
 @interface DKSettingViewController ()<UITableViewDelegate, UITableViewDataSource,UIFontPickerViewControllerDelegate>
 
@@ -69,62 +70,98 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *titles = @[@"关于我们",@"用户协议",@"隐私政策",@"给我们好评",@"字体设置"];
+    @weakify(self);
+//    NSArray *titles = [[DKSettingItem allSettings] valueForKeyPath:@"title"];
+    DKSettingItem *item = [[[DKApplication cy_shareInstance] settingItems] objectAtIndex:indexPath.row];
     static NSString *identifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    cell.textLabel.text = titles[indexPath.row];
+    cell.textLabel.text = item.title;
     cell.textLabel.font = DKFont(15);
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if ([item hasArrow]) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    if ([item hasSwitch]) {
+        UISwitch *switchView = [[UISwitch alloc] init];
+        switchView.on = item.isOn;
+        [[switchView rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            UISwitch *innerSwitch = (UISwitch *) x;
+            item.isOn = innerSwitch.isOn;
+            [[DKApplication cy_shareInstance] cy_save];
+        }];
+        switchView.onTintColor = kMainColor;
+        cell.accessoryView = switchView;
+    }
+    else{
+        cell.accessoryView = nil;
+    }
+    
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [[DKApplication cy_shareInstance] settingItems].count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     vibrate();
-    if (indexPath.row == 0) {
-        DKAboutUsViewController *vc = [DKAboutUsViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    else if (indexPath.row == 1){
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"userregiest" ofType:@"html"]];
-        CYH5ViewController *h5 = [[CYH5ViewController alloc] initWithURL:url];
-        [self.navigationController pushViewController:h5 animated:YES];
-    }
-    else if (indexPath.row == 2){
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"private" ofType:@"html"]];
-        CYH5ViewController *h5 = [[CYH5ViewController alloc] initWithURL:url];
-        [self.navigationController pushViewController:h5 animated:YES];
-    }
-    else if (indexPath.row == 3){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1531050825&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"] options:@{} completionHandler:^(BOOL success) {
-            
-        }];
-    }
-    else if (indexPath.row == 4){
-//        if (@available(iOS 13.0, *)) {
-//
-//            UIFontPickerViewControllerConfiguration *config = [UIFontPickerViewControllerConfiguration new];
-//            config.filteredLanguagesPredicate = [UIFontPickerViewControllerConfiguration filterPredicateForFilteredLanguages:@[@"zh-Hans"]];
-//
-//            UIFontPickerViewController *fontPicker=  [[UIFontPickerViewController alloc] initWithConfiguration:config];
-//            fontPicker.delegate = self;
-//            fontPicker.modalPresentationStyle = UIModalPresentationFullScreen;
-//
-//            [self presentViewController:fontPicker animated:YES completion:nil];
-//        } else
+    
+    DKSettingItem *item = [[[DKApplication cy_shareInstance] settingItems] objectAtIndex:indexPath.row];
+    switch (item.settingType) {
+        case DKSettingItem_AboutUs:
+        {
+            DKAboutUsViewController *vc = [DKAboutUsViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case DKSettingItem_UserProtocol:
+        {
+            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"userregiest" ofType:@"html"]];
+            CYH5ViewController *h5 = [[CYH5ViewController alloc] initWithURL:url];
+            [self.navigationController pushViewController:h5 animated:YES];
+        }
+            break;
+        case DKSettingItem_PrivateProtocol:
+        {
+            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"private" ofType:@"html"]];
+            CYH5ViewController *h5 = [[CYH5ViewController alloc] initWithURL:url];
+            [self.navigationController pushViewController:h5 animated:YES];
+        }
+            break;
+        case DKSettingItem_RecommendUS:
+        {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1531050825&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"] options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        }
+            break;
+        case DKSettingItem_FontSetting:
         {
             DKFontSettingViewController *vc = [DKFontSettingViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }
+            break;
+        case DKSettingItem_Vibrate:
+        {
+            
+        }
+            break;
+        case DKSettingItem_MusicForClock:
+        {
+            
+        }
+            break;
+        default:
+            break;
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
