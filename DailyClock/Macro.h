@@ -11,15 +11,6 @@
 
 #import <UIKit/UIKit.h>
 static AVAudioPlayer * movePlayer = nil;
-//static AVAudioPlayer * avplayer(){
-//    static AVAudioPlayer *player = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        player = [[AVAudioPlayer alloc] init];
-//        player.url =
-//    });
-//}
-
 static inline void vibrate(){
     dispatch_async(dispatch_get_main_queue(), ^{
         if (@available(iOS 10, *)) {

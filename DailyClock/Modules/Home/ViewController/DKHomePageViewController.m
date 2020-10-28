@@ -11,15 +11,17 @@
 #import "DKTargetSharedViewController.h"
 #import "DKTargetDetailViewController.h"
 #import "DKTargetSettingViewController.h"
+#import "DKTargetCollectionViewCell.h"
 
-@interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+@interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong) UIButton *addBtn;
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+@property (nonatomic, strong) UICollectionView *colletionView;
 @end
 
 @implementation DKHomePageViewController
@@ -55,24 +57,31 @@
 - (void) loadData {
     @weakify(self);
     if ([DKTargetManager cy_shareInstance].activeModels.count == 0) {
-        [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"你还没有创建目标，点击右上角开始吧~" topMargin:200 clickRefresh:^{
+//        [self.tableView cy_showEmptyImage:@"BeginTargetTip" text:@"你还没有创建目标，点击右上角开始吧~" topMargin:200 clickRefresh:^{
+//            @strongify(self);
+//            [self loadData];
+//        }];
+        
+        [self.colletionView cy_showEmptyImage:@"BeginTargetTip" text:@"你还没有创建目标，点击右上角开始吧~" topMargin:200 clickRefresh:^{
             @strongify(self);
             [self loadData];
         }];
     }
     else{
-        [self.tableView cy_hideAll];
+//        [self.tableView cy_hideAll];
+        [self.colletionView cy_hideAll];
     }
     
-    [self.tableView reloadData];
-    
+//    [self.tableView reloadData];
+    [self.colletionView reloadData];
     
 }
 
 - (void) setupSubView
 {
     [self.headerView addSubview:self.addBtn];
-    [self.view addSubview:self.tableView];
+//    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.colletionView];
 }
 
 - (void) addConstraints
@@ -83,7 +92,12 @@
         make.width.height.offset(44);
     }];
     
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.headerView.mas_bottom);
+//        make.left.right.bottom.offset(0);
+//    }];
+    
+    [self.colletionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.headerView.mas_bottom);
         make.left.right.bottom.offset(0);
     }];
@@ -207,6 +221,7 @@
 /// @param model 目标参数
 - (void) p_save:(DKTargetModel *)model{
     [[DKTargetManager cy_shareInstance] cy_save];
+    [self.colletionView reloadData];
 }
 
 
@@ -244,6 +259,71 @@
         [_tableView registerClass:[DKHomeItemTableViewCell class] forCellReuseIdentifier:@"DKHomeItemTableViewCell"];
     }
     return _tableView;
+}
+
+- (UICollectionView *) colletionView{
+    if (!_colletionView) {
+        NSInteger numberofColum = 3;
+        CGFloat gap = 20.f;
+        CGFloat margin = 15.f;
+        CGFloat itemWidth = (kScreenSize.width - margin * 2 - (numberofColum - 1) * gap) / numberofColum;
+        CGFloat itemHeight = 106.f;
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+//        layout.headerReferenceSize = CGSizeMake(margin, itemHeight);
+//        layout.footerReferenceSize = CGSizeMake(margin, itemHeight);
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        _colletionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        _colletionView.delegate = self;
+        _colletionView.dataSource = self;
+        _colletionView.contentInset = UIEdgeInsetsMake(30, 15, 0, 15);
+        _colletionView.alwaysBounceVertical = YES;
+        _colletionView.backgroundColor = [UIColor clearColor];
+        [_colletionView registerClass:[DKTargetCollectionViewCell class] forCellWithReuseIdentifier:@"DKTargetCollectionViewCell"];
+    }
+    return _colletionView;
+}
+
+- (__kindof UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    @weakify(self);
+    DKTargetCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DKTargetCollectionViewCell" forIndexPath:indexPath];
+    DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
+    cell.model = model;
+    cell.clickBlock = ^(id obj) {
+        @strongify(self);
+        if (![model shouldAutoDaily]) {
+            vibrate();
+            music();
+            [self p_save:model];
+        }
+        else{
+            vibrate();
+            music();
+            [DKSharePopView showOnView:[UIApplication sharedApplication].keyWindow confirmAction:^{
+                vibrate();
+                [self p_save:model];
+            } shareAction:^{
+                vibrate();
+                [self p_save:model];
+                [self p_share:model];
+                
+                DKTargetSharedViewController *shareObj =  [[DKTargetSharedViewController alloc] initWithNibName:@"DKTargetSharedViewController" bundle:[NSBundle mainBundle]];
+                shareObj.modalPresentationStyle = UIModalPresentationFullScreen;
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareObj];
+                nav.modalPresentationStyle = UIModalPresentationFullScreen;
+                [self.navigationController presentViewController:nav animated:YES completion:nil];
+                
+                
+            } cancelAction:^{
+                
+            } targetModel:model signModel:obj];
+        }
+    };
+    return cell;
+}
+
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [[DKTargetManager cy_shareInstance] activeModels].count;
 }
 
 - (NSMutableArray *) dataSource{

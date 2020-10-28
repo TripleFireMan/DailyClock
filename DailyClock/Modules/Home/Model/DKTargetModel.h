@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 @property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, copy) NSString *icon;
+/// 颜色
+@property (nonatomic, strong) NSString *color;
 
 @property (nonatomic, copy) NSString *backgroundImage;
 

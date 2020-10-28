@@ -245,6 +245,7 @@
 		4C9CDD55253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
 		4C9CDD56253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
 		4C9CDD57253339C900869493 /* DKPlayMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CDD54253339C900869493 /* DKPlayMusicModel.m */; };
+		4CA09CB12549476A0081C60F /* DKTargetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA09CB02549476A0081C60F /* DKTargetCollectionViewCell.m */; };
 		4CA51F7D2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
 		4CA51F7E2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
 		4CA51F7F2536A15500FDC6DB /* DKFontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA51F7C2536A15500FDC6DB /* DKFontCell.m */; };
@@ -490,6 +491,8 @@
 		4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKDailyClockMusicItemCell.m; sourceTree = "<group>"; };
 		4C9CDD53253339C900869493 /* DKPlayMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKPlayMusicModel.h; sourceTree = "<group>"; };
 		4C9CDD54253339C900869493 /* DKPlayMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKPlayMusicModel.m; sourceTree = "<group>"; };
+		4CA09CAF2549476A0081C60F /* DKTargetCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetCollectionViewCell.h; sourceTree = "<group>"; };
+		4CA09CB02549476A0081C60F /* DKTargetCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetCollectionViewCell.m; sourceTree = "<group>"; };
 		4CA51F7B2536A15500FDC6DB /* DKFontCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKFontCell.h; sourceTree = "<group>"; };
 		4CA51F7C2536A15500FDC6DB /* DKFontCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKFontCell.m; sourceTree = "<group>"; };
 		4CA97731251456BC0041EB7D /* DKDataResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKDataResumeViewController.h; sourceTree = "<group>"; };
@@ -843,6 +846,8 @@
 				4C9CDD4B2533302800869493 /* DKDailyClockMusicItemCell.m */,
 				4C9CDAB725319D4500869493 /* DKDailyClockTimeSettingView.h */,
 				4C9CDAB825319D4500869493 /* DKDailyClockTimeSettingView.m */,
+				4CA09CAF2549476A0081C60F /* DKTargetCollectionViewCell.h */,
+				4CA09CB02549476A0081C60F /* DKTargetCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1360,6 +1365,7 @@
 				4C8DA0BB2500E6D700112389 /* DKApplication.m in Sources */,
 				4CA9776525164BB20041EB7D /* DKFontSettingViewController.m in Sources */,
 				4C993BCA2513A7B90082F86D /* CacheTool.m in Sources */,
+				4CA09CB12549476A0081C60F /* DKTargetCollectionViewCell.m in Sources */,
 				4C8DA0CF2500EA0800112389 /* CYBaseViewController+DKExtend.m in Sources */,
 				4CC6FCD32547B1500038E70D /* DKSettingItem.m in Sources */,
 				4CA977462515D61E0041EB7D /* HttpTool.m in Sources */,
