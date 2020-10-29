@@ -46,6 +46,26 @@
     return _signModels;
 }
 
+- (NSString *) color{
+    if (!_color) {
+        NSMutableArray * datasource = [NSMutableArray array];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"targets" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:path]];
+        NSDictionary *datamodels = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSArray *models = [NSArray modelArrayWithClass:[DKTargetModel class] json:datamodels[@"data"]];
+        [datasource addObjectsFromArray:models];
+        [datasource enumerateObjectsUsingBlock:^(DKTargetModel *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj.title isEqualToString:self.title]) {
+                _color = obj.color;
+            }
+        }];
+        if (!_color) {
+            _color = @"#75B1FF";
+        }
+    }
+    return _color;
+}
+
 - (NSMutableArray <DKTargetPinCiWeekModel *> *) weekSettings{
     if (!_weekSettings) {
         _weekSettings = [NSMutableArray array];

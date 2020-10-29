@@ -28,7 +28,7 @@ class DKDailyItemCell: UITableViewCell {
     var model:DKTargetModel?{
         willSet(newobj){
             self.nameLabel.text = newobj!.title
-            self.img.image = UIImage.init(named: newobj!.icon)
+            self.img.image = UIImage.init(named: newobj!.icon.appending("-3"))
         }
     }
     

@@ -72,6 +72,7 @@
     self.titleLabel.text = self.model.title;
     self.bgImageView.image = [UIImage imageNamed:self.model.backgroundImage];
     self.iconImgView.image = [UIImage imageNamed:self.model.icon];
+    self.titleLabel.font = DKFont(14);
 }
 
 - (UILabel *) titleLabel{

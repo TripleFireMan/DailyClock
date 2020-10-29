@@ -4,6 +4,7 @@
             "id":0,
             "title":"自定义",
             "icon":"zidingyi",
+            "homeIcon":"zidingyi-3",
             "backgroundImage":"bbg6",
             "color":"#75B1FF"
         },
@@ -11,6 +12,7 @@
             "id":1,
             "title":"早起",
             "icon":"zaoqi",
+            "homeIcon":"zaoqi-3",
             "backgroundImage":"bbg1",
             "color":"#53D7D5"
         },
@@ -18,6 +20,7 @@
             "id":2,
             "title":"早睡",
             "icon":"sleep",
+            "homeIcon":"sleep-3",
             "backgroundImage":"bbg2",
             "color":"#FFD66A"
         },
@@ -25,6 +28,7 @@
             "id":3,
             "title":"戒烟",
             "icon":"jieyan",
+            "homeIcon":"jieyan-3",
             "backgroundImage":"bbg3",
             "color":"#FF9B90"
         },
@@ -32,6 +36,7 @@
             "id":4,
             "title":"戒酒",
             "icon":"drink",
+            "homeIcon":"drink-3",
             "backgroundImage":"bbg4",
             "color":"#FB83BE"
         },
@@ -39,6 +44,7 @@
             "id":5,
             "title":"运动健身",
             "icon":"sport",
+            "homeIcon":"sport-3",
             "backgroundImage":"bbg5",
             "color":"#6AD5FD"
         },
@@ -46,6 +52,7 @@
             "id":6,
             "title":"游泳",
             "icon":"swim",
+            "homeIcon":"swim-3",
             "backgroundImage":"bbg6",
             "color":"#75B1FF"
         },
@@ -53,6 +60,7 @@
             "id":7,
             "title":"每天八杯水",
             "icon":"water",
+            "homeIcon":"water-3",
             "backgroundImage":"bbg1",
             "color":"#53D7D5"
         },
@@ -60,6 +68,7 @@
             "id":8,
             "title":"浇水",
             "icon":"jiaoshui",
+            "homeIcon":"jiaoshui-3",
             "backgroundImage":"bbg2",
             "color":"#FFD66A"
         },
@@ -67,6 +76,7 @@
             "id":9,
             "title":"每日水果",
             "icon":"shuiguo",
+            "homeIcon":"shuiguo-3",
             "backgroundImage":"bbg3",
             "color":"#FF9B90"
         },
@@ -74,6 +84,7 @@
             "id":10,
             "title":"每日噗噗",
             "icon":"matong",
+            "homeIcon":"matong-3",
             "backgroundImage":"bbg4",
             "color":"#FB83BE"
         },
@@ -81,6 +92,7 @@
             "id":11,
             "title":"爬山",
             "icon":"pashan",
+            "homeIcon":"pashan-3",
             "backgroundImage":"bbg5",
             "color":"#6AD5FD"
         },
@@ -88,6 +100,7 @@
             "id":12,
             "title":"忌口",
             "icon":"jikou",
+            "homeIcon":"jikou-3",
             "backgroundImage":"bbg6",
             "color":"#75B1FF"
         },
@@ -95,6 +108,7 @@
             "id":13,
             "title":"看书",
             "icon":"book",
+            "homeIcon":"book-3",
             "backgroundImage":"bbg1",
             "color":"#53D7D5"
         },
@@ -102,6 +116,7 @@
             "id":14,
             "title":"背单词",
             "icon":"beidanci",
+            "homeIcon":"beidanci-3",
             "backgroundImage":"bbg2",
             "color":"#FFD66A"
         },
@@ -109,6 +124,7 @@
             "id":15,
             "title":"练字",
             "icon":"lianzi",
+            "homeIcon":"lianzi-3",
             "backgroundImage":"bbg3",
             "color":"#FF9B90"
         },
@@ -116,6 +132,7 @@
             "id":16,
             "title":"每天遛狗",
             "icon":"dog",
+            "homeIcon":"dog-3",
             "backgroundImage":"bbg4",
             "color":"#FB83BE"
         }

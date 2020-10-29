@@ -45,6 +45,7 @@
     [RACObserve([DKApplication cy_shareInstance], fontName) subscribeNext:^(id  _Nullable x) {
         @strongify(self);
         [self.tableView reloadData];
+        [self.colletionView reloadData];
         self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
     }];
 }
@@ -267,7 +268,7 @@
         CGFloat gap = 20.f;
         CGFloat margin = 15.f;
         CGFloat itemWidth = (kScreenSize.width - margin * 2 - (numberofColum - 1) * gap) / numberofColum;
-        CGFloat itemHeight = 106.f;
+        CGFloat itemHeight = 116.f;
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.itemSize = CGSizeMake(itemWidth, itemHeight);
 //        layout.headerReferenceSize = CGSizeMake(margin, itemHeight);
@@ -276,7 +277,7 @@
         _colletionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _colletionView.delegate = self;
         _colletionView.dataSource = self;
-        _colletionView.contentInset = UIEdgeInsetsMake(30, 15, 0, 15);
+        _colletionView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
         _colletionView.alwaysBounceVertical = YES;
         _colletionView.backgroundColor = [UIColor clearColor];
         [_colletionView registerClass:[DKTargetCollectionViewCell class] forCellWithReuseIdentifier:@"DKTargetCollectionViewCell"];

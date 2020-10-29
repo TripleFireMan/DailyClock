@@ -78,19 +78,19 @@ platform :ios do
 
   desc "screet"
   lane:frame do
-	snapshot
+	#snapshot
 	#frame_screenshots
-	 #frameit(
-     # white: true,
+	 frameit(
+      white: true,
       # 使用iPhone 5s替代iPhone SE框架
-      #use_legacy_iphone5s: true,
+      use_legacy_iphone5s: true,
       # 使用iPhone 6s替代iPhone 7框架
-      # use_legacy_iphone6s: true,
+       use_legacy_iphone6s: true,
       # 使用iPhone X 替代iPhone XS框架
-      # use_legacy_iphonex: true,
+       use_legacy_iphonex: true,
       # 截图所在路径
-      #path: "./fastlane/screenshots"
-    #)
+      path: "./fastlane/screenshots"
+    )
 
   end
 

@@ -44,19 +44,19 @@
     {
       "filter": "2",
       "keyword": {
-        "color": "#feb909"
+        "color": "#d21559"
       }
     },
     {
       "filter": "3",
       "keyword": {
-        "color": "#aa4dbc"
+        "color": "#d21559"
       }
     },
     {
       "filter": "4",
       "keyword": {
-        "color": "#31bb48"
+        "color": "#d21559"
       }
     },
     {
@@ -68,7 +68,7 @@
     {
       "filter": "6",
       "keyword": {
-        "color": "#feb909"
+        "color": "#d21559"
       }
     }
   ]

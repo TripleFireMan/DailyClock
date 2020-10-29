@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "DKCreateTargetViewController.h"
 #import "DKMineViewController.h"
+#import "DKTargetListViewController.h"
 
 @implementation DKApplication (Window)
 - (void) initwindow:(NSDictionary *)laucnInfo{
@@ -30,9 +31,14 @@
     UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mine];
     [[CYCustomTabBarController shareInstance] addChildViewController:mineNavi title:@"我的" image:[UIImage imageNamed:@"TabBar_My_Nor"] selectedImage:[UIImage imageNamed:@"TabBar_My_Sel"] color:[UIColor lightGrayColor] selectedColor:[UIColor lightGrayColor]];
     
+    DKTargetListViewController *targetList = [DKTargetListViewController new];
+    UINavigationController *targetListNavi = [[UINavigationController alloc] initWithRootViewController:targetList];
+    [[CYCustomTabBarController shareInstance] addChildViewController:targetListNavi title:@"目标" image:[UIImage imageNamed:@"TabBar_Target_Nor"] selectedImage:[UIImage imageNamed:@"TabBar_Target_Sel"] color:[UIColor lightGrayColor] selectedColor:[UIColor lightGrayColor]];
+    
     UITabBarController *tabbar = [[UITabBarController alloc] init];
     tabbar.delegate = self;
     [tabbar addChildViewController:homeNavi];
+    [tabbar addChildViewController:targetListNavi];
     [tabbar addChildViewController:mineNavi];
     tabbar.tabBar.tintColor = DKIOS13LabelColor();
 

@@ -16,6 +16,7 @@
         [self.contentView addSubview:self.iconContainer];
         [self.iconContainer addSubview:self.iconImageView];
         [self.contentView addSubview:self.textLabel];
+        [self.contentView addSubview:self.continueLabel];
         
         [self.iconContainer mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.offset(0);
@@ -31,6 +32,11 @@
         [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.iconContainer.mas_bottom).offset(5);
             make.centerX.offset(0);
+        }];
+        
+        [self.continueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.textLabel.mas_bottom).offset(4);
+            make.centerX.offset(0);
             make.bottom.offset(-10);
         }];
     }
@@ -39,13 +45,23 @@
 
 - (void) setModel:(DKTargetModel *)model{
     _model = model;
-    self.iconImageView.image = [UIImage imageNamed:_model.icon];
+    
     self.textLabel.text=  _model.title;
+    self.textLabel.font = DKBoldFont(12);
+    self.continueLabel.font = DKFont(11);
+    if (_model.continueCont!=0) {
+        self.continueLabel.text = [NSString stringWithFormat:@"已打卡%@天",@(_model.signModels.count)];
+    }else{
+        self.continueLabel.text = nil;
+    }
+    
     if ([self isTodaySigned]) {
         self.iconContainer.backgroundColor = [UIColor colorWithHexString:model.color];
+        self.iconImageView.image = [UIImage imageNamed:_model.icon];
     }
     else{
-        self.iconContainer.backgroundColor = DKIOS13BackgroundColor();
+        self.iconContainer.backgroundColor = DKIOS13ContainerColor();
+        self.iconImageView.image = [UIImage imageNamed:[_model.icon stringByAppendingString:@"-3"]];
     }
 }
 
@@ -55,7 +71,7 @@
         _iconContainer = [UIView new];
         _iconContainer.backgroundColor = [UIColor whiteColor];
         _iconContainer.layer.cornerRadius = 33.f;
-        _iconContainer.layer.borderColor = [UIColor colorWithHexString:@"#999999"].CGColor;
+        _iconContainer.layer.borderColor = [UIColor colorWithHexString:@"#e0e0e0"].CGColor;
         _iconContainer.layer.borderWidth = 1.f;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
             @strongify(self);
@@ -69,7 +85,7 @@
                 self.clickBlock ? self.clickBlock(signModel) : nil;
             }
             else{
-                
+                [XHToast showBottomWithText:@"今日已打卡，明天再来吧！"];
             }
         }];
         _iconContainer.userInteractionEnabled = YES;
@@ -106,7 +122,28 @@
     return _textLabel;
 }
 
+- (UILabel *) continueLabel{
+    if (!_continueLabel) {
+        _continueLabel = [UILabel new];
+        _continueLabel.font = DKFont(11);
+        _continueLabel.textColor = DKIOS13SecondLabelColor();
+    }
+    return _continueLabel;
+}
+
 - (void) animate{
-    
+    [UIView transitionWithView:self.iconContainer duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        if ([self isTodaySigned]) {
+            self.iconContainer.backgroundColor = [UIColor colorWithHexString:self.model.color];
+            self.iconImageView.image = [UIImage imageNamed:self.model.icon];
+        }
+        else{
+            self.iconContainer.backgroundColor = DKIOS13BackgroundColor();
+        }
+        [self setModel:self.model];
+       
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 @end

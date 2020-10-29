@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView   *iconImageView;
 @property (nonatomic, strong) UILabel       *textLabel;
 @property (nonatomic, copy  ) CYIDBlock clickBlock;
+@property (nonatomic, strong) UILabel    *continueLabel;
 
 /// 做动画
 - (void) animate;

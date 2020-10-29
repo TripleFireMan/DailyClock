@@ -65,7 +65,7 @@
 
 - (void) setTargetModel:(DKTargetModel *)targetModel{
     _targetModel = targetModel;
-    self.iconImage.image = [UIImage imageNamed:_targetModel.icon?:@""];
+    self.iconImage.image = [UIImage imageNamed:[_targetModel.icon stringByAppendingString:@"-2"]?:@""];
     self.nameLabel.text = _targetModel.title;
 }
 - (UIImageView *) iconImage{
