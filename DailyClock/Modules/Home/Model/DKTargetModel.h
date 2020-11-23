@@ -68,6 +68,10 @@ typedef NS_ENUM(NSInteger, DKTargetStatus){
 - (NSInteger) continueCont;
 
 - (NSMutableArray <DKSignModel *> *) rizhi;
+/// 注册本地通知
+- (void) regiestNotifications;
+/// 取消本地通知
+- (void) unRegiestNotifications;
 @end
 
 

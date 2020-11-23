@@ -259,6 +259,14 @@
     return days;
 }
 
+-  (void) regiestNotifications{
+    
+}
+
+- (void) unRegiestNotifications{
+    
+}
+
 
 - (NSMutableArray <DKSignModel *> *)rizhi{
     NSMutableArray <DKSignModel *>*signs = [NSMutableArray new];
