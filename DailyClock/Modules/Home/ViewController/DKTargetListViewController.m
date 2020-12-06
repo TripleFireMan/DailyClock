@@ -147,6 +147,7 @@
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = DKIOS13BackgroundColor();
         [_tableView registerClass:[DKCurrentTableViewCell class] forCellReuseIdentifier:@"DKCurrentTableViewCell"];
     }
     return _tableView;

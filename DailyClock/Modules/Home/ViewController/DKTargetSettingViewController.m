@@ -10,6 +10,7 @@
 #import "DKDailyArticleReminderView.h"
 #import "DKDailyClockTimeSettingView.h"
 #import <UserNotifications/UserNotifications.h>
+#import "JPUSHService.h"
 
 @interface DKTargetSettingViewController ()
 /// 内容区
@@ -764,6 +765,8 @@
             [notificationCenter removePendingNotificationRequestsWithIdentifiers:[pendings valueForKeyPath:@"identifier"]];
         }
     }];
+    
+    
 }
 
 - (UIView *) pingciContainer{

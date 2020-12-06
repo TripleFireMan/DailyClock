@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DKTargetSharedViewController : CYBaseViewController
 
+@property (nonatomic, strong) DKTargetModel *model;
+
 @end
 
 NS_ASSUME_NONNULL_END

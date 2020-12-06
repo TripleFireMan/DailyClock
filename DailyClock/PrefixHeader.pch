@@ -28,4 +28,5 @@
 #import "HttpTool.h"
 #import "URL.h"
 #import "Macro.h"
+#import <UMCommon/MobClick.h>
 #endif /* PrefixHeader_pch */

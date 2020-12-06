@@ -20,4 +20,5 @@
 #define UploadImge          HOST@"save_profile?"
 #define VersionHistory      HOST@"dailyClock/versionHistory?"
 #define kDailyClockFont     HOST@"dailyClock/fonts"
+#define kDailyClockTodayCard HOST@"dailyClock/todayCard?"
 #endif /* URL_h */

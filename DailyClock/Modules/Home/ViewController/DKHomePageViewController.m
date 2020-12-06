@@ -12,11 +12,11 @@
 #import "DKTargetDetailViewController.h"
 #import "DKTargetSettingViewController.h"
 #import "DKTargetCollectionViewCell.h"
-
+#import <StoreKit/StoreKit.h>
 @interface DKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong) UIButton *addBtn;
-
+@property (nonatomic, strong) UIButton *sharebtn;
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -48,6 +48,15 @@
         [self.colletionView reloadData];
         self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
     }];
+    [self  showReviewAlert];
+}
+
+- (void)showReviewAlert {
+    if (@available(iOS 10.3, *)) {
+        [SKStoreReviewController requestReview];
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -81,7 +90,7 @@
 - (void) setupSubView
 {
     [self.headerView addSubview:self.addBtn];
-//    [self.view addSubview:self.tableView];
+    [self.headerView addSubview:self.sharebtn];
     [self.view addSubview:self.colletionView];
 }
 
@@ -89,6 +98,12 @@
 {
     [self.addBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.offset(-10);
+        make.bottom.offset(0);
+        make.width.height.offset(44);
+    }];
+    
+    [self.sharebtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(10);
         make.bottom.offset(0);
         make.width.height.offset(44);
     }];
@@ -292,10 +307,12 @@
     cell.model = model;
     cell.clickBlock = ^(id obj) {
         @strongify(self);
+        [MobClick event:@"打卡" label:model.title];
         if (![model shouldAutoDaily]) {
             vibrate();
             music();
             [self p_save:model];
+            [self p_jumpToshare];
         }
         else{
             vibrate();
@@ -303,18 +320,9 @@
             [DKSharePopView showOnView:[UIApplication sharedApplication].keyWindow confirmAction:^{
                 vibrate();
                 [self p_save:model];
+                [self p_jumpToshare];
             } shareAction:^{
-                vibrate();
-                [self p_save:model];
-                [self p_share:model];
-                
-                DKTargetSharedViewController *shareObj =  [[DKTargetSharedViewController alloc] initWithNibName:@"DKTargetSharedViewController" bundle:[NSBundle mainBundle]];
-                shareObj.modalPresentationStyle = UIModalPresentationFullScreen;
-                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:shareObj];
-                nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                [self.navigationController presentViewController:nav animated:YES completion:nil];
-                
-                
+
             } cancelAction:^{
                 
             } targetModel:model signModel:obj];
@@ -332,6 +340,27 @@
         _dataSource = [NSMutableArray array];
     }
     return _dataSource;
+}
+
+- (UIButton *) sharebtn{
+    @weakify(self);
+    if (!_sharebtn) {
+        _sharebtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _sharebtn.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+        [_sharebtn setImage:[UIImage imageNamed:@"jilu"] forState:UIControlStateNormal];
+        [[_sharebtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self);
+            [self p_jumpToshare];
+        }];
+    }
+    return _sharebtn;
+}
+
+- (void) p_jumpToshare {
+    DKTargetSharedViewController *shared = [DKTargetSharedViewController new];
+    UINavigationController *naviShare = [[UINavigationController alloc] initWithRootViewController:shared];
+    naviShare.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController presentViewController:naviShare animated:YES completion:nil];
 }
 
 #pragma mark -

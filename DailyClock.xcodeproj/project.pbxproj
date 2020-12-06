@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C076989257CBB9800CC3411 /* DKTodayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C076987257CBB9700CC3411 /* DKTodayCard.m */; };
 		4C07A929250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
 		4C07A92A250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
 		4C07A92B250108850064CB76 /* DKCreateTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07A928250108850064CB76 /* DKCreateTargetCell.m */; };
@@ -65,9 +66,6 @@
 		4C51AD14250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
 		4C51AD15250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
 		4C51AD16250C6D2B007DEB77 /* DKTargetSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */; };
-		4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
-		4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
-		4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */; };
 		4C51AD1F250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
 		4C51AD20250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
 		4C51AD21250CAC42007DEB77 /* DKMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */; };
@@ -344,6 +342,8 @@
 /* Begin PBXFileReference section */
 		282AB14845C9214A0EF522D4 /* libPods-DailyClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3491C9716A45D76C310454C9 /* Pods-DailyClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyClockUITests.release.xcconfig"; path = "Target Support Files/Pods-DailyClockUITests/Pods-DailyClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C076987257CBB9700CC3411 /* DKTodayCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTodayCard.m; sourceTree = "<group>"; };
+		4C076988257CBB9800CC3411 /* DKTodayCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTodayCard.h; sourceTree = "<group>"; };
 		4C07A927250108850064CB76 /* DKCreateTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCreateTargetCell.h; sourceTree = "<group>"; };
 		4C07A928250108850064CB76 /* DKCreateTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCreateTargetCell.m; sourceTree = "<group>"; };
 		4C07A92C250121DE0064CB76 /* DKTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTheme.h; sourceTree = "<group>"; };
@@ -394,7 +394,6 @@
 		4C51AD05250B53E4007DEB77 /* qqw_bling_bling.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qqw_bling_bling.json; sourceTree = "<group>"; };
 		4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKTargetSharedViewController.h; sourceTree = "<group>"; };
 		4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKTargetSharedViewController.m; sourceTree = "<group>"; };
-		4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKTargetSharedViewController.xib; sourceTree = "<group>"; };
 		4C51AD1D250CAC42007DEB77 /* DKMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKMineViewController.h; sourceTree = "<group>"; };
 		4C51AD1E250CAC42007DEB77 /* DKMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKMineViewController.m; sourceTree = "<group>"; };
 		4C51AD22250CB7AA007DEB77 /* 打卡.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "打卡.entitlements"; sourceTree = "<group>"; };
@@ -810,7 +809,6 @@
 				4C51AD4D250E1DA3007DEB77 /* DKTargetDetailViewController.m */,
 				4C51AD11250C6D2B007DEB77 /* DKTargetSharedViewController.h */,
 				4C51AD12250C6D2B007DEB77 /* DKTargetSharedViewController.m */,
-				4C51AD13250C6D2B007DEB77 /* DKTargetSharedViewController.xib */,
 				4C7DA7A42524191900B58B59 /* DailyClock-Bridging-Header.h */,
 				4C7DA7A52524191900B58B59 /* DailyClockTests-Bridging-Header.h */,
 			);
@@ -865,6 +863,8 @@
 		4C8DA0C72500E88F00112389 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C076988257CBB9800CC3411 /* DKTodayCard.h */,
+				4C076987257CBB9700CC3411 /* DKTodayCard.m */,
 				4C07A9372501DE740064CB76 /* DKTargetManager.h */,
 				4C07A9382501DE740064CB76 /* DKTargetManager.m */,
 				4C8DA0DC2500F3E500112389 /* DKTargetModel.h */,
@@ -1145,7 +1145,6 @@
 				4C91B7962513B25C00C8F594 /* userregiest.html in Resources */,
 				4C9CDCBD25332F6300869493 /* Across the Liffey Lead Guitar.caf in Resources */,
 				4C7DA8472524627900B58B59 /* com.css in Resources */,
-				4C51AD17250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C9CDD3C25332F8800869493 /* xixu.mp3 in Resources */,
 				4C1CCE7824FE49690004EF4E /* Assets.xcassets in Resources */,
 			);
@@ -1161,7 +1160,6 @@
 				4CEDD5AA250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C9CDCF125332F7000869493 /* Twilight.caf in Resources */,
 				4C9CDD1225332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
-				4C51AD18250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C9CDD3425332F8800869493 /* knock.mp3 in Resources */,
 				4C9CDCF425332F7000869493 /* Shining Star Electric Piano.caf in Resources */,
 				4C9CDD1525332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
@@ -1200,7 +1198,6 @@
 				4CEDD5AB250F753A00092940 /* DKSettingViewController.xib in Resources */,
 				4C9CDCF225332F7000869493 /* Twilight.caf in Resources */,
 				4C9CDD1325332F7000869493 /* Arpeggio Interlude Guitar.caf in Resources */,
-				4C51AD19250C6D2B007DEB77 /* DKTargetSharedViewController.xib in Resources */,
 				4C9CDD3525332F8800869493 /* knock.mp3 in Resources */,
 				4C9CDCF525332F7000869493 /* Shining Star Electric Piano.caf in Resources */,
 				4C9CDD1625332F7000869493 /* Brooklyn Nights Guitar.caf in Resources */,
@@ -1341,6 +1338,7 @@
 				4C07A9342501DDE80064CB76 /* DKTargetSettingViewController.m in Sources */,
 				4C9CDD55253339C900869493 /* DKPlayMusicModel.m in Sources */,
 				4C993BBB25139A370082F86D /* DKMineItemModel.m in Sources */,
+				4C076989257CBB9800CC3411 /* DKTodayCard.m in Sources */,
 				4C91B79B25144B1200C8F594 /* DKPausedTargetCell.m in Sources */,
 				4C993BC02513A6C00082F86D /* DKUserCenterFooter.m in Sources */,
 				4C1CCE6D24FE49680004EF4E /* AppDelegate.m in Sources */,
@@ -1689,7 +1687,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1699,7 +1697,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1721,7 +1719,7 @@
 				CODE_SIGN_ENTITLEMENTS = "DailyClock/打卡Release.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DailyClock/PrefixHeader.pch";
@@ -1731,7 +1729,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock;
 				PRODUCT_NAME = "打卡";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1857,7 +1855,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1866,7 +1864,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1886,7 +1884,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyClockWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = M99LZTCK8N;
 				INFOPLIST_FILE = DailyClockWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1895,7 +1893,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chengyan.DailyClock.DailyClockWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

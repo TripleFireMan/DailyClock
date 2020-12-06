@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "2~iphone.png",
+      "filename" : "jilu~iphone.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "2~iphone@2x.png",
+      "filename" : "jilu~iphone@2x.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },

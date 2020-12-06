@@ -29,7 +29,7 @@
     //注册友盟
     [UMConfigure initWithAppkey:UM_APPKEY channel:nil];
     [UMConfigure setLogEnabled:YES];
-    
+    [MobClick setAutoPageEnabled:YES];
     [self initwindow:launchInfo];
     [self configJPush:launchInfo];
     /// 自动备份
