@@ -179,6 +179,8 @@
     else if (indexPath.row == 5){
         [self p_share];
     }
+    
+    [MobClick event:@"mine_collection_cell" attributes:@{@"name":model.title?:@""}];
 }
 - (void) p_sendEmail{
     MFMailComposeViewController *mailVC = [MFMailComposeViewController new];
@@ -292,6 +294,7 @@
         [[_settingBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             vibrate();
+            [MobClick event:@"mine_setting"];
             DKSettingViewController *setting = [[DKSettingViewController alloc] init];
             [self.navigationController pushViewController:setting animated:YES];
         }];

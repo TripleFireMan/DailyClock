@@ -722,6 +722,7 @@
         _reminderView = [DKDailyArticleReminderView new];
         _reminderView.block = ^(id obj) {
             @strongify(self);
+            [MobClick event:@"target_setting_reminder"];
             if ([obj isAdd]) {
                 if (self.model.reminders.count >= 10) {
                     MBProgressShowWithText(@"最多设置9个提醒");
@@ -730,6 +731,7 @@
                 [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {
                     DKReminder *reminder = (DKReminder *)obj;
                     [self.model.reminders addObject:reminder];
+                    [MobClick event:@"target_setting_reminder_info" attributes:@{@"alert":reminder.alert?:@""}];
                     [self.reminderView reload];
                 }];
             }
@@ -739,6 +741,7 @@
                         [self clearOldLocalnotications];
                         [self.model.reminders removeObject:obj];
                         [self.reminderView reload];
+                        [MobClick event:@"target_setting_reminder_remove"];
                     }
                 } doneTitle:@"确定" array:@[@"取消"]];
             }

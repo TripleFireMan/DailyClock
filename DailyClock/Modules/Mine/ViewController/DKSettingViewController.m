@@ -95,6 +95,9 @@
             UISwitch *innerSwitch = (UISwitch *) x;
             item.isOn = innerSwitch.isOn;
             [[DKApplication cy_shareInstance] cy_save];
+            [MobClick event:@"mine_setting_switch_on" attributes:@{@"name":item.title,
+                                                                   @"On":@(item.isOn)
+            }];
         }];
         switchView.onTintColor = kMainColor;
         cell.accessoryView = switchView;
@@ -116,6 +119,7 @@
     vibrate();
     
     DKSettingItem *item = [[[DKApplication cy_shareInstance] settingItems] objectAtIndex:indexPath.row];
+    [MobClick event:@"mine_setting_cell" attributes:@{@"title":item.title}];
     switch (item.settingType) {
         case DKSettingItem_AboutUs:
         {

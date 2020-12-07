@@ -115,6 +115,9 @@
     DKTargetModel *model = [[[DKTargetManager cy_shareInstance] activeModels] objectAtIndex:indexPath.row];
     DKTargetDetailViewController *detail = [DKTargetDetailViewController new];
     detail.model = model;
+    [MobClick event:@"daily_list_cell_click" attributes:@{@"name":model.title?:@"",
+                                                          @"count":@(model.signModels.count)
+    }];
     [self.navigationController pushViewController:detail animated:YES];
 }
 
@@ -164,6 +167,7 @@
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             vibrate();
+            [MobClick event:@"daily_list_add"];
             DKCreateTargetViewController *vc = [DKCreateTargetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];

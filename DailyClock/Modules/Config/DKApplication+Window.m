@@ -51,5 +51,15 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     vibrate();
+    NSInteger selectedIndex = tabBarController.selectedIndex;
+    if (selectedIndex == 0) {
+        [MobClick event:@"tab_home"];
+    }
+    else if (selectedIndex == 1){
+        [MobClick event:@"tab_list"];
+    }
+    else{
+        [MobClick event:@"tab_mine"];
+    }
 }
 @end

@@ -123,7 +123,7 @@
     [[DKApplication cy_shareInstance] cy_save];
     [tableView reloadData];
     self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
-    
+    [MobClick event:@"mine_setting_font_cell" attributes:@{@"font":font.name?:@""}];
     MBProgressShowWithText(@"字体切换成功");
 }
 

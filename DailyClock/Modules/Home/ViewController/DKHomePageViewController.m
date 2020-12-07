@@ -254,6 +254,7 @@
         [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             vibrate();
+            [MobClick event:@"home_daily_add"];
             DKCreateTargetViewController *vc = [DKCreateTargetViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }];
@@ -351,6 +352,7 @@
         [[_sharebtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
             vibrate();
+            [MobClick event:@"home_daily_share"];
             [self p_jumpToshare];
         }];
     }

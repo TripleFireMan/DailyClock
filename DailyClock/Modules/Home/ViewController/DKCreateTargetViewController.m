@@ -81,7 +81,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     vibrate();
+    
     DKTargetModel *model = [self.datasource objectAtIndex:indexPath.row];
+    [MobClick event:@"daily_add_cell_click" attributes:@{@"name":model.title?:@""}];
     DKTargetSettingViewController *settingVC = [DKTargetSettingViewController initWithTargetType:DKTargetSettingType_Insert model:model];
     [self.navigationController pushViewController:settingVC animated:YES];
 }

@@ -1,4 +1,25 @@
+tab_home,底导航-首页,1
+tab_list,底导航-列表,1
+tab_mine,底导航-我的,1
+
 share_close, 分享-关闭, 1
 share_save_to_album, 分享-保存到相册, 1
 share_share_to_wechat, 分享-分享到微信, 1
+
 home_daily_click,首页-打卡,0
+home_daily_add,首页-添加,1
+home_daily_share,首页-分享,1
+
+daily_list_cell_click,列表页-cell点击,0
+daily_list_add,列表页-添加,1
+daily_add_cell_click,添加目标-cell点击,0
+
+target_setting_reminder,目标设置页-添加提醒设置,1
+target_setting_reminder_info, 目标设置页-添加提醒详情,0
+target_setting_reminder_remove,目标设置页-移除提醒,1
+
+mine_collection_cell,个人中心-cell点击,0
+mine_setting,个人中心-设置,1
+mine_setting_cell,个人中心-设置-cell点击,0
+mine_setting_font_cell,个人中心-设置-字体-当前字体,0
+mine_setting_switch_on,个人中心-设置-开关设置,0
