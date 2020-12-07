@@ -340,7 +340,7 @@
             @strongify(self);
             vibrate();
             if (CYStringIsEmpty(self.nameTF.text)) {
-                [XHToast showBottomWithText:@"请设置目标名称"];
+                MBProgressShowWithText(@"请设置目标名称");
                 return;
             }
             
@@ -480,7 +480,7 @@
             createLocalNotification();
         }
         else{
-            [XHToast showBottomWithText:@"设置提醒失败，请确保通知打开"];
+            MBProgressShowWithText(@"设置提醒失败，请确保通知打开");
         }
     }];
     
@@ -659,7 +659,7 @@
                 else{
                     self.model.startDate = self.model.endDate;
                     [self.startTimeBtn setTitle:[self stringWithDate:self.model.startDate] forState:UIControlStateNormal];
-                    [XHToast showBottomWithText:@"开始时间不可大于结束时间"];
+                    MBProgressShowWithText(@"开始时间不可大于结束时间");
                 }
                 [self p_configTotalInfo];
             };
@@ -698,7 +698,7 @@
                 else{
                     self.model.endDate = self.model.startDate;
                     [self.endTimeBtn setTitle:[self stringWithDate:self.model.endDate] forState:UIControlStateNormal];
-                    [XHToast showBottomWithText:@"结束时间不可小于开始时间"];
+                    MBProgressShowWithText(@"结束时间不可小于开始时间");
                 }
                 [self p_configTotalInfo];
             };
@@ -724,7 +724,7 @@
             @strongify(self);
             if ([obj isAdd]) {
                 if (self.model.reminders.count >= 10) {
-                    [XHToast showBottomWithText:@"最多设置9个提醒"];
+                    MBProgressShowWithText(@"最多设置9个提醒");
                     return;
                 }
                 [DKDailyClockTimeSettingView showOnView:self.view model:self.model complete:^(id obj) {

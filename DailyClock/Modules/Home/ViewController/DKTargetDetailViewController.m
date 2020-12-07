@@ -495,7 +495,7 @@
             self.model.status = DKTargetStatus_Doing;
             [[DKTargetManager cy_shareInstance] cy_save];
             [self p_config];
-            [XHToast showBottomWithText:@"任务已激活"];
+            MBProgressShowWithText(@"任务已激活");
         }];
             
     }

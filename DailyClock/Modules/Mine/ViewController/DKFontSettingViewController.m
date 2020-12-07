@@ -110,11 +110,11 @@
     vibrate();
     DKFontModel *font = [self.dataSource objectAtIndex:indexPath.row];
     if ([font isDownloading]) {
-        [XHToast showBottomWithText:@"字体正在下载"];
+        MBProgressShowWithText(@"字体正在下载");
         return;
     }
     if (![font isDownloaded]) {
-        [XHToast showBottomWithText:@"字体还未下载，请先下载安装"];
+        MBProgressShowWithText(@"字体还未下载，请先下载安装");
         return;
     }
     [DKApplication cy_shareInstance].boldFontName = font.boldFontName;
@@ -124,7 +124,7 @@
     [tableView reloadData];
     self.titleLabel.font = [UIFont fontWithName:[DKApplication cy_shareInstance].boldFontName size:18.f];
     
-    [XHToast showBottomWithText:@"字体切换成功"];
+    MBProgressShowWithText(@"字体切换成功");
 }
 
 - (CGFloat) tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath

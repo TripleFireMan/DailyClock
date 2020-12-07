@@ -1,0 +1,4 @@
+share_close, 分享-关闭, 1
+share_save_to_album, 分享-保存到相册, 1
+share_share_to_wechat, 分享-分享到微信, 1
+home_daily_click,首页-打卡,0

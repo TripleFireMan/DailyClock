@@ -85,7 +85,7 @@
                 self.clickBlock ? self.clickBlock(signModel) : nil;
             }
             else{
-                [XHToast showBottomWithText:@"今日已打卡，明天再来吧！"];
+                MBProgressShowWithText(@"今日已打卡，明天再来吧！");
             }
         }];
         _iconContainer.userInteractionEnabled = YES;

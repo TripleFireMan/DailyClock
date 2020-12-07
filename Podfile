@@ -11,7 +11,7 @@ def DKPods()
   pod 'IQKeyboardManager', '6.4.2'                                 #键盘处理
   pod 'PromisesObjC','1.2.8'
   pod 'FastCoding','3.3'
-  pod 'XHToast'
+  #pod 'XHToast'
   pod 'YYKit'
   pod 'CYLTabBarController/Lottie', '1.28.3'
   pod 'ZWPlaceHolder'

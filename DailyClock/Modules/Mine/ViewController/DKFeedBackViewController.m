@@ -199,20 +199,20 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
             dic[@"imgs"] = img;
         }
         if ([content length] == 0) {
-            [XHToast showBottomWithText:@"反馈内容不能为空"];
+            MBProgressShowWithText(@"反馈内容不能为空");
             return;
         }
 
         if ([CYEvaluate validateMobile:self.phoneTF.text] == NO) {
-            [XHToast showBottomWithText:@"请输入正确的手机号"];
+            MBProgressShowWithText(@"请输入正确的手机号");
             return;
         }
         
         [HttpTool POST:FeedBack parameters:dic HUD:YES success:^(id responseObject) {
-            [XHToast showBottomWithText:@"您的反馈已提交，谢谢合作"];
+            MBProgressShowWithText(@"您的反馈已提交，谢谢合作");
             [self.navigationController popViewControllerAnimated:YES];
         } failure:^(NSError *error) {
-            [XHToast showBottomWithText:error.localizedDescription];
+            MBProgressShowWithText(error.localizedDescription);
         }];
     }];
     
@@ -375,7 +375,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 - (void) pushToCamera
 {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        [XHToast showBottomWithText:@"相机不可用"];
+        MBProgressShowWithText(@"相机不可用");
     } else {
         UIImagePickerController * vc = [[UIImagePickerController alloc] init];
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -390,7 +390,7 @@ NSString * const k_MobilePhoneKey = @"k_MobilePhoneKey";
 
 - (void)pushToAlbum {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        [XHToast showBottomWithText:@"相机不可用"];
+        MBProgressShowWithText(@"相机不可用");
     } else {
         UIImagePickerController * vc = [[UIImagePickerController alloc] init];
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -413,21 +413,21 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     double fileLength = [imgData length];
     NSLog(@"filelength == %@MB",@(fileLength / (1024.f * 1024.f)));
     if (fileLength > 3 * 1024.f * 1024.f) {
-        [XHToast showBottomWithText:@"文件太大，允许上传最大图片为3MB"];
+        MBProgressShowWithText(@"文件太大，允许上传最大图片为3MB");
         return;
     }
     [HttpTool UPLOAD:UploadImge parameters:@{@"picture":imgData} HUD:YES success:^(id responseObject) {
         DKResultObject *obj = [DKResultObject modelWithJSON:responseObject];
         if (obj.status == 0) {
             self.imageView.image = self.currentUploadImage;
-            [XHToast showBottomWithText:@"上传图片成功"];
+            MBProgressShowWithText(@"上传图片成功");
             self.uploadImg = obj;
         }
         else{
-            [XHToast showBottomWithText:obj.message];
+            MBProgressShowWithText(obj.message);
         }
     } failure:^(NSError *error) {
-        [XHToast showBottomWithText:@"上传图片失败"];
+        MBProgressShowWithText(@"上传图片失败");
     }];
     
 }

@@ -8,7 +8,7 @@
 
 #ifndef Macro_h
 #define Macro_h
-
+#import "MBProgressHUD.h"
 #import <UIKit/UIKit.h>
 static AVAudioPlayer * movePlayer = nil;
 static inline void vibrate(){
@@ -55,7 +55,7 @@ static inline void playMusic(NSString *musicName){
         NSURL*moveMP3=[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:musicName?:@"jingle" ofType:@"aac"]];
 
         NSError*err=nil;
-
+        
         movePlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:moveMP3 error:&err];
 
         [movePlayer prepareToPlay];
@@ -67,5 +67,11 @@ static inline void playMusic(NSString *musicName){
 }
 
 
+static inline void MBProgressShowWithText(NSString *text){
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = text;
+    [hud hideAnimated:YES afterDelay:1.5];
+}
 
 #endif /* Macro_h */

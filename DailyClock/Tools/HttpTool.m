@@ -155,7 +155,7 @@ static HttpTool * httpTool = nil;
         }
         if (error.code != kCFURLErrorCancelled) {
             if (hud == YES) {
-               [XHToast showBottomWithText:@"网络请求失败"];
+               MBProgressShowWithText(@"网络请求失败");
             }
         }
     }];

@@ -253,9 +253,9 @@
     // MFMailComposeResultFailed
   
     if (result == MFMailComposeResultSent) {
-        [XHToast showBottomWithText:@"发送成功"];
+        MBProgressShowWithText(@"发送成功");
     } else if (result == MFMailComposeResultFailed) {
-        [XHToast showBottomWithText:@"发送失败"];
+        MBProgressShowWithText(@"发送失败");
     }
     
     [controller dismissViewControllerAnimated:YES completion:nil];

@@ -363,7 +363,8 @@
         [_closeBtn setImage:[UIImage imageNamed:@"sku_btn_close"] forState:UIControlStateNormal];
         [[_closeBtn   rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
-            [MobClick event:@"分享-关闭"];
+            vibrate();
+            [MobClick event:@"share_close"];
             [self dismissViewControllerAnimated:YES completion:nil];
         }];
     }
@@ -390,18 +391,19 @@
         [_saveToAlbumBtn setBackgroundImage:[UIImage imageWithColor:[kMainColor colorWithAlphaComponent:0.8]] forState:UIControlStateHighlighted];
         [[_saveToAlbumBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
-            [MobClick event:@"分享-保存到相册"];
+            [MobClick event:@"share_save_to_album"];
+            vibrate();
             [self screenShots:^(id obj) {
                 [[self class] isCanVisitPhotoLibrary:^(BOOL agreen) {
                     if (agreen) {
                         UIImageWriteToSavedPhotosAlbum(obj, NULL, NULL, NULL);
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [XHToast showBottomWithText:@"保存相册成功"];
+                            MBProgressShowWithText(@"保存相册成功");
                         });
                     }
                     else{
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [XHToast showBottomWithText:@"请允许访问相册，才可以保存图片"];
+                            MBProgressShowWithText(@"请允许访问相册，才可以保存图片");
                         });
                     }
                 }];
@@ -424,7 +426,7 @@
         [_shareBtn setBackgroundImage:[UIImage imageWithColor:[kMainColor colorWithAlphaComponent:0.8]] forState:UIControlStateHighlighted];
         [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
-            [MobClick event:@"分享-分享到微信"];
+            [MobClick event:@"share_share_to_wechat"];
             [self screenShots:^(id obj) {
                 @strongify(self);
                 dispatch_async_on_main_queue(^{

@@ -244,7 +244,7 @@
             self.clickBlock ? self.clickBlock(signModel) : nil;
         }
         else{
-            [XHToast showBottomWithText:@"亲，您今天已经打过卡了哦~"];
+            MBProgressShowWithText(@"亲，您今天已经打过卡了哦~");
         }
 
     }

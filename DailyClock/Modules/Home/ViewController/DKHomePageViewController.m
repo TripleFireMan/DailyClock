@@ -307,7 +307,7 @@
     cell.model = model;
     cell.clickBlock = ^(id obj) {
         @strongify(self);
-        [MobClick event:@"打卡" label:model.title];
+        [MobClick event:@"home_daily_click" attributes:@{@"name":model.title?:@""}];
         if (![model shouldAutoDaily]) {
             vibrate();
             music();
@@ -350,6 +350,7 @@
         [_sharebtn setImage:[UIImage imageNamed:@"jilu"] forState:UIControlStateNormal];
         [[_sharebtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self);
+            vibrate();
             [self p_jumpToshare];
         }];
     }
