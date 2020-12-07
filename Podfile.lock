@@ -93,7 +93,6 @@ DEPENDENCIES:
   - SDWebImage (= 5.5.2)
   - SnapKit
   - UMCCommon (= 7.1.3)
-  - XHToast
   - YYKit
   - ZWLimitCounter (= 0.0.2)
   - ZWPlaceHolder
@@ -157,6 +156,6 @@ SPEC CHECKSUMS:
   ZWLimitCounter: 7908540cfae4a3c7391182bbd58ed628cb5a2c82
   ZWPlaceHolder: d55cce10c9930b48c31bf48e7f4748974a31f7e0
 
-PODFILE CHECKSUM: d42bb8999c9422889d0f07bfab7e8e4cc66f0bf0
+PODFILE CHECKSUM: 8500fc1341c18059901f5b544beddef10b38c8b7
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0
